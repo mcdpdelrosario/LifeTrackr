@@ -48,7 +48,7 @@
 			<div class="col-xs-5">
 				<div class="panel-group" >
 						<div class="panel panel-default">
-							<form action="UserPage.php" method="post">
+							<form action="signupPage.php" method="post">
 								<div class="panel-heading plogh">
 									<center><h3>Not a member?</h3></center>
 								</div>

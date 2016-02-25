@@ -6,14 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <link href="login.css" rel="stylesheet">
+  <link href="userpage.css" rel="stylesheet">
   <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
-
 <?php
 /*  
 	This is the page for receiving the posted values.
@@ -28,23 +27,47 @@
 	
 	$log="11277920";
 	$pass="2hutru8e";
+	$name=" Dips";
+
+	$out_u = strcmp($logged_num,$log);
+	$out_p = strcmp($signed_num,$pass);
+	
+	if($out_u!=0 && $out_p!=0){
+		header('Location: http://www.google.com');
+	}
 	
 ?>
 
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
-				<div class="navbar-header active">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-					</button>
-					<a class="navbar-brand" href="#home">LifeTrackr</a>
-				</div>
-				<div class="collapse navbar-collapse" id="myNavbar">
-				  	<ul class="nav navbar-nav navbar-right ">
-						<li>
-							
-						</li>
-				  	</ul>
-				</div>
+		  	<ul class="nav navbar-nav">
+				<li>
+					<a href="#"><span class="glyphicon glyphicon-home"></span> Home</a>
+				</li>
+				<li>
+					<a href="#"><span class="glyphicon glyphicon-film"></span> Moments</a>
+				</li>
+				<li>
+					<a href="#"><span class="glyphicon glyphicon-bell"></span> Notifications</a>
+				</li>
+		  	</ul>
+		  	<div class="navbar-brand">
+		  		LifeTrackr
+		  	</div>
+		  	<ul class="nav navbar-nav navbar-right">
+		  		<li>
+		  			<div class="inner-addon left-addon">
+			      		<i class="glyphicon glyphicon-user"></i>
+	    				<input type="text" class="form-control test" placeholder=" Search">
+	    			</div>
+		      	</li>
+		      	<li>
+		      		<a href="#"><img class="iconimg"src="img.jpg"> <?=$name?></a>
+		      	</li>
+		      	<li>
+		      		<a href="#"><span class="glyphicon glyphicon-cog"></span></a>
+		      	</li>
+		    </ul>
 		</div>
 	</nav>
 
@@ -52,16 +75,6 @@
 	<div class="container signup">
 		<div class="row">
 			<div class="col-xs-6">
-				<?php 
-						$out_u = strcmp($logged_num,$log);
-						$out_p = strcmp($signed_num,$pass);
-						
-						if($out_u==0 && $out_p==0){
-							echo $logged_num;
-						}else{
-							echo "MALI";
-						}
-				?>
 			</div>
 			<div class="col-xs-6">
 
