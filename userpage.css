@@ -87,3 +87,42 @@
 .user-name-head{
   margin-top:5%;
 }
+
+@media (min-width: 768px) {
+  .navbar-collapsebot {
+    height: auto;
+    border-top: 0;
+    box-shadow: none;
+    max-height: none;
+    padding-left:0;
+    padding-right:0;
+  }
+  .navbar-collapsebot.collapse {
+    display: block !important;
+    width: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+  }
+  .navbar-collapsebot.in {
+    overflow-x: visible;
+  }
+
+.navbarbot
+{
+  max-width:300px;
+  margin-right: 0;
+  margin-left: 0;
+} 
+
+.navbar-navbot,
+.navbar-navbot > li,
+.navbar-leftbot,
+.navbar-rightbot,
+.navbar-headerbot
+{float:none !important;}
+
+.navbar-rightbot .dropdown-menubot {left:0;right:auto;}
+.navbar-collapsebot .navbar-navbot.navbar-rightbot:last-child {
+    margin-right: 0;
+}
+}
