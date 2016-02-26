@@ -98,22 +98,14 @@ session_start();
 	<div class="content container">
 		<div class="row">
 			<div class="col-xs-2 left-pane">
+				<div class="lp-header">
+					<a href="#"><img src="img.jpg" class="iconimg"></a>
+				</div>
 				<nav class="navbar navbar-default navbarbot" role="navigation">
-				  <!-- Brand and toggle get grouped for better mobile display -->
-				  <div class="navbar-header navbar-headerbot">
-				    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-				      <span class="sr-only">Toggle navigation</span>
-				      <span class="icon-bar"></span>
-				      <span class="icon-bar"></span>
-				      <span class="icon-bar"></span>
-				    </button>
-				    <a class="navbar-brand" href="#">Brand</a>
-				  </div>
-
 				  <!-- Collect the nav links, forms, and other content for toggling -->
 				  <div class="collapse navbar-collapsebot navbar-ex1-collapse">
 				    <ul class="nav navbar-navbot">
-				      <li class="active"><a href="#">Link</a></li>
+				      <li><a href="#">Link</a></li>
 				      <li><a href="#">Link</a></li>
 				      <li class="dropdown">
 				        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
@@ -126,13 +118,7 @@ session_start();
 				        </ul>
 				      </li>
 				    </ul>
-				    <form class="navbar-form navbar-left navbar-leftbot" role="search">
-				      <div class="form-group">
-				        <input class="form-control" placeholder="Search" type="text">
-				      </div>
-				      <button type="submit" class="btn btn-default">Submit</button>
-				    </form>
-				    <ul class="nav navbar-nav navbar-right navbar-rightbot">
+				    <ul class="nav navbar-navbot navbar-right navbar-rightbot">
 				      <li><a href="#">Link</a></li>
 				      <li class="dropdown">
 				        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
