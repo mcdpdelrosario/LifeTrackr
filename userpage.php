@@ -13,31 +13,11 @@
   
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
 <?php
-/*  
-	This is the page for receiving the posted values.
-	Use checking for posted values to refrain errors. :)
-*/ 	
+	session_start();
 
-	if (!empty($_POST)) {
-		
-		$logged_num = $_POST["eadd_log"];
-		$signed_num = $_POST["pwd_log"];
-	}
-	
-	$log="11277920";
-	$pass="2hutru8e";
-	$name=" Dips";
-
-	$out_u = strcmp($logged_num,$log);
-	$out_p = strcmp($signed_num,$pass);
-	
-	if($out_u!=0 && $out_p!=0){
-		header('Location: http://www.google.com');
-	}
-	
 ?>
-
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 		  	<ul class="nav navbar-nav">
@@ -51,8 +31,8 @@
 					<a href="#"><span class="glyphicon glyphicon-bell"></span> Notifications</a>
 				</li>
 		  	</ul>
-		  	<div class="navbar-brand">
-		  		LifeTrackr
+		  	<div class="navbar-brand"
+>		  		LifeTrackr
 		  	</div>
 		  	<ul class="nav navbar-nav navbar-right">
 		  		<li>
@@ -62,7 +42,7 @@
 	    			</div>
 		      	</li>
 		      	<li>
-		      		<a href="#"><img class="iconimg"src="img.jpg"> <?=$name?></a>
+		      		<a href="#"><img class="iconimg"src="img.jpg"> <?=$_SESSION["emailmo"]?></a>
 		      	</li>
 		      	<li>
 		      		<a href="#"><span class="glyphicon glyphicon-cog"></span></a>
@@ -71,15 +51,51 @@
 		</div>
 	</nav>
 
-		
-	<div class="container signup">
-		<div class="row">
-			<div class="col-xs-6">
-			</div>
-			<div class="col-xs-6">
+<div class="maps">
+	<section id="wrapper">
+		Click the allow button to let the browser find your location.
 
-			</div>
-		</div>
-	</div>
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+		    <article>
+
+		    </article>
+		<script>
+		function success(position) {
+		  var mapcanvas = document.createElement('div');
+		  mapcanvas.id = 'mapcontainer';
+		  mapcanvas.style.height = '400px';
+		  mapcanvas.style.width = '600px';
+
+		  document.querySelector('article').appendChild(mapcanvas);
+
+		  var coords = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+		  
+		  var options = {
+		    zoom: 15,
+		    center: coords,
+		    mapTypeControl: false,
+		    navigationControlOptions: {
+		    	style: google.maps.NavigationControlStyle.SMALL
+		    },
+		    mapTypeId: google.maps.MapTypeId.ROADMAP
+		  };
+		  var map = new google.maps.Map(document.getElementById("mapcontainer"), options);
+
+		  var marker = new google.maps.Marker({
+		      position: coords,
+		      map: map,
+		      title:"You are here!"
+		  });
+		}
+
+		if (navigator.geolocation) {
+		  navigator.geolocation.getCurrentPosition(success);
+		} else {
+		  error('Geo Location is not supported');
+		}
+
+		</script>
+	</section>
+</div>
 </body>
 </html>

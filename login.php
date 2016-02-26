@@ -22,7 +22,7 @@
 					<a class="navbar-brand" href="#home">LifeTrackr</a>
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
-					<form action="userpage.php" method="post">
+					<form action="checklogin.php" method="post">
 					  	<ul class="nav navbar-nav navbar-right ">
 							<li>
 								<input type="text" class="form-control" id="eadd-log" placeholder="Email" name="eadd_log">
@@ -48,7 +48,7 @@
 			<div class="col-xs-5">
 				<div class="panel-group" >
 						<div class="panel panel-default">
-							<form action="signupPage.php" method="post">
+							<form action="gosignup.php" method="post">
 								<div class="panel-heading plogh">
 									<center><h3>Not a member?</h3></center>
 								</div>
@@ -65,13 +65,16 @@
 										</div>
 										<div class="col-sm-12">
 											<div class="form-group">
+												<input type="text" class="form-control" id="uname-su" placeholder="Username" name="uname-su">
+											</div>
+											<div class="form-group">
 												<input type="text" class="form-control" id="eadd-su" placeholder="Email Address" name="eadd-su">
 											</div>
 											<div class="form-group">
-												<input type="text" class="form-control" id="pwd-su" placeholder="Password" name="pwd-su">
+												<input type="password" class="form-control" id="pwd-su" placeholder="Password" name="pwd-su">
 											</div>
 											<div class="form-group">
-												<input type="text" class="form-control" id="cpwd-su" placeholder="Confirm Password" name="cpwd-su">
+												<input type="password" class="form-control" id="cpwd-su" placeholder="Confirm Password" name="cpwd-su">
 											</div>
 											<button class="btn btn-default" type="submit" value="submit" id="sign-but">Register</button>
 										</div>
