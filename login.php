@@ -25,7 +25,7 @@
 					<form action="checklogin.php" method="post">
 					  	<ul class="nav navbar-nav navbar-right ">
 							<li>
-								<input type="text" class="form-control" id="eadd-log" placeholder="Email" name="eadd_log">
+								<input type="text" class="form-control" id="eadd-log" placeholder="Username" name="uname_log">
 							</li>
 							<li>
 								<input type="password" class="form-control" id="pwd-log" placeholder="Password" name="pwd_log">

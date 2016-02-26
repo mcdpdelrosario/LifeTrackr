@@ -15,8 +15,10 @@
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
 <?php
-	session_start();
 
+session_start();
+
+	
 ?>
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
@@ -31,9 +33,6 @@
 					<a href="#"><span class="glyphicon glyphicon-bell"></span> Notifications</a>
 				</li>
 		  	</ul>
-		  	<div class="navbar-brand"
->		  		LifeTrackr
-		  	</div>
 		  	<ul class="nav navbar-nav navbar-right">
 		  		<li>
 		  			<div class="inner-addon left-addon">
@@ -42,16 +41,13 @@
 	    			</div>
 		      	</li>
 		      	<li>
-		      		<a href="#"><img class="iconimg"src="img.jpg"> <?=$_SESSION["emailmo"]?></a>
-		      	</li>
-		      	<li>
 		      		<a href="#"><span class="glyphicon glyphicon-cog"></span></a>
 		      	</li>
 		    </ul>
 		</div>
 	</nav>
 
-<div class="maps">
+<!-- <div class="maps">
 	<section id="wrapper">
 		Click the allow button to let the browser find your location.
 
@@ -96,6 +92,26 @@
 
 		</script>
 	</section>
-</div>
+</div> -->
+
+
+	<div class="content container">
+		<div class="row">
+			<div class="col-xs-2 left-pane">
+				<div class="user-head">
+					<img src="img.jpg" class="iconimg">
+					<br>
+					<p class="user-name-head">DP</p>
+				</div>
+				
+			</div>
+			<div class="col-xs-7 center-pane">
+				<h1>center pane</h1>
+			</div>
+			<div class="col-xs-3 right-pane">
+				<h1>right pane</h1>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

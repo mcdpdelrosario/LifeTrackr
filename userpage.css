@@ -30,8 +30,9 @@
   }
 
   .iconimg{
-    height:20px;
-    width:20px;
+    height:100px;
+    width:100px;
+    border-radius: 5em;
   }
 
 /* enable absolute positioning */
@@ -62,4 +63,27 @@
 
 #wrapper{
   padding-top:20%;
+}
+
+.content{
+  padding-top:5%;
+}
+
+.left-pane{
+  padding-top:5%;
+  background-color: green;
+}
+.center-pane{
+  background-color: red;
+}
+.right-pane{
+  background-color: yellow;
+}
+
+.user-head{
+  text-align: center;
+}
+
+.user-name-head{
+  margin-top:5%;
 }
