@@ -1,90 +1,126 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-  <head>
+<head>
     <title>Geolocation</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
+    
+    <!-- for mobile view -->
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
     <style>
       html, body {
         height: 100%;
         margin: 0;
         padding: 0;
       }
-      #map {
+      #map_canvas {
         height: 100%;
       }
     </style>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-QcrS-bymcrFPClDmuA4A3RMVZsvQCuQ&signed_in=true"></script>
-    <script>
-      // In the following example, markers appear when the user clicks on the map.
-      // Each marker is labeled with a single alphabetical character.
-      var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-      var labelIndex = 0;
-      var map;
-      var userPosition;
-      function initialize() {
-        var philippines = { lat: 13, lng: 122 };
-        map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 6,
-          center: philippines
-        });
-        var infoWindow = new google.maps.InfoWindow({map: map});
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&sensor=false&language=en"></script>
+    
+    <script type="text/javascript">
 
-        // This event listener calls addMarker() when the map is clicked.
-        google.maps.event.addListener(map, 'click', function(event) {
-          var wordlat = event.latLng.lat();
-          var wordlng = event.latLng.lng();
-          addMarker(event.latLng, map);
-          infoWindow.setPosition(event.latLng);
-          infoWindow.setContent("Latitude: "+wordlat+"\nLongtitude: "+wordlng);
-        });
-        
-        // Try HTML5 geolocation.
-        
-        if (navigator.geolocation) {
-          navigator.geolocation.watchPosition(function(position) {
-            userPosition = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
-          
+        // you can specify the default lat long
+        var map,
+            currentPositionMarker,
+            mapCenter = new google.maps.LatLng(14, 122),
+            map;
+        var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        var labelIndex = 0;
+        // change the zoom if you want
+        function initializeMap()
+        {
+            map = new google.maps.Map(document.getElementById('map_canvas'), {
+               zoom: 18,
+               center: mapCenter,
+               mapTypeId: google.maps.MapTypeId.ROADMAP
+             });
+            google.maps.event.addListener(map, 'click', function(event) {
+              addMarker(event.latLng, map);
+            });
             
-            addMarker(userPosition, map);
-            map.setCenter(userPosition);
-            map.setZoom(16);
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
-        } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
+        }
+        function locError(error) {
+            // tell the user if the current position could not be located
+            alert("The current position could not be found!");
         }
 
-        // Add a marker at the center of the map.
-        
-      }
+        // current position of the user
+        function setCurrentPosition(pos) {
+            currentPositionMarker = new google.maps.Marker({
+                map: map,
+                position: new google.maps.LatLng(
+                    pos.coords.latitude,
+                    pos.coords.longitude
+                ),
+                title: "Current Position"
+            });
+            map.panTo(new google.maps.LatLng(
+                    pos.coords.latitude,
+                    pos.coords.longitude
+                ));
+        }
 
-      // Adds a marker to the map.
-      function addMarker(location, map) {
+        function displayAndWatch(position) {
+        
+            // set current position
+            setCurrentPosition(position);
+            
+            // watch position
+            watchCurrentPosition();
+        }
+
+        function watchCurrentPosition() {
+            var positionTimer = navigator.geolocation.watchPosition(
+                function (position) {
+                    setMarkerPosition(
+                        currentPositionMarker,
+                        position
+                    );
+                });
+        }
+
+        function setMarkerPosition(marker, position) {
+            marker.setPosition(
+                new google.maps.LatLng(
+                    position.coords.latitude,
+                    position.coords.longitude)
+            );
+        }
+
+        function initLocationProcedure() {
+            initializeMap();
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(displayAndWatch, locError);
+            } else {
+                // tell the user if a browser doesn't support this amazing API
+                alert("Your browser does not support the Geolocation API!");
+            }
+        }
+
+        // initialize with a little help of jQuery
+        $(document).ready(function() {
+            initLocationProcedure();
+        });
+
+         function addMarker(location, map) {
         // Add the marker at the clicked location, and add the next-available label
         // from the array of alphabetical characters.
-        var marker = new google.maps.Marker({
-          position: location,
-          label: labels[labelIndex++ % labels.length],
-          map: map
-        });
-      }
-      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
-      }
+          var marker = new google.maps.Marker({
+            position: location,
+            label: labels[labelIndex++ % labels.length],
+            map: map
+          });
+        }
+
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
-  </head>
-  <body>
-    <div id="map"></div>
+</head>
 
-  </body>
+<body style="margin:0; padding:0;">
+    
+    <!-- display the map here, you can changed the height or style -->
+    <div id="map_canvas" ></div>
+</body>
+
 </html>
