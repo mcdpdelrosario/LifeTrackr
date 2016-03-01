@@ -1,0 +1,55 @@
+
+  body{
+	background-color: white;
+	font-family: Montserrat, sans-serif;
+	
+ }
+
+ 
+  .navbar {
+      font-family: Montserrat, sans-serif;
+      font-size: 12px !important;     
+  }
+  .navbar li a, .navbar { /* //font color of nav bar */
+      color: #0E182C!important;
+  }
+  .navbar-nav li a:hover { /* //font color upon hover */
+    color: #ff8c5b!important;
+    background-color: white !important;
+  }
+  .navbar-nav li.active a { /* //font bg of active  */
+      background-color: white !important;
+	   color: #ff8c5b!important;
+  }
+  /*.navbar-brand{
+    color: #ff8c5b!important;
+  }*/
+  .navbar-right{
+    padding-right:5em !important;
+  }
+  .imgicon{
+    border-radius:0.5em;
+    width:25px;
+    height:25px;
+  }
+
+  .searchbar{
+    padding-top:4.5% !important;
+  }
+
+ .right-inner-addon {
+    position: relative;
+  }
+  .right-inner-addon input {
+      padding-right: 30px; 
+  }
+  .right-inner-addon i {
+      position: absolute;
+      right: 0px;
+      padding: 10px 12px;
+      pointer-events: none;
+  }
+  .search-bar{
+    height:5%;
+    border-radius:1.5em;
+ }
