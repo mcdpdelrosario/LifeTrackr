@@ -1,31 +1,36 @@
-body{
+html, body{
     background-color: white;
   font-family: Montserrat, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
  }
+#map {
+  height: 92%;
+}
 
-
-  .navbar {
-      font-family: Montserrat, sans-serif;
-      font-size: 12px !important; 
-      margin-bottom: 0% !important;
-      background-color: white !important;
-      border-radius: 0;
-  }
-  .navbar li a, .navbar { /* //font color of nav bar */
-    color: #0E182C!important;
-  background-color: white !important;
-  }
-  .navbar-nav li a:hover { /* //font color upon hover */
-    color: #ff8c5b!important;
+.navbar {
+    font-family: Montserrat, sans-serif;
+    font-size: 12px !important; 
+    margin-bottom: 0% !important;
     background-color: white !important;
-  }
-  .navbar-brand{
-    color: #ff8c5b!important;
-  }
+    border-radius: 0;
+}
+.navbar li a, .navbar { /* //font color of nav bar */
+  color: #0E182C!important;
+background-color: white !important;
+}
+.navbar-nav li a:hover { /* //font color upon hover */
+  color: #ff8c5b!important;
+  background-color: white !important;
+}
+.navbar-brand{
+  color: #ff8c5b!important;
+}
 
-  .imgicon{
-    border-radius: 5em !important;
-    height: 100px;
-    width: 100px;
-  }
+.imgicon{
+  border-radius: 5em !important;
+  height: 100px;
+  width: 100px;
+}
 
