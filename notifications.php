@@ -162,7 +162,7 @@ if (mysqli_connect_errno())
     <section id="main-content">
     <div id="guts">
 
-      <h2>moments</h2>
+      <h2>notifications</h2>
 
 
     </div>
