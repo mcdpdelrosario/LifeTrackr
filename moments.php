@@ -64,7 +64,7 @@ if (mysqli_connect_errno())
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav" >
                 <li class="sidebar-brand">
-                    <a href="#">
+                    <a href="profiler.php">
                         <img src="img.jpg" class="imgicon"><br>
                         <p>
                         <?php
