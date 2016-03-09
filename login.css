@@ -2,14 +2,17 @@
   body{
 	background-color: white;
 	font-family: Montserrat, sans-serif;
-  background-image: url("moment1.jpg");
-  background-size: 100% 100%;
-  opacity: 0.8;
+ 
+  
+	
  }
 
  #home{
 
-  
+  background-image: url("moment1.jpg");
+  background-size: 100% 100%;
+  opacity: 0.9;
+  height: 100%;
 
  }
  
@@ -61,5 +64,17 @@
 
 .signup{
 	padding-top:10%;
+  text-transform: capitalize;
+  text-indent: 1px;
+ letter-spacing: 4px;
+ word-spacing: 10px;
+  line-height: 60;
+}
 
+/*#title{
+  text-shadow: 2px 2px #ff0000;
+}
+*/
+#boxsignup{
+  opacity: 0.9  ;
 }
