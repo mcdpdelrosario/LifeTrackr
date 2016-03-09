@@ -29,7 +29,7 @@ if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   } else {
-			$query = "select * from userinfo where userName = 'mcdpdelrosario'";
+			$query = "select * from userinfo where userName = '".$_SESSION["myuser"]."'";
 			$result = mysqli_query($con, $query) or mysqli_error($con);
 			while ($row = mysqli_fetch_array($result)) {
 			  $_SESSION["uname"] = $row[0];
@@ -101,7 +101,7 @@ if (mysqli_connect_errno())
     <section class="container" id="main-content">
       <div class="panel-group" >
         <div class="panel panel-default">
-          <form action="" method="post">
+          <form action="goprofiler.php" method="post">
             <div class="panel-heading plogh">
               <h4>General Account Settings</h4>
             </div>
