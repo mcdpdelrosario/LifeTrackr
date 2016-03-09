@@ -27,7 +27,7 @@ if (mysqli_connect_errno())
 			if(!$result) {
 				echo mysqli_error($con);
 			} else {
-			header('Location: http://www.google.com');
+			header('Location: signupPage.php');
 			}
 
 		}
