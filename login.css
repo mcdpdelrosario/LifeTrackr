@@ -4,7 +4,7 @@
 	font-family: Montserrat, sans-serif;
   background-image: url("moment1.jpg");
   background-size: 100% 100%;
-  opacity: 0.7;
+  opacity: 0.8;
   
 	
  }
@@ -20,10 +20,8 @@
   .navbar {
       font-family: Montserrat, sans-serif;
       background-color: white;
-      height:7em;
-      margin-top:1.5%;
+      height:13%;
       font-size: 11px !important;
-
   }
   .navbar li a, .navbar { /* //font color of nav bar */
       color: #0E182C!important;
@@ -41,6 +39,13 @@
 
 .navbar-right{
 	margin-top:0.5%;
+}
+
+
+
+
+.bar-align{
+  margin-top:1.5%;
 }
 
 #pwd-log{

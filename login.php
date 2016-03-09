@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <link href="css/login.css" rel="stylesheet">
+  <link href="login.css" rel="stylesheet">
   <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -15,7 +15,7 @@
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
 	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container">
+		<div class="container bar-align">
 				<div class="navbar-header active">
 					  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 					  </button>
