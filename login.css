@@ -2,16 +2,16 @@
   body{
 	background-color: white;
 	font-family: Montserrat, sans-serif;
-  background-image: url("moment1.jpg");
-  background-size: 100% 100%;
-  opacity: 0.8;
+ 
   
 	
  }
 
  #home{
 
-  
+   background-image: url("moment1.jpg");
+  background-size: 100% 100%;
+  opacity: 0.8;
 
  }
  
