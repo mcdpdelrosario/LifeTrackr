@@ -41,7 +41,7 @@
 
 		
 	<div class="container signup">
-		<div class="row">
+		<div id="home" class="row">
 			<div class="col-xs-6">
 				Insert things here.
 			</div>
