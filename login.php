@@ -47,7 +47,7 @@
 					COMMIT.
 					SHARE.
 				</div>
-				<div id = "boxsignup" class="col-xs-5">
+				<div id ="boxsignup"class="col-xs-5">
 					<div class="panel-group" >
 							<div class="panel panel-default">
 								<form action="gosignup.php" method="post">
