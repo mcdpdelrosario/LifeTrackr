@@ -1,0 +1,62 @@
+
+  body{
+	background-color: white;
+	font-family: Montserrat, sans-serif;
+  background-image: url("moment1.jpg");
+  background-size: 100% 100%;
+  opacity: 0.7;
+  
+	
+ }
+
+ #home{
+
+  
+
+ }
+ 
+ 
+
+  .navbar {
+      font-family: Montserrat, sans-serif;
+      background-color: white;
+      height:7em;
+      margin-top:1.5%;
+      font-size: 11px !important;
+
+  }
+  .navbar li a, .navbar { /* //font color of nav bar */
+      color: #0E182C!important;
+  }
+  .navbar-nav li a:hover { /* //font color upon hover */
+  
+  }
+  .navbar-nav li.active a { /* //font bg of active  */
+      background-color: white !important;
+	  color: #ff8c5b!important;
+  }
+  .navbar-brand{
+	color: #ff8c5b!important;
+  }
+
+.navbar-right{
+	margin-top:0.5%;
+}
+
+#pwd-log{
+	margin-left:3%;
+}
+
+#login-but{
+	margin-left:15%;
+}
+
+#sign-but{
+	height:7%;
+	width:100%;
+}
+
+.signup{
+	padding-top:10%;
+
+}
