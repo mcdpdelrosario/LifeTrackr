@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <link href="userpage.css" rel="stylesheet">
+  <link href="profiler.css" rel="stylesheet">
   <link href="sidebar.css" rel="stylesheet">
 
   <script src='//ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
@@ -29,11 +29,14 @@ if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   } else {
-			$query = "select firstName,lastName from userinfo where userName = '".$_SESSION["myuser"]."'";
+			$query = "select * from userinfo where userName = '".$_SESSION["myuser"]."'";
 			$result = mysqli_query($con, $query) or mysqli_error($con);
 			while ($row = mysqli_fetch_array($result)) {
-			    $_SESSION["fname"] = $row[0];
-				$_SESSION["lname"] = $row[1];
+			  $_SESSION["uname"] = $row[0];
+        $_SESSION["pword"] = $row[2];
+				$_SESSION["lname"] = $row[3];
+        $_SESSION["fname"] = $row[4];
+        $_SESSION["email"] = $row[5];
 			}
 			
 	}
@@ -64,7 +67,7 @@ if (mysqli_connect_errno())
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav" >
                 <li class="sidebar-brand" >
-                    <a href="profiler.php" >
+                    <a href="#" >
                         <img src="img.jpg" class="imgicon"><br>
                         <p>
                         <?php
@@ -95,10 +98,41 @@ if (mysqli_connect_errno())
     </div>
 
 
-    <section id="main-content">
-		  <!-- <h2>Home</h2> -->
-		  <div id="map"></div>
-    </iframe>
+    <section class="container" id="main-content">
+      <div class="panel-group" >
+        <div class="panel panel-default">
+          <form action="goprofiler.php" method="post">
+            <div class="panel-heading plogh">
+              <h4>General Account Settings</h4>
+            </div>
+            <div class="panel-body plogb">
+                <div class="col-xs-12">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="fname_edit" placeholder="First Name" name="fname_edit" value="<?=$_SESSION["fname"]?>">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="lname_edit" placeholder="Last Name" name="lname_edit" value="<?=$_SESSION["lname"]?>">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="uname_edit" placeholder="Username" name="uname_edit" value="<?=$_SESSION["uname"]?>">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="email_edit" placeholder="Email" name="email_edit" value="<?=$_SESSION["email"]?>">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control" id="pword_edit" placeholder="Password" name="pword_edit" value="<?=$_SESSION["pword"]?>">
+                  </div>
+                  <button class="btn btn-default" type="submit" value="submit" id="update-but">Update</button>
+                </div>
+            </div>
+          </form> 
+        </div>
+      </div>
+        
+        
+        
+        
+        
 		</section>
 
     
