@@ -42,10 +42,12 @@
 	<div id= "home">	
 		<div class="container signup">
 			<div class="row">
-				<div class="col-xs-6">
-					Insert things here.
+				<div id = "title"class="col-xs-6">
+					CAPTURE.
+					COMMIT.
+					SHARE.
 				</div>
-				<div class="col-xs-5">
+				<div id = "boxsignup" class="col-xs-5">
 					<div class="panel-group" >
 							<div class="panel panel-default">
 								<form action="gosignup.php" method="post">
