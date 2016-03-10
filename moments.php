@@ -14,7 +14,8 @@
 
   <!-- <link href="css/simple-sidebar.css" rel="stylesheet"> -->
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-QcrS-bymcrFPClDmuA4A3RMVZsvQCuQ&signed_in=true"></script>
+<!--   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-QcrS-bymcrFPClDmuA4A3RMVZsvQCuQ&signed_in=true"></script>
+  
   <script src="js/googlemaps.js"></script>
 </head>
 <body>
@@ -43,22 +44,22 @@ if (mysqli_connect_errno())
     <div class="container-fluid">
       <div class="navbar-center navbar-header">
         <a  class="navbar-brand" >LF</a>
-      </div>
-        <ul class="nav navbar-nav">
+	    </div>
+	      <ul class="nav navbar-nav">
       <li>
         <a href="#menu-toggle" id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger"></span>  </a>
       </li>
       <li>
-        <a href="userpage.php" id="home-but"><span class="glyphicon glyphicon-home"></span> Home</a>
-      </li>
-      <li>
-        <a href="moments.php" id="moments-but"><span class="glyphicon glyphicon-film"></span> Moments</a>
-      </li>
-      <li>
-        <a href="notifications.php" id="notif-but" class="popper" data-toggle="popover" data-trigger="focus"><span class="glyphicon glyphicon-bell"></span> Notifications</a>
-      </li>
-        </ul>
-    </div>
+				<a href="userpage.php" id="home-but"><span class="glyphicon glyphicon-home"></span> Home</a>
+			</li>
+			<li>
+				<a href="moments.php" id="moments-but"><span class="glyphicon glyphicon-film"></span> Moments</a>
+			</li>
+			<li>
+				<a href="notifications.php" id="notif-but" class="popper" data-toggle="popover" data-trigger="focus"><span class="glyphicon glyphicon-bell"></span> Notifications</a>
+			</li>
+	      </ul>
+	  </div>
   </nav>
   <div id="wrapper" class="toggled">
         <div id="sidebar-wrapper">
@@ -97,11 +98,9 @@ if (mysqli_connect_errno())
 
     <section id="main-content">
       <h2>Moments</h2>
-      <!-- <div id="map"></div> -->
-    </iframe>
     </section>
-
-    
+      
+    </iframe>
 
     <script src="js/jquery.js"></script>
 

@@ -25,7 +25,7 @@ if (mysqli_connect_errno())
 			if (!$result) {
 				echo mysqli_error($con);
 			} else {
-			$_SESSION["myuser"] = $uname_edit;
+			$_SESSION["myuser"] = $uname_su;
 			header('Location: userpage.php');
 			}
 		}
