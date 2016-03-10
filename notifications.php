@@ -14,7 +14,7 @@
 
   <!-- <link href="css/simple-sidebar.css" rel="stylesheet"> -->
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-QcrS-bymcrFPClDmuA4A3RMVZsvQCuQ&signed_in=true"></script>
+<!--   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-QcrS-bymcrFPClDmuA4A3RMVZsvQCuQ&signed_in=true"></script>
   <script src="js/googlemaps.js"></script>
 </head>
 <body>
@@ -100,8 +100,9 @@ if (mysqli_connect_errno())
       <!-- <div id="map"></div> -->
     </iframe>
     </section>
-
-    
+      
+    </iframe>
+    </section>
 
     <script src="js/jquery.js"></script>
 
