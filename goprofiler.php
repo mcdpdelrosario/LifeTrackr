@@ -25,7 +25,8 @@ if (mysqli_connect_errno())
 			if (!$result) {
 				echo mysqli_error($con);
 			} else {
-				echo "pasok";
+			$_SESSION["myuser"] = $uname_su;
+			header('Location: userpage.php');
 			}
 		}
 	}

@@ -73,7 +73,7 @@ if (mysqli_connect_errno())
                     </a>
                 </li>
                 <!-- <hr width="70%"> -->
-                <div class="sidebar-coms">
+                <!-- <div class="sidebar-coms">
                 <li>
                     <a href="#">Favorites</a>
                 </li>
@@ -89,7 +89,7 @@ if (mysqli_connect_errno())
                 <li>
                     <a href="#">Logout</a>
                 </li>
-                </div>
+                </div> -->
             </ul>
         </div>
     </div>
