@@ -28,7 +28,7 @@ if (mysqli_connect_errno())
 				echo mysqli_error($con);
 			} else {
 			$_SESSION["myuser"] = $uname_su;
-			header('Location: profiler.php');
+			header('Location: userpage.php');
 			}
 
 		}
