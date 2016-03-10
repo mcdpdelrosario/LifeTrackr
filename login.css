@@ -1,0 +1,84 @@
+
+  body{
+	background-color: white;
+	font-family: Montserrat, sans-serif;
+ height: 100%;
+  
+	
+ }
+
+ #home{
+
+  background-image: url("moment1.jpg");
+  background-size: 100% 100%;
+  opacity: 0.8;
+  height: 100%;
+
+ }
+ 
+ 
+
+  .navbar {
+      font-family: Montserrat, sans-serif;
+      background-color: white;
+      height:13%;
+      font-size: 11px !important;
+  }
+  .navbar li a, .navbar { /* //font color of nav bar */
+      color: #0E182C!important;
+  }
+  .navbar-nav li a:hover { /* //font color upon hover */
+  
+  }
+  .navbar-nav li.active a { /* //font bg of active  */
+      background-color: white !important;
+	  color: #ff8c5b!important;
+  }
+  .navbar-brand{
+	color: #ff8c5b!important;
+  }
+
+.navbar-right{
+	margin-top:0.5%;
+}
+
+
+
+
+.bar-align{
+  margin-top:1.5%;
+}
+
+#pwd-log{
+	margin-left:3%;
+}
+
+#login-but{
+	margin-left:15%;
+}
+
+#sign-but{
+	height:7%;
+	width:100%;
+}
+
+
+.signup{
+	padding-top:10%;
+  text-transform: capitalize;
+  text-indent: 1px;
+ letter-spacing: 4px;
+ word-spacing: 10px;
+  line-height: 60;
+  
+}
+
+#boxsignup{
+  padding-top:2%;
+ opacity: 0.93;
+    word-spacing: 0px;
+    letter-spacing: 2px;
+    background: black;
+    box-shadow: black; 
+
+  }
