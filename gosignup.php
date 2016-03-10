@@ -27,7 +27,8 @@ if (mysqli_connect_errno())
 			if(!$result) {
 				echo mysqli_error($con);
 			} else {
-			header('Location: signupPage.php');
+			$_SESSION["myuser"] = $uname_su;
+			header('Location: profiler.php');
 			}
 
 		}
