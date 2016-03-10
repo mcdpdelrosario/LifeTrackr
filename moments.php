@@ -4,17 +4,18 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <link href="css/userpage.css" rel="stylesheet">
-  <link href="css/sidebar.css" rel="stylesheet">
+  <link href="userpage.css" rel="stylesheet">
+  <link href="sidebar.css" rel="stylesheet">
 
   <script src='//ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
   <script src='js/jquery.ba-hashchange.min.js'></script>
-  <script src='js/dynamicpage.js'></script>
+  <!-- <script src='dynamicpage.js'></script> -->
+  <!-- <script src='switchpage.js'></script> -->
 
   <!-- <link href="css/simple-sidebar.css" rel="stylesheet"> -->
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-QcrS-bymcrFPClDmuA4A3RMVZsvQCuQ&signed_in=true"></script>
-  
+  <script src="js/googlemaps.js"></script>
 </head>
 <body>
 
@@ -28,8 +29,7 @@ if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   } else {
-
-      $query = "select firstName,lastName from userinfo where userName = 'mcdpdelrosario'";
+      $query = "select firstName,lastName from userinfo where userName = '".$_SESSION["myuser"]."'";
       $result = mysqli_query($con, $query) or mysqli_error($con);
       while ($row = mysqli_fetch_array($result)) {
           $_SESSION["fname"] = $row[0];
@@ -37,15 +37,17 @@ if (mysqli_connect_errno())
       }
       
   }
-  
 ?>
 
   <nav class="navbar">
     <div class="container-fluid">
-      <div class="navbar-header">
-        <a href="#menu-toggle" class="navbar-brand" id="menu-toggle" >LF</a>
+      <div class="navbar-center navbar-header">
+        <a  class="navbar-brand" >LF</a>
       </div>
         <ul class="nav navbar-nav">
+      <li>
+        <a href="#menu-toggle" id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger"></span>  </a>
+      </li>
       <li>
         <a href="userpage.php" id="home-but"><span class="glyphicon glyphicon-home"></span> Home</a>
       </li>
@@ -61,8 +63,8 @@ if (mysqli_connect_errno())
   <div id="wrapper" class="toggled">
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav" >
-                <li class="sidebar-brand">
-                    <a href="#">
+                <li class="sidebar-brand" >
+                    <a href="profiler.php">
                         <img src="img.jpg" class="imgicon"><br>
                         <p>
                         <?php
@@ -71,15 +73,15 @@ if (mysqli_connect_errno())
                     </a>
                 </li>
                 <!-- <hr width="70%"> -->
-                <div class="sidebar-coms">
+                <!-- <div class="sidebar-coms">
                 <li>
                     <a href="#">Favorites</a>
                 </li>
                 <li>
-                    <a href="#">Shortcuts</a>
+                    <a href="#">Friends</a>
                 </li>
                 <li>
-                    <a href="#">Friends</a>
+                    <a href="#">Drafts</a>
                 </li>
                 <li>
                     <a href="#">Settings</a>
@@ -87,20 +89,19 @@ if (mysqli_connect_errno())
                 <li>
                     <a href="#">Logout</a>
                 </li>
-                </div>
+                </div> -->
             </ul>
         </div>
     </div>
 
 
     <section id="main-content">
-    <div id="guts">
-
-      <h2>moments</h2>
-
-
-    </div>
+      <h2>Moments</h2>
+      <!-- <div id="map"></div> -->
+    </iframe>
     </section>
+
+    
 
     <script src="js/jquery.js"></script>
 

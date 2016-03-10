@@ -12,7 +12,7 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+<body>
 
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container bar-align">
