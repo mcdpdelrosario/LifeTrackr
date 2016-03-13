@@ -5,13 +5,13 @@
  /*height: 100%;*/
  }
 
- #home{
+ #home img{
 
-  background-image: url("moment1.jpg");
+  /*background-image: url("moment1.jpg");*/
   background-size: 100% 100%;
-  opacity: 0.8;
-  height: 100%;
-
+  opacity:0.9;
+  width:100% !important;
+  height: 100% !important;
  }
  
   .navbar {
@@ -57,23 +57,22 @@
 
 
 .signup{
-	padding-top:11%;
-  opacity: 0.8;
+
+  opacity: 0.83;
+  padding-top:4%;
+  color: black;
+  word-spacing: 0px;
+  letter-spacing: 2px;
+  margin-top: 10;
 }
 
 #title{
+  margin-top: 410;
   text-transform: capitalize;
   text-indent: 1px;
   word-spacing: 10px;
-  letter-spacing: 4px;
-  margin-top:29em;
-}
-/*
-/*#boxsignup{
-  padding-top:2%;
- opacity: 0.93;
-    word-spacing: 0px;
-    letter-spacing: 2px;
+  letter-spacing: 6px;
+  color: black;
+  font-weight: 900;
 
-  }
-*/
+}
