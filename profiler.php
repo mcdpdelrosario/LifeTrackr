@@ -106,25 +106,27 @@ if (mysqli_connect_errno())
               <center><h4>General Account Settings</h4></center>
             </div>
             <div class="panel-body plogb">
-            <div class="col-xs-2"></div>
-                <div class="col-xs-8">
-                  <div class="form-group">
-                    <input type="text" class="form-control" id="fname_edit" placeholder="First Name" name="fname_edit" value="<?=$_SESSION["fname"]?>">
-                  </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" id="lname_edit" placeholder="Last Name" name="lname_edit" value="<?=$_SESSION["lname"]?>">
-                  </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" id="uname_edit" placeholder="Username" name="uname_edit" value="<?=$_SESSION["uname"]?>">
-                  </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" id="email_edit" placeholder="Email" name="email_edit" value="<?=$_SESSION["email"]?>">
-                  </div>
-                  <div class="form-group">
-                    <input type="password" class="form-control" id="pword_edit" placeholder="Password" name="pword_edit" value="<?=$_SESSION["pword"]?>">
-                  </div>
-                  <button class="btn btn-default" type="submit" value="submit" id="update-but">Update</button>
+              <div class="col-xs-2">
+              
+              </div>
+              <div class="col-xs-8">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="fname_edit" name="fname_edit" value="<?=$_SESSION["fname"]?>">
                 </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="lname_edit" name="lname_edit" value="<?=$_SESSION["lname"]?>">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="uname_edit" name="uname_edit" value="<?=$_SESSION["uname"]?>">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="email_edit" name="email_edit" value="<?=$_SESSION["email"]?>">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" id="pword_edit" name="pword_edit" value="<?=$_SESSION["pword"]?>">
+                </div>
+                <button class="btn btn-default" type="submit" value="submit" id="update-but">Update</button>
+              </div>
             </div>
           </form> 
         </div>
