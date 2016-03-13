@@ -14,8 +14,8 @@
 
   <!-- <link href="css/simple-sidebar.css" rel="stylesheet"> -->
 
-<!--   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-QcrS-bymcrFPClDmuA4A3RMVZsvQCuQ&signed_in=true"></script>
-  <script src="js/googlemaps.js"></script>
+  <!--  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-QcrS-bymcrFPClDmuA4A3RMVZsvQCuQ&signed_in=true"></script>
+  <script src="js/googlemaps.js"></script> -->
 </head>
 <body>
 
@@ -94,10 +94,45 @@ if (mysqli_connect_errno())
         </div>
     </div>
 
+  
 
     <section id="main-content">
-      <h2>Notifications</h2>
-      <!-- <div id="map"></div> -->
+      <div class="panel-group" >
+        <div class="panel panel-default">
+          <!-- <form action="goprofiler.php" method="post"> -->
+            <div class="panel-heading plogh">
+              <center><h4>Notifications</h4></center>
+            </div>
+            <div class="panel-body plogb">
+            <div class="col-xs-2"></div>
+                <div class="col-xs-8">
+
+                  <?php
+                    $con = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","bdd92f8752ef7e","fdb4d70b","lifetrackr");
+
+                  // Check connection
+                  if (mysqli_connect_errno())
+                    {
+                    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                    } else {
+                        $query = "select * from notifications where userName = '".$_SESSION["myuser"]."'";
+                        $result = mysqli_query($con, $query) or mysqli_error($con);
+                        while ($row = mysqli_fetch_array($result)) {
+                          echo $_SESSION["uname"] = $row[0];
+                          echo $_SESSION["pword"] = $row[2];
+                          echo $_SESSION["lname"] = $row[3];
+                          echo $_SESSION["fname"] = $row[4];
+                        }
+                    }
+
+                ?>
+                  
+                </div>
+            </div>
+          <!-- </form>  -->
+        </div>
+      </div>
+
     </iframe>
     </section>
       

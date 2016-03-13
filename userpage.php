@@ -15,7 +15,7 @@
   <!-- <link href="css/simple-sidebar.css" rel="stylesheet"> -->
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-QcrS-bymcrFPClDmuA4A3RMVZsvQCuQ&signed_in=true"></script>
-  <script src="js/googlemaps.js"></script>
+  <script src="googlemaps.js"></script>
 </head>
 <body>
 

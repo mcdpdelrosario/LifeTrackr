@@ -14,9 +14,9 @@
 
   <!-- <link href="css/simple-sidebar.css" rel="stylesheet"> -->
 
-<!--   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-QcrS-bymcrFPClDmuA4A3RMVZsvQCuQ&signed_in=true"></script>
+<!--    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-QcrS-bymcrFPClDmuA4A3RMVZsvQCuQ&signed_in=true"></script>
   
-  <script src="js/googlemaps.js"></script>
+  <script src="js/googlemaps.js"></script> -->
 </head>
 <body>
 
@@ -90,14 +90,17 @@ if (mysqli_connect_errno())
                 <li>
                     <a href="#">Logout</a>
                 </li>
-                </div> -->
+                </div>-->
             </ul>
         </div>
     </div>
 
+    <?php
+        
 
+      ?>
     <section id="main-content">
-      <h2>Moments</h2>
+      
     </section>
       
     </iframe>
