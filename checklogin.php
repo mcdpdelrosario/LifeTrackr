@@ -1,4 +1,3 @@
-
 <?php
 
 session_start();
@@ -26,7 +25,7 @@ if (mysqli_connect_errno())
 
 			 	header('Location: userpage.php');
 			} else {
-				echo "shet";
+				header('Location: login.php');
 			}
 		}
 	}
