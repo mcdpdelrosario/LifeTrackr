@@ -33,7 +33,7 @@
 	        
 	        addMarker(userPosition, map);
 	        map.setCenter(userPosition);
-	        map.setZoom(18);
+	        map.setZoom(16);
 	      }, function() {
 	        handleLocationError(true, infoWindow, map.getCenter());
 	      });
