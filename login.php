@@ -10,7 +10,7 @@
   <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  
+  <script src="logincarousel.js"></script>
 </head>
 <body>
 
@@ -41,18 +41,53 @@
 
 	<div id= "home">	
 		<div id = "myCarousel" class ="carousel slide">
+			<!-- <ol class ="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to = "0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to = "1"</li>
+				<li data-target="#myCarousel" data-slide-to = "2"</li>
+				<li data-target="#myCarousel" data-slide-to = "3"</li>
+				<li data-target="#myCarousel" data-slide-to = "4"</li>
+				<li data-target="#myCarousel" data-slide-to = "5"</li>
+
+			</ol> -->
 			<div class = "carousel-inner">
 				<div class="item active">
-					<img src = "moment2.jpg"/>
+					<img src = "moment1.jpg" class = "img-responsive">
+				</div>
+
+				<div class="item">
+					<img src = "moment2.jpg" class = "img-responsive">
+				</div>
+
+			<!-- 	<div class="item">
+					<img src = "moment3.jpg" class = "img-responsive">
+				</div> -->
+
+				<div class="item">
+					<img src = "moment4.jpg" class = "img-responsive">
+				</div>
+
+				<div class="item">
+					<img src = "moment5.jpg" class = "img-responsive">
+				</div>
+
+				<div class="item">
+					<img src = "moment6.jpg" class = "img-responsive">
+				</div>
+
+				<div class="item">
+					<img src = "moment8.jpg" class = "img-responsive">
+				</div>
+			</div>	
 						<div class ="container">
 							<div class="carousel-caption">
-								<div id = "title"class="col-xs-6">
+								
+								<div class="row">
+									<div id = "title"class="col-xs-6">
 												CAPTURE.
 												COMMIT.
 												SHARE.
-											</div>
-								<div class="row">
-										
+											</div>	
 									<div class="container signup">
 											<div class="col-xs-5">
 												<div class="panel-group" >
@@ -96,11 +131,13 @@
 									</div>
 								</div>
 						</div>
-					</div>
-				</div>
+					
+			
+
 			</div>
+
+
 		</div>	
-    </div>
 
 </body>
 </html>
