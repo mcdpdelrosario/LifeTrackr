@@ -3,6 +3,7 @@
 	background-color: white;
 	font-family: Montserrat, sans-serif;
  /*height: 100%;*/
+ overflow-x : hidden
  }
 
  
@@ -50,10 +51,11 @@
 #home img{
 
   /*background-image: url("moment1.jpg");*/
-  background-size: 100% 100%;
+  /*background-size: 100% 100%;*/
   opacity:0.9;
   width:100% !important;
   height: 100% !important;
+   max-width: NNNpx;
  }
  
  #home
