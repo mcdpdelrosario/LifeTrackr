@@ -115,7 +115,7 @@ if (mysqli_connect_errno())
                     {
                     echo "Failed to connect to MySQL: " . mysqli_connect_error();
                     } else {
-                        $query = "select * from notifications where userName = '".$_SESSION["myuser"]."'";
+                        $query = "select * from notifications where userName = '".$_SESSION["myuser"]."' order by time_taken desc";
                         $result = mysqli_query($con, $query) or mysqli_error($con);
                         while ($row = mysqli_fetch_array($result)) {
                            $_SESSION["uname_notif"] = $row['username'];
