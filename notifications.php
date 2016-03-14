@@ -73,7 +73,7 @@ if (mysqli_connect_errno())
                     </a>
                 </li>
                 <!-- <hr width="70%"> -->
-                <!-- <div class="sidebar-coms">
+                <div class="sidebar-coms">
                 <li>
                     <a href="#">Favorites</a>
                 </li>
@@ -81,7 +81,7 @@ if (mysqli_connect_errno())
                     <a href="#">Friends</a>
                 </li>
                 <li>
-                    <a href="#">Drafts</a>
+                    <a href="#">Search</a>
                 </li>
                 <li>
                     <a href="#">Settings</a>
@@ -89,7 +89,7 @@ if (mysqli_connect_errno())
                 <li>
                     <a href="#">Logout</a>
                 </li>
-                </div> -->
+                </div>
             </ul>
         </div>
     </div>
@@ -115,30 +115,50 @@ if (mysqli_connect_errno())
                     {
                     echo "Failed to connect to MySQL: " . mysqli_connect_error();
                     } else {
-                        $query = "select * from notifications where userName = '".$_SESSION["myuser"]."'";
+                        $query = "select * from notifications where userName = '".$_SESSION["myuser"]."' order by time_taken desc";
                         $result = mysqli_query($con, $query) or mysqli_error($con);
                         while ($row = mysqli_fetch_array($result)) {
-                          echo $_SESSION["uname"] = $row[0];
-                          echo $_SESSION["pword"] = $row[2];
-                          echo $_SESSION["lname"] = $row[3];
-                          echo $_SESSION["fname"] = $row[4];
+                           $_SESSION["uname_notif"] = $row['username'];
+                           $_SESSION["sender_notif"] = $row['from'];
+                           $_SESSION["message_notif"] = $row['notif_message'];
+                           $_SESSION["time_notif"] = $row['time_taken'];
+                           ?>
+                           <div class="inner-content">
+                             <div class="panel panel-default">
+                                <div class="panel-heading">
+                                  <p><b><?=$_SESSION["sender_notif"]?></b>  <?=$_SESSION["time_notif"]?></p>
+                                </div>
+                                <div class="panel-body">
+                                  <p><?=$_SESSION["message_notif"]?></p>
+                                </div>
+                             </div>
+                           </div>
+                        <?php
                         }
-                    }
-
-                ?>
-                  
+                      }
+                  ?>
+                  <br>
+                  <!-- <a href="#" id="load-more">Load More</a> -->
+                  <button class="btn btn-default" id="load-more"><span class="glyphicon glyphicon-repeat"></span><br>Load</button>
+                  </div>
                 </div>
             </div>
-          <!-- </form>  -->
         </div>
-      </div>
-
-    </iframe>
     </section>
       
-    </iframe>
     </section>
-
+    <script>
+      $(function(){
+          $(".inner-content").slice(0, 3).show(); // select the first ten
+          $("#load-more").click(function(e){ // click event for load more
+              e.preventDefault();
+              $(".inner-content:hidden").slice(0, 3).show(); // select next 10 hidden divs and show them
+              if($(".inner-content:hidden").length == 0){ // check if any hidden divs still exist
+                  alert("No more Notifications!"); // alert if there are none left
+              }
+          });
+      });
+    </script>
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
