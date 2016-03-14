@@ -40,16 +40,7 @@
 	</nav>
 
 	<div id= "home">	
-		<div id = "myCarousel" class ="carousel slide">
-			<!-- <ol class ="carousel-indicators">
-				<li data-target="#myCarousel" data-slide-to = "0" class="active"></li>
-				<li data-target="#myCarousel" data-slide-to = "1"</li>
-				<li data-target="#myCarousel" data-slide-to = "2"</li>
-				<li data-target="#myCarousel" data-slide-to = "3"</li>
-				<li data-target="#myCarousel" data-slide-to = "4"</li>
-				<li data-target="#myCarousel" data-slide-to = "5"</li>
-
-			</ol> -->
+		<div id = "myCarousel" class ="carousel">
 			<div class = "carousel-inner">
 				<div class="item active">
 					<img src = "moment1.jpg" class = "img-responsive">
@@ -58,10 +49,6 @@
 				<div class="item">
 					<img src = "moment2.jpg" class = "img-responsive">
 				</div>
-
-			<!-- 	<div class="item">
-					<img src = "moment3.jpg" class = "img-responsive">
-				</div> -->
 
 				<div class="item">
 					<img src = "moment4.jpg" class = "img-responsive">
@@ -131,8 +118,6 @@
 									</div>
 								</div>
 						</div>
-					
-			
 
 			</div>
 
