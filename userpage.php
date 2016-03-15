@@ -14,7 +14,7 @@
 
   <!-- <link href="css/simple-sidebar.css" rel="stylesheet"> -->
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-QcrS-bymcrFPClDmuA4A3RMVZsvQCuQ&signed_in=true"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-QcrS-bymcrFPClDmuA4A3RMVZsvQCuQ&signed_in=false"></script>
   <script src="googlemaps.js"></script>
 </head>
 <body>
@@ -73,7 +73,10 @@ if (mysqli_connect_errno())
                     </a>
                 </li>
                 <!-- <hr width="70%"> -->
-                <!-- <div class="sidebar-coms">
+                <div class="sidebar-coms">
+                <li>
+                    <a href="#">My Moments</a>
+                </li>
                 <li>
                     <a href="#">Favorites</a>
                 </li>
@@ -81,7 +84,7 @@ if (mysqli_connect_errno())
                     <a href="#">Friends</a>
                 </li>
                 <li>
-                    <a href="#">Drafts</a>
+                    <a href="#">Search</a>
                 </li>
                 <li>
                     <a href="#">Settings</a>
@@ -89,7 +92,7 @@ if (mysqli_connect_errno())
                 <li>
                     <a href="#">Logout</a>
                 </li>
-                </div> -->
+                </div>
             </ul>
         </div>
     </div>
