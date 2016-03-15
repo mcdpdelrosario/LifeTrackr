@@ -34,11 +34,11 @@ function initialize() {
 			infoWindow.setPosition(event.latLng);
 			infoWindow.setContent("Latitude: "+wordlat+"\nLongtitude: "+wordlng);
 			var url = "savecoordinates.php?longitude="+wordlat + "&latitude=" + wordlng; 
-			httpGetAsync(url, alert("yo")); 
+			httpGetAsync(url, alert("You clicked the map")); 
 		}else{
 			alert('Too Far');
 		}
-		
+		 
 	});
 
 	// Try HTML5 geolocation.
@@ -59,7 +59,7 @@ function initialize() {
 			userMarker.addListener('click', function() {
 				map.setCenter(userMarker.getPosition());
 				var url = "savecoordinates.php?longitude="+userPosition.lng + "&latitude=" + userPosition.lat;
-				httpGetAsync(url,alert("yo"));
+				httpGetAsync(url,alert("You clicked the Marker"));
 			    
 		  	});
 			iterations++;
