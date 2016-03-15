@@ -66,10 +66,17 @@
 					<img src = "moment8.jpg" class = "img-responsive">
 				</div>
 			</div>	
+						<div class ="container">
 							<div class="carousel-caption">
+								
 								<div class="row">
+									<div id = "title"class="col-xs-7">
+												CAPTURE.
+												COMMIT.
+												SHARE.
+											</div>	
 									<div class="container signup">
-											<div class="col-xs-7">
+											<div class="col-xs-5">
 												<div class="panel-group" >
 														<div class="panel panel-default">
 															<form action="gosignup.php" method="post">
@@ -110,7 +117,7 @@
 										</div>
 									</div>
 								</div>
-					
+						</div>
 
 			</div>
 
