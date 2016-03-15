@@ -51,11 +51,11 @@
 #home img{
 
   /*background-image: url("moment1.jpg");*/
-  /*background-size: 100% 100%;*/
+  background-size: 100% 100%;
   opacity:0.9;
   width:100% !important;
   height: 100% !important;
-   max-width: NNNpx;
+
  }
  
  #home
@@ -72,16 +72,20 @@
   word-spacing: 0px;
   letter-spacing: 2px;
   margin-top: 10;
+  margin-left: 400;
 }
 
 
 #title{
-   font-family: Montserrat, sans-serif;
-  margin-top: 430;
+  font-family: Montserrat, sans-serif;
+  margin-top: 385;
   text-transform: capitalize;
   text-indent: 1px;
   word-spacing: 10px;
   letter-spacing: 6px;
   color: white;
-  font-weight: 900;
+  font-weight: 400;
+  position: absolute;
+  margin-left: -500;
+
 }
