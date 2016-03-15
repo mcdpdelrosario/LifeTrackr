@@ -1,94 +1,122 @@
 <html lang="en">
 <head>
-  <!-- Theme Made By www.w3schools.com - No Copyright -->
   <title>LifeTrackr</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <link href="moments.css" rel="stylesheet">
   <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href="userpage.css" rel="stylesheet">
+  <link href="sidebar.css" rel="stylesheet">
+
+  <script src='//ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+  <script src='js/jquery.ba-hashchange.min.js'></script>
+  <!-- <script src='dynamicpage.js'></script> -->
+  <!-- <script src='switchpage.js'></script> -->
+
+  <!-- <link href="css/simple-sidebar.css" rel="stylesheet"> -->
+
+<!--    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-QcrS-bymcrFPClDmuA4A3RMVZsvQCuQ&signed_in=true"></script>
   
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<script>
-	$(document).ready(function(){
-	    $("#moments-but").click(function(){
-	        $("#center-pane").load("moments.php");
-	    });
-	});
-	</script>
+  <script src="js/googlemaps.js"></script> -->
 </head>
 <body>
 
 <?php
 
 session_start();
-	$con = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","bdd92f8752ef7e","fdb4d70b","lifetrackr");
+  $con = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","bdd92f8752ef7e","fdb4d70b","lifetrackr");
 
 // Check connection
 if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   } else {
-
-	}
+      $query = "select firstName,lastName from userinfo where userName = '".$_SESSION["myuser"]."'";
+      $result = mysqli_query($con, $query) or mysqli_error($con);
+      while ($row = mysqli_fetch_array($result)) {
+          $_SESSION["fname"] = $row[0];
+        $_SESSION["lname"] = $row[1];
+      }
+      
+  }
 ?>
-	
 
-<!-- <div class="maps">
-	<section id="wrapper">
-		Click the allow button to let the browser find your location.
+  <nav class="navbar">
+    <div class="container-fluid">
+      <div class="navbar-center navbar-header">
+        <a  class="navbar-brand" >LF</a>
+	    </div>
+	      <ul class="nav navbar-nav">
+      <li>
+        <a href="#menu-toggle" id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger"></span>  </a>
+      </li>
+      <li>
+				<a href="userpage.php" id="home-but"><span class="glyphicon glyphicon-home"></span> Home</a>
+			</li>
+			<li>
+				<a href="moments.php" id="moments-but"><span class="glyphicon glyphicon-film"></span> Moments</a>
+			</li>
+			<li>
+				<a href="notifications.php" id="notif-but" class="popper" data-toggle="popover" data-trigger="focus"><span class="glyphicon glyphicon-bell"></span> Notifications</a>
+			</li>
+	      </ul>
+	  </div>
+  </nav>
+  <div id="wrapper" class="toggled">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav" >
+                <li class="sidebar-brand" >
+                    <a href="profiler.php">
+                        <img src="img.jpg" class="imgicon"><br>
+                        <p>
+                        <?php
+                          echo $_SESSION["fname"]." ". $_SESSION["lname"];
+                        ?></p>
+                    </a>
+                </li>
+                <!-- <hr width="70%"> -->
+                <!-- <div class="sidebar-coms">
+                <li>
+                    <a href="#">Favorites</a>
+                </li>
+                <li>
+                    <a href="#">Friends</a>
+                </li>
+                <li>
+                    <a href="#">Drafts</a>
+                </li>
+                <li>
+                    <a href="#">Settings</a>
+                </li>
+                <li>
+                    <a href="#">Logout</a>
+                </li>
+                </div>-->
+            </ul>
+        </div>
+    </div>
 
-		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-		    <article>
+    <?php
+        
 
-		    </article>
-		<script>
-		function success(position) {
-		  var mapcanvas = document.createElement('div');
-		  mapcanvas.id = 'mapcontainer';
-		  mapcanvas.style.height = '400px';
-		  mapcanvas.style.width = '600px';
+      ?>
+    <section id="main-content">
+      
+    </section>
+      
+    </iframe>
 
-		  document.querySelector('article').appendChild(mapcanvas);
+    <script src="js/jquery.js"></script>
 
-		  var coords = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-		  
-		  var options = {
-		    zoom: 15,
-		    center: coords,
-		    mapTypeControl: false,
-		    navigationControlOptions: {
-		    	style: google.maps.NavigationControlStyle.SMALL
-		    },
-		    mapTypeId: google.maps.MapTypeId.ROADMAP
-		  };
-		  var map = new google.maps.Map(document.getElementById("mapcontainer"), options);
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
-		  var marker = new google.maps.Marker({
-		      position: coords,
-		      map: map,
-		      title:"You are here!"
-		  });
-		}
-
-		if (navigator.geolocation) {
-		  navigator.geolocation.getCurrentPosition(success);
-		} else {
-		  error('Geo Location is not supported');
-		}
-
-		</script>
-	</section>
-</div> -->
-
-
-	<div class="content container">
-		<h1>moments</h1>
-	</div>
-
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
 
 </body>
 </html>

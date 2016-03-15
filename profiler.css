@@ -50,11 +50,7 @@ background-color: white !important;
   padding-top:1.1em;
   font-size: 15px !important; 
 }
-.inner-content { display:none; }
 
-#load-more{
-  border-radius: 5em !important;
-  height: 100px;
-  width: 100px;
-  margin-left:45%;
+#main-content{
+  padding-top: 3em;
 }

@@ -1,17 +1,17 @@
 
-  body{
+  body,html{
 	background-color: white;
 	font-family: Montserrat, sans-serif;
-	
+ /*height: 100%;*/
+ overflow-x : hidden
  }
+
  
   .navbar {
       font-family: Montserrat, sans-serif;
       background-color: white;
-      height:10%;
-      margin-top:1.5%;
+      height:13%;
       font-size: 11px !important;
-
   }
   .navbar li a, .navbar { /* //font color of nav bar */
       color: #0E182C!important;
@@ -31,6 +31,10 @@
 	margin-top:0.5%;
 }
 
+.bar-align{
+  margin-top:1.5%;
+}
+
 #pwd-log{
 	margin-left:3%;
 }
@@ -44,7 +48,44 @@
 	width:100%;
 }
 
+#home img{
+
+  /*background-image: url("moment1.jpg");*/
+  background-size: 100% 100%;
+  opacity:0.9;
+  width:100% !important;
+  height: 100% !important;
+
+ }
+ 
+ #home
+ {
+    padding-right: 0%;
+}
+
+
 .signup{
-	padding-top:10%;
+
+  opacity: 0.7;
+  padding-top:4%;
+  color: black;
+  word-spacing: 0px;
+  letter-spacing: 2px;
+  margin-top: 10;
+  margin-left: 400;
+}
+
+
+#title{
+  font-family: Montserrat, sans-serif;
+  margin-top: 385;
+  text-transform: capitalize;
+  text-indent: 1px;
+  word-spacing: 10px;
+  letter-spacing: 6px;
+  color: white;
+  font-weight: 400;
+  position: absolute;
+  margin-left: -500;
 
 }
