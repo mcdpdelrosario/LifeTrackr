@@ -40,7 +40,7 @@
 	</nav>
 
 	<div id= "home">	
-		<div id = "myCarousel" class ="carousel">
+		<div id = "myCarousel" class ="carousel slide">
 			<div class = "carousel-inner">
 				<div class="item active">
 					<img src = "moment1.jpg" class = "img-responsive">
@@ -66,12 +66,8 @@
 					<img src = "moment8.jpg" class = "img-responsive">
 				</div>
 			</div>	
-						<div class ="container">
 							<div class="carousel-caption">
 								<div class="row">
-									<div id = "title">
-									CAPTURE.COMMIT.SHARE.
-									</div>	
 									<div class="container signup">
 											<div class="col-xs-7">
 												<div class="panel-group" >
@@ -114,7 +110,7 @@
 										</div>
 									</div>
 								</div>
-						</div>
+					
 
 			</div>
 
