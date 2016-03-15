@@ -39,11 +39,12 @@
 		</div>
 	</nav>
 
-	<div id= "home">	
-		<div id = "myCarousel" class ="carousel">
+	<div id= "home">
+		<div id = "myCarousel" class ="carousel row"	>
 			<div class = "carousel-inner">
 				<div class="item active">
 					<img src = "moment1.jpg" class = "img-responsive">
+					
 				</div>
 
 				<div class="item">
@@ -66,17 +67,16 @@
 					<img src = "moment8.jpg" class = "img-responsive">
 				</div>
 			</div>	
-						<div class ="container">
+					
 							<div class="carousel-caption">
-								
+
 								<div class="row">
-									<div id = "title"class="col-xs-6">
-												CAPTURE.
-												COMMIT.
-												SHARE.
-											</div>	
+
 									<div class="container signup">
-											<div class="col-xs-5">
+										<div id = "title" class="col-xs-5">
+											CAPTURE.COMMIT.SHARE
+										</div>
+											<div class="col-xs-5 ">
 												<div class="panel-group" >
 														<div class="panel panel-default">
 															<form action="gosignup.php" method="post">
@@ -117,7 +117,7 @@
 										</div>
 									</div>
 								</div>
-						</div>
+				
 
 			</div>
 
