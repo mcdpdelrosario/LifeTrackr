@@ -129,7 +129,7 @@ if (mysqli_connect_errno())
                            <div class="inner-content">
                              <div class="panel panel-default">
                                 <div class="panel-heading">
-                                  <p><b><?=$_SESSION["fname_sender_notif"]?> <?=$_SESSION["lname_sender_notif"]?></b> @<?=$_SESSION["sender_notif"]?> <?=$_SESSION["time_notif"]?></p>
+                                  <p><b><?=$_SESSION["fname_sender_notif"]?> <?=$_SESSION["lname_sender_notif"]?></b> @<?=$_SESSION["uname_sender_notif"]?> <?=$_SESSION["time_notif"]?></p>
                                 </div>
                                 <div class="panel-body">
                                   <p><?=$_SESSION["message_notif"]?></p>

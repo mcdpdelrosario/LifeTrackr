@@ -8,7 +8,7 @@ var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
 	userMarker,
 	momentMarker,
 	iterations = 0,
-	zoomValue = 15,
+	zoomValue = 18
 	;
 
 function initialize() {
@@ -24,14 +24,17 @@ function initialize() {
 	google.maps.event.addListener(map, 'click', function(event) {
 		var wordlat = event.latLng.lat(); //upon click
 		var wordlng = event.latLng.lng(); //upon click
+
 		var userlat = userMarker.getPosition().lat();
 		var userlng = userMarker.getPosition().lng();
 
 		var distance = Math.sqrt(Math.pow((wordlat-userlat),2)+Math.pow((wordlng-userlng),2)); 
-		if(distance<0.03){
+		if(distance<0.005){
 			addMarker(event.latLng, map);
 			infoWindow.setPosition(event.latLng);
 			infoWindow.setContent("Latitude: "+wordlat+"\nLongtitude: "+wordlng);
+			var url = "savecoordinates.php?longitude="+wordlat + "&latitude=" + wordlng; 
+			httpGetAsync(url, alert("yo")); 
 		}else{
 			alert('Too Far');
 		}
@@ -55,7 +58,8 @@ function initialize() {
 			
 			userMarker.addListener('click', function() {
 				map.setCenter(userMarker.getPosition());
-				alert('YES');
+				var url = "savecoordinates.php?longitude="+userPosition.lng + "&latitude=" + userPosition.lat;
+				httpGetAsync(url,alert("yo"));
 			    
 		  	});
 			iterations++;
@@ -74,6 +78,16 @@ function initialize() {
 }
 // Adds a marker to the map.
 
+function httpGetAsync(theUrl, callback)
+		{
+			var xmlHttp = new XMLHttpRequest();
+			xmlHttp.onreadystatechange = function() { 
+				if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+					callback(xmlHttp.responseText);
+			}
+			xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+			xmlHttp.send(null);
+		}
 
 function addMarker(location, map) {
 // Add the marker at the clicked location, and add the next-available label
