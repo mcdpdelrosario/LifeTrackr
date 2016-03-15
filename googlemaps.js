@@ -9,9 +9,22 @@ var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
 	momentMarker,
 	iterations = 0,
 	zoomValue = 15,
-	;
-
+	screenMaxHeight,
+	screenMaxWidth,
+	buttonYes,
+	buttonNo,
+	momentsOption,
+	momentsTextArea,
+	momentsExtraWords,
+	abreak;
+function PTP(percent,max){
+	var pix = (percent/100)*max + "px"
+	return pix;
+}
 function initialize() {
+	abreak = document.createElement("BR");
+	screenMaxHeight = screen.height;
+	screenMaxWidth = screen.width;
 	var philippines = { lat: 13, lng: 122 };
 	map = new google.maps.Map(document.getElementById('map'), {
 		zoom: 6,
@@ -26,9 +39,37 @@ function initialize() {
 		var wordlng = event.latLng.lng(); //upon click
 		var userlat = userMarker.getPosition().lat();
 		var userlng = userMarker.getPosition().lng();
-
 		var distance = Math.sqrt(Math.pow((wordlat-userlat),2)+Math.pow((wordlng-userlng),2)); 
 		if(distance<0.03){
+			if(document.getElementById("momentsDiv")){
+				
+			}else{
+
+				momentsOption = document.createElement("div");
+				momentsOption.setAttribute("id","momentsDiv");
+				momentsOption.style.width = "200px";
+				momentsOption.style.height = "100px";
+				momentsOption.style.background = "pink";
+				momentsOption.style.position = "absolute";
+				momentsOption.style.top = PTP(15,screenMaxHeight);
+  				momentsOption.style.left = PTP(80,screenMaxWidth);
+	    		var textYes = document.createTextNode("Submit");
+	    		var textNo = document.createTextNode("Cancel");
+	    		momentsExtraWords = document.createTextNode("Moments");
+	    		momentsTextArea = document.createElement("TEXTAREA");
+	    		buttonYes = document.createElement("BUTTON");
+	    		buttonYes.setAttribute("id", "yesButton");
+	    		buttonNo = document.createElement("BUTTON");
+	    		buttonNo.setAttribute("id", "noButton");
+	   			buttonYes.appendChild(textYes);
+	   			buttonNo.appendChild(textNo);
+	   			document.body.appendChild(momentsOption);
+	   			momentsOption.appendChild(momentsExtraWords);
+	   			momentsOption.appendChild(abreak);
+	   			momentsOption.appendChild(momentsTextArea);
+	   			momentsOption.appendChild(buttonYes);
+	   			momentsOption.appendChild(buttonNo);
+   			}
 			addMarker(event.latLng, map);
 			infoWindow.setPosition(event.latLng);
 			infoWindow.setContent("Latitude: "+wordlat+"\nLongtitude: "+wordlng);
@@ -113,5 +154,19 @@ function updateUserPosition(){
 
 }
 
+function removeElement(parentDiv, childDiv){
+     if (childDiv == parentDiv) {
+          alert("The parent div cannot be removed.");
+     }
+     else if (document.getElementById(childDiv)) {     
+          var child = document.getElementById(childDiv);
+          var parent = document.getElementById(parentDiv);
+          parent.removeChild(child);
+     }
+     else {
+          //alert("Child div has already been removed or does not exist.");
+          return false;
+     }
+}
 
 google.maps.event.addDomListener(window, 'load', initialize);
