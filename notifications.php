@@ -1,3 +1,4 @@
+
 <html lang="en">
 <head>
   <title>LifeTrackr</title>
@@ -8,7 +9,7 @@
   <link href="sidebar.css" rel="stylesheet">
 
   <script src='//ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
-  <script src='js/jquery.ba-hashchange.min.js'></script>
+  <!-- <script src='js/jquery.ba-hashchange.min.js'></script> -->
   <!-- <script src='dynamicpage.js'></script> -->
   <!-- <script src='switchpage.js'></script> -->
 
@@ -115,18 +116,20 @@ if (mysqli_connect_errno())
                     {
                     echo "Failed to connect to MySQL: " . mysqli_connect_error();
                     } else {
-                        $query = "select * from notifications where userName = '".$_SESSION["myuser"]."' order by time_taken desc";
+                        $query = "SELECT * FROM userinfo AS ui INNER JOIN notifications AS noti ON ui.userName = noti.from_username WHERE noti.username = '".$_SESSION["myuser"]."' ORDER BY time_taken DESC";
                         $result = mysqli_query($con, $query) or mysqli_error($con);
                         while ($row = mysqli_fetch_array($result)) {
                            $_SESSION["uname_notif"] = $row['username'];
-                           $_SESSION["sender_notif"] = $row['from'];
+                           $_SESSION["fname_sender_notif"] = $row['firstName'];
+                           $_SESSION["lname_sender_notif"] = $row['lastName'];
+                           $_SESSION["uname_sender_notif"] = $row['from_username'];
                            $_SESSION["message_notif"] = $row['notif_message'];
                            $_SESSION["time_notif"] = $row['time_taken'];
                            ?>
                            <div class="inner-content">
                              <div class="panel panel-default">
                                 <div class="panel-heading">
-                                  <p><b><?=$_SESSION["sender_notif"]?></b>  <?=$_SESSION["time_notif"]?></p>
+                                  <p><b><?=$_SESSION["fname_sender_notif"]?> <?=$_SESSION["lname_sender_notif"]?></b> @<?=$_SESSION["sender_notif"]?> <?=$_SESSION["time_notif"]?></p>
                                 </div>
                                 <div class="panel-body">
                                   <p><?=$_SESSION["message_notif"]?></p>
@@ -159,7 +162,7 @@ if (mysqli_connect_errno())
           });
       });
     </script>
-    <script src="js/jquery.js"></script>
+    <script src="js/jquery-2.2.1.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
