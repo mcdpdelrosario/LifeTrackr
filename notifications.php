@@ -14,8 +14,8 @@
 
   <!-- <link href="css/simple-sidebar.css" rel="stylesheet"> -->
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-QcrS-bymcrFPClDmuA4A3RMVZsvQCuQ&signed_in=true"></script>
-  <script src="googlemaps.js"></script>
+  <!--  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-QcrS-bymcrFPClDmuA4A3RMVZsvQCuQ&signed_in=true"></script>
+  <script src="js/googlemaps.js"></script> -->
 </head>
 <body>
 
@@ -73,7 +73,7 @@ if (mysqli_connect_errno())
                     </a>
                 </li>
                 <!-- <hr width="70%"> -->
-                <!-- <div class="sidebar-coms">
+                <div class="sidebar-coms">
                 <li>
                     <a href="#">Favorites</a>
                 </li>
@@ -81,7 +81,7 @@ if (mysqli_connect_errno())
                     <a href="#">Friends</a>
                 </li>
                 <li>
-                    <a href="#">Drafts</a>
+                    <a href="#">Search</a>
                 </li>
                 <li>
                     <a href="#">Settings</a>
@@ -89,20 +89,76 @@ if (mysqli_connect_errno())
                 <li>
                     <a href="#">Logout</a>
                 </li>
-                </div> -->
+                </div>
             </ul>
         </div>
     </div>
 
+  
 
     <section id="main-content">
-      <!-- <h2>Home</h2> -->
-      <div id="map"></div>
-    </iframe>
+      <div class="panel-group" >
+        <div class="panel panel-default">
+          <!-- <form action="goprofiler.php" method="post"> -->
+            <div class="panel-heading plogh">
+              <center><h4>Notifications</h4></center>
+            </div>
+            <div class="panel-body plogb">
+            <div class="col-xs-2"></div>
+                <div class="col-xs-8">
+
+                  <?php
+                    $con = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","bdd92f8752ef7e","fdb4d70b","lifetrackr");
+
+                  // Check connection
+                  if (mysqli_connect_errno())
+                    {
+                    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                    } else {
+                        $query = "select * from notifications where userName = '".$_SESSION["myuser"]."' order by time_taken desc";
+                        $result = mysqli_query($con, $query) or mysqli_error($con);
+                        while ($row = mysqli_fetch_array($result)) {
+                           $_SESSION["uname_notif"] = $row['username'];
+                           $_SESSION["sender_notif"] = $row['from'];
+                           $_SESSION["message_notif"] = $row['notif_message'];
+                           $_SESSION["time_notif"] = $row['time_taken'];
+                           ?>
+                           <div class="inner-content">
+                             <div class="panel panel-default">
+                                <div class="panel-heading">
+                                  <p><b><?=$_SESSION["sender_notif"]?></b>  <?=$_SESSION["time_notif"]?></p>
+                                </div>
+                                <div class="panel-body">
+                                  <p><?=$_SESSION["message_notif"]?></p>
+                                </div>
+                             </div>
+                           </div>
+                        <?php
+                        }
+                      }
+                  ?>
+                  <br>
+                  <!-- <a href="#" id="load-more">Load More</a> -->
+                  <button class="btn btn-default" id="load-more"><span class="glyphicon glyphicon-repeat"></span><br>Load</button>
+                  </div>
+                </div>
+            </div>
+        </div>
     </section>
-
-    
-
+      
+    </section>
+    <script>
+      $(function(){
+          $(".inner-content").slice(0, 3).show(); // select the first ten
+          $("#load-more").click(function(e){ // click event for load more
+              e.preventDefault();
+              $(".inner-content:hidden").slice(0, 3).show(); // select next 10 hidden divs and show them
+              if($(".inner-content:hidden").length == 0){ // check if any hidden divs still exist
+                  alert("No more Notifications!"); // alert if there are none left
+              }
+          });
+      });
+    </script>
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->

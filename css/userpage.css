@@ -34,27 +34,3 @@ background-color: white !important;
   width: 100px;
 }
 
-.navbar-center {
-  padding-top: 1em;
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    text-align: center;
-    margin: auto;
-  height:100%;
-}
-.navbar-brand {float:none;}
-
-#menu-toggle{
-  padding-top:1.1em;
-  font-size: 15px !important; 
-}
-.inner-content { display:none; }
-
-#load-more{
-  border-radius: 5em !important;
-  height: 100px;
-  width: 100px;
-  margin-left:45%;
-}
