@@ -34,50 +34,7 @@ function initialize() {
 
 	// This event listener calls addMarker() when the map is clicked.
 
-	google.maps.event.addListener(map, 'click', function(event) {
-		var wordlat = event.latLng.lat(); //upon click
-		var wordlng = event.latLng.lng(); //upon click
-		var userlat = userMarker.getPosition().lat();
-		var userlng = userMarker.getPosition().lng();
-		var distance = Math.sqrt(Math.pow((wordlat-userlat),2)+Math.pow((wordlng-userlng),2)); 
-		if(distance<0.03){
-			if(document.getElementById("momentsDiv")){
-				
-			}else{
-
-				momentsOption = document.createElement("div");
-				momentsOption.setAttribute("id","momentsDiv");
-				momentsOption.style.width = "200px";
-				momentsOption.style.height = "100px";
-				momentsOption.style.background = "pink";
-				momentsOption.style.position = "absolute";
-				momentsOption.style.top = PTP(15,screenMaxHeight);
-  				momentsOption.style.left = PTP(80,screenMaxWidth);
-	    		var textYes = document.createTextNode("Submit");
-	    		var textNo = document.createTextNode("Cancel");
-	    		momentsExtraWords = document.createTextNode("Moments");
-	    		momentsTextArea = document.createElement("TEXTAREA");
-	    		buttonYes = document.createElement("BUTTON");
-	    		buttonYes.setAttribute("id", "yesButton");
-	    		buttonNo = document.createElement("BUTTON");
-	    		buttonNo.setAttribute("id", "noButton");
-	   			buttonYes.appendChild(textYes);
-	   			buttonNo.appendChild(textNo);
-	   			document.body.appendChild(momentsOption);
-	   			momentsOption.appendChild(momentsExtraWords);
-	   			momentsOption.appendChild(abreak);
-	   			momentsOption.appendChild(momentsTextArea);
-	   			momentsOption.appendChild(buttonYes);
-	   			momentsOption.appendChild(buttonNo);
-   			}
-			addMarker(event.latLng, map);
-			infoWindow.setPosition(event.latLng);
-			infoWindow.setContent("Latitude: "+wordlat+"\nLongtitude: "+wordlng);
-		}else{
-			alert('Too Far');
-		}
-		
-	});
+	creatingMapListener(map);
 
 	// Try HTML5 geolocation.
 
@@ -96,7 +53,7 @@ function initialize() {
 			
 			userMarker.addListener('click', function() {
 				map.setCenter(userMarker.getPosition());
-				alert('YES');
+				alert('You clicked Me');
 			    
 		  	});
 			iterations++;
@@ -114,7 +71,77 @@ function initialize() {
 // Add a marker at the center of the map.
 }
 // Adds a marker to the map.
+function creatingMapListener(map){
+	var coordWindow = new google.maps.InfoWindow({map: map});
+	google.maps.event.addListener(map, 'click', function(event) {
+		var wordlat = event.latLng.lat(); //upon click
+		var wordlng = event.latLng.lng(); //upon click
+		momentPosition = event.latLng;
+		var userlat = userMarker.getPosition().lat();
+		var userlng = userMarker.getPosition().lng();
+		var distance = Math.sqrt(Math.pow((wordlat-userlat),2)+Math.pow((wordlng-userlng),2)); 
+		if(distance<0.03){
+			if(document.getElementById("momentsDiv")){
+				
+			}else{
+				createMomentsDiv(map);
+				
+   			}
+			
+		}else{
+			alert('Too Far');
+		}
+		
+	});
+}
+function createMomentsDiv(map){
+	momentsOption = document.createElement("div");
+	momentsOption.setAttribute("id","momentsDiv");
+	momentsOption.style.width = "200px";
+	momentsOption.style.height = "100px";
+	// momentsOption.style.background = "black";
+	// momentsOption.style.opacity = "0.1";
+	momentsOption.style.position = "absolute";
+	momentsOption.style.top = PTP(15,screenMaxHeight);
+	momentsOption.style.left = PTP(80,screenMaxWidth);
+	var textYes = document.createTextNode("Submit");
+	var textNo = document.createTextNode("Cancel");
+	momentsExtraWords = document.createTextNode("Moments");
+	momentsTextArea = document.createElement("TEXTAREA");
+	buttonYes = document.createElement("BUTTON");
+	buttonYes.setAttribute("id", "yesButton");
+	//############## Dp ito ung part kung san tatawagin ung database submit
+	buttonYes.onclick = function(){
+		momentSubmit('Submitted');
+	};
 
+	buttonNo = document.createElement("BUTTON");
+	buttonNo.setAttribute("id", "noButton");
+	buttonNo.onclick = function(){
+		momentCancel();
+	};
+	buttonYes.appendChild(textYes);
+	buttonNo.appendChild(textNo);
+	document.body.appendChild(momentsOption);
+	momentsOption.appendChild(momentsExtraWords);
+	momentsOption.appendChild(abreak);
+	momentsOption.appendChild(momentsTextArea);
+	momentsOption.appendChild(buttonYes);
+	momentsOption.appendChild(buttonNo);
+}
+//################ DP ito ung literal na gagawin nya kpg pinindot mo ung submit
+function momentSubmit(str){
+	
+	alert('Words: '+momentsTextArea.value);
+	momentCancel();
+	addMarker(momentPosition, map);
+	coordWindow.setPosition(momentPosition);
+	coordWindow.setContent("Latitude: "+momentPosition.lat()+"\nLongtitude: "+momentPosition.lng());
+	
+}
+function momentCancel(){
+	document.body.removeChild(document.getElementById("momentsDiv"));
+}
 
 function addMarker(location, map) {
 // Add the marker at the clicked location, and add the next-available label
