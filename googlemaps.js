@@ -91,7 +91,6 @@ function creatingMapListener(map){
 				
 			}else{
 				createMomentsDiv(map);  
-				
    			}
 			
 		}else{
