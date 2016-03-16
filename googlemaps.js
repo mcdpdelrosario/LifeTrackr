@@ -54,9 +54,13 @@ function initialize() {
 			userMarker.addListener('click', function() {
 				map.setCenter(userMarker.getPosition());
 				// alert('You clicked Me');
-				var url = "savecoordinates.php?longitude="+userPosition.lng + "&latitude=" + userPosition.lat;
-				httpGetAsync(url,alert("yo"));
-			    
+				if(document.getElementById("momentsDiv")){
+				
+				}else{
+					createMomentsDiv(map);  
+					
+	   			}
+
 		  	});
 			iterations++;
 			map.setCenter(userPosition);
