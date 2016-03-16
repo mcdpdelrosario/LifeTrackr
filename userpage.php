@@ -8,7 +8,6 @@
   <link href="sidebar.css" rel="stylesheet">
 
   <script src='//ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
-  <script src='js/jquery.ba-hashchange.min.js'></script>
   <!-- <script src='dynamicpage.js'></script> -->
   <!-- <script src='switchpage.js'></script> -->
 
@@ -106,10 +105,10 @@ if (mysqli_connect_errno())
 
     
 
-    <script src="js/jquery.js"></script>
+    <!-- <script src="js/jquery.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    Bootstrap Core JavaScript
+    <script src="js/bootstrap.min.js"></script> -->
 
     <!-- Menu Toggle Script -->
     <script>
