@@ -1,20 +1,16 @@
 <?php
 	
 	// $userID = $_GET["userID"];
+session_start();
 	$longitude = $_GET["longitude"];
 	$latitude = $_GET["latitude"];
+	$moments = $_GET["moments"];
+	date_default_timezone_set('Asia/Taipei');
+	$date=date("Y-m-d h:i");
 
-	// echo($userID);
-	echo("<br/>");
-	echo($longitude);
-	echo("<br/>");
-	echo($latitude);		
-	echo("<br/>");
-		
-	// Create connection to database
 	$link = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","bdd92f8752ef7e","fdb4d70b","lifetrackr");
 
-	$query = "INSERT INTO dummytable (`long`, `lat`) VALUES(".$longitude.",".$latitude.")";
+	$query = "INSERT INTO moments (`username`,`moments_message`,`longtitude`, `latitude`,`time_taken`) VALUES('".$_SESSION["myuser"]."','".$moments."',".$longitude.",".$latitude.",'".$date."')";
 				
 	$result = mysqli_query($link,$query);
 	
