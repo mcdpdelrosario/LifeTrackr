@@ -102,10 +102,10 @@ if (mysqli_connect_errno())
       <div class="panel-group" >
         <div class="panel panel-default">
           <form action="goprofiler.php" method="post">
-            <div class="panel-heading plogh">
+            <div class="panel-heading plogh" id ="box1">
               <center><h4>General Account Settings</h4></center>
             </div>
-            <div class="panel-body plogb">
+            <div class="panel-body plogb" id = "box">
               <div class="col-xs-2">
               
               </div>
@@ -123,7 +123,10 @@ if (mysqli_connect_errno())
                   <input type="text" class="form-control" id="email_edit" name="email_edit" value="<?=$_SESSION["email"]?>">
                 </div>
                 <div class="form-group">
-                  <input type="password" class="form-control" id="pword_edit" name="pword_edit" value="<?=$_SESSION["pword"]?>">
+                  <a id="lock-but"><span class="glyphicon glyphicon-lock"></span></a>
+
+                  <input type="password" class="form-control" id="pword_edit" name="pword_edit" value="<?=$_SESSION["pword"]?>
+                
                 </div>
                 <button class="btn btn-default" type="submit" value="submit" id="update-but">Update</button>
               </div>

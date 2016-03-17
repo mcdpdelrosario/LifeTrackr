@@ -4,6 +4,9 @@ html, body{
   height: 100%;
   margin: 0;
   padding: 0;
+   background-image: url("g2.jpg");
+   /*background-color: #D9EDF0;*/
+  /*background-color: #8DE090;*/
  }
 #map {
   height: 92%;
@@ -53,4 +56,27 @@ background-color: white !important;
 
 #main-content{
   padding-top: 3em;
+  width: 50%;
+  margin-bottom: 0px;
+}
+
+#box1{
+  background-color: #273940;
+    color: white;
+    letter-spacing: 2px;
+    font-family: Montserrat, sans-serif;
+    word-spacing: 5px;
+}
+
+#box{
+
+  
+ background-color: #3E5560;
+  color: white;
+  margin-bottom: 0px;
+}
+
+#lock-but
+{
+  color: white;
 }
