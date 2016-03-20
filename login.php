@@ -3,13 +3,20 @@
   <!-- Theme Made By www.w3schools.com - No Copyright -->
   <title>LifeTrackr</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1 ,maximum-scale=1,user-scalable=no">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+  
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="login.css" rel="stylesheet" media="screen and (min-width:0)">
   <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
   
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -19,10 +26,10 @@
 				<div class="navbar-header active" id ="logo">
 					  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=#myNavbar>
 
-					  <span class="glyphicon glyphicon-menu-hamburger"></span>
+					  	Login
 
 					  </button>
-					<a class="navbar-brand" href="#home">LifeTracker</a>
+					<a class="navbar-brand" href="#home"><!-- LifeTracker --></a>
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<form action="checklogin.php" method="post">
@@ -44,28 +51,38 @@
 		</div>
 	</nav>
 
-	<!-- <div id= "home">	
-		<div class="container signup">
-			<div class="row">
-				<div id = "boxsignup" class="col-xs-5">
+	<div class="login">
+	    <div class = "signup">
+	      <div class = "row">
+	        <div class= "col-wd-6 col-md-6">
+	               <div class ="col">Share your moments with your loved ones..</div>
+	        </div>
+			
+			<div id = "boxsignup" class="col-wd-5 col-md-6">
 					<div class="panel-group" >
-							<div class="panel panel-default">
-								<form action="gosignup.php" method="post">
-									<div class="panel-heading plogh">
-										<center><h3>Not a member?</h3></center>
-									</div>
-									<div class="panel-body plogb">
-											<div class="col-sm-6">
-												<div class="form-group">
-													<input type="text" class="form-control" id="fname-su" placeholder="First Name" name="fname-su">
-												</div>
-											</div>
-											<div class="col-sm-6">
-												<div class="form-group">
-													<input type="text" class="form-control" id="lname-su" placeholder="Last Name" name="lname-su">
-												</div>
-											</div>
-											<div class="col-sm-12">
+						<div class="panel panel-default">
+							<form action="gosignup.php" method="post">
+
+								<div class="panel-heading plogh">
+									<center><h3>Not a member?</h3></center>
+								</div>
+
+								<div class="panel-body plogb">
+									
+										<div class="col-sm-6">
+													<div class="form-group">
+														<input type="text" class="form-control" id="fname-su" placeholder="First Name" name="fname-su">
+													</div>
+										</div>
+
+										<div class="col-sm-6">
+													<div class="form-group">
+														<input type="text" class="form-control" id="lname-su" placeholder="Last Name" name="lname-su">
+													</div>
+										</div>
+									
+
+									<div class="col-sm-12">
 												<div class="form-group">
 													<input type="text" class="form-control" id="uname-su" placeholder="Username" name="uname-su">
 												</div>
@@ -79,15 +96,30 @@
 													<input type="password" class="form-control" id="cpwd-su" placeholder="Confirm Password" name="cpwd-su">
 												</div>
 												<button class="btn btn-default" type="submit" value="submit" id="sign-but">Register</button>
-											</div>
 									</div>
-								</form>	
-							</div>
+
+
+								</div>
+
+
+							</form>
+
+
 						</div>
-				</div>
+					</div>
 			</div>
-		</div>
-    </div> -->
+
+						
+		  </div>
+	        	
+
+	    </div>
+
+	</div>
+
+
+	    
+
 
 </body>
 </html>
