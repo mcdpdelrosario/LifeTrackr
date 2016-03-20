@@ -53,18 +53,63 @@
 
 
 	<div class = "grid">
-
 		<div class = "row">
 
-			<div class ="col-wd-6">
+				<div class ="col-wd-7 col-md-7">
 		          <div class ="col">6column</div>
 		        </div>
-		      
+		     
 
-		        <div class ="col-wd-6">
-		          <div class ="col">6 column</div>
+		        <div class ="col-wd-5 col-md-5">
+		        	 <form action="gosignup.php" method="post">
+
+		                <div class"col-wd-12">
+		                    <div class ="col"><center><h3>Not a member?</h3></center>
+		                      <div class="row">
+
+		                        <div class="col-wd-6 box">
+
+		                          <div class="form-group" id = "First">
+		                            <input type="text" class="form-control" id="fname-su" placeholder="First Name" name="fname-su">
+		                          </div>
+		                          
+		                        </div>
+		                     <!--    
+		                        <div class="col-wd-1">
+		                        </div> -->
+
+		                        <div class="col-wd-6 box">
+		                          <div class="form-group"  id = "First">
+		                            <input type="text" class="form-control" id="lname-su" placeholder="Last Name" name="lname-su">
+		                          </div>
+		                        </div>
+
+		                        <div class="col-sm-12 box">
+												<div class="form-group">
+													<input type="text" class="form-control" id="uname-su" placeholder="Username" name="uname-su">
+												</div>
+												<div class="form-group">
+													<input type="text" class="form-control" id="eadd-su" placeholder="Email Address" name="eadd-su">
+												</div>
+												<div class="form-group">
+													<input type="password" class="form-control" id="pwd-su" placeholder="Password" name="pwd-su">
+												</div>
+												<div class="form-group">
+													<input type="password" class="form-control" id="cpwd-su" placeholder="Confirm Password" name="cpwd-su">
+												</div>
+												<button class="btn btn-default" type="submit" value="submit" id="sign-but">Register</button>
+									</div>
+
+		                      </div>
+		                    </div>
+
+
+		                 </div>
+		          	
+         			 </form>      
+		        	
+					
 		        </div>
-      
 
 		</div>
 	
