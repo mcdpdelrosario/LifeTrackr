@@ -63,7 +63,7 @@
 		        <div class ="col-wd-5 col-md-5">
 		        	 <form action="gosignup.php" method="post">
 
-		                <div class"col-wd-12">
+		                <div class"col-wd-12 ">
 		                    <div class ="col"><center><h3>Not a member?</h3></center>
 		                      <div class="row">
 
