@@ -55,14 +55,14 @@
 	<div class = "grid">
 		<div class = "row">
 
-		        <div class = "col-xs-5 col-md-12">
+		        <div class = "col-xs-5 col-md-6">
 		        	 <form action="gosignup.php" method="post">
 
-		                <div class"col-wd-12 ">
+		                <div class"col-xs-12 col-md-12">
 		                    <div class ="col"><center><h3>Not a member?</h3></center>
 		                      <div class="row">
 
-		                        <div class="col-wd-6 box">
+		                        <div class="col-xs-6 col-md-6 box">
 
 		                          <div class="form-group" id = "First">
 		                            <input type="text" class="form-control" id="fname-su" placeholder="First Name" name="fname-su">
@@ -73,13 +73,13 @@
 		                        <div class="col-wd-1">
 		                        </div> -->
 
-		                        <div class="col-wd-6 box">
+		                        <div class="col-xs-6 col-md-6 box">
 		                          <div class="form-group"  id = "First">
 		                            <input type="text" class="form-control" id="lname-su" placeholder="Last Name" name="lname-su">
 		                          </div>
 		                        </div>
 
-		                        <div class="col-sm-12 box">
+		                        <div class="col-xs-12 col-md-12 box">
 												<div class="form-group">
 													<input type="text" class="form-control" id="uname-su" placeholder="Username" name="uname-su">
 												</div>
@@ -107,7 +107,7 @@
 		        </div>
 
 
-				<div class ="col-xs-7 col-md-12 col-wd-1">
+				<div class ="col-xs-7 col-md-6 col-wd-1">
 		          <div class ="col">6column</div>
 		        </div>
 		     

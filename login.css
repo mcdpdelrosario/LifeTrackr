@@ -5,11 +5,12 @@
   body{
   background-color: black;
   font-family: Montserrat, sans-serif;
-  /*overflow-y: hidden;                 /* hide scrollbars   */*/
-  overflow-x: hidden; 
+  /*overflow-y: hidden; */                /* hide scrollbars   */*/
+  overflow-x: hidden !important; 
   padding: 0;
   margin: 0;
   padding-top: 50px;
+  width: 100%;
  }
 
   .navbar {
@@ -90,6 +91,8 @@
   margin: 0 auto;
   padding-top: 10%;
   position: inherit;  
+  max-width: 100% !important;
+    overflow-x: hidden !important;
 }
 
 .grid:before,
@@ -123,6 +126,7 @@
   text-align: center;
   margin-right: 2.4%;
   margin-left: 2.4%;
+  overflow-x: hidden;
 }
 
 
@@ -136,7 +140,9 @@
 }
 
 
-@media screen and (max-width: 499px){
+@media screen and (max-width: 499px){   
+
+  /*499*/
 .col-wd-1{width: 8.33%;
 display: none;}
 .col-wd-2{width: 16.67%;}
