@@ -51,72 +51,26 @@
 		</div>
 	</nav>
 
-	<div class="login">
-	    <div class = "signup">
-	      <div class = "row">
-	        <div class= "col-wd-6 col-md-6">
-	               <div class ="col">Share your moments with your loved ones..</div>
-	        </div>
-			
-			<div id = "boxsignup" class="col-wd-5 col-md-6">
-					<div class="panel-group" >
-						<div class="panel panel-default">
-							<form action="gosignup.php" method="post">
 
-								<div class="panel-heading plogh">
-									<center><h3>Not a member?</h3></center>
-								</div>
+	<div class = "grid">
 
-								<div class="panel-body plogb">
-									
-										<div class="col-sm-6">
-													<div class="form-group">
-														<input type="text" class="form-control" id="fname-su" placeholder="First Name" name="fname-su">
-													</div>
-										</div>
+		<div class = "row">
 
-										<div class="col-sm-6">
-													<div class="form-group">
-														<input type="text" class="form-control" id="lname-su" placeholder="Last Name" name="lname-su">
-													</div>
-										</div>
-									
+			<div class ="col-wd-6">
+		          <div class ="col">6column</div>
+		        </div>
+		      
 
-									<div class="col-sm-12">
-												<div class="form-group">
-													<input type="text" class="form-control" id="uname-su" placeholder="Username" name="uname-su">
-												</div>
-												<div class="form-group">
-													<input type="text" class="form-control" id="eadd-su" placeholder="Email Address" name="eadd-su">
-												</div>
-												<div class="form-group">
-													<input type="password" class="form-control" id="pwd-su" placeholder="Password" name="pwd-su">
-												</div>
-												<div class="form-group">
-													<input type="password" class="form-control" id="cpwd-su" placeholder="Confirm Password" name="cpwd-su">
-												</div>
-												<button class="btn btn-default" type="submit" value="submit" id="sign-but">Register</button>
-									</div>
+		        <div class ="col-wd-6">
+		          <div class ="col">6 column</div>
+		        </div>
+      
 
+		</div>
+	
 
-								</div>
-
-
-							</form>
-
-
-						</div>
-					</div>
-			</div>
-
-						
-		  </div>
-	        	
-
-	    </div>
 
 	</div>
-
 
 	    
 
