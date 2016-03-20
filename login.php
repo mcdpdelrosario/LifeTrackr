@@ -55,12 +55,12 @@
 	<div class = "grid">
 		<div class = "row">
 
-				<div class ="col-wd-7 col-md-7">
+				<div class ="col-xs-7 col-wd-1">
 		          <div class ="col">6column</div>
 		        </div>
 		     
 
-		        <div class ="col-wd-5 col-md-5">
+		        <div class = "col-xs-5">
 		        	 <form action="gosignup.php" method="post">
 
 		                <div class"col-wd-12 ">
