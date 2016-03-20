@@ -59,7 +59,7 @@
 }
 
 #sign-but{
-  height:7%;
+  min-height:7%;
   width:100%;
 }
 
@@ -92,7 +92,8 @@
   padding-top: 10%;
   position: inherit;  
   max-width: 100% !important;
-    overflow-x: hidden !important;
+  overflow-x: hidden !important;
+  padding-left: 2.4%;
 }
 
 .grid:before,
