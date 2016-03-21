@@ -25,7 +25,9 @@
 		<div class="container bar-align">
 				<div class="navbar-header active" id ="logo">
 					  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=#myNavbar>
+
 					  	Sign up!
+
 					  </button>
 					<a class="navbar-brand" href="#home"><!-- LifeTracker --></a>
 				</div>
@@ -42,12 +44,18 @@
 				</div>
 		</div>
 	</nav>
-
-
+	
+	<div id = "background">
+		<img src = "photg1.jpg"/>
+	</div>
 	<div class = "grid">
 		<div class = "row">
-		      <div class = "col-xs-1">	
-			  </div>
+				
+
+		      <div class = "col-xs-1">
+						
+				</div>
+				
 		        <div class = "col-xs-4 col-md-6">
 		        	 <form action="gosignup.php" method="post">
 
@@ -67,8 +75,13 @@
 
 		                      </div>
 		                    </div>
+
+
 		                 </div>
+		          	
          			 </form>      
+		        	
+					
 		        </div>
 
 		       
@@ -78,11 +91,16 @@
 		          <div class ="col">6column</div>
 		        </div>
 		     
-		      <div class = "col-xs-1">	
-			  </div>
+		      <div class = "col-xs-1">
+						
+				</div>
 
 		</div>
+	
+
+
 	</div>
+
 
 	    
 
