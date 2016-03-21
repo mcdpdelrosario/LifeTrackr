@@ -45,9 +45,6 @@
 		</div>
 	</nav>
 	
-	<div id = "background">
-		<img src = "photg1.jpg"/>
-	</div>
 	<div class = "grid">
 		<div class = "row">
 				
