@@ -16,12 +16,14 @@ var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
 	momentsOption,
 	momentsTextArea,
 	momentsExtraWords,
-	abreak;
+	abreak,
+	temporaryMarker;
 function PTP(percent,max){
 	var pix = (percent/100)*max + "px"
 	return pix;
 }
 function initialize() {
+	temporaryMarker = new google.maps.Marker({});
 	abreak = document.createElement("BR");
 	screenMaxHeight = screen.height;
 	screenMaxWidth = screen.width;
@@ -77,6 +79,7 @@ function initialize() {
 // Add a marker at the center of the map.
 }
 // Adds a marker to the map.
+
 function creatingMapListener(map){
 	var coordWindow = new google.maps.InfoWindow({map: map});
 	google.maps.event.addListener(map, 'click', function(event) {
@@ -88,8 +91,11 @@ function creatingMapListener(map){
 		var distance = Math.sqrt(Math.pow((wordlat-userlat),2)+Math.pow((wordlng-userlng),2)); 
 		if(distance<0.014){
 			if(document.getElementById("momentsDiv")){
-				
+				temporaryMarker.setMap(null);
+				createPointer();
 			}else{
+				temporaryMarker.setMap(null);
+				createPointer();
 				createMomentsDiv(map);  
    			}
 			
@@ -98,6 +104,11 @@ function creatingMapListener(map){
 		}
 		
 	});
+}
+function createPointer(){
+	temporaryMarker.setPosition(momentPosition);
+	temporaryMarker.setLabel("4");
+	temporaryMarker.setMap(map);
 }
 function createMomentsDiv(map){
 	momentsOption = document.createElement("div");
@@ -147,6 +158,7 @@ function momentSubmit(str){
 	
 }
 function momentCancel(){
+	temporaryMarker.setMap(null);
 	document.body.removeChild(document.getElementById("momentsDiv"));
 }
 
@@ -158,8 +170,9 @@ function addMarker(location, map) {
 		label: labels[labelIndex++ % labels.length],
 		map: map
 	});
-}
+	//worldMarkers.push(marker);
 
+}
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 	infoWindow.setPosition(pos);
