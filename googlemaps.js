@@ -106,6 +106,7 @@ function creatingMapListener(map){
 	});
 }
 function createPointer(){
+	map.panTo(momentPosition);
 	temporaryMarker.setPosition(momentPosition);
 	temporaryMarker.setLabel("4");
 	temporaryMarker.setMap(map);
