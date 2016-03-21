@@ -24,23 +24,20 @@
 	<nav class="navbar navbar-default navbar-fixed-top" role = "navigation">
 		<div class="container bar-align">
 				<div class="navbar-header active" id ="logo">
-					  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=#myNavbar>
+					 <a href="signup.php"> <button type="button" class="navbar-toggle">Sign up! </button></a>
+				
+						LOGO!
 
-					  	Sign up!
-
-					  </button>
-					<a class="navbar-brand" href="#home"><!-- LifeTracker --></a>
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
-					<form action="checklogin.php" method="post">
+					
 					  	<ul class="nav navbar-nav navbar-right ">
 							<li>
-								<button class="btn btn-default" type="submit" value="submit" id="login-but">Sign Up! </button>
+								<a href="signup.php"><button href="signup.php" class="btn btn-default"  value="submit" id="login-but">Sign Up!</button> </a>
+							
 							</li>
-
-
 					  	</ul>
-					</form>
+				
 				</div>
 		</div>
 	</nav>

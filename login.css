@@ -70,6 +70,7 @@
 #login-but{
   /*margin-left:15%;*/
   width: 100%;
+  
 
 }
 
@@ -167,7 +168,7 @@
 @media screen and (max-width: 800px) {
   .navbar.navbar-default {
       position:fixed; top:0; left:0; z-index:1030;*/
-     padding-left: 30%;
+     padding-left: 20%;
    }
 
 }
