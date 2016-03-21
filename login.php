@@ -25,9 +25,7 @@
 		<div class="container bar-align">
 				<div class="navbar-header active" id ="logo">
 					  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=#myNavbar>
-
-					  	Login
-
+					  	Sign up!
 					  </button>
 					<a class="navbar-brand" href="#home"><!-- LifeTracker --></a>
 				</div>
@@ -35,13 +33,7 @@
 					<form action="checklogin.php" method="post">
 					  	<ul class="nav navbar-nav navbar-right ">
 							<li>
-								<input type="text" class="form-control" id="eadd-log" placeholder="Username" name="uname_log">
-							</li>
-							<li>
-								<input type="password" class="form-control" id="pwd-log" placeholder="Password" name="pwd_log">
-							</li>
-							<li>
-								<button class="btn btn-default" type="submit" value="submit" id="login-but">Log in </button>
+								<button class="btn btn-default" type="submit" value="submit" id="login-but">Sign Up! </button>
 							</li>
 
 
@@ -54,68 +46,42 @@
 
 	<div class = "grid">
 		<div class = "row">
-
-		        <div class = "col-xs-5 col-md-6">
+		      <div class = "col-xs-1">	
+			  </div>
+		        <div class = "col-xs-4 col-md-6">
 		        	 <form action="gosignup.php" method="post">
 
 		                <div class"col-xs-12 col-md-12">
-		                    <div class ="col"><center><h3>Not a member?</h3></center>
+		                    <div class ="col"><center><h3>WELCOME!</h3></center>
 		                      <div class="row">
-
-		                        <div class="col-xs-6 col-md-6 box">
-
-		                          <div class="form-group" id = "First">
-		                            <input type="text" class="form-control" id="fname-su" placeholder="First Name" name="fname-su">
-		                          </div>
-		                          
-		                        </div>
-		                     <!--    
-		                        <div class="col-wd-1">
-		                        </div> -->
-
-		                        <div class="col-xs-6 col-md-6 box">
-		                          <div class="form-group"  id = "First">
-		                            <input type="text" class="form-control" id="lname-su" placeholder="Last Name" name="lname-su">
-		                          </div>
-		                        </div>
 
 		                        <div class="col-xs-12 col-md-12 box">
 												<div class="form-group">
-													<input type="text" class="form-control" id="uname-su" placeholder="Username" name="uname-su">
+													<input type="text" class="form-control" id="eadd-log" placeholder="Username" name="uname_log">
 												</div>
 												<div class="form-group">
-													<input type="text" class="form-control" id="eadd-su" placeholder="Email Address" name="eadd-su">
+													<input type="password" class="form-control" id="pwd-log" placeholder="Password" name="pwd_log">
 												</div>
-												<div class="form-group">
-													<input type="password" class="form-control" id="pwd-su" placeholder="Password" name="pwd-su">
-												</div>
-												<div class="form-group">
-													<input type="password" class="form-control" id="cpwd-su" placeholder="Confirm Password" name="cpwd-su">
-												</div>
-												<button class="btn btn-default" type="submit" value="submit" id="sign-but">Register</button>
+												<button class="btn btn-default" type="submit" value="submit" id="sign-but">Log In</button>
 									</div>
 
 		                      </div>
 		                    </div>
-
-
 		                 </div>
-		          	
          			 </form>      
-		        	
-					
 		        </div>
 
+		       
 
-				<div class ="col-xs-7 col-md-6 col-wd-1">
+
+				<div class ="col-xs-6 col-md-6 col-wd-1">
 		          <div class ="col">6column</div>
 		        </div>
 		     
+		      <div class = "col-xs-1">	
+			  </div>
 
 		</div>
-	
-
-
 	</div>
 
 	    
