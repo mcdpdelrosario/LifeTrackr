@@ -35,7 +35,7 @@
       padding: -9px !important; 
   }
   .navbar li a, .navbar { /* //font color of nav bar */
-      /*color: #0E182C!important;*/
+      color: #0E182C!important;
      
 
   }
@@ -86,12 +86,17 @@
 }*/
 
 
-#logo{
-  height: 1;
-}
-
 .box {
     padding: 0 10px 0 10px;
+}
+
+#home-but{
+text-decoration: none;
+color: #000000;
+font-family: Montserrat, sans-serif;
+font-size: medium;
+font-weight: 100;
+letter-spacing: 1px;
 }
 
 /*for responsive*/

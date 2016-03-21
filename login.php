@@ -23,18 +23,15 @@
 
 	<nav class="navbar navbar-default navbar-fixed-top" role = "navigation">
 		<div class="container bar-align">
-				<div class="navbar-header active" id ="logo">
+				<!-- <div class="navbar-header active" id ="logo">
 					 <a href="signup.php"> <button type="button" class="navbar-toggle">Sign up! </button></a>
-				
-						LOGO!
-
-				</div>
+						<div class = "logo">
+						</div>
+				</div> -->
 				<div class="collapse navbar-collapse" id="myNavbar">
-					
 					  	<ul class="nav navbar-nav navbar-right ">
 							<li>
-								<a href="signup.php"><button href="signup.php" class="btn btn-default"  value="submit" id="login-but">Sign Up!</button> </a>
-							
+        						 <a href="userpage.php" id="home-but">Sign Up</a>
 							</li>
 					  	</ul>
 				
@@ -44,10 +41,7 @@
 	
 	<div class = "grid">
 		<div class = "row">
-				
-
 		      <div class = "col-xs-1">
-						
 				</div>
 				
 		        <div class = "col-xs-4 col-md-6">
@@ -66,16 +60,10 @@
 												</div>
 												<button class="btn btn-default" type="submit" value="submit" id="sign-but">Log In</button>
 									</div>
-
 		                      </div>
 		                    </div>
-
-
 		                 </div>
-		          	
          			 </form>      
-		        	
-					
 		        </div>
 
 		       
