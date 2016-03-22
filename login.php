@@ -21,18 +21,27 @@
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
-	<nav class="navbar navbar-default navbar-fixed-top" role = "navigation">
+	<nav class="navbar navbar-default navbar-fixed-top" role = "navigation" id = "navbars">
 		<div class="container bar-align">
-				<!-- <div class="navbar-header active" id ="logo">
-					 <a href="signup.php"> <button type="button" class="navbar-toggle">Sign up! </button></a>
+				<div class="navbar-header active" id ="logo">
+					 <a href="signup.php" id="signup-but"> <button type="button" class="navbar-toggle">Sign up! </button></a>
 						<div class = "logo">
 						</div>
-				</div> -->
+				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
+					
 					  	<ul class="nav navbar-nav navbar-right ">
 							<li>
-        						 <a href="userpage.php" id="home-but">Sign Up</a>
+								
+        						 <a href="signup.php" id="signup-but"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+   								 	
 							</li>
+
+							<!-- <li>
+								
+        						 <a href="userpage.php" id="signup-but" data-hover="Sign Up"><span class="glyphicon glyphicon-user"></span>About</a>
+   								 	
+							</li> -->
 					  	</ul>
 				
 				</div>
@@ -45,7 +54,7 @@
 				</div>
 				
 		        <div class = "col-xs-4 col-md-6">
-		        	 <form action="gosignup.php" method="post">
+		        	 <form action="checklogin.php" method="post">
 
 		                <div class"col-xs-12 col-md-12">
 		                    <div class ="col"><center><h3>WELCOME!</h3></center>
