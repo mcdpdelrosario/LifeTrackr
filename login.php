@@ -56,7 +56,7 @@
 		        <div class = "col-xs-4 col-md-6">
 		        	 <form action="checklogin.php" method="post">
 
-		                <div class"col-xs-12 col-md-12">
+		                <div class"col-xs-12 col-md-12 col-wd-6">
 		                    <div class ="col"><center><h3>WELCOME!</h3></center>
 		                      <div class="row">
 
