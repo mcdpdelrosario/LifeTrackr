@@ -53,7 +53,7 @@
 
         <div class ="col-xs-3"></div>
 
-        <div class ="col-xs-6 col-md-12">
+        <div class ="col-xs-6 col-md-12 .vert-offset-top-12">
           <form action="gosignup.php" method="post">
 				<div class ="col"><center><h3>Not a member?</h3></center>
 				<div class="row">

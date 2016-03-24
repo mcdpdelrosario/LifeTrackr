@@ -228,6 +228,9 @@ display: none;}
 .col-wd-10{width: 83.33%;}
 .col-wd-11{width: 91.67%;}
 .col-wd-12{width: 100%;}
+.col{
+  margin-top: 15%;
+}
 }
 
 /*gitna ito*/
@@ -246,6 +249,10 @@ display: none;}
 .col-md-12{width: 100%;}
 
 
+
+}
+
+
 @media screen and (min-width: 960px){
 .col-xs-1{width: 8.33%;}
 .col-xs-2{width: 16.67%;}
@@ -259,4 +266,9 @@ display: none;}
 .col-xs-10{width: 83.33%;}
 .col-xs-11{width: 91.67%;}
 .col-xs-12{width: 100%;}
+
+.col{
+  margin-top: 1%;
+}
+
 }

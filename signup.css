@@ -262,3 +262,7 @@ display: none;}
 .col-xs-11{width: 91.67%;}
 .col-xs-12{width: 100%;}
 }
+
+.vert-offset-top-12{
+    margin-top: 100em;
+}
