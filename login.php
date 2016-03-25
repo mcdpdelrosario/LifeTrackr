@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-  <!-- Theme Made By www.w3schools.com - No Copyright -->
+
   <title>LifeTrackr</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1 ,maximum-scale=1,user-scalable=no">
@@ -44,11 +44,6 @@
    								 	
 							</li>
 
-							<!-- <li>
-								
-        						 <a href="userpage.php" id="signup-but" data-hover="Sign Up"><span class="glyphicon glyphicon-user"></span>About</a>
-   								 	
-							</li> -->
 					  	</ul>
 				
 				</div>
@@ -88,7 +83,7 @@
 				<div class ="col-xs-6 col-md-6 col-wd-1">
 		          <div class =caption>
 		          <h3>	Welcome to LifeTracker </h3>
-		          <p><span class ="highlight"> In LifeTracker </span>, capture every moment without hesitation. <br> Commit it and share it with your loved ones.					
+		          <p><span class ="highlight"> In LifeTracker </span>, capture every moment without hesitation. <br> Commit and share it with your loved ones.					
 				  <br>
 				  <br>		
 		          You can also connect and visit your friends profile <br>and witness some of their unforgettable experiences.
