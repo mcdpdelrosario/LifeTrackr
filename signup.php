@@ -58,7 +58,7 @@
         	<br><br>
         	<span class="glyphicon glyphicon-camera"></span> Capture moments
         	<br><br>
-        	<span class="glyphicon glyphicon-user"></span> Share timeless memories
+        	<span class="glyphicon glyphicon-time"></span> Share timeless memories
         	<br><br>
         	<span class="glyphicon glyphicon-repeat"></span> Watch and repeat every moment
         </div>
