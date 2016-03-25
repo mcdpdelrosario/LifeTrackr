@@ -51,8 +51,19 @@
  <div class = "grid">
     <div class = "row">
 		<div class ="col-xs-1"></div>
-        <div class ="col-xs-3"></div>
-		<div class ="col-xs-2"></div>
+        <div class ="col-xs-5 caption">
+        	
+        	<span class="glyphicon glyphicon-plus-sign"></span> Be a member
+        	<br><br>
+        	<span class="glyphicon glyphicon-camera"></span> Capture moments
+        	<br><br>
+        	<span class="glyphicon glyphicon-time"></span> Share timeless memories
+        	<br><br>
+        	<span class="glyphicon glyphicon-repeat"></span> Watch and repeat every moment
+        </div>
+
+
+		<!-- <div class ="col-xs-2"></div> -->
         <div class ="col-xs-4 col-md-12 .vert-offset-top-12">
           <form action="gosignup.php" method="post">
 				<div class ="col"><center><h3>Not a member?</h3></center>
