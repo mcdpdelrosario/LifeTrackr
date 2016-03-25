@@ -13,9 +13,11 @@
   <link href="login.css" rel="stylesheet" media="screen and (min-width:0)">
   <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 
   
 </head>
@@ -24,8 +26,13 @@
 	<nav class="navbar navbar-default navbar-fixed-top" role = "navigation" id = "navbars">
 		<div class="container bar-align">
 				<div class="navbar-header active" id ="logo">
-					 <a href="signup.php" id="signup-but"> <button type="button" class="navbar-toggle">Sign up! </button></a>
+					 <a href="signup.php" id="signup-but"> <button type="button" class="navbar-toggle">SIGN UP </button></a>
 						<div class = "logo">
+						LifeTracker
+						</div>
+
+						<div class ="logologo">
+						LF
 						</div>
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
@@ -50,7 +57,7 @@
 	
 	<div class = "grid">
 		<div class = "row">
-		      <div class = "col-xs-1">
+		      <div class = "col-xs-2">
 				</div>
 				
 		        <div class = "col-xs-4 col-md-6">
@@ -79,12 +86,24 @@
 
 
 				<div class ="col-xs-6 col-md-6 col-wd-1">
-		          <div class ="col">6column</div>
+		          <div class =caption>
+		          <h3>	Welcome to LifeTracker </h3>
+		          <p><span class ="highlight"> In LifeTracker </span>, capture every moment without hesitation. <br> Commit it and share it with your loved ones.					
+				  <br>
+				  <br>		
+		          You can also connect and visit your friends profile <br>and witness some of their unforgettable experiences.
+				 
+				 <br>
+				 <br>
+		          Enjoy!
+		          </p>
+		          </div>
+
+		         
+
 		        </div>
 		     
-		      <div class = "col-xs-1">
-						
-				</div>
+		  
 
 		</div>
 	
