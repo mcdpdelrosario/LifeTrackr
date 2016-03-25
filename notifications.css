@@ -1,0 +1,11 @@
+
+
+#main{
+	background-image: url("g5.jpg");
+	background-size: 100% ;
+	opacity: 1;
+}
+
+#box{
+	opacity: 0.8;
+}
