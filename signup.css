@@ -1,19 +1,17 @@
 
-  *{box-sizing: border-box}
+ *{box-sizing: border-box}
 
 
 
   body{
-  /*background-color: black;*/
-  font-family: Montserrat, sans-serif;
-  /*overflow-y: hidden; */                /* hide scrollbars   */
+  font-family: Montserrat, sans-serif;             
   overflow-x: hidden !important; 
   padding: 0;
   margin: 0;
-  padding-top: 2px;
-/*  width: 100%;
-  height: 100%;*/
-  background: url("photog1.jpg") no-repeat center top fixed;
+  padding-top: 50px;
+
+  background: url("photog2.jpg") no-repeat center top fixed;
+  background-size: 100% 100%;
   background-size: cover;
   -webkit-background-size:cover;
   -moz-background-size:cover;
@@ -21,20 +19,15 @@
   background-size:cover;
 
 }
-/*
-.background{
-  width:100%;
-  max-width: 500px;
-}*/
 
   .navbar {
       font-family: Montserrat, sans-serif;
       background-color: white;
-      /*height:13%;*/
+    
       font-size: 11px !important;
-      /*padding: -9px !important; */
+     
   }
-  .navbar li a, .navbar { /* //font color of nav bar */
+  .navbar li a, .navbar {
         color: #0E182C!important;
         text-decoration: none;
         color: #000000;
@@ -42,7 +35,7 @@
         font-size: medium;
         font-weight: 100;
         letter-spacing: 1px;
-        /*height: 20%;*/
+    
 
         
 
@@ -78,12 +71,12 @@
     transform: scaleX(1);
 }
 
-  .navbar-nav li a:hover { /* //font color upon hover */
+  .navbar-nav li a:hover { 
     
          }
 
 
-  .navbar-nav li.active a { /* //font bg of active  */
+  .navbar-nav li.active a { 
     background-color: white !important;
     color: #ff8c5b!important;
     height: 10%;
@@ -97,16 +90,9 @@
 .navbar-right{
 }
 
-/*.bar-align{
-  margin-top:1.5%;
-}
-*/
-/*#pwd-log{
-  margin-left:3%;
-}*/
 
 #login-but{
-  /*margin-left:15%;*/
+
   width: 100%;
   
 
@@ -118,10 +104,7 @@
   background-color: #4CAF50;
 }
 
-/*.signup{
-  padding-top:10%;
-  margin: 5px 50px 5px 50px;
-}*/
+
 
 
 .box {
@@ -132,23 +115,36 @@
 
 }
 
-/*for responsive*/
+.logo{
+
+        color: #F04A00!important;
+        text-decoration: none;
+        margin-top: 10px !important;
+        font-family: Montserrat, sans-serif;
+        font-size: medium;
+        font-weight: 400;
+        letter-spacing: 3px;
+        font-size: 160%;
+
+}
+
+
 
 *,
 *:before,
 *:after {
   box-sizing: inherit;
-  /*will inherti from the box sizing*/
+
 }
 .grid{
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
-  padding-top: 12%;
+  padding-top: 15%;
   position: inherit;  
   max-width: 100% !important;
   overflow-x: hidden !important;
- /* padding-left: 2.4%;*/
+  padding-left: 2.4%;
   opacity: 0.9;
 }
 
@@ -165,9 +161,9 @@
 .row:after{
   clear: both;
 
-  /*not overlap*/
+
 }
-/*any class that has this class name*/
+
 [class*="col-"]{
   width: 100%;
   float: left;
@@ -176,21 +172,19 @@
 
 .col{
   padding: 1em;
-  margin: 4px;
+  margin: 6px;
   background: white;
   border-radius: 3px;
   color:black;
   text-align: center;
-/*  margin-right: 5%;
-  margin-left: 5%;*/
+  margin-right: 5%;
+  margin-left: 6%;
   overflow-x: hidden;
-  font-family: Montserrat, sans-serif;
-  letter-spacing: 2px;
 }
 
 #home img{
 
-  /*background-image: url("moment1.jpg");*/
+  
   background-size: 100% 100%;
   opacity:0.9;
   width:100% !important;
@@ -203,36 +197,92 @@
     padding-right: 0%;
 }
 
+.caption h3{
+  
+  color: white !important;
 
-/*media query*/
+  font-family: Montserrat, sans-serif !important;
+  font-family: 'Amatic SC';
+  margin-left:2%;
+  font-size: 200%;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  
+}
+
+.caption p{
+  font-style: italic;
+  color: white !important;
+  margin-left: 3%;
+
+}
+
+
 @media screen and (max-width: 800px) {
   .navbar.navbar-default {
-      position:fixed; top:0; left:0; z-index:1030;*/
+      position:fixed; top:0; left:0; z-index:1030;
      padding-left: 20%;
    }
 
 }
 
-
+span.highlight{
+background-color: yellow;
+color: black;
+}
 @media screen and (max-width: 499px){   
 
-  /*499*/
 .col-wd-1{width: 8.33%;
 display: none;}
 .col-wd-2{width: 16.67%;}
 .col-wd-3{width: 25%;}
 .col-wd-4{width: 33.33%;}
 .col-wd-5{width: 41.67%;}
-.col-wd-6{width: 50%;}
+.col-wd-6{width: 50%;
+padding-left: 2.4px;
+padding-right: 2.4px;
+}
 .col-wd-7{width: 58.33%;}
 .col-wd-8{width: 66.67%;}
 .col-wd-9{width: 75%;}
 .col-wd-10{width: 83.33%;}
 .col-wd-11{width: 91.67%;}
 .col-wd-12{width: 100%;}
+.col{
+  margin-top: 8%;
+  margin-left: 4px;
+
 }
 
-/*gitna ito*/
+.logo{
+  display: none;
+}
+
+.logologo{
+  font-size: 200%;
+  color: #FC9626;
+  margin-top: 5%;
+  margin-left: 25%;
+
+}
+
+.navbar{
+  height: 5px;
+}
+body{
+
+ background: url("photog5.jpg") no-repeat center top fixed;
+  background-size: 100% 100%;
+  background-size: cover;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+
+ 
+}
+}
+
 @media screen and (min-width:500px){
 .col-md-1{width: 8.33%;}
 .col-md-2{width: 16.67%;}
@@ -246,6 +296,14 @@ display: none;}
 .col-md-10{width: 83.33%;}
 .col-md-11{width: 91.67%;}
 .col-md-12{width: 100%;}
+
+.logologo{
+  display: none;
+}
+
+
+
+}
 
 
 @media screen and (min-width: 960px){
@@ -261,8 +319,13 @@ display: none;}
 .col-xs-10{width: 83.33%;}
 .col-xs-11{width: 91.67%;}
 .col-xs-12{width: 100%;}
+
+.col{
+  margin-top: 1%;
 }
 
-.vert-offset-top-12{
-    margin-top: 100em;
+.logologo{
+  display: none;
+}
+
 }
