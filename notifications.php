@@ -47,7 +47,15 @@ if (mysqli_connect_errno())
   <div class="navbar-center navbar-header">
         <a  class="navbar-brand" >LF</a>
       </div>
+
+      <div class="navbar-left navbar-header " id = "menu-toggle">
+         <a href="userpage.php" ><span class="glyphicon glyphicon-menu-hamburger"></span> </a>
+      </div>
+      
+
     <div class="container bar-align">
+     
+
         <div class="navbar-header active">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"><span class="glyphicon glyphicon-menu-hamburger"></span> 
             </button>
@@ -75,14 +83,42 @@ if (mysqli_connect_errno())
     </div>
   </nav>
 
+  <div id="wrapper">
 
-    
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Page content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <a href="#" class="btn btn-success" id="menu-toggle">Toggle Menu</a>
+                        <h1>Sidebar Layouts are Cool</h1>
+                        <p>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
     <!-- Bootstrap Core JavaScript -->
 
 
     <!-- Menu Toggle Script -->
-   
+    <!-- Menu toggle script -->
+    <script>
+        $("#menu-toggle").click( function (e){
+            e.preventDefault();
+            $("#wrapper").toggleClass("menuDisplayed");
+        });
+    </script>
 
 </body>
 </html>
