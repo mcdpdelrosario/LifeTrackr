@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-  <!-- Theme Made By www.w3schools.com - No Copyright -->
+
   <title>LifeTrackr</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1 ,maximum-scale=1,user-scalable=no">
@@ -58,13 +58,11 @@
         	<br><br>
         	<span class="glyphicon glyphicon-camera"></span> Capture moments
         	<br><br>
-        	<span class="glyphicon glyphicon-user"></span> Share timeless memories
+        	<span class="glyphicon glyphicon-time"></span> Share timeless memories
         	<br><br>
         	<span class="glyphicon glyphicon-repeat"></span> Watch and repeat every moment
         </div>
 
-
-		<!-- <div class ="col-xs-2"></div> -->
         <div class ="col-xs-4 col-md-6 col-wd-12">
           <form action="gosignup.php" method="post">
 				<div class ="col"><center><h3>Not a member?</h3></center>
