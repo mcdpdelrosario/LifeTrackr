@@ -4,15 +4,11 @@
 
 
   body{
-  /*background-color: black;*/
   font-family: Montserrat, sans-serif;
-  /*overflow-y: hidden; */                /* hide scrollbars   */
   overflow-x: hidden !important; 
   padding: 0;
   margin: 0;
   padding-top: 2px;
-/*  width: 100%;
-  height: 100%;*/
   background: url("signupb1.jpg") no-repeat center top fixed;
   background-size: cover;
   -webkit-background-size:cover;
@@ -21,20 +17,15 @@
   background-size:cover;
 
 }
-/*
-.background{
-  width:100%;
-  max-width: 500px;
-}*/
 
   .navbar {
       font-family: Montserrat, sans-serif;
       background-color: white;
-      /*height:13%;*/
+     
       font-size: 11px !important;
-      /*padding: -9px !important; */
+
   }
-  .navbar li a, .navbar { /* //font color of nav bar */
+  .navbar li a, .navbar { 
         color: #0E182C!important;
         text-decoration: none;
         color: #000000;
@@ -42,10 +33,7 @@
         font-size: medium;
         font-weight: 100;
         letter-spacing: 1px;
-        /*height: 20%;*/
-
-        
-
+    
   }
 
   #signup-but{
@@ -78,12 +66,11 @@
     transform: scaleX(1);
 }
 
-  .navbar-nav li a:hover { /* //font color upon hover */
-    
+  .navbar-nav li a:hover { 
          }
 
 
-  .navbar-nav li.active a { /* //font bg of active  */
+  .navbar-nav li.active a { 
     background-color: white !important;
     color: #ff8c5b!important;
     height: 10%;
@@ -97,18 +84,10 @@
 .navbar-right{
 }
 
-/*.bar-align{
-  margin-top:1.5%;
-}
-*/
-/*#pwd-log{
-  margin-left:3%;
-}*/
 
 #login-but{
-  /*margin-left:15%;*/
+ 
   width: 100%;
-  
 
 }
 
@@ -118,10 +97,6 @@
   background-color: #4CAF50;
 }
 
-/*.signup{
-  padding-top:10%;
-  margin: 5px 50px 5px 50px;
-}*/
 
 
 .box {
@@ -132,13 +107,13 @@
 
 }
 
-/*for responsive*/
+
 
 *,
 *:before,
 *:after {
   box-sizing: inherit;
-  /*will inherti from the box sizing*/
+
 }
 .grid{
   width: 100%;
@@ -148,7 +123,6 @@
   position: inherit;  
   max-width: 100% !important;
   overflow-x: hidden !important;
- /* padding-left: 2.4%;*/
   opacity: 0.9;
 }
 
@@ -165,9 +139,9 @@
 .row:after{
   clear: both;
 
-  /*not overlap*/
+
 }
-/*any class that has this class name*/
+
 [class*="col-"]{
   width: 100%;
   float: left;
@@ -181,16 +155,12 @@
   border-radius: 3px;
   color:black;
   text-align: center;
-/*  margin-right: 5%;
-  margin-left: 5%;*/
   overflow-x: hidden;
   font-family: Montserrat, sans-serif;
   letter-spacing: 2px;
 }
 
 #home img{
-
-  /*background-image: url("moment1.jpg");*/
   background-size: 100% 100%;
   opacity:0.9;
   width:100% !important;
@@ -237,10 +207,10 @@
   margin-left: 3%;
 }
 
-/*media query*/
+
 @media screen and (max-width: 800px) {
   .navbar.navbar-default {
-      position:fixed; top:0; left:0; z-index:1030;*/
+      position:fixed; top:0; left:0; z-index:1030;
      padding-left: 20%;
    }
 
@@ -269,7 +239,7 @@ padding-right: 2.4px;
   margin-top: 7%;
   margin-left: 7px;
   margin-right: 7px;
-
+  
 }
 
 .logo{
@@ -280,7 +250,7 @@ padding-right: 2.4px;
   font-size: 200%;
   color: #FC9626;background-repeat: repeat-x;
   margin-top: 5%;
-  margin-left: 40%;
+  margin-left: 30%;
 
 }
 

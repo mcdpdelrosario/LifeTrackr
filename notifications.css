@@ -1,11 +1,186 @@
 
-
-#main{
-	background-image: url("g5.jpg");
-	background-size: 100% ;
-	opacity: 1;
+body{
+	
+	background-color: white;
+  	background-size: cover;
+  	-webkit-background-size:cover;
+  	-moz-background-size:cover;
+  	-o-background-size:cover;
+  	background-size:cover;
 }
 
-#box{
+/*#main{
+	
+	background-size: 100% ;
+
+	opacity: 1;
+}
+*/
+
+  .navbar {
+      font-family: Montserrat, sans-serif;
+      background-color: white;
+     
+      /*font-size: 5px !important;
+*/
+  }
+  .navbar li a, .navbar { 
+        color: #0E182C!important;
+        text-decoration: none;
+        color: #000000;
+        font-family: Montserrat, sans-serif;
+        font-size: 100%;
+        font-weight: 100;
+        letter-spacing: 1px;
+  }
+
+  #signup-but{
+    position: relative;
+    color: #000;
+    text-decoration: none;
+  }
+
+  #signup-but:hover{
+   color: #000;
+  }
+  
+  #signup-but:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+#signup-but:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+
+#menu-but{
+	position: relative;
+    color: #000;
+    text-decoration: none;
+  }
+
+
+ #menu-but:hover{
+   color: #000;
+  }
+  
+  #menu-but:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+#menu-but:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}	
+
+  #box{
 	opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 499px){   
+
+.col-wd-1{width: 8.33%;}
+.col-wd-2{width: 16.67%;}
+.col-wd-3{width: 25%;}
+.col-wd-4{width: 33.33%;}
+.col-wd-5{width: 41.67%;}
+.col-wd-6{width: 50%;}
+.col-wd-7{width: 58.33%;}
+.col-wd-8{width: 66.67%;}
+.col-wd-9{width: 75%;}
+.col-wd-10{width: 83.33%;}
+.col-wd-11{width: 91.67%;}
+.col-wd-12{width: 100%;}
+
+#menu-but:hover:before {
+    visibility: hidden;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+#signup-but:hover:before {
+    visibility: hidden;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+
+
+/*gitna ito*/
+@media screen and (min-width:500px){
+.col-md-0{width:0%;}
+.col-md-1{width: 8.33%;
+display:none;}
+.col-md-2{width: 16.67%;}
+.col-md-3{width: 25%;}
+.col-md-4{width: 33.33%;}
+.col-md-5{width: 41.67%;}
+.col-md-6{width: 50%;}
+.col-md-7{width: 58.33%;}
+.col-md-8{width: 66.67%;}
+.col-md-9{width: 75%;}
+.col-md-10{width: 83.33%;}
+.col-md-11{width: 91.67%;}
+.col-md-12{width: 100%;}
+.logologo{
+  display: none;
+}
+
+}
+
+
+@media screen and (min-width: 960px){
+.col-xs-1{width: 8.33%;}
+.col-xs-2{width: 16.67%;}
+.col-xs-3{width: 25%;}
+.col-xs-4{width: 33.33%;}
+.col-xs-5{width: 41.67%;}
+.col-xs-6{width: 50%;}
+.col-xs-7{width: 58.33%;}
+.col-xs-8{width: 66.67%;}
+.col-xs-9{width: 75%;}
+.col-xs-10{width: 83.33%;}
+.col-xs-11{width: 91.67%;}
+.col-xs-12{width: 100%;}
+
+.logologo{
+  display: none;
+}
+
 }
