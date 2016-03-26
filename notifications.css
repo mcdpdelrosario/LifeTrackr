@@ -1,6 +1,6 @@
 
 body{
-	
+	 background: url("signupb1.jpg") no-repeat center top fixed; 
 	background-color: white;
   	background-size: cover;
   	-webkit-background-size:cover;
@@ -127,19 +127,19 @@ body{
 .col-wd-10{width: 83.33%;}
 .col-wd-11{width: 91.67%;}
 .col-wd-12{width: 100%;}
-
+/*
 #menu-but:hover:before {
     visibility: hidden;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
-}
+}*/
 
 #signup-but:hover:before {
     visibility: hidden;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
-
+}
 
 
 /*gitna ito*/

@@ -56,9 +56,9 @@ if (mysqli_connect_errno())
 
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li>
+<!--                 <li>
                   <a href="#menu-but" id="menu-but"><span class="glyphicon glyphicon-user"></span> Profile</a>
-                </li>
+                </li> -->
                 <li>
                   <a href="userpage.php" id="signup-but"><span class="glyphicon glyphicon-home"></span> Home</a>
                 </li>
