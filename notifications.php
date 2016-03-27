@@ -6,18 +6,10 @@
   <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <link href="userpage.css" rel="stylesheet">
-  <link href="sidebar.css" rel="stylesheet">
   <link href="notifications.css" rel="stylesheet">
 
 
-  <script src='//ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
   <script src="js/bootstrap.min.js"></script>
-  <!-- <script src='js/jquery.ba-hashchange.min.js'></script> -->
-  <!-- <script src='dynamicpage.js'></script> -->
-  <!-- <script src='switchpage.js'></script> -->
-
-  <!-- <link href="css/simple-sidebar.css" rel="stylesheet"> -->
-
   <!--  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-QcrS-bymcrFPClDmuA4A3RMVZsvQCuQ&signed_in=true"></script>
   <script src="js/googlemaps.js"></script> -->
 </head>
@@ -39,7 +31,6 @@ if (mysqli_connect_errno())
           $_SESSION["fname"] = $row[0];
         $_SESSION["lname"] = $row[1];
       }
-      
   }
 ?>
 
