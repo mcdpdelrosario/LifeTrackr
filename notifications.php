@@ -10,7 +10,7 @@
   <link href="notifications.css" rel="stylesheet">
 
 
-  <script src='//ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+ <!--  <script src='//ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script> -->
   <script src="js/bootstrap.min.js"></script>
   <!-- <script src='js/jquery.ba-hashchange.min.js'></script> -->
   <!-- <script src='dynamicpage.js'></script> -->

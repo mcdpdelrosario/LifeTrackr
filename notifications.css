@@ -190,8 +190,33 @@ display:none;}
 .col-md-10{width: 83.33%;}
 .col-md-11{width: 91.67%;}
 .col-md-12{width: 100%;}
-.logologo{
-  display: none;
+#signup-but:hover:before {
+    visibility: hidden;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+#hamburgerbutton.navbar-toggle {
+	float:left;
+	margin-left: 3% !important;
+}
+
+#searchbutton{
+	float: right;
+	margin-left: 100%;
+	margin-top: -13%;
+
+}
+
+
+#search{
+	visibility: hidden;
+}
+
+#myNavbars{
+	margin-top:1%;
+	width: 90%;
+	padding-left: 10%;
 }
 
 }
