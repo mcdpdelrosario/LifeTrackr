@@ -107,16 +107,9 @@ body{
 	float: right;
 }
 
-#searchbutton{
+#search-but{
 	margin-right:5%;
 }
-
-
-
-
-
-
-
 
 
 
@@ -148,9 +141,21 @@ body{
     transform: scaleX(1);
 }
 
-.navbar-toggle{
+#hamburgerbutton.navbar-toggle {
 	float:left;
 	margin-left: 3% !important;
+}
+
+#searchbutton{
+	float: right;
+	margin-left: 100%;
+	margin-top: -13%;
+
+}
+
+
+#search{
+	visibility: hidden;
 }
 
 
