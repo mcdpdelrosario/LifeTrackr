@@ -44,20 +44,27 @@ if (mysqli_connect_errno())
 ?>
 
   <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="navbar-center navbar-header">
+     <div class="navbar-center navbar-header" >
         <a  class="navbar-brand" >LF</a>
       </div>
 
-      <div class="navbar-left navbar-header " id = "menu-toggle">
-         <a href="userpage.php" ><span class="glyphicon glyphicon-menu-hamburger"></span> </a>
-      </div>
-      
+ 
+     <!--  <div class="col-xs-2" id = "search">
+          <div class="right-inner-addon">
+              
+           <input type="search" class="form-control" placeholder="Search" />
+           <i class="form-control-feedback glyphicon glyphicon-search" id = "search-but"></i> 
 
+          </div>
+     </div>
+      -->
+</div>
     <div class="container bar-align">
-     
-
         <div class="navbar-header active">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"><span class="glyphicon glyphicon-menu-hamburger"></span> 
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"  id = "hamburgerbutton"><span class="glyphicon glyphicon-menu-hamburger"></span> 
+            </button>
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbars" id = "searchbutton"><span class="glyphicon glyphicon-search"></span> 
             </button>
     
         </div>
@@ -81,44 +88,26 @@ if (mysqli_connect_errno())
         </div>
   
     </div>
+        <div class="collapse navbar-collapse" id="myNavbars">
+           <ul class="nav navbar-nav">
+             <li>
+                      <input type="search" class="form-control" placeholder="Search" />
+                     <i class="form-control-feedback glyphicon glyphicon-search" id = "search-but"></i> 
+
+                   
+                </li>
+           </ul>
+         </div>  
   </nav>
 
-  <div id="wrapper">
 
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li><a href="#">Account</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Logout</a></li>
-            </ul>
-        </div>
-
-        <!-- Page content -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <a href="#" class="btn btn-success" id="menu-toggle">Toggle Menu</a>
-                        <h1>Sidebar Layouts are Cool</h1>
-                        <p>
-                </div>
-            </div>
-        </div>
-
-    </div>
+    
 
     <!-- Bootstrap Core JavaScript -->
 
 
     <!-- Menu Toggle Script -->
-    <!-- Menu toggle script -->
-    <script>
-        $("#menu-toggle").click( function (e){
-            e.preventDefault();
-            $("#wrapper").toggleClass("menuDisplayed");
-        });
-    </script>
+   
 
 </body>
 </html>
