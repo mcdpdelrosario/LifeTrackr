@@ -1,25 +1,27 @@
+<!-- The new loginpage -->
 
 <html lang="en">
 <head>
+
   <title>LifeTrackr</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1 ,maximum-scale=1,user-scalable=no">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+  
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="notifications.css" rel="stylesheet" media="screen and (min-width:0)">
   <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <link href="userpage.css" rel="stylesheet">
-  <link href="sidebar.css" rel="stylesheet">
-  <link href="notifications.css" rel="stylesheet">
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 
- <!--  <script src='//ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script> -->
-  <script src="js/bootstrap.min.js"></script>
-  <!-- <script src='js/jquery.ba-hashchange.min.js'></script> -->
-  <!-- <script src='dynamicpage.js'></script> -->
-  <!-- <script src='switchpage.js'></script> -->
-
-  <!-- <link href="css/simple-sidebar.css" rel="stylesheet"> -->
-
-  <!--  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-QcrS-bymcrFPClDmuA4A3RMVZsvQCuQ&signed_in=true"></script>
-  <script src="js/googlemaps.js"></script> -->
+  
 </head>
 <body>
 
@@ -43,33 +45,20 @@ if (mysqli_connect_errno())
   }
 ?>
 
-  <nav class="navbar navbar-default navbar-fixed-top">
+
+ <nav class="navbar navbar-default navbar-fixed-top">
+    
+      
      <div class="navbar-center navbar-header" >
         <a  class="navbar-brand" >LF</a>
       </div>
-
- 
-     <!--  <div class="col-xs-2" id = "search">
-          <div class="right-inner-addon">
-              
-           <input type="search" class="form-control" placeholder="Search" />
-           <i class="form-control-feedback glyphicon glyphicon-search" id = "search-but"></i> 
-
-          </div>
-     </div>
-      -->
-</div>
-    <div class="container bar-align">
-        <div class="navbar-header active">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"  id = "hamburgerbutton"><span class="glyphicon glyphicon-menu-hamburger"></span> 
-            </button>
-
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbars" id = "searchbutton"><span class="glyphicon glyphicon-search"></span> 
-            </button>
     
+    <div class="container bar-align">
+        <div class="navbar-header active" id ="logo">
+             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" id = "searchbutton"><span class="glyphicon glyphicon-menu-hamburger"></span> 
+            </button>
         </div>
-
-        <div class="collapse navbar-collapse" id="myNavbar">
+         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
 <!--                 <li>
                   <a href="#menu-but" id="menu-but"><span class="glyphicon glyphicon-user"></span> Profile</a>
@@ -86,28 +75,25 @@ if (mysqli_connect_errno())
             </ul>
       
         </div>
-  
     </div>
         <div class="collapse navbar-collapse" id="myNavbars">
            <ul class="nav navbar-nav">
              <li>
-                      <input type="search" class="form-control" placeholder="Search" />
-                     <i class="form-control-feedback glyphicon glyphicon-search" id = "search-but"></i> 
-
-                   
+                      <form>
+                      <input type="search" class="form-control" placeholder=" Search" />
+                     <i class="form-control-feedback glyphicon glyphicon-search" id = "search-but"></i></form>   
                 </li>
            </ul>
-         </div>  
+         </div> 
+
+
   </nav>
+  
+ 
 
 
-    
+      
 
-    <!-- Bootstrap Core JavaScript -->
-
-
-    <!-- Menu Toggle Script -->
-   
 
 </body>
 </html>
