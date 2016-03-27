@@ -47,17 +47,24 @@ if (mysqli_connect_errno())
 
 
  <nav class="navbar navbar-default navbar-fixed-top">
-    
-      
-     <div class="navbar-center navbar-header" >
-        <a  class="navbar-brand" >LF</a>
-      </div>
+
     
     <div class="container bar-align">
-        <div class="navbar-header active" id ="logo">
-             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" id = "searchbutton"><span class="glyphicon glyphicon-menu-hamburger"></span> 
+
+    
+        <div class="navbar-header active">
+             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" id = "hamburgerbutton"><span class="glyphicon glyphicon-menu-hamburger"></span> 
             </button>
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbars" id = "searchbutton"><span class="glyphicon glyphicon-search"></span> 
+            </button>
+
         </div>
+
+        <div class = "logo">
+            LF
+            </div>
+
          <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
 <!--                 <li>
@@ -71,8 +78,8 @@ if (mysqli_connect_errno())
                 </li>
                 <li>
                   <a href="notifications.php" id="signup-but" class="popper" data-toggle="popover" data-trigger="focus"><span class="glyphicon glyphicon-bell"></span> Notifications</a>
-                </li>
-            </ul>
+                </li>    
+              </ul>
       
         </div>
     </div>

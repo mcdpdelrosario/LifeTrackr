@@ -12,7 +12,7 @@
   margin: 0;
   padding-top: 50px;
 
-  background: url("notif3.jpg") no-repeat center top fixed;
+  background: url("photog2.jpg") no-repeat center top fixed;
   background-size: 100% 100%;
   background-size: cover;
   -webkit-background-size:cover;
@@ -34,7 +34,7 @@
         text-decoration: none;
         color: #000000;
         font-family: Montserrat, sans-serif;
-        font-size: 110%;
+        font-size: medium;
         font-weight: 100;
         letter-spacing: 1px;
     
@@ -89,46 +89,49 @@
   letter-spacing: 2px;
   }
 
-#search-but{
-	margin-top: 1%;
-	margin-right: 3%;
-	position: absolute;
-	float: left;
-		
+.navbar-right{
 }
 
-#myNavbars{
-	margin-top:-3%;
-	margin-right: 10%;
-	float: right;
-	height: 28px;
 
+#login-but{
+
+  width: 100%;
+  
 
 }
 
-form input[type="search"] {
-height: 25px;
-width: 170px;
-margin: 0;
-padding: 0;
-margin-top: 2% !important;
-margin-right: 5% !important;
-font-size: 120%;
-border: 1px solid #CCCCCC;
+#sign-but{
+  min-height:6%;
+  width:100%;
+  background-color: #4CAF50;
 }
+
+
+
+
+.box {
+    padding: 0 10px 0 10px;
+}
+
+#home-but{
+
+}
+
 .logo{
 
         color: #F04A00!important;
         text-decoration: none;
-        margin-left: 40%;
-		margin-top: 1%;
-        padding: 0;
+        margin-top: 10px !important;
         font-family: Montserrat, sans-serif;
-        font-size: 150%;
+        font-size: medium;
         font-weight: 400;
         letter-spacing: 3px;
-        position: absolute;
+        font-size: 160%;
+
 }
+
+
+
 *,
 *:before,
 *:after {
@@ -181,6 +184,41 @@ border: 1px solid #CCCCCC;
   overflow-x: hidden;
 }
 
+#home img{
+
+  
+  background-size: 100% 100%;
+  opacity:0.9;
+  width:100% !important;
+  height: 100% !important;
+
+ }
+ 
+ #home
+ {
+    padding-right: 0%;
+}
+
+.caption h3{
+  
+  color: white !important;
+
+  font-family: Montserrat, sans-serif !important;
+  font-family: 'Amatic SC';
+  margin-left:2%;
+  font-size: 200%;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  
+}
+
+.caption p{
+  font-style: italic;
+  color: white !important;
+  margin-left: 3%;
+
+}
+
 
 @media screen and (max-width: 800px) {
   .navbar.navbar-default {
@@ -190,7 +228,10 @@ border: 1px solid #CCCCCC;
 
 }
 
-
+span.highlight{
+background-color: yellow;
+color: black;
+}
 @media screen and (max-width: 499px){   
 
 .col-wd-1{width: 8.33%;
@@ -209,24 +250,38 @@ padding-right: 2.4px;
 .col-wd-10{width: 83.33%;}
 .col-wd-11{width: 91.67%;}
 .col-wd-12{width: 100%;}
+.col{
+  margin-top: 8%;
+  margin-left: 4px;
+
+}
+
+.logo{
+  display: none;
+}
+
+.logologo{
+  font-size: 200%;
+  color: #FC9626;
+  margin-top: 5%;
+  margin-left: 30%;
+
+}
 
 .navbar{
   height: 5px;
 }
+body{
 
-.logo{
-	margin-top: -12%;
-  margin-left: 22%;
-}
-#hamburgerbutton.navbar-toggle {
-	float: left;
-	margin-left: -20%;
-	
-}
+ background: url("photog5.jpg") no-repeat center top fixed;
+  background-size: 100% 100%;
+  background-size: cover;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
 
-#myNavbars{
-	height: 30%;
-	position: absolute;
+ 
 }
 }
 
@@ -243,6 +298,12 @@ padding-right: 2.4px;
 .col-md-10{width: 83.33%;}
 .col-md-11{width: 91.67%;}
 .col-md-12{width: 100%;}
+
+.logologo{
+  display: none;
+}
+
+
 
 }
 
@@ -261,5 +322,12 @@ padding-right: 2.4px;
 .col-xs-11{width: 91.67%;}
 .col-xs-12{width: 100%;}
 
+.col{
+  margin-top: 1%;
+}
+
+.logologo{
+  display: none;
+}
 
 }
