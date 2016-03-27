@@ -20,6 +20,7 @@ body{
   .navbar {
       font-family: Montserrat, sans-serif;
       background-color: white;
+
      
       /*font-size: 5px !important;
 */
@@ -100,8 +101,15 @@ body{
 	opacity: 0.8;
 }
 
+#search{
+	margin-top: 0.8%;
+	margin-right: 10%;
+	float: right;
+}
 
-
+#searchbutton{
+	margin-right:5%;
+}
 
 
 
