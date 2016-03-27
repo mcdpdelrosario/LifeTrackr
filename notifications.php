@@ -44,9 +44,22 @@ if (mysqli_connect_errno())
 ?>
 
   <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="navbar-center navbar-header">
+     <div class="navbar-center navbar-header" >
         <a  class="navbar-brand" >LF</a>
       </div>
+
+ 
+      <div class="col-xs-2" id = "search">
+          <div class="right-inner-addon">
+              
+           <input type="search" class="form-control" placeholder="Search" />
+           <i class="form-control-feedback glyphicon glyphicon-search" id = "searchbutton"></i> 
+
+
+          </div>
+     </div>
+     
+</div>
     <div class="container bar-align">
         <div class="navbar-header active">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"><span class="glyphicon glyphicon-menu-hamburger"></span> 
