@@ -49,7 +49,7 @@ if (mysqli_connect_errno())
       </div>
 
  
-      <div class="col-xs-2" id = "search">
+     <!--  <div class="col-xs-2" id = "search">
           <div class="right-inner-addon">
               
            <input type="search" class="form-control" placeholder="Search" />
@@ -57,14 +57,14 @@ if (mysqli_connect_errno())
 
           </div>
      </div>
-     
+      -->
 </div>
     <div class="container bar-align">
         <div class="navbar-header active">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"  id = "hamburgerbutton"><span class="glyphicon glyphicon-menu-hamburger"></span> 
             </button>
 
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" id = "searchbutton"><span class="glyphicon glyphicon-search"></span> 
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbars" id = "searchbutton"><span class="glyphicon glyphicon-search"></span> 
             </button>
     
         </div>
@@ -88,6 +88,16 @@ if (mysqli_connect_errno())
         </div>
   
     </div>
+        <div class="collapse navbar-collapse" id="myNavbars">
+           <ul class="nav navbar-nav">
+             <li>
+                      <input type="search" class="form-control" placeholder="Search" />
+                     <i class="form-control-feedback glyphicon glyphicon-search" id = "search-but"></i> 
+
+                   
+                </li>
+           </ul>
+         </div>  
   </nav>
 
 
