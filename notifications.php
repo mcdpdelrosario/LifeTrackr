@@ -87,7 +87,7 @@ if (mysqli_connect_errno())
            <ul class="nav navbar-nav">
              <li>
                       <form>
-                      <input type="search" class="form-control" placeholder=" Search" />
+                      <input type="search" class="form-control" placeholder=" Search " />
                      <i class="form-control-feedback glyphicon glyphicon-search" id = "search-but"></i></form>   
                 </li>
            </ul>
