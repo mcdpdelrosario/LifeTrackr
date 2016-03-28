@@ -96,14 +96,15 @@ function creatingMapListener(map){
 				$("#myModal").modal("toggle");
 			
 		}else{
-			alert('Too Far');
+			swal("Too Far!", "Moment cannot be created", "error")
+			//alert('Too Far');
 		}	
 		
 	});
 }
 function confirmFunction(){
 	//alert("Sent");
-	swal("Good job!", "You clicked the button!", "success");
+	swal("Success!", "Moment has been created", "success");
 }
 function cancelFunction(){
 
