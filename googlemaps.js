@@ -8,7 +8,7 @@ var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
 	userMarker,
 	momentMarker,
 	iterations = 0,
-	zoomValue = 15,
+	zoomValue = 17,
 	screenMaxHeight,
 	screenMaxWidth,
 	buttonYes,
@@ -97,7 +97,7 @@ function creatingMapListener(map){
 				temporaryMarker.setMap(null);
 				createPointer();
 				$("#myModal").modal("toggle");
-				//createMomentsDiv(map);  
+				
    			}
 			
 		}else{
@@ -106,62 +106,17 @@ function creatingMapListener(map){
 		
 	});
 }
+function confirmFunction(){
+	alert("Sent");
+}
+function cancelFunction(){
+
+}
 function createPointer(){
 	map.panTo(momentPosition);
 	temporaryMarker.setPosition(momentPosition);
 	temporaryMarker.setLabel("4");
 	temporaryMarker.setMap(map);
-}
-function createMomentsDiv(map){
-	momentsOption = document.createElement("div");
-	momentsOption.setAttribute("id","momentsDiv");
-	momentsOption.style.width = "200px";
-	momentsOption.style.height = "100px";
-	// momentsOption.style.background = "black";
-	// momentsOption.style.opacity = "0.1";
-	momentsOption.style.position = "absolute";
-	momentsOption.style.top = PTP(15,screenMaxHeight);
-	momentsOption.style.left = PTP(80,screenMaxWidth);
-	var textYes = document.createTextNode("Submit");
-	var textNo = document.createTextNode("Cancel");
-	momentsExtraWords = document.createTextNode("Moments");
-	momentsTextArea = document.createElement("TEXTAREA");
-	buttonYes = document.createElement("BUTTON");
-	buttonYes.setAttribute("id", "yesButton");
-	//############## Dp ito ung part kung san tatawagin ung database submit
-	buttonYes.onclick = function(){
-		momentSubmit('Submitted');
-	};
-
-	buttonNo = document.createElement("BUTTON");
-	buttonNo.setAttribute("id", "noButton");
-	buttonNo.onclick = function(){
-		momentCancel();
-	};
-	buttonYes.appendChild(textYes);
-	buttonNo.appendChild(textNo);
-	document.body.appendChild(momentsOption);
-	momentsOption.appendChild(momentsExtraWords);
-	momentsOption.appendChild(abreak);
-	momentsOption.appendChild(momentsTextArea);
-	momentsOption.appendChild(buttonYes);
-	momentsOption.appendChild(buttonNo);
-}
-//################ DP ito ung literal na gagawin nya kpg pinindot mo ung submit
-function momentSubmit(str){
-	
-	alert('Words: '+momentsTextArea.value);
-	momentCancel();
-	addMarker(momentPosition, map);
-	// coordWindow.setPosition(momentPosition);
-	// coordWindow.setContent("Latitude: "+momentPosition.lat()+"\nLongtitude: "+momentPosition.lng());
-	var url = "savecoordinates.php?moments="+momentsTextArea.value+"&longitude="+momentPosition.lat() + "&latitude=" + momentPosition.lng();
-	httpGetAsync(url,alert("yo"));
-	
-}
-function momentCancel(){
-	temporaryMarker.setMap(null);
-	document.body.removeChild(document.getElementById("momentsDiv"));
 }
 
 function addMarker(location, map) {

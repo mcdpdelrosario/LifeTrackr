@@ -125,7 +125,7 @@ if (mysqli_connect_errno())
                 <div class="form-group">
                   <a id="lock-but"><span class="glyphicon glyphicon-lock"></span></a>
 
-                  <input type="password" class="form-control" id="pword_edit" name="pword_edit" value="<?=$_SESSION["pword"]?>
+                  <input type="password" class="form-control" id="pword_edit" name="pword_edit" value="<?=$_SESSION["pword"]?>">
                 
                 </div>
                 <button class="btn btn-default" type="submit" value="submit" id="update-but">Update</button>
