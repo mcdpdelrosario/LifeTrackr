@@ -17,7 +17,9 @@ var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
 	momentsTextArea,
 	momentsExtraWords,
 	abreak,
-	temporaryMarker;
+	temporaryMarker,
+	dataLat,
+	dataLng;
 function PTP(percent,max){
 	var pix = (percent/100)*max + "px"
 	return pix;
@@ -59,8 +61,10 @@ function initialize() {
 				temporaryMarker.setMap(null);
 				map.setCenter(userPosition);
 				momentPosition=userPosition;
-				alert("lat: " +momentPosition.lat +"\tlng: " + momentPosition.lng);
-				$("#myModal").modal("toggle");
+				dataLat=momentPosition.lat;
+				dataLng=momentPosition.lng;
+				//alert("lat: " +momentPosition.lat +"\tlng: " + momentPosition.lng);
+				$("#myModal").modal("show");
 
 		  	});
 			iterations++;
@@ -85,6 +89,8 @@ function creatingMapListener(map){
 		var wordlat = event.latLng.lat(); //upon click
 		var wordlng = event.latLng.lng(); //upon click
 		momentPosition = event.latLng;
+		dataLat=wordlat;
+		dataLng=wordlng;
 		var userlat = userMarker.getPosition().lat();
 		var userlng = userMarker.getPosition().lng();
 		var distance = Math.sqrt(Math.pow((wordlat-userlat),2)+Math.pow((wordlng-userlng),2)); 
@@ -92,8 +98,8 @@ function creatingMapListener(map){
 
 				temporaryMarker.setMap(null);
 				createPointer();
-				alert("lat: " +wordlat +"\tlng: " + wordlng);
-				$("#myModal").modal("toggle");
+				//alert("lat: " +momentPosition.lat() +"\tlng: " +momentPosition.lng());
+				$("#myModal").modal("show");
 			
 		}else{
 			alert('Too Far');
@@ -102,11 +108,19 @@ function creatingMapListener(map){
 	});
 }
 function confirmFunction(){
-	//alert("Sent");
-	swal("Good job!", "You clicked the button!", "success");
+	//
+	var commentText = document.getElementById("MomentsComment").value;
+	//dataLat for latitude of clicked
+	//dataLng for longtitude of clicked
+	//alert("Sent: " + commentText + "...Lat: " + dataLat + "...Lng: " + dataLng);
+	swal("Blow job!", "Sent: " + commentText + "...Lat: " + dataLat + "...Lng: " + dataLng, "success");
+
+	$("#myModal").modal("hide");
+	document.getElementById("MomentsComment").value = "";
 }
 function cancelFunction(){
-
+	$("#myModal").modal("hide");
+	document.getElementById("MomentsComment").value = "";
 }
 function createPointer(){
 	map.panTo(momentPosition);

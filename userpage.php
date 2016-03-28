@@ -125,7 +125,7 @@ if (mysqli_connect_errno())
           <div class="modal-body">
             <form>
               <div class="form-group">
-                  <textarea class="form-control" rows="5" id="comment"></textarea>
+                  <textarea class="form-control" rows="5" id="MomentsComment"></textarea>
                 </div>
 
             </form>
