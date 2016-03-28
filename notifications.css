@@ -1,4 +1,6 @@
 
+ /*The new login css = login1.css*/
+
  *{box-sizing: border-box}
 
 
@@ -10,7 +12,8 @@
   margin: 0;
   padding-top: 50px;
 
-  background: url("photog2.jpg") no-repeat center top fixed;
+  background-color: white;
+  /*background: url("notif3.jpg") no-repeat center top fixed;*/
   background-size: 100% 100%;
   background-size: cover;
   -webkit-background-size:cover;
@@ -32,7 +35,7 @@
         text-decoration: none;
         color: #000000;
         font-family: Montserrat, sans-serif;
-        font-size: medium;
+        font-size: 110%;
         font-weight: 100;
         letter-spacing: 1px;
     
@@ -87,49 +90,46 @@
   letter-spacing: 2px;
   }
 
-.navbar-right{
+#search-but{
+	margin-top: 1%;
+	margin-right: 3%;
+	position: absolute;
+	float: left;
+		
 }
 
+#myNavbars{
+	margin-top:-3%;
+	margin-right: 10%;
+	float: right;
+	height: 28px;
 
-#login-but{
-
-  width: 100%;
-  
-
-}
-
-#sign-but{
-  min-height:6%;
-  width:100%;
-  background-color: #4CAF50;
-}
-
-
-
-
-.box {
-    padding: 0 10px 0 10px;
-}
-
-#home-but{
 
 }
 
+form input[type="search"] {
+	height: 25px;
+	width: 170px;
+	margin: 0;
+	padding: 0;
+	margin-top: 2% !important;
+	margin-right: 5% !important;
+	font-size: 120%;
+	border: 1px solid #CCCCCC;
+}
 .logo{
 
         color: #F04A00!important;
         text-decoration: none;
-        margin-top: 10px !important;
+        margin-left: 40%;
+		margin-top: 1%;
+        padding: 0;
         font-family: Montserrat, sans-serif;
-        font-size: medium;
+        font-size: 150%;
         font-weight: 400;
         letter-spacing: 3px;
-        font-size: 160%;
-
+        position: absolute;
 }
-
-
-
 *,
 *:before,
 *:after {
@@ -182,41 +182,6 @@
   overflow-x: hidden;
 }
 
-#home img{
-
-  
-  background-size: 100% 100%;
-  opacity:0.9;
-  width:100% !important;
-  height: 100% !important;
-
- }
- 
- #home
- {
-    padding-right: 0%;
-}
-
-.caption h3{
-  
-  color: white !important;
-
-  font-family: Montserrat, sans-serif !important;
-  font-family: 'Amatic SC';
-  margin-left:2%;
-  font-size: 200%;
-  letter-spacing: 2px;
-  word-spacing: 2px;
-  
-}
-
-.caption p{
-  font-style: italic;
-  color: white !important;
-  margin-left: 3%;
-
-}
-
 
 @media screen and (max-width: 800px) {
   .navbar.navbar-default {
@@ -226,10 +191,7 @@
 
 }
 
-span.highlight{
-background-color: yellow;
-color: black;
-}
+
 @media screen and (max-width: 499px){   
 
 .col-wd-1{width: 8.33%;
@@ -248,39 +210,44 @@ padding-right: 2.4px;
 .col-wd-10{width: 83.33%;}
 .col-wd-11{width: 91.67%;}
 .col-wd-12{width: 100%;}
-.col{
-  margin-top: 8%;
-  margin-left: 4px;
-
-}
-
-.logo{
-  display: none;
-}
-
-.logologo{
-  font-size: 200%;
-  color: #FC9626;
-  margin-top: 5%;
-  margin-left: 32%;
-
-}
 
 .navbar{
   height: 5px;
 }
-body{
 
- background: url("photog5.jpg") no-repeat center top fixed;
-  background-size: 100% 100%;
-  background-size: cover;
-  -webkit-background-size:cover;
-  -moz-background-size:cover;
-  -o-background-size:cover;
-  background-size:cover;
-
- 
+.logo{
+	margin-top: -12%;
+  margin-left: 22%;
 }
+#hamburgerbutton.navbar-toggle {
+	float: left;
+	margin-left: -20%;
+	
+}
+
+#myNavbars{
+	height: 100%;
+	overflow: hidden;
+	width:100%;
+	margin: 0;
+
+}	
+
+#search-but{
+	margin-right: 30%;
+	margin-top: -1%;
+}
+
+#signup-but:hover:before {
+visibility: hidden;
+}
+
+#signup-but:hover{
+ color: #F04A00!important;
+  }
+
+#myNavbar{
+	margin-left: -35%;
 }
 
 @media screen and (min-width:500px){
@@ -296,12 +263,6 @@ body{
 .col-md-10{width: 83.33%;}
 .col-md-11{width: 91.67%;}
 .col-md-12{width: 100%;}
-
-.logologo{
-  display: none;
-}
-
-
 
 }
 
@@ -320,12 +281,5 @@ body{
 .col-xs-11{width: 91.67%;}
 .col-xs-12{width: 100%;}
 
-.col{
-  margin-top: 1%;
-}
-
-.logologo{
-  display: none;
-}
 
 }
