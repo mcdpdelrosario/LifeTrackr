@@ -107,7 +107,8 @@ function creatingMapListener(map){
 	});
 }
 function confirmFunction(){
-	alert("Sent");
+	//alert("Sent");
+	swal("Good job!", "You clicked the button!", "success");
 }
 function cancelFunction(){
 
