@@ -32,7 +32,7 @@ function initialize() {
 		zoom: 6,
 		center: philippines
 	});
-	var infoWindow = new google.maps.InfoWindow({map: map});
+	var infoWindow = new google.maps.InfoWindow({map: null});
 
 	// This event listener calls addMarker() when the map is clicked.
 
@@ -102,7 +102,7 @@ function creatingMapListener(map){
 			
 		}else{
 			alert('Too Far');
-		}
+		}	
 		
 	});
 }
