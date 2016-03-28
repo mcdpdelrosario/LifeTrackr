@@ -13,7 +13,7 @@
   padding-top: 50px;
 
   /*background-color: white;*/
-  /*background: url("notif3.jpg") no-repeat center top fixed;*/
+  background: url("notif3.jpg") no-repeat center top fixed;
   background-size: 100% 100%;
   background-size: cover;
   -webkit-background-size:cover;
@@ -22,9 +22,7 @@
   background-size:cover;
 
 }
-#map {
-  height: 92%;
-}
+
   .navbar {
       font-family: Montserrat, sans-serif;
       background-color: white;
@@ -252,6 +250,19 @@ visibility: hidden;
   margin-left: -35%;
 }
 
+#myNavbars
+{
+  width: 100%;
+}
+
+#myNavbar.navbar-collapse {
+  background: white;
+}
+
+
+
+}
+
 @media screen and (min-width:500px){
 .col-md-1{width: 8.33%;}
 .col-md-2{width: 16.67%;}
@@ -282,4 +293,6 @@ visibility: hidden;
 .col-xs-10{width: 83.33%;}
 .col-xs-11{width: 91.67%;}
 .col-xs-12{width: 100%;}
+
+
 }
