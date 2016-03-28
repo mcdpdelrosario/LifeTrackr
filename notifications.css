@@ -225,8 +225,16 @@ padding-right: 2.4px;
 }
 
 #myNavbars{
-	height: 30%;
-	position: absolute;
+	height: 100%;
+	overflow: hidden;
+	width:100%;
+	margin: 0;
+
+}	
+
+#search-but{
+	margin-right: 30%;
+	margin-top: -1%;
 }
 }
 
