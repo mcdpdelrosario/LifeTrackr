@@ -40,61 +40,55 @@ if (mysqli_connect_errno())
   }
 ?>
 
-  <nav class="navbar">
-    <div class="container-fluid">
-      <div class="navbar-center navbar-header">
-        <a  class="navbar-brand" >LF</a>
-	    </div>
-	      <ul class="nav navbar-nav">
-      <li>
-        <a href="#menu-toggle" id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger"></span>  </a>
-      </li>
-      <li>
-				<a href="userpage.php" id="home-but"><span class="glyphicon glyphicon-home"></span> Home</a>
-			</li>
-			<li>
-				<a href="moments.php" id="moments-but"><span class="glyphicon glyphicon-film"></span> Moments</a>
-			</li>
-			<li>
-				<a href="notifications.php" id="notif-but" class="popper" data-toggle="popover" data-trigger="focus"><span class="glyphicon glyphicon-bell"></span> Notifications</a>
-			</li>
-	      </ul>
-	  </div>
-  </nav>
-  <div id="wrapper" class="toggled">
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav" >
-                <li class="sidebar-brand" >
-                    <a href="profiler.php">
-                        <img src="img.jpg" class="imgicon"><br>
-                        <p>
-                        <?php
-                          echo $_SESSION["fname"]." ". $_SESSION["lname"];
-                        ?></p>
-                    </a>
-                </li>
-                <!-- <hr width="70%"> -->
-                 <div class="sidebar-coms">
+ <nav class="navbar navbar-default navbar-fixed-top">
+
+    
+    <div class="container bar-align">
+
+    
+        <div class="navbar-header active">
+             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" id = "hamburgerbutton"><span class="glyphicon glyphicon-menu-hamburger"></span> 
+            </button>
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbars" id = "searchbutton"><span class="glyphicon glyphicon-search"></span> 
+            </button>
+
+        </div>
+
+        <div class = "logo">
+            LF
+            </div>
+
+         <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+<!--                 <li>
+                  <a href="#menu-but" id="menu-but"><span class="glyphicon glyphicon-user"></span> Profile</a>
+                </li> -->
                 <li>
-                    <a href="#">Favorites</a>
+                  <a href="userpage.php" id="signup-but"><span class="glyphicon glyphicon-home"></span> Home</a>
                 </li>
                 <li>
-                    <a href="#">Friends</a>
+                  <a href="moments.php" id="signup-but"><span class="glyphicon glyphicon-film"></span> Moments</a>
                 </li>
                 <li>
-                    <a href="#">Search</a>
-                </li>
-                <li>
-                    <a href="#">Settings</a>
-                </li>
-                <li>
-                    <a href="#">Logout</a>
-                </li>
-                </div>
-            </ul>
+                  <a href="notifications.php" id="signup-but" class="popper" data-toggle="popover" data-trigger="focus"><span class="glyphicon glyphicon-bell"></span> Notifications</a>
+                </li>    
+              </ul>
+      
         </div>
     </div>
+        <div class="collapse navbar-collapse" id="myNavbars">
+           <ul class="nav navbar-nav">
+             <li>
+                      <form>
+                      <input type="search" class="form-control" placeholder=" Search" />
+                     <i class="form-control-feedback glyphicon glyphicon-search" id = "search-but"></i></form>   
+                </li>
+           </ul>
+         </div> 
 
+
+  </nav>
     <?php
         
 
