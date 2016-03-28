@@ -27,7 +27,7 @@
 
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-QcrS-bymcrFPClDmuA4A3RMVZsvQCuQ&signed_in=false"></script>
-  <script src="googlemaps.js"></script>
+  <script src="userpage.js"></script>
 </head>
 <body>
 
@@ -112,26 +112,21 @@ if (mysqli_connect_errno())
     </section>
 
 <!-- Modal -->
-<section id="momentsSection">
+<div id="momentsSection">
     <div class="modal fade" id="myModal" role="dialog">
       <div class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Modal Method</h4>
+            <h4 class="modal-title">Moments</h4>
           </div>
           <div class="modal-body">
             <form>
               <div class="form-group">
-                  <input type="text" class="form-control" id="usr">
+                  <textarea class="form-control" rows="5" id="comment"></textarea>
                 </div>
-              <!-- <div class="row">
-                
-                <div class="col-xs-3">
-                  <button class="btn btn-default">Confirm</button>
-                </div>
-              </div> -->
+
             </form>
           </div>
         <div class="modal-footer">
@@ -141,7 +136,7 @@ if (mysqli_connect_errno())
       </div>
     </div>
   </div>
-  </section>
+</div>
 
 
  
