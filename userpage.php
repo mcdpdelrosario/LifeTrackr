@@ -1,22 +1,36 @@
+<!-- The new loginpage -->
+
 <html lang="en">
 <head>
+
   <title>LifeTrackr</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1 ,maximum-scale=1,user-scalable=no">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+  
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="userpage.css" rel="stylesheet" media="screen and (min-width:0)">
   <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <link href="userpage.css" rel="stylesheet">
-  <link href="sidebar.css" rel="stylesheet">
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-  <script src='//ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
-  <!-- <script src='dynamicpage.js'></script> -->
-  <!-- <script src='switchpage.js'></script> -->
 
-  <!-- <link href="css/simple-sidebar.css" rel="stylesheet"> -->
+
+
+
+
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-QcrS-bymcrFPClDmuA4A3RMVZsvQCuQ&signed_in=false"></script>
   <script src="googlemaps.js"></script>
 </head>
 <body>
+
 
 <?php
 
@@ -38,85 +52,69 @@ if (mysqli_connect_errno())
   }
 ?>
 
-  <nav class="navbar">
-    <div class="container-fluid">
-      <div class="navbar-center navbar-header">
-        <a  class="navbar-brand" >LF</a>
-      </div>
-        <ul class="nav navbar-nav">
-      <li>
-        <a href="#menu-toggle" id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger"></span>  </a>
-      </li>
-      <li>
-        <a href="userpage.php" id="home-but"><span class="glyphicon glyphicon-home"></span> Home</a>
-      </li>
-      <li>
-        <a href="moments.php" id="moments-but"><span class="glyphicon glyphicon-film"></span> Moments</a>
-      </li>
-      <li>
-        <a href="notifications.php" id="notif-but" class="popper" data-toggle="popover" data-trigger="focus"><span class="glyphicon glyphicon-bell"></span> Notifications</a>
-      </li>
-        </ul>
-    </div>
-  </nav>
-  <div id="wrapper" class="toggled">
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav" >
-                <li class="sidebar-brand" >
-                    <a href="profiler.php">
-                        <img src="img.jpg" class="imgicon"><br>
-                        <p>
-                        <?php
-                          echo $_SESSION["fname"]." ". $_SESSION["lname"];
-                        ?></p>
-                    </a>
-                </li>
-                <!-- <hr width="70%"> -->
-                <div class="sidebar-coms">
+
+ <nav class="navbar navbar-default navbar-fixed-top">
+
+    
+    <div class="container bar-align">
+
+    
+        <div class="navbar-header active">
+             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" id = "hamburgerbutton"><span class="glyphicon glyphicon-menu-hamburger"></span> 
+            </button>
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbars" id = "searchbutton"><span class="glyphicon glyphicon-search"></span> 
+            </button>
+
+        </div>
+
+        <div class = "logo">
+            LF
+            </div>
+
+         <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+<!--                 <li>
+                  <a href="#menu-but" id="menu-but"><span class="glyphicon glyphicon-user"></span> Profile</a>
+                </li> -->
                 <li>
-                    <a href="#">My Moments</a>
+                  <a href="userpage.php" id="signup-but"><span class="glyphicon glyphicon-home"></span> Home</a>
                 </li>
                 <li>
-                    <a href="#">Favorites</a>
+                  <a href="moments.php" id="signup-but"><span class="glyphicon glyphicon-film"></span> Moments</a>
                 </li>
                 <li>
-                    <a href="#">Friends</a>
-                </li>
-                <li>
-                    <a href="#">Search</a>
-                </li>
-                <li>
-                    <a href="#">Settings</a>
-                </li>
-                <li>
-                    <a href="#">Logout</a>
-                </li>
-                </div>
-            </ul>
+                  <a href="notifications.php" id="signup-but" class="popper" data-toggle="popover" data-trigger="focus"><span class="glyphicon glyphicon-bell"></span> Notifications</a>
+                </li>    
+              </ul>
+      
         </div>
     </div>
+        <div class="collapse navbar-collapse" id="myNavbars">
+           <ul class="nav navbar-nav">
+             <li>
+                      <form>
+                      <input type="search" class="form-control" placeholder=" Search" />
+                     <i class="form-control-feedback glyphicon glyphicon-search" id = "search-but"></i></form>   
+                </li>
+           </ul>
+         </div> 
 
+
+  </nav>
+  
+
+<!-- 
 
     <section id="main-content">
-      <!-- <h2>Home</h2> -->
+      
       <div id="map"></div>
     </iframe>
     </section>
 
-    
+     -->
 
-    <!-- <script src="js/jquery.js"></script>
-
-    Bootstrap Core JavaScript
-    <script src="js/bootstrap.min.js"></script> -->
-
-    <!-- Menu Toggle Script -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
+ 
 
 </body>
 </html>
