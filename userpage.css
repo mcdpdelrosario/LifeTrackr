@@ -299,3 +299,6 @@ visibility: hidden;
 #map{
   height: 100%;
 }
+.modal-footer{
+  padding-right:35%;
+}

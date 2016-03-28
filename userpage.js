@@ -81,7 +81,7 @@ function initialize() {
 // Adds a marker to the map.
 
 function creatingMapListener(map){
-	var coordWindow = new google.maps.InfoWindow({map: map});
+	//var coordWindow = new google.maps.InfoWindow({map: map});
 	google.maps.event.addListener(map, 'click', function(event) {
 		var wordlat = event.latLng.lat(); //upon click
 		var wordlng = event.latLng.lng(); //upon click
