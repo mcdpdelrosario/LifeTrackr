@@ -1,0 +1,301 @@
+
+ /*The new login css = login1.css*/
+
+ *{box-sizing: border-box}
+
+
+
+  body{
+  font-family: Montserrat, sans-serif;             
+  overflow-x: hidden !important; 
+  padding: 0;
+  margin: 0;
+  padding-top: 50px;
+
+  /*background-color: white;*/
+  background: url("notif3.jpg") no-repeat center top fixed;
+  background-size: 100% 100%;
+  background-size: cover;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+
+}
+
+  .navbar {
+      font-family: Montserrat, sans-serif;
+      background-color: white;
+    
+      font-size: 11px !important;
+     
+  }
+  .navbar li a, .navbar {
+        color: #0E182C!important;
+        text-decoration: none;
+        color: #000000;
+        font-family: Montserrat, sans-serif;
+        font-size: 110%;
+        font-weight: 100;
+        letter-spacing: 1px;
+    
+
+        
+
+  }
+
+  #signup-but{
+    position: relative;
+    color: #000;
+    text-decoration: none;
+  }
+
+  #signup-but:hover{
+   color: #000;
+  }
+  
+  #signup-but:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+#signup-but:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+  .navbar-nav li a:hover { 
+    
+         }
+
+
+  .navbar-nav li.active a { 
+    background-color: white !important;
+    color: #ff8c5b!important;
+    height: 10%;
+  }
+  .navbar-brand{
+  color: #ff8c5b!important;
+  margin-top: 1% !important;
+  letter-spacing: 2px;
+  }
+
+#search-but{
+  margin-top: 1%;
+  margin-right: 3%;
+  position: absolute;
+  float: left;
+    
+}
+
+#myNavbars{
+  margin-top:-3%;
+  margin-right: 10%;
+  float: right;
+  height: 28px;
+
+
+}
+
+form input[type="search"] {
+  height: 25px;
+  width: 170px;
+  margin: 0;
+  padding: 0;
+  margin-top: 2% !important;
+  margin-right: 5% !important;
+  font-size: 120%;
+  border: 1px solid #CCCCCC;
+}
+.logo{
+
+        color: #F04A00!important;
+        text-decoration: none;
+        margin-left: 40%;
+    margin-top: 1%;
+        padding: 0;
+        font-family: Montserrat, sans-serif;
+        font-size: 150%;
+        font-weight: 400;
+        letter-spacing: 3px;
+        position: absolute;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+
+}
+.grid{
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 15%;
+  position: inherit;  
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  padding-left: 2.4%;
+  opacity: 0.9;
+}
+
+.grid:before,
+.grid:after,
+.row:before,
+.row:after{
+  content: " ";
+  display: table;
+}
+
+
+.grid:after,
+.row:after{
+  clear: both;
+
+
+}
+
+[class*="col-"]{
+  width: 100%;
+  float: left;
+  min-height: 1px;
+}
+
+.col{
+  padding: 1em;
+  margin: 6px;
+  background: white;
+  border-radius: 3px;
+  color:black;
+  text-align: center;
+  margin-right: 5%;
+  margin-left: 6%;
+  overflow-x: hidden;
+}
+
+
+@media screen and (max-width: 800px) {
+  .navbar.navbar-default {
+      position:fixed; top:0; left:0; z-index:1030;
+     padding-left: 20%;
+   }
+
+}
+
+
+@media screen and (max-width: 499px){   
+
+.col-wd-1{width: 8.33%;
+display: none;}
+.col-wd-2{width: 16.67%;}
+.col-wd-3{width: 25%;}
+.col-wd-4{width: 33.33%;}
+.col-wd-5{width: 41.67%;}
+.col-wd-6{width: 50%;
+padding-left: 2.4px;
+padding-right: 2.4px;
+}
+.col-wd-7{width: 58.33%;}
+.col-wd-8{width: 66.67%;}
+.col-wd-9{width: 75%;}
+.col-wd-10{width: 83.33%;}
+.col-wd-11{width: 91.67%;}
+.col-wd-12{width: 100%;}
+
+.navbar{
+  height: 5px;
+}
+
+.logo{
+  margin-top: -12%;
+  margin-left: 22%;
+}
+#hamburgerbutton.navbar-toggle {
+  float: left;
+  margin-left: -20%;
+  
+}
+
+#myNavbars{
+  height: 100%;
+  overflow: hidden;
+  width:100%;
+  margin: 0;
+
+} 
+
+#search-but{
+  margin-right: 30%;
+  margin-top: -1%;
+}
+
+#signup-but:hover:before {
+visibility: hidden;
+}
+
+#signup-but:hover{
+ color: #F04A00!important;
+  }
+
+#myNavbar{
+  margin-left: -35%;
+}
+
+#myNavbars
+{
+  width: 100%;
+}
+
+#myNavbar.navbar-collapse {
+  background: white;
+}
+
+
+
+}
+
+@media screen and (min-width:500px){
+.col-md-1{width: 8.33%;}
+.col-md-2{width: 16.67%;}
+.col-md-3{width: 25%;}
+.col-md-4{width: 33.33%;}
+.col-md-5{width: 41.67%;}
+.col-md-6{width: 50%;}
+.col-md-7{width: 58.33%;}
+.col-md-8{width: 66.67%;}
+.col-md-9{width: 75%;}
+.col-md-10{width: 83.33%;}
+.col-md-11{width: 91.67%;}
+.col-md-12{width: 100%;}
+
+}
+
+
+@media screen and (min-width: 960px){
+.col-xs-1{width: 8.33%;}
+.col-xs-2{width: 16.67%;}
+.col-xs-3{width: 25%;}
+.col-xs-4{width: 33.33%;}
+.col-xs-5{width: 41.67%;}
+.col-xs-6{width: 50%;}
+.col-xs-7{width: 58.33%;}
+.col-xs-8{width: 66.67%;}
+.col-xs-9{width: 75%;}
+.col-xs-10{width: 83.33%;}
+.col-xs-11{width: 91.67%;}
+.col-xs-12{width: 100%;}
+
+
+}
+#map{
+  height: 100%;
+}
