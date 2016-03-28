@@ -113,12 +113,20 @@ function confirmFunction(){
 	//dataLat for latitude of clicked
 	//dataLng for longtitude of clicked
 	//alert("Sent: " + commentText + "...Lat: " + dataLat + "...Lng: " + dataLng);
+	var url = "savecoordinates.php?longitude="+dataLng + "&latitude=" + dataLat+"&moments-text=" + commentText;
+	httpGetAsync(url, alert);
 	swal("Blow job!", "Sent: " + commentText + "...Lat: " + dataLat + "...Lng: " + dataLng, "success");
 
 	$("#myModal").modal("hide");
 	document.getElementById("MomentsComment").value = "";
 }
+
+function td(){
+
+}
+
 function cancelFunction(){
+	temporaryMarker.setMap(null);
 	$("#myModal").modal("hide");
 	document.getElementById("MomentsComment").value = "";
 }
