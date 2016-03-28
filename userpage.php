@@ -140,6 +140,10 @@ if (mysqli_connect_errno())
 </div>
 
 
+      <a id="findButton" onclick="findUser()" class="btn btn-default">
+        <span class="glyphicon glyphicon-screenshot"></span>
+      </a>
+
  
 
 </body>

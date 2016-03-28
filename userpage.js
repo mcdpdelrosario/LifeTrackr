@@ -30,7 +30,8 @@ function initialize() {
 	var philippines = { lat: 13, lng: 122 };
 	map = new google.maps.Map(document.getElementById('map'), {
 		zoom: 6,
-		center: philippines
+		center: philippines,
+		disableDefaultUI: true
 	});
 	var infoWindow = new google.maps.InfoWindow({map: null});
 
@@ -153,7 +154,9 @@ function updateUserPosition(){
 		});
 
 }
-
+function findUser(){
+	map.panTo(userPosition);
+}
 function httpGetAsync(theUrl, callback){
 		var xmlHttp = new XMLHttpRequest();
 		xmlHttp.onreadystatechange = function() { 

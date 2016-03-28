@@ -312,3 +312,10 @@ visibility: hidden;
 #modalfoot{
   background-color:orange;
 }
+#findButton{
+position: absolute;
+  top:90%;
+  right:3px;
+  background-color:orange;
+
+}
