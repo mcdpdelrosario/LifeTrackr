@@ -32,7 +32,7 @@ function initialize() {
 		zoom: 6,
 		center: philippines
 	});
-	var infoWindow = new google.maps.InfoWindow({map: map});
+	var infoWindow = new google.maps.InfoWindow({map: null});
 
 	// This event listener calls addMarker() when the map is clicked.
 
@@ -54,14 +54,13 @@ function initialize() {
 			});
 			
 			userMarker.addListener('click', function() {
-				map.setCenter(userMarker.getPosition());
-				// alert('You clicked Me');
-				if(document.getElementById("momentsDiv")){
 				
-				}else{
-					createMomentsDiv(map);  
-					
-	   			}
+				// alert('You clicked Me');
+				temporaryMarker.setMap(null);
+				map.setCenter(userPosition);
+				momentPosition=userPosition;
+				alert("lat: " +momentPosition.lat +"\tlng: " + momentPosition.lng);
+				$("#myModal").modal("toggle");
 
 		  	});
 			iterations++;
@@ -90,24 +89,21 @@ function creatingMapListener(map){
 		var userlng = userMarker.getPosition().lng();
 		var distance = Math.sqrt(Math.pow((wordlat-userlat),2)+Math.pow((wordlng-userlng),2)); 
 		if(distance<0.014){
-			if(document.getElementById("momentsDiv")){
+
 				temporaryMarker.setMap(null);
 				createPointer();
-			}else{
-				temporaryMarker.setMap(null);
-				createPointer();
+				alert("lat: " +wordlat +"\tlng: " + wordlng);
 				$("#myModal").modal("toggle");
-				
-   			}
 			
 		}else{
 			alert('Too Far');
-		}
+		}	
 		
 	});
 }
 function confirmFunction(){
-	alert("Sent");
+	//alert("Sent");
+	swal("Good job!", "You clicked the button!", "success");
 }
 function cancelFunction(){
 

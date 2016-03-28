@@ -302,3 +302,13 @@ visibility: hidden;
 .modal-footer{
   padding-right:35%;
 }
+#xbutton{
+  background-color:red;
+  color: black;
+}
+#modalhead{
+  background-color:orange;
+}
+#modalfoot{
+  background-color:orange;
+}
