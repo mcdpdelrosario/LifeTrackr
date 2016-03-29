@@ -68,12 +68,19 @@ function httpGetAsync(theUrl, callback){
 function pinMarkers(){
 	setInterval(function(){
 		pinMoment();
+		//console.log(dataMoments);
 		for(var i = 0; i < dataMoments.moment_id.length; i++){
-
+			// console.log(dataMoments.moments_id[i]);
+			//addMarker({lat: dataMoments.latitude[i],lng: dataMoments.longitude[i]},dataMoments.moment_id[i]);	
 		}
+		//showMarkers(map);
 	}, 3000);
 }
-
+function showMarkers(map){
+	for (var j = 0; j < arrayMarkers.length; j++) {
+    	arrayMarkers[j].setMap(map);
+  	}
+}
 function findUser(){
 	map.panTo(userMarker.position);
 }
@@ -117,20 +124,21 @@ function creatingMapListener(){
 		}else{
 			//swal("Too Far!", "Moment cannot be Created", "error");
 			alert('Too Far');
+			temporaryMarker.setMap(null);
 		}	
 		
 	});
 }
 
-function addMarker(location) {
+function addMarker(location, id) {
 // Add the marker at the clicked location, and add the next-available label
 // from the array of alphabetical characters.
 	var marker = new google.maps.Marker({
 		position: location,
-		label: labels[labelIndex++ % labels.length],
+		id: id,
 		map: map
 	});
-	//arrayMarkers.push(marker);
+	arrayMarkers.push(marker);
 
 }
 

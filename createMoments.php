@@ -5,7 +5,7 @@
 	$longitude=$_GET["moment_Lng"];
 	$latitude=$_GET["moment_Lat"];
 	$message=$_GET["moment_Message"];
-	$img=$_GET["moment_Img"];
+	//$img=$_GET["moment_Img"];
 	date_default_timezone_set('Asia/Taipei');
 	$date=date("Y-m-d h:i:s");
 

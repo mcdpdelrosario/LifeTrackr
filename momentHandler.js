@@ -12,6 +12,7 @@ function pinMoment(){
 	var url = "pinMoments.php";
 	httpGetAsync(url,function(json){
 		dataMoments = JSON.parse(json);
-		alert('received');
+		//alert('received');
+		console.log(dataMoments);
 	});
 }
