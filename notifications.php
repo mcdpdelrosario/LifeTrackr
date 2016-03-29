@@ -59,6 +59,9 @@ if (mysqli_connect_errno())
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbars" id = "searchbutton"><span class="glyphicon glyphicon-search"></span> 
             </button>
 
+             <button type="button" class="navbar-toggle" data-toggle="collapse" id = "listbutton"><span class="glyphicon glyphicon-option-vertical"></span> 
+            </button>
+
         </div>
 
         <div class = "logo">
@@ -78,9 +81,10 @@ if (mysqli_connect_errno())
                 </li>
                 <li>
                   <a href="notifications.php" id="signup-but" class="popper" data-toggle="popover" data-trigger="focus"><span class="glyphicon glyphicon-bell"></span> Notifications</a>
-                </li>    
-              </ul>
-      
+                </li>
+
+                
+                  
         </div>
     </div>
         <div class="collapse navbar-collapse" id="myNavbars">
@@ -90,11 +94,49 @@ if (mysqli_connect_errno())
                       <input type="search" class="form-control" placeholder=" Search" />
                      <i class="form-control-feedback glyphicon glyphicon-search" id = "search-but"></i></form>   
                 </li>
+            </ul>
+            </li>
+           </ul>
+         </div> 
+
+        <div class="collapse navbar-collapse" id="mySettings">
+           <ul class="nav navbar-nav">
+            
+                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-vertical" ></span></a>
+                    <ul class="dropdown-menu">
+                      <?php
+                        include "list.html";
+                      ?>
+            </ul>
+            </li>
            </ul>
          </div> 
 
 
+      
+
+
   </nav>
+  
+
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+ 
+            <ul class="sidebar-nav">
+               <?php
+
+                  include "list.html";
+
+               ?>
+            </ul>
+           
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+
+
+    </div>
+
 
    <div class="panel-group" >
           <div class="panel panel-default">
