@@ -9,7 +9,7 @@
 	date_default_timezone_set('Asia/Taipei');
 	$date=date("Y-m-d h:i:s");
 
-	$query = "INSERT INTO moments (`longitude`, `latitude`,`timestamp`) VALUES(".$longitude.",".$latitude.",'".$date."')";
+	$query = "INSERT INTO moments (`longitude`, `latitude`,`moments_message`,`timestamp`) VALUES(".$longitude.",".$latitude.",'".$message."','".$date."')";
 	$result = mysqli_query($con,$query);
 
 	echo $query;
