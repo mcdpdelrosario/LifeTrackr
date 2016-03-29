@@ -12,7 +12,9 @@
   
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <link href="userpage.css" rel="stylesheet" media="screen and (min-width:0)">
+  <!-- <link href="userpage.css" rel="stylesheet" media="screen and (min-width:0)"> -->
+   <link href="navbar.css" rel="stylesheet" media="screen and (min-width:0)">
+    <link href="userpage.css" rel="stylesheet" media="screen and (min-width:0)">
   <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>

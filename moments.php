@@ -5,8 +5,10 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  
+  <link href="navbar.css" rel="stylesheet">
   <link href="userpage.css" rel="stylesheet">
-  <link href="sidebar.css" rel="stylesheet">
+  
 
   <script src='//ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
   <!-- <script src='dynamicpage.js'></script> -->
@@ -39,8 +41,7 @@ if (mysqli_connect_errno())
       
   }
 ?>
-
- <nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top">
 
     
     <div class="container bar-align">
@@ -125,6 +126,12 @@ if (mysqli_connect_errno())
             </ul>
            
         </div>
+        <!-- /#sidebar-wrapper -->
+
+       
+
+    </div>
+
     <?php
         
 
