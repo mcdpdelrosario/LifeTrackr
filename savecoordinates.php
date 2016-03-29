@@ -4,9 +4,10 @@
 session_start();
 	$longitude = $_GET["longitude"];
 	$latitude = $_GET["latitude"];
-	$moments = $_GET["moments"];
+	$moments = $_GET["moments-text"];
+	// $image_user = $_POST["moments-img"];
 	date_default_timezone_set('Asia/Taipei');
-	$date=date("Y-m-d h:i:sa");
+	$date=date("Y-m-d h:i:s");
 
 	$link = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","bdd92f8752ef7e","fdb4d70b","lifetrackr");
 
