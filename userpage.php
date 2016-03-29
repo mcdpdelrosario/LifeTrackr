@@ -20,8 +20,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-<script src="dist/sweetalert.min.js"></script>
-<link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+
 
 
 
@@ -67,6 +66,9 @@ if (mysqli_connect_errno())
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbars" id = "searchbutton"><span class="glyphicon glyphicon-search"></span> 
             </button>
 
+             <button type="button" class="navbar-toggle" data-toggle="collapse" id = "listbutton"><span class="glyphicon glyphicon-option-vertical"></span> 
+            </button>
+
         </div>
 
         <div class = "logo">
@@ -86,9 +88,10 @@ if (mysqli_connect_errno())
                 </li>
                 <li>
                   <a href="notifications.php" id="signup-but" class="popper" data-toggle="popover" data-trigger="focus"><span class="glyphicon glyphicon-bell"></span> Notifications</a>
-                </li>    
-              </ul>
-      
+                </li>
+
+                
+                  
         </div>
     </div>
         <div class="collapse navbar-collapse" id="myNavbars">
@@ -98,16 +101,50 @@ if (mysqli_connect_errno())
                       <input type="search" class="form-control" placeholder=" Search" />
                      <i class="form-control-feedback glyphicon glyphicon-search" id = "search-but"></i></form>   
                 </li>
+            </ul>
+            </li>
            </ul>
          </div> 
+
+        <div class="collapse navbar-collapse" id="mySettings">
+           <ul class="nav navbar-nav">
+            
+                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-vertical" ></span></a>
+                    <ul class="dropdown-menu">
+                      <?php
+                        include "list.html";
+                      ?>
+            </ul>
+            </li>
+           </ul>
+         </div> 
+
+
+      
 
 
   </nav>
   
 
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+ 
+            <ul class="sidebar-nav">
+               <?php
 
+                  include "list.html";
 
-    <section id="main-content">
+               ?>
+            </ul>
+           
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+       
+
+    </div>
+
+     <section id="main-content">
       
       <div id="map"></div>
     </section>
@@ -118,8 +155,8 @@ if (mysqli_connect_errno())
       <div class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
-          <div id="modalhead" class="modal-header">
-            <button id="xbutton" type="button" class="close" data-dismiss="modal">&times;</button>
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
             <h4 class="modal-title">Moments</h4>
           </div>
           <div class="modal-body">
@@ -130,7 +167,7 @@ if (mysqli_connect_errno())
 
             </form>
           </div>
-        <div id="modalfoot" class="modal-footer">
+        <div class="modal-footer">
           <button id="ConfirmMoment" class="btn btn-default" type="submit" value="submit" onclick="confirmFunction()">Confirm</button>
           <button id="CancelMoment" type="button" class="btn btn-default" data-dismiss="modal" onclick="cancelFunction()">Cancel</button>
         </div>
@@ -140,7 +177,14 @@ if (mysqli_connect_errno())
 </div>
 
 
- 
+    <script>
+    $("#listbutton").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+
 
 </body>
 </html>
