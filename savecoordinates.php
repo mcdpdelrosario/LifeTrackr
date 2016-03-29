@@ -11,7 +11,7 @@ session_start();
 
 	$link = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","bdd92f8752ef7e","fdb4d70b","lifetrackr");
 
-	$query = "INSERT INTO moments (`username`,`moments_message`,`long`, `lat`,`timestamp`) VALUES('".$_SESSION["myuser"]."','".$moments."',".$longitude.",".$latitude.",'".$date."')";
+	$query = "INSERT INTO moments (`username`,`moments_message`,`longitude`, `latitude`,`time_stamp`) VALUES('".$_SESSION["myuser"]."','".$moments."',".$longitude.",".$latitude.",'".$date."')";
 				
 	$result = mysqli_query($link,$query);
 	
