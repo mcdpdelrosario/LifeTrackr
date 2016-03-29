@@ -1,19 +1,17 @@
-var moment_Lat,
-moment_Lng,
-map,
-username,
-moment_ID,
-moment_Message,
-moment_Img;
+var dataMoments;
 
-
-function createMoment(){
-	var url = "savecoordinates.php?moment_Lng="+moment_Lng + "&moment_Lat=" + moment_Lat+"&moment_Message=" + moment_Message;
-	httpGetAsync(url,successQuery);
+function createMoment(lat,lng,message){
+	alert('lat: '+lat+' lng: '+lng+' comments: '+message);
+	var url = "createMoments.php?moment_Lng="+lng+ "&moment_Lat=" + lat+"&moment_Message=" + message;
+	httpGetAsync(url,alert);
 }
 function successQuery(){
-	
+	alert('sent');
 }
 function pinMoment(){
-
+	var url = "pinMoments.php";
+	httpGetAsync(url,function(json){
+		dataMoments = JSON.parse(json);
+		alert('received');
+	});
 }

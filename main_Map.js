@@ -1,7 +1,7 @@
 var map,
 temporaryMarker,
 userMarker,
-arrayMarker,
+arrayMarkers,
 zoomValue = 17;
 
 function initialize() {
@@ -12,9 +12,7 @@ function initialize() {
 		center: philippines,
 		disableDefaultUI: true
 	});
-	// This event listener calls addMarker() when the map is clicked.
 	creatingMapListener();
-	// Try HTML5 geolocation.
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(function(position) {
 			userMarker = new google.maps.Marker({
@@ -24,7 +22,7 @@ function initialize() {
 				},
 				label: 'X',
 				map: map,
-				title:'Im Was Here'
+				title:'Im this Here'
 			});
 			map.setCenter(userMarker.position);
 			map.setZoom(zoomValue);
@@ -33,14 +31,11 @@ function initialize() {
 		});
 		updateUserPosition();
 	} else {
-		// Browser doesn't support Geolocation
 		handleLocationError(false);
 	}
 	updateUserPosition();
-// Add a marker at the center of the map.
+	pinMarkers();
 }
-
-// Adds a marker to the map.
 
 function handleLocationError(browserHasGeolocation) {
 	if(browserHasGeolocation){
@@ -49,7 +44,6 @@ function handleLocationError(browserHasGeolocation) {
 		alert('Error: Browser does not support Geolocation.');
 	}
 }
-
 function updateUserPosition(){
 		navigator.geolocation.watchPosition(function(position) {
 			userMarker.setPosition({
@@ -59,7 +53,6 @@ function updateUserPosition(){
 		}, function() {
 			handleLocationError(true);
 		});
-
 }
 
 function httpGetAsync(theUrl, callback){
@@ -72,7 +65,14 @@ function httpGetAsync(theUrl, callback){
 	xmlHttp.send(null);
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+function pinMarkers(){
+	setInterval(function(){
+		pinMoment();
+		for(var i = 0; i < dataMoments.moment_id.length; i++){
+
+		}
+	}, 3000);
+}
 
 function findUser(){
 	map.panTo(userMarker.position);
@@ -81,19 +81,57 @@ function findUser(){
 function userMarkerListener(){
 
 }
-
+function confirmFunction(){
+	var comments = document.getElementById("MomentsComment").value;
+	//alert(comments);
+	//var markerObj = {temporaryMarker.position,message: comments};
+	createMoment(temporaryMarker.position.lat(),
+		temporaryMarker.position.lng(),comments);
+	$("#myModal").modal("hide");
+	document.getElementById("MomentsComment").value = "";
+}
+function cancelFunction(){
+	$("#myModal").modal("hide");
+	document.getElementById("MomentsComment").value = "";
+}
+function createPointer(){
+	map.panTo(temporaryMarker.position);
+	temporaryMarker.setLabel("4");
+	temporaryMarker.setMap(map);
+}
 function creatingMapListener(){
-
+	google.maps.event.addListener(map, 'click', function(event) {
+		var wordlat = event.latLng.lat(); //upon click
+		var wordlng = event.latLng.lng(); //upon click
+		temporaryMarker.setPosition({lat: event.latLng.lat(),lng: event.latLng.lng()});
+		var userlat = userMarker.position.lat();
+		var userlng = userMarker.position.lng();
+		var distance = Math.sqrt(Math.pow((wordlat-userlat),2)+Math.pow((wordlng-userlng),2)); 
+		
+		if(distance<0.014){
+			temporaryMarker.setMap(null);
+			createPointer();
+			//alert("lat: " +userlat +"\tlng: " +userlng);
+			$("#myModal").modal("show");
+			
+		}else{
+			//swal("Too Far!", "Moment cannot be Created", "error");
+			alert('Too Far');
+		}	
+		
+	});
 }
 
 function addMarker(location) {
 // Add the marker at the clicked location, and add the next-available label
 // from the array of alphabetical characters.
-	// var marker = new google.maps.Marker({
-	// 	position: location,
-	// 	label: labels[labelIndex++ % labels.length],
-	// 	map: map
-	// });
-	//worldMarkers.push(marker);
+	var marker = new google.maps.Marker({
+		position: location,
+		label: labels[labelIndex++ % labels.length],
+		map: map
+	});
+	//arrayMarkers.push(marker);
 
 }
+
+google.maps.event.addDomListener(window, 'load', initialize);
