@@ -1,0 +1,108 @@
+
+/*for notifications*/
+
+/*notifications code of dp*/
+.inner-content { display:none; }
+
+#load-more{
+  border-radius: 5em !important;
+  height: 100px;
+  width: 100px;
+  margin-left:45%;
+}
+
+
+/*userpage*/
+
+/*for rick*/
+#map{
+  height: 100%;
+}
+.modal-footer{
+  padding-right:35%;
+}
+
+
+
+/*for moments*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*for pagecontent responsive*/
+
+@media screen and (max-width: 499px){   
+
+.col-wd-1{width: 8.33%;}
+.col-wd-2{width: 16.67%;}
+.col-wd-3{width: 25%;}
+.col-wd-4{width: 33.33%;}
+.col-wd-5{width: 41.67%;}
+.col-wd-6{width: 50%;}
+.col-wd-7{width: 58.33%;}
+.col-wd-8{width: 66.67%;}
+.col-wd-9{width: 75%;}
+.col-wd-10{width: 83.33%;}
+.col-wd-11{width: 91.67%;}
+.col-wd-12{width: 100%;}
+}
+
+
+@media screen and (max-width: 499px){   
+
+.col-wd-1{width: 8.33%;}
+.col-wd-2{width: 16.67%;}
+.col-wd-3{width: 25%;}
+.col-wd-4{width: 33.33%;}
+.col-wd-5{width: 41.67%;}
+.col-wd-6{width: 50%;}
+.col-wd-7{width: 58.33%;}
+.col-wd-8{width: 66.67%;}
+.col-wd-9{width: 75%;}
+.col-wd-10{width: 83.33%;}
+.col-wd-11{width: 91.67%;}
+.col-wd-12{width: 100%;}
+}
+
+@media screen and (min-width: 960px){
+.col-xs-1{width: 8.33%;}
+.col-xs-2{width: 16.67%;}
+.col-xs-3{width: 25%;}
+.col-xs-4{width: 33.33%;}
+.col-xs-5{width: 41.67%;}
+.col-xs-6{width: 50%;}
+.col-xs-7{width: 58.33%;}
+.col-xs-8{width: 66.67%;}
+.col-xs-9{width: 75%;}
+.col-xs-10{width: 83.33%;}
+.col-xs-11{width: 91.67%;}
+.col-xs-12{width: 100%;}
+}
+
+
