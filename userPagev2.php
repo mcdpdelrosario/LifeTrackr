@@ -45,11 +45,11 @@ if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   } else {
-      $query = "select firstName,lastName from userinfo where userName = '".$_SESSION["myuser"]."'";
+      $query = "select first_name,last_name from userinfo where username = '".$_SESSION["myuser"]."'";
       $result = mysqli_query($con, $query) or mysqli_error($con);
       while ($row = mysqli_fetch_array($result)) {
-          $_SESSION["fname"] = $row[0];
-        $_SESSION["lname"] = $row[1];
+          $_SESSION["fname"] = $row['first_name'];
+        $_SESSION["lname"] = $row['last_name'];
       }
       
   }

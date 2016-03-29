@@ -57,7 +57,7 @@
                  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-vertical" ></span></a>
                     <ul class="dropdown-menu">
                       <?php
-                        include "list.html";
+                        include "list.php";
                       ?>
             </ul>
             </li>
@@ -77,7 +77,7 @@
             <ul class="sidebar-nav">
                <?php
 
-                  include "list.html";
+                  include "list.php";
 
                ?>
             </ul>

@@ -32,11 +32,11 @@ if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   } else {
-      $query = "select firstName,lastName from userinfo where userName = '".$_SESSION["myuser"]."'";
+      $query = "select first_name,last_name from userinfo where username = '".$_SESSION["myuser"]."'";
       $result = mysqli_query($con, $query) or mysqli_error($con);
       while ($row = mysqli_fetch_array($result)) {
-          $_SESSION["fname"] = $row[0];
-        $_SESSION["lname"] = $row[1];
+          $_SESSION["fname"] = $row['first_name'];
+        $_SESSION["lname"] = $row['last_name'];
       }
       
   }
@@ -63,17 +63,17 @@ if (mysqli_connect_errno())
                     {
                     echo "Failed to connect to MySQL: " . mysqli_connect_error();
                     } else {
-                        $query = "SELECT * FROM userinfo AS ui INNER JOIN moments AS mmnt ON ui.userName = mmnt.username WHERE mmnt.username = '".$_SESSION["myuser"]."' ORDER BY time_taken DESC";
+                        $query = "SELECT * FROM userinfo AS ui INNER JOIN moments AS mmnt ON ui.username = mmnt.username WHERE mmnt.username = '".$_SESSION["myuser"]."' ORDER BY time_taken DESC";
                         $result = mysqli_query($con, $query) or mysqli_error($con);
                         while ($row = mysqli_fetch_array($result)) {
                            // $_SESSION["uname_notif"] = $row['username'];
-                           $_SESSION["fname_my_moment"] = $row['firstName'];
-                           $_SESSION["lname_my_moment"] = $row['lastName'];
+                           $_SESSION["fname_my_moment"] = $row['first_name'];
+                           $_SESSION["lname_my_moment"] = $row['last_name'];
                            $_SESSION["uname_my_moment"] = $row['username'];
                            $_SESSION["message_moments"] = $row['moments_message'];
                            $_SESSION["longtitude_moments"] = $row['longtitude'];
                            $_SESSION["latitude_moments"] = $row['latitude'];
-                           $_SESSION["time_taken"] = $row['time_taken'];
+                           $_SESSION["time_taken"] = $row['time_stamp'];
                            $longlat = $_SESSION["longtitude_moments"].','.$_SESSION["latitude_moments"];
                            ?>
                           

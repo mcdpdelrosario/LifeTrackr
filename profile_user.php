@@ -96,8 +96,8 @@
                            $_SESSION["lname_my_moment"] = $row['last_Name'];
                            $_SESSION["uname_my_moment"] = $row['username'];
                            $_SESSION["message_moments"] = $row['moments_message'];
-                           $_SESSION["longtitude_moments"] = $row['long'];
-                           $_SESSION["latitude_moments"] = $row['lat'];
+                           $_SESSION["longtitude_moments"] = $row['longitude'];
+                           $_SESSION["latitude_moments"] = $row['latitude'];
                            $_SESSION["time_taken"] = $row['time_stamp'];
                            $longlat = $_SESSION["longtitude_moments"].','.$_SESSION["latitude_moments"];
                            ?>
