@@ -19,7 +19,8 @@ var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
 	abreak,
 	temporaryMarker,
 	dataLat,
-	dataLng;
+	dataLng,
+	commentText;
 function PTP(percent,max){
 	var pix = (percent/100)*max + "px"
 	return pix;
@@ -103,23 +104,29 @@ function creatingMapListener(map){
 				$("#myModal").modal("show");
 			
 		}else{
-			alert('Too Far');
+			swal("Too Far!", "Moment cannot be Created", "error");
+			//alert('Too Far');
 		}	
 		
 	});
 }
+
 function confirmFunction(){
 	//
-	var commentText = document.getElementById("MomentsComment").value;
+	commentText = document.getElementById("MomentsComment").value;
 	//dataLat for latitude of clicked
 	//dataLng for longtitude of clicked
 	//alert("Sent: " + commentText + "...Lat: " + dataLat + "...Lng: " + dataLng);
 	var url = "savecoordinates.php?longitude="+dataLng + "&latitude=" + dataLat+"&moments-text=" + commentText;
-	httpGetAsync(url, alert);
-	swal("Blow job!", "Sent: " + commentText + "...Lat: " + dataLat + "...Lng: " + dataLng, "success");
+	//httpGetAsync(url,successQuery);
+	$.get(url,successQuery); 
 
 	$("#myModal").modal("hide");
 	document.getElementById("MomentsComment").value = "";
+}
+
+function successQuery(){
+	swal("Moment Created!", "Thank you", "success");
 }
 
 function td(){
@@ -205,3 +212,7 @@ function removeElement(parentDiv, childDiv){
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
+
+function cleanValue(){
+	
+}
