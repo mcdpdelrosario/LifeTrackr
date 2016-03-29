@@ -88,17 +88,17 @@
                     {
                     echo "Failed to connect to MySQL: " . mysqli_connect_error();
                     } else {
-                        $query = "SELECT * FROM userinfo AS ui INNER JOIN moments AS mmnt ON ui.userName = mmnt.username WHERE mmnt.username = '".$_SESSION["myuser"]."' ORDER BY time_taken DESC";
+                        $query = "SELECT * FROM userinfo AS ui INNER JOIN moments AS mmnt ON ui.username = mmnt.username WHERE mmnt.username = '".$_SESSION["myuser"]."' ORDER BY time_taken DESC";
                         $result = mysqli_query($con, $query) or mysqli_error($con);
                         while ($row = mysqli_fetch_array($result)) {
                            // $_SESSION["uname_notif"] = $row['username'];
-                           $_SESSION["fname_my_moment"] = $row['firstName'];
-                           $_SESSION["lname_my_moment"] = $row['lastName'];
+                           $_SESSION["fname_my_moment"] = $row['first_name'];
+                           $_SESSION["lname_my_moment"] = $row['last_Name'];
                            $_SESSION["uname_my_moment"] = $row['username'];
                            $_SESSION["message_moments"] = $row['moments_message'];
-                           $_SESSION["longtitude_moments"] = $row['longtitude'];
-                           $_SESSION["latitude_moments"] = $row['latitude'];
-                           $_SESSION["time_taken"] = $row['time_taken'];
+                           $_SESSION["longtitude_moments"] = $row['long'];
+                           $_SESSION["latitude_moments"] = $row['lat'];
+                           $_SESSION["time_taken"] = $row['time_stamp'];
                            $longlat = $_SESSION["longtitude_moments"].','.$_SESSION["latitude_moments"];
                            ?>
                           
