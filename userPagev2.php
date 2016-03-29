@@ -30,6 +30,7 @@
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-QcrS-bymcrFPClDmuA4A3RMVZsvQCuQ&signed_in=false"></script>
   <script src="main_Map.js"></script>
+  <script src="momentHandler.js"></script>
 </head>
 <body>
 
