@@ -48,14 +48,14 @@ if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   } else {
-			$query = "select * from userinfo where userName = '".$_SESSION["myuser"]."'";
+			$query = "select * from userinfo where username = '".$_SESSION["myuser"]."'";
 			$result = mysqli_query($con, $query) or mysqli_error($con);
 			while ($row = mysqli_fetch_array($result)) {
-			  $_SESSION["uname"] = $row[0];
-        $_SESSION["pword"] = $row[2];
-				$_SESSION["lname"] = $row[3];
-        $_SESSION["fname"] = $row[4];
-        $_SESSION["email"] = $row[5];
+			  $_SESSION["uname"] = $row['username'];
+        $_SESSION["pword"] = $row['password'];
+				$_SESSION["lname"] = $row['last_name'];
+        $_SESSION["fname"] = $row['first_name'];
+        $_SESSION["email"] = $row['email'];
 			}
 			
 	}
