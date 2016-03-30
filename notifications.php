@@ -8,7 +8,7 @@
   <link href="navbar.css" rel="stylesheet">
   <link href="userpage.css" rel="stylesheet">
 
-  
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src='//ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
   <!-- <script src='js/jquery.ba-hashchange.min.js'></script> -->
   <!-- <script src='dynamicpage.js'></script> -->
@@ -31,105 +31,19 @@ if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   } else {
-      $query = "select first_name,last_name from userinfo where username = '".$_SESSION["myuser"]."'";
+      $query = "select firstName,lastName from userinfo where userName = '".$_SESSION["myuser"]."'";
       $result = mysqli_query($con, $query) or mysqli_error($con);
       while ($row = mysqli_fetch_array($result)) {
-          $_SESSION["fname"] = $row[first_name];
-        $_SESSION["lname"] = $row[last_name];
+          $_SESSION["fname"] = $row[0];
+        $_SESSION["lname"] = $row[1];
       }
+      
   }
 ?>
 
- <nav class="navbar navbar-default navbar-fixed-top">
-
-    
-    <div class="container bar-align">
-
-    
-        <div class="navbar-header active">
-             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" id = "hamburgerbutton"><span class="glyphicon glyphicon-menu-hamburger"></span> 
-            </button>
-
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbars" id = "searchbutton"><span class="glyphicon glyphicon-search"></span> 
-            </button>
-
-             <button type="button" class="navbar-toggle" data-toggle="collapse" id = "listbutton"><span class="glyphicon glyphicon-option-vertical"></span> 
-            </button>
-
-        </div>
-
-        <div class = "logo">
-            LF
-            </div>
-
-         <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-<!--                 <li>
-                  <a href="#menu-but" id="menu-but"><span class="glyphicon glyphicon-user"></span> Profile</a>
-                </li> -->
-                <li>
-                  <a href="userpage.php" id="signup-but"><span class="glyphicon glyphicon-home"></span> Home</a>
-                </li>
-                <li>
-                  <a href="moments.php" id="signup-but"><span class="glyphicon glyphicon-film"></span> Moments</a>
-                </li>
-                <li>
-                  <a href="notifications.php" id="signup-but" class="popper" data-toggle="popover" data-trigger="focus"><span class="glyphicon glyphicon-bell"></span> Notifications</a>
-                </li>
-
-                
-                  
-        </div>
-    </div>
-        <div class="collapse navbar-collapse" id="myNavbars">
-           <ul class="nav navbar-nav">
-             <li>
-                      <form>
-                      <input type="search" class="form-control" placeholder=" Search" />
-                     <i class="form-control-feedback glyphicon glyphicon-search" id = "search-but"></i></form>   
-                </li>
-            </ul>
-            </li>
-           </ul>
-         </div> 
-
-        <div class="collapse navbar-collapse" id="mySettings">
-           <ul class="nav navbar-nav">
-            
-                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-vertical" ></span></a>
-                    <ul class="dropdown-menu">
-                      <?php
-                        include "list.html";
+                    <?php
+                        include "navbar.php";
                       ?>
-            </ul>
-            </li>
-           </ul>
-         </div> 
-
-
-      
-
-
-  </nav>
-  
-
-    <div id="wrapper">
-        <div id="sidebar-wrapper">
- 
-            <ul class="sidebar-nav">
-               <?php
-
-                  include "list.html";
-
-               ?>
-            </ul>
-           
-        </div>
-        <!-- /#sidebar-wrapper -->
-
-       
-
-    </div>
   
 
     <section id="main-content">
@@ -151,12 +65,12 @@ if (mysqli_connect_errno())
                     {
                     echo "Failed to connect to MySQL: " . mysqli_connect_error();
                     } else {
-                        $query = "SELECT * FROM userinfo AS ui INNER JOIN notifications AS noti ON ui.username = noti.username WHERE noti.username = '".$_SESSION["myuser"]."' ORDER BY time_taken DESC";
+                        $query = "SELECT * FROM userinfo AS ui INNER JOIN notifications AS noti ON ui.userName = noti.from_username WHERE noti.username = '".$_SESSION["myuser"]."' ORDER BY time_taken DESC";
                         $result = mysqli_query($con, $query) or mysqli_error($con);
                         while ($row = mysqli_fetch_array($result)) {
                            $_SESSION["uname_notif"] = $row['username'];
-                           $_SESSION["fname_sender_notif"] = $row['first_name'];
-                           $_SESSION["lname_sender_notif"] = $row['last_name'];
+                           $_SESSION["fname_sender_notif"] = $row['firstName'];
+                           $_SESSION["lname_sender_notif"] = $row['lastName'];
                            $_SESSION["uname_sender_notif"] = $row['from_username'];
                            $_SESSION["message_notif"] = $row['notif_message'];
                            $_SESSION["time_notif"] = $row['time_taken'];

@@ -54,7 +54,7 @@
         <div class="collapse navbar-collapse" id="mySettings">
            <ul class="nav navbar-nav">
             
-                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">
+                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-vertical" ></span></a>
                     <ul class="dropdown-menu">
                       <?php
                         include "list.html";
@@ -63,6 +63,11 @@
             </li>
            </ul>
          </div> 
+
+
+      
+
+
   </nav>
   
 
@@ -79,24 +84,7 @@
            
         </div>
         <!-- /#sidebar-wrapper -->
-      
-      
-       <script>
-        $("#listbutton").click(function(e) {
-        e.preventDefault();
-        // $("#wrapper").toggleClass("toggled");
-        $("#wrapper").toggleClass("toggled");
-        });
 
-
-       $("#searchbutton").click(function(e) {
-        e.preventDefault();
-        // $("#wrapper").toggleClass("toggled");
-        $("wrapper").autoHidingNavbar('hide');
-        });
-
-        </script>
-
-
+       
 
     </div>
