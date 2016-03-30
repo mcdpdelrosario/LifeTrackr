@@ -31,13 +31,12 @@ if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   } else {
-      $query = "select firstName,lastName from userinfo where userName = '".$_SESSION["myuser"]."'";
+      $query = "select first_name,last_name from userinfo where username = '".$_SESSION["myuser"]."'";
       $result = mysqli_query($con, $query) or mysqli_error($con);
       while ($row = mysqli_fetch_array($result)) {
-          $_SESSION["fname"] = $row[0];
-        $_SESSION["lname"] = $row[1];
+          $_SESSION["fname"] = $row[first_name];
+        $_SESSION["lname"] = $row[last_name];
       }
-      
   }
 ?>
 
@@ -65,12 +64,12 @@ if (mysqli_connect_errno())
                     {
                     echo "Failed to connect to MySQL: " . mysqli_connect_error();
                     } else {
-                        $query = "SELECT * FROM userinfo AS ui INNER JOIN notifications AS noti ON ui.userName = noti.from_username WHERE noti.username = '".$_SESSION["myuser"]."' ORDER BY time_taken DESC";
+                        $query = "SELECT * FROM userinfo AS ui INNER JOIN notifications AS noti ON ui.username = noti.username WHERE noti.username = '".$_SESSION["myuser"]."' ORDER BY time_taken DESC";
                         $result = mysqli_query($con, $query) or mysqli_error($con);
                         while ($row = mysqli_fetch_array($result)) {
                            $_SESSION["uname_notif"] = $row['username'];
-                           $_SESSION["fname_sender_notif"] = $row['firstName'];
-                           $_SESSION["lname_sender_notif"] = $row['lastName'];
+                           $_SESSION["fname_sender_notif"] = $row['first_name'];
+                           $_SESSION["lname_sender_notif"] = $row['last_name'];
                            $_SESSION["uname_sender_notif"] = $row['from_username'];
                            $_SESSION["message_notif"] = $row['notif_message'];
                            $_SESSION["time_notif"] = $row['time_taken'];

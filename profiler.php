@@ -1,21 +1,25 @@
 <html lang="en">
 <head>
   <title>LifeTrackr</title>
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <link href="profiler.css" rel="stylesheet">
-  <link href="sidebar.css" rel="stylesheet">
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1 ,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true"> 
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>  
+<link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+<link href="profiler.css" rel="stylesheet">
+<link href="sidebar.css" rel="stylesheet">
+<script src='//ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+<script src='js/jquery.ba-hashchange.min.js'></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-QcrS-bymcrFPClDmuA4A3RMVZsvQCuQ&signed_in=true"></script>
+<script src="js/googlemaps.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-  <script src='//ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
-  <script src='js/jquery.ba-hashchange.min.js'></script>
-  <!-- <script src='dynamicpage.js'></script> -->
-  <!-- <script src='switchpage.js'></script> -->
-
-  <!-- <link href="css/simple-sidebar.css" rel="stylesheet"> -->
-
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-QcrS-bymcrFPClDmuA4A3RMVZsvQCuQ&signed_in=true"></script>
-	<script src="js/googlemaps.js"></script>
 </head>
 <body>
 
@@ -29,14 +33,14 @@ if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   } else {
-			$query = "select * from userinfo where userName = '".$_SESSION["myuser"]."'";
+			$query = "select * from userinfo where username = '".$_SESSION["myuser"]."'";
 			$result = mysqli_query($con, $query) or mysqli_error($con);
 			while ($row = mysqli_fetch_array($result)) {
-			  $_SESSION["uname"] = $row[0];
-        $_SESSION["pword"] = $row[2];
-				$_SESSION["lname"] = $row[3];
-        $_SESSION["fname"] = $row[4];
-        $_SESSION["email"] = $row[5];
+			  $_SESSION["uname"] = $row['username'];
+        $_SESSION["pword"] = $row['password'];
+				$_SESSION["lname"] = $row['last_name'];
+        $_SESSION["fname"] = $row['first_name'];
+        $_SESSION["email"] = $row['email'];
 			}
 			
 	}
@@ -134,14 +138,38 @@ if (mysqli_connect_errno())
           </form> 
         </div>
       </div>
-        
-        
-        
-        
-        
 		</section>
 
-    
+    <section>
+      <div class="container">
+  <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal" data-backdrop="true">Modal with Overlay (true)</button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">  
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal with Dark Overlay</h4>
+        </div>
+        <div class="modal-body">
+          <p>This modal has a dark overlay.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  
+      
+    </div>
+  </div>
+</div>
+    </section>>
 
     <script src="js/jquery.js"></script>
 

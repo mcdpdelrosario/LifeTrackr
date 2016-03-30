@@ -31,18 +31,15 @@
      
   }
   .navbar li a, .navbar {
-        color: #0E182C!important;
+        color: black!important;
         text-decoration: none;
-        color: #000000;
         font-family: Montserrat, sans-serif;
         font-size: 110%;
         font-weight: 100;
         letter-spacing: 1px;
-    
-
-        
-
   }
+
+
 
   #signup-but{
     position: relative;
@@ -114,9 +111,36 @@
   margin-top: -3.4%;
   margin-left:85%;
   position: absolute;
+  text-decoration: none;
+  border: 0; 
 }
 
-form input[type="search"] {
+#mySettings a.brand{
+  background-color: black;
+}
+
+#listdropdown-but{
+
+  font-size: 100%;
+
+}
+
+#listdropdown-but:hover{
+ color: #F04A00!important; 
+ background-color: transparent;
+}
+
+#userpic{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin-top: -6px;
+  margin-right: 100%;
+}
+
+
+form input[type="search"] 
+{
   height: 25px;
   width: 170px;
   margin: 0;
@@ -131,7 +155,7 @@ form input[type="search"] {
         color: #F04A00!important;
         text-decoration: none;
         margin-left: 40%;
-    margin-top: 1%;
+        margin-top: 1%;
         padding: 0;
         font-family: Montserrat, sans-serif;
         font-size: 150%;
