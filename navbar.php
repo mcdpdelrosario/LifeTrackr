@@ -79,7 +79,24 @@
            
         </div>
         <!-- /#sidebar-wrapper -->
+      
+      
+       <script>
+        $("#listbutton").click(function(e) {
+        e.preventDefault();
+        // $("#wrapper").toggleClass("toggled");
+        $("#wrapper").toggleClass("toggled");
+        });
 
-       
+
+       $("#searchbutton").click(function(e) {
+        e.preventDefault();
+        // $("#wrapper").toggleClass("toggled");
+        $("wrapper").autoHidingNavbar('hide');
+        });
+
+        </script>
+
+
 
     </div>

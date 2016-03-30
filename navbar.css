@@ -122,10 +122,21 @@
 #listdropdown-but{
 
   font-size: 100%;
-
+  color: white !important;
 }
 
+#listdropdown-buts{
+
+  font-size: 100%;
+ color: #242625 !important;}
+
 #listdropdown-but:hover{
+ color: #F04A00!important; 
+ background-color: transparent;
+}
+
+
+#listdropdown-buts:hover{
  color: #F04A00!important; 
  background-color: transparent;
 }
@@ -335,6 +346,11 @@ visibility: hidden;
 
 #wrapper.toggled #sidebar-wrapper {
     width: 100%;
+    visibility: visible;
+}
+
+#wrapper.hidden #sidebar-wrapper {
+    width: 0%;
     visibility: visible;
 }
 
