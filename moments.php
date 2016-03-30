@@ -124,12 +124,7 @@ if (mysqli_connect_errno())
 
 
     <!-- Menu Toggle Script -->
-     <script>
-    $("#listbutton").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
+
 
 </body>
 </html>
