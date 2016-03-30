@@ -54,7 +54,7 @@
         <div class="collapse navbar-collapse" id="mySettings">
            <ul class="nav navbar-nav">
             
-                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive" id = "userpic" src="http://placehold.it/120x120"/><a class="change"></a>
+                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">
                     <ul class="dropdown-menu">
                       <?php
                         include "list.html";
@@ -63,11 +63,6 @@
             </li>
            </ul>
          </div> 
-
-
-      
-
-
   </nav>
   
 
