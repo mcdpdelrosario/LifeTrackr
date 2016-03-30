@@ -12,7 +12,7 @@
   margin: 0;
   padding-top: 50px;
 
-  background-color: black;
+  
 /*  background: url("notif3.jpg") no-repeat center top fixed;*/
   background-size: 100% 100%;
   background-size: cover;
@@ -380,3 +380,43 @@ visibility: hidden;
 }
 
 
+/*for dp search*/
+#mySearches{
+margin-top: -3.4%;
+  margin-left:90%;
+  position: absolute;
+}
+
+
+#searchwrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    visibility: hidden;
+}
+
+
+#sidebar-searchwrapper {
+    z-index: 1000;
+    position: relative;
+    width: 0;
+    height: 50%;
+    overflow: hidden;
+    background: white;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    visibility: hidden;
+    float: right!important;
+}
+
+#searchwrapper.toggled #sidebar-searchwrapper {
+    width: 20%;
+    height: 50% !important;
+    visibility: visible;
+   
+    overflow: hidden;
+  }

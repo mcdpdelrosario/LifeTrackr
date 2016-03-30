@@ -64,6 +64,14 @@
            </ul>
          </div> 
 
+         <div class="collapse navbar-collapse" id="mySearches">
+           <ul class="nav navbar-nav">
+                 <span class="glyphicon glyphicon-search" ></span></a>
+            </li>
+           </ul>
+         </div> 
+            
+        
 
       
 
@@ -84,14 +92,39 @@
            
         </div>
         <!-- /#sidebar-wrapper -->
-
-       
-
     </div>
+
+
+
+    <div id="searchwrapper">
+        <div id="sidebar-searchwrapper">
+ 
+            <ul class="sidebar-nav">
+               <?php
+
+                  include "list.php";
+
+               ?>
+            </ul>
+           
+        </div>
+        <!-- /#sidebar-wrapper -->
+    </div>
+
+
+
+
 
         <script>
     $("#listbutton").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+      <script>
+    $("#mySearches").click(function(e) {
+        e.preventDefault();
+        $("#searchwrapper").toggleClass("toggled");
     });
     </script>
