@@ -43,8 +43,12 @@
            <ul class="nav navbar-nav">
              <li>
                       <form>
-                      <input type="search" class="form-control" placeholder=" Search" />
-                     <i class="form-control-feedback glyphicon glyphicon-search" id = "search-but"></i></form>   
+                      <?php
+                      include "index.php"
+                      ?>
+                     <!-- <input type="search" class="form-control" placeholder=" Search" />
+                     <i class="form-control-feedback glyphicon glyphicon-search" id = "search-but"></i>-->
+                     </form>   
                 </li>
             </ul>
             </li>
