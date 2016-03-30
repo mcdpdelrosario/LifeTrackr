@@ -7,8 +7,15 @@
                       } 
                       else 
                       {
+
+                        $query = "select * from userinfo where username = '".$_SESSION["myuser"]."'";
+                        $result = mysqli_query($con, $query) or mysqli_error($con);
+                        while ($row = mysqli_fetch_array($result)) {
+                          $_SESSION["uname"] = $row['username'];
+                        }
+
                         //$query = "select first_name,last_name from userinfo where username = '".$_SESSION["myuser"]."'";
-                        $query = "select first_name,last_name from userinfo where username = 'Gio'";
+                        $query = "select first_name,last_name from userinfo where username = '".$_SESSION["uname"]."'";
                         $result = mysqli_query($con, $query) or mysqli_error($con);
                         
                         while ($row = mysqli_fetch_array($result)) 
