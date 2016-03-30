@@ -88,3 +88,10 @@
        
 
     </div>
+
+        <script>
+    $("#listbutton").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>

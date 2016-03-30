@@ -1,18 +1,15 @@
+
 <html lang="en">
 <head>
   <title>LifeTrackr</title>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <link href="navbar.css" rel="stylesheet">
   <link href="userpage.css" rel="stylesheet">
-  <!-- <link href="sidebar.css" rel="stylesheet"> -->
 
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src='//ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
-
-  <!-- <link href="css/simple-sidebar.css" rel="stylesheet"> -->
-
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-QcrS-bymcrFPClDmuA4A3RMVZsvQCuQ&signed_in=false"></script>
-  <script src="googlemaps.js"></script>
 </head>
 <body>
 <?php
@@ -20,36 +17,10 @@
 ?>
 
 	<!-- palitan mo nalang ng navbar mo-->
-  <nav class="navbar">
-    <div class="container-fluid">
-      <div class="navbar-center navbar-header">
-        <a  class="navbar-brand" >LF</a>
-      </div>
-        <ul class="nav navbar-nav">
-      <li>
-        <a href="#menu-toggle" id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger"></span>  </a>
-      </li>
-      <li>
-        <a href="userpage.php" id="home-but"><span class="glyphicon glyphicon-home"></span> Home</a>
-      </li>
-      <li>
-        <a href="moments.php" id="moments-but"><span class="glyphicon glyphicon-film"></span> Moments</a>
-      </li>
-      <li>
-        <a href="notifications.php" id="notif-but" class="popper" data-toggle="popover" data-trigger="focus"><span class="glyphicon glyphicon-bell"></span> Notifications</a>
-      </li>
-        </ul>
-      <div class="col-sm-3 col-md-3 pull-right">
-        <form class="navbar-form" action="gosearch.php" method="get">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
-            <div class="input-group-btn">
-                <button class="btn btn-default" value="submit" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-            </div>
-        </div>
-        </form>
-    </div>
-  </nav>
+  
+                    <?php
+                        include "navbar.php";
+                      ?>
 
   <section id="main-content" class="container profile">
   	<div class="row">
@@ -136,6 +107,11 @@
         });
     });
   </script>
+
+      <script src="js/jquery-2.2.1.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
 </body>
 </html>

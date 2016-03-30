@@ -96,12 +96,7 @@ if (mysqli_connect_errno())
         <span class="glyphicon glyphicon-screenshot"></span>
       </a>
 
-    <script>
-    $("#listbutton").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
+
 
 
 
