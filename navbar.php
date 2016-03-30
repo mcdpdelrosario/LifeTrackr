@@ -1,4 +1,4 @@
- <nav class="navbar navbar-default navbar-fixed-top">
+ <nav class="navbar navbar-default" id="navbarsettings">
 
     
     <div class="container bar-align">
@@ -128,3 +128,19 @@
         $("#searchwrapper").toggleClass("toggled");
     });
     </script>
+
+      
+
+<!-- 
+    <script>
+
+     
+
+         $( "#listbutton" ).click(function(e)
+          {
+              e.preventDefault();
+              $( "#wrapper" ).click();
+          });
+
+    
+    </script> -->
