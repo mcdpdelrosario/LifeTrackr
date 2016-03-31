@@ -74,7 +74,7 @@ function pinMarkers(){
 			//addMarker({lat: dataMoments.latitude[i],lng: dataMoments.longitude[i]},dataMoments.moment_id[i]);	
 		}
 		//showMarkers(map);
-	}, 3000);
+	}, 5000);
 }
 function showMarkers(map){
 	for (var j = 0; j < arrayMarkers.length; j++) {
