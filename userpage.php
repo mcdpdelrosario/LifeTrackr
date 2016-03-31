@@ -23,9 +23,8 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 
-
-
-
+  <script src="dist/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
 
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-QcrS-bymcrFPClDmuA4A3RMVZsvQCuQ&signed_in=false"></script>

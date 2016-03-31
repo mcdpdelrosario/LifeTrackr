@@ -11,7 +11,7 @@
 	$pin_moment['first_name'] = array();
 	$pin_moment['last_name'] = array();
 
-	$query = "SELECT moments_id, mome.username, moments_message, longitude, latitude, first_name, last_name FROM moments AS mome INNER JOIN userinfo AS ui ON ui.username = mome.username WHERE mome.username='mcdpdelrosario'"; //mome.username should be a variable
+	$query = "SELECT moments_id, mome.username, moments_message, longitude, latitude, first_name, last_name FROM moments AS mome INNER JOIN userinfo AS ui ON ui.username = mome.username"; //mome.username should be a variable
 	// SELECT ui.username, moments_message, longitude, latitude, first_name, last_name FROM moments AS mome INNER JOIN userinfo AS ui ON ui.username = mome.username WHERE mome.username='mcdpdelrosario'
 	$result = mysqli_query($con, $query) or mysqli_error($con);
 
