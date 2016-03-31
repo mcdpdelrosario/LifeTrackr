@@ -138,64 +138,14 @@ form input[type="search"] {
         color: #F04A00!important;
         text-decoration: none;
         margin-left: 40%;
-    margin-top: 1%;
+        margin-top: 1%;
         padding: 0;
         font-family: Montserrat, sans-serif;
         font-size: 150%;
         font-weight: 400;
         letter-spacing: 3px;
         position: absolute;
-}
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-
-}
-.grid{
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding-top: 15%;
-  position: inherit;  
-  max-width: 100% !important;
-  overflow-x: hidden !important;
-  padding-left: 2.4%;
-  opacity: 0.9;
-}
-
-.grid:before,
-.grid:after,
-.row:before,
-.row:after{
-  content: " ";
-  display: table;
-}
-
-
-.grid:after,
-.row:after{
-  clear: both;
-
-
-}
-
-[class*="col-"]{
-  width: 100%;
-  float: left;
-  min-height: 1px;
-}
-
-.col{
-  padding: 1em;
-  margin: 6px;
-  background: orange;
-  border-radius: 3px;
-  color:white!important;
-  text-align: center;
-  margin-right: 5%;
-  margin-left: 6%;
-  overflow-x: hidden;
+         display: inline-block;
 }
 
 
@@ -280,7 +230,29 @@ visibility: hidden;
 }
 }
 
+@media screen and (min-width:500px){
 
+.logo{
+  visibility: hidden;
+}
+
+#navbarsettings{
+   margin-top: 1%;
+}
+
+}
+
+@media screen and (min-width:800px){
+
+.logo{
+  visibility: visible;
+}
+
+#navbarsettings{
+   margin-top: -4%;
+}
+
+}
 
 #map{
   height: 100%;
