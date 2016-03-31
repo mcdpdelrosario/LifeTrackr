@@ -27,7 +27,58 @@
 /*for moments*/
 
 
+/*for profile_user*/
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 
+}
+.grid{
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 15%;
+  position: inherit;  
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  padding-left: 2.4%;
+  opacity: 0.9;
+}
+
+.grid:before,
+.grid:after,
+.row:before,
+.row:after{
+  content: " ";
+  display: table;
+}
+
+
+.grid:after,
+.row:after{
+  clear: both;
+
+
+}
+
+[class*="col-"]{
+  width: 100%;
+  float: left;
+  min-height: 1px;
+}
+
+.col{
+  padding: 1em;
+  margin: 6px;
+  background: orange;
+  border-radius: 3px;
+  color:white!important;
+  text-align: center;
+  margin-right: 5%;
+  margin-left: 6%;
+  overflow-x: hidden;
+}
 
 
 

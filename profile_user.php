@@ -22,78 +22,22 @@
                         include "navbar.php";
                       ?>
 
-  <section id="main-content" class="container profile">
-  	<div class="row">
-  		<div class="col-xs-4">
-      	<div class="panel panel-default lefty">
-          <div class="panel-heading header">
-          </div>
-	        <div class="panel-body">
-            <div id="left-panel">
-              <img id="profile_pic" src="img.jpg">
+
+<div class="grid">
+  <div class="row">
+   <div class ="col-xs-5">
+      <div class="col">
+          <img id="profile_pic" src="img.jpg">
               <a href="profile_user.php"><h4 id="myname"><?=$_SESSION["fname"]?> <?=$_SESSION["lname"]?> <br> </h4></a>
               <p id="username">@<?=$_SESSION["myuser"]?></p>
-              <a href="profiler.php"><button class="btn btn-default edit-profile">Edit Profile</button></a>
-            </div>
-	        </div>
-        </div>
-		  </div>
-      <div class="col-xs-8">
-        <div class="panel panel-default">
-          <div class="panel-heading header">
-          </div>
-          <div class="panel-body righty">
-            <div id="right-panel">
-              <ul class="nav nav-tabs">
-                <li class="active"><a href="profile_user.php">Home</a></li>
-                <li><a href="#">Menu 1</a></li>
-                <li><a href="#">Menu 2</a></li>
-              </ul>
-            </div>
-
-              <?php
-                    $con = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","bdd92f8752ef7e","fdb4d70b","lifetrackr");
-
-                  // Check connection
-                  if (mysqli_connect_errno())
-                    {
-                    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-                    } else {
-                        $query = "SELECT * FROM userinfo AS ui INNER JOIN moments AS mmnt ON ui.username = mmnt.username WHERE mmnt.username = '".$_SESSION["myuser"]."' ORDER BY time_taken DESC";
-                        $result = mysqli_query($con, $query) or mysqli_error($con);
-                        while ($row = mysqli_fetch_array($result)) {
-                           // $_SESSION["uname_notif"] = $row['username'];
-                           $_SESSION["fname_my_moment"] = $row['first_name'];
-                           $_SESSION["lname_my_moment"] = $row['last_Name'];
-                           $_SESSION["uname_my_moment"] = $row['username'];
-                           $_SESSION["message_moments"] = $row['moments_message'];
-                           $_SESSION["longtitude_moments"] = $row['longitude'];
-                           $_SESSION["latitude_moments"] = $row['latitude'];
-                           $_SESSION["time_taken"] = $row['time_stamp'];
-                           $longlat = $_SESSION["longtitude_moments"].','.$_SESSION["latitude_moments"];
-                           ?>
-                          
-                           <div class="inner-content">
-                                  <p><b><?=$_SESSION["fname_my_moment"]?> <?=$_SESSION["lname_my_moment"]?></b> @<?=$_SESSION["uname_my_moment"]?> <?=$_SESSION["time_taken"]?></p>
-                                  <?php
-                                    echo "<img src='http://maps.googleapis.com/maps/api/staticmap?center=".$longlat."&zoom=19&size=400x300&sensor=true&maptype=satellite'>";
-                                    ?>
-                                  <p><?=$_SESSION["message_moments"]?></p>
-                                  <hr>
-                           </div>
-
-                      <?php
-                        }
-                      }
-                  ?>   
-                  <br>
-                  <!-- <a href="#" id="load-more">Load More</a> -->
-                  <button class="btn btn-default" id="load-more"><span class="glyphicon glyphicon-repeat"></span><br>Load</button>
-          </div>
-        </div>
+              <a href="profiler.php"><button class="btn btn-default edit-profile">Edit Profile</button></a> 
       </div>
-	  </div>
-  </section>
+    </div>      
+  </div>
+</div>
+
+
+
 
   <script>
     $(function(){

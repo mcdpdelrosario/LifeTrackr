@@ -189,9 +189,9 @@ form input[type="search"] {
 .col{
   padding: 1em;
   margin: 6px;
-  background: white;
+  background: orange;
   border-radius: 3px;
-  color:black;
+  color:white!important;
   text-align: center;
   margin-right: 5%;
   margin-left: 6%;
@@ -276,7 +276,7 @@ visibility: hidden;
 
 
 #navbarsettings{
-   margin-top: -1%;
+   margin-top: 1%;
 }
 }
 
@@ -430,3 +430,5 @@ margin-top: -3.4%;
     width: 100%;
     visibility: visible;
 }
+
+
