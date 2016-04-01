@@ -27,11 +27,6 @@
 /*for moments*/
 
 
-
-
-
-
-
 /*for profile user*/
 
 #container1-profileuser{
@@ -42,6 +37,9 @@
 	position: absolute;
 	/*background-color: #D93D04*/
 	background-color: #b4c0d9;
+/*	border-radius: 20px;*/
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 }
 
 #container1-background{
@@ -87,7 +85,7 @@
 
 
 
-
+/*for settings*/
 
 
 
@@ -178,13 +176,15 @@
 #profile_pic{
 	width: 30% !important;
 	margin-top: 20%;
+	margin-left: -5%;
+
 }
 
 
 #profile_name{
 	position: absolute;
 	margin-top: 17%;
-	margin-left: 26%;
+	margin-left: 21%;
 	color: white!important;	
 
 }

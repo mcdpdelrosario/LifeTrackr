@@ -25,7 +25,7 @@
                         }
                       }
                       ?>
-                        <a id="listdropdown-but" href="#">
+                        <a id="listdropdown-name" href="#">
                           <?php
                             echo $_SESSION["fname"]." ". $_SESSION["lname"];
                           ?>
@@ -42,7 +42,7 @@
                </li>
 				
 			   <li>
-                  <a href="#" id="listdropdown-buts">Settings</a>
+                  <a href="subpages/settings.php" id="listdropdown-buts">Settings</a>
                </li>
 
                <li>

@@ -123,6 +123,17 @@
   position: absolute;
 }
 
+#dropdown-settings{
+  margin-left: -360%;
+  position: absolute;
+  font-size: 110%;
+  margin-top: 10%;
+}
+
+#listdropdown-name{
+  font-weight: bold;
+}
+
 form input[type="search"] {
   height: 25px;
   width: 170px;
