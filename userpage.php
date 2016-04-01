@@ -56,6 +56,7 @@ if (mysqli_connect_errno())
 
 
                     <?php
+                    	include "logout.php";
                         include "navbar.php";
                       ?>
 
