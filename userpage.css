@@ -35,24 +35,54 @@
 /*for profile user*/
 
 #container1-profileuser{
-	margin-top: -2%;
-	margin-left: 7%;
+	margin-top: -15%;
+	margin-left: 11%;
+	margin-right: 9%;
+	width: 75%;
 	position: absolute;
+	/*background-color: #D93D04*/
+	background-color: #b4c0d9;
 }
 
+#container1-background{
+	background-color: white;
+}
 
 #editprofile-profileuser{
 	background-color: gray;
 	color: black;
 	font-weight: 400;
+	margin-top: -6%;
+	margin-left:  90% !important;
+	position: absolute;
 }
+
+#profile_pic{
+	width: 65% !important;
 }
 
+#profile_name{
+	position: absolute;
+	margin-top: 12%;
+	margin-left: 20%;
+}
 
+#myname{
+	font-weight: bold;
+	color: black!important;
+}
 
-
-
-
+#username{
+	margin-top: -1%;
+}
+#container2-profileuser{
+	
+	margin-top: 3%;
+	margin-left: 11%;
+	margin-right: 9%;
+	width: 75%;
+	position: absolute;
+}
 
 
 
@@ -132,15 +162,64 @@
 .col-wd-12{width: 100%;}
 
 #container1-profileuser{
-	margin-left: -1%;
-	width:100%;
+	margin-left: -2%!important;
+	margin-top: -17%;
+	width:110%;
 	position: absolute;
-	margin-right: 2.4%;
-	margin-left: 2.4%;
+	background-color: white;
+	position: absolute;
+	height: 20% !important;
+
 }
 
 #editprofile-profileuser{
 	float:right;
+}
+#profile_pic{
+	width: 30% !important;
+	margin-top: 20%;
+}
+
+
+#profile_name{
+	position: absolute;
+	margin-top: 17%;
+	margin-left: 26%;
+	color: white!important;	
+
+}
+
+#myname{
+	font-weight: 300;
+	color: white!important;
+}
+
+#username{
+	margin-top: -4%;
+}
+#container1-background{
+	background-color: #1c1c17;
+}
+
+
+#myname{
+	font-size: 110%;
+}
+
+#container2-profileuser{
+	margin-top: 35%;
+	width: 110%;
+	margin-left: -2%!important;
+
+
+}
+
+
+#load-more{
+  border-radius: 5em !important;
+  height: 100px;
+  width: 100px;
+  margin-left:33%;
 }
 
 }
