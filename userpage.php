@@ -55,10 +55,10 @@ if (mysqli_connect_errno())
 ?>
 
 
-                    <?php
-                    	include "logout.php";
-                        include "navbar.php";
-                      ?>
+      <?php
+      	include "logout.php";
+          include "navbar.php";
+        ?>
 
      <section id="main-content">
       
@@ -66,8 +66,8 @@ if (mysqli_connect_errno())
     </section>
 
 <!-- Modal -->
-<div id="momentsSection">
-    <div class="modal fade" id="myModal" role="dialog">
+<div id="momentPop">
+    <div class="modal fade" id="momentModal" role="dialog">
       <div class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
@@ -91,6 +91,33 @@ if (mysqli_connect_errno())
     </div>
   </div>
 </div>
+
+<!-- Modal -->
+<div id="momentsSection">
+    <div class="modal fade" id="momentPost" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title" id="momentTitlePost">Patrick Gonzales</h4>
+          </div>
+          <div class="modal-body">
+                  <p id="momentWords">
+                    I saw the love of my life and we had our first kiss
+                  </p>
+          </div>
+        <div class="modal-footer">
+          <button id="momentLike" class="btn btn-default" type="submit" value="submit" onclick="likeFunction()">Like</button>
+          <button id="momentComment" type="button" class="btn btn-default" data-dismiss="modal" onclick="commentFunction()">Comment</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
 
       <a id="findButton" onclick="findUser()" class="btn btn-default">
