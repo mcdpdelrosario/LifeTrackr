@@ -46,5 +46,5 @@
                </li>
 
                <li>
-                  <a href="#" id="listdropdown-buts">Logout</a>
+                  <a href="logoutv2.php" id="listdropdown-buts">Logout</a>
                </li>
