@@ -4,7 +4,7 @@
 
 	$pin_moment = array();
 	$pin_moment['moment_id'] = array();
-	$pin_moment['user_id'] = array();
+	$pin_moment['username'] = array();
 	$pin_moment['longitude'] = array();
 	$pin_moment['latitude'] = array();
 	$pin_moment['message'] = array();
@@ -12,7 +12,7 @@
 	$pin_moment['first_name'] = array();
 	$pin_moment['last_name'] = array();
 
-	$query = "SELECT moments_id, moments_user_id, moments_message, longitude, latitude, first_name, last_name, mome.time_stamp FROM moments AS mome 
+	$query = "SELECT moments_id, ui.username, moments_message, longitude, latitude, first_name, last_name, mome.time_stamp FROM moments AS mome 
 	INNER JOIN userinfo AS ui 
 		ON ui.user_id = mome.moments_user_id
 WHERE moments_user_id = '".$_SESSION['myuser']."'"; //mome.username should be a variable
@@ -23,7 +23,7 @@ WHERE moments_user_id = '".$_SESSION['myuser']."'"; //mome.username should be a 
 
 	while($row = mysqli_fetch_array($result)){
 		array_push($pin_moment['moment_id'], $row['moments_id']);
-		array_push($pin_moment['user_id'], $row['moments_user_id']);
+		array_push($pin_moment['username'], $row['ui.username']);
 		array_push($pin_moment['message'], $row['moments_message']);
 		array_push($pin_moment['longitude'], $row['longitude']); 
 		array_push($pin_moment['latitude'], $row['latitude']); 
