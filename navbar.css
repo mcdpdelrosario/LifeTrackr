@@ -268,10 +268,12 @@ visibility: hidden;
 #map{
   height: 100%;
 }
-.modal-footer{
-  padding-right:35%;
+#postButtons{
+  text-align: center;
 }
-
+#commentArea{
+  text-align: left;
+}
 #wrapper {
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
