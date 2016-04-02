@@ -98,16 +98,19 @@ if (mysqli_connect_errno())
       <div class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header" style="background-color:orange;">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title" id="momentTitlePost">Patrick Gonzales</h4>
+            <div class="modal-title">
+            <h1 id="momentTitlePost"></h1>
+            <p id="momentSubtitlePost"></p>
+            </div>
           </div>
           <div class="modal-body">
-                  <p id="momentWords">
+                  <h4 id="momentWords">
                     
-                  </p>
+                  </h4>
           </div>
-        <div class="modal-footer">
+        <div class="modal-footer" style="background-color:orange;">
           <button id="momentLike" class="btn btn-default" type="submit" value="submit" onclick="likeFunction()">Like</button>
           <button id="momentComment" type="button" class="btn btn-default" data-dismiss="modal" onclick="commentFunction()">Comment</button>
         </div>

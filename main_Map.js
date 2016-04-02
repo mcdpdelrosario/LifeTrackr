@@ -13,7 +13,7 @@ function initialize() {
 	map = new google.maps.Map(document.getElementById('map'), {
 		zoom: 6,
 		center: philippines,
-		disableDefaultUI: true
+		//disableDefaultUI: true
 	});
 	creatingMapListener();
 	if (navigator.geolocation) {
@@ -86,7 +86,7 @@ function showMarkers(map){
 		var distance = getDistanceFromLatLonInKm(arrayMarkers[j].position.lat(),arrayMarkers[j].position.lng(),userMarker.position.lat(),userMarker.position.lng());
 		if(0.25>distance){
     		arrayMarkers[j].setMap(map);
-    		attachListener(arrayMarkers[j], String(infoMessages[j].msg));
+    		attachListener(arrayMarkers[j], infoMessages[j]);
     	}else{
     		arrayMarkers[j].setMap(null);
     	}
@@ -95,7 +95,7 @@ function showMarkers(map){
 }
 
 
-function attachListener(marker, secretMessage) {
+function attachListener(marker, momentInfo) {
   // var infowindow = new google.maps.InfoWindow({
   //   content: secretMessage
   // });
@@ -104,8 +104,10 @@ function attachListener(marker, secretMessage) {
   	// console.log(mouseX);
 	// infowindow.setContent("X: " +mouseX +" Y: " + mouseY);
     // infowindow.open(marker.get('map'), marker);
-    console.log(secretMessage);
-    document.getElementById("momentWords").value=secretMessage;
+    //console.log(secretMessage);
+    document.getElementById("momentTitlePost").innerHTML=momentInfo.first_name+" "+momentInfo.last_name;
+    document.getElementById("momentSubtitlePost").innerHTML=momentInfo.username;
+    document.getElementById("momentWords").innerHTML=momentInfo.msg;
     $("#momentPost").modal("show");
     //alert("sa");
 
