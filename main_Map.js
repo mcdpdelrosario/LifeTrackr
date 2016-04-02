@@ -84,33 +84,24 @@ function pinMarkers(){
 function showMarkers(map){
 	for (var j = 0; j < arrayMarkers.length; j++) {
 		var distance = getDistanceFromLatLonInKm(arrayMarkers[j].position.lat(),arrayMarkers[j].position.lng(),userMarker.position.lat(),userMarker.position.lng());
-		if(0.25>distance){
+		if(userRadius>distance){
     		arrayMarkers[j].setMap(map);
     		attachListener(arrayMarkers[j], infoMessages[j]);
     	}else{
     		arrayMarkers[j].setMap(null);
     	}
   	}
-  	hideTemporaryMarker();
+  	//hideTemporaryMarker();
 }
 
 
 function attachListener(marker, momentInfo) {
-  // var infowindow = new google.maps.InfoWindow({
-  //   content: secretMessage
-  // });
 
   marker.addListener('click', function() {
-  	// console.log(mouseX);
-	// infowindow.setContent("X: " +mouseX +" Y: " + mouseY);
-    // infowindow.open(marker.get('map'), marker);
-    //console.log(secretMessage);
     document.getElementById("momentTitlePost").innerHTML=momentInfo.first_name+" "+momentInfo.last_name;
     document.getElementById("momentSubtitlePost").innerHTML=momentInfo.username;
     document.getElementById("momentWords").innerHTML=momentInfo.msg;
     $("#momentPost").modal("show");
-    //alert("sa");
-
   });
 }
 
