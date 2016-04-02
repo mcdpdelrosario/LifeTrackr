@@ -56,7 +56,7 @@ if (mysqli_connect_errno())
 
 
       <?php
-      	include "logout.php";
+      	//include "logout.php";
           include "navbar.php";
         ?>
 
@@ -104,7 +104,7 @@ if (mysqli_connect_errno())
           </div>
           <div class="modal-body">
                   <p id="momentWords">
-                    I saw the love of my life and we had our first kiss
+                    
                   </p>
           </div>
         <div class="modal-footer">

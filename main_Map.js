@@ -86,7 +86,7 @@ function showMarkers(map){
 		var distance = getDistanceFromLatLonInKm(arrayMarkers[j].position.lat(),arrayMarkers[j].position.lng(),userMarker.position.lat(),userMarker.position.lng());
 		if(0.25>distance){
     		arrayMarkers[j].setMap(map);
-    		attachListener(arrayMarkers[j], infoMessages[j].msg);
+    		attachListener(arrayMarkers[j], String(infoMessages[j].msg));
     	}else{
     		arrayMarkers[j].setMap(null);
     	}
@@ -104,6 +104,8 @@ function attachListener(marker, secretMessage) {
   	// console.log(mouseX);
 	// infowindow.setContent("X: " +mouseX +" Y: " + mouseY);
     // infowindow.open(marker.get('map'), marker);
+    console.log(secretMessage);
+    document.getElementById("momentWords").value=secretMessage;
     $("#momentPost").modal("show");
     //alert("sa");
 
