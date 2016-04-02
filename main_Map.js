@@ -2,8 +2,8 @@ var map,
 temporaryMarker,
 userMarker,
 arrayMarkers = [],
-zoomValue = 16,
-userRadius = 0.5,
+zoomValue = 20,
+userRadius = 0.2,
 infoWindow,
 infoMessages = [];//in Km
 function initialize() {
