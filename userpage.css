@@ -22,11 +22,6 @@
   padding-right:35%;
 }
 
-
-
-/*for moments*/
-
-
 /*for profile user*/
 
 #container1-profileuser{
@@ -83,7 +78,46 @@
 }
 
 
+/*for moments*/
+#containera-moments{
+	background-color: #b6d5f2;
+	left:10%;
+	top: 18%;
+	height: 25%;
+	width: 30%;
+	position: absolute;
+	border-radius: 5px;
+}
 
+#profile-pic-moments{
+	width: 100%;
+	padding-top: 80%;
+	left: 12%;
+	position: absolute;
+
+}
+
+#container2-moments{
+	background-color: white;
+	top: 100%;
+	left: 38%;
+	width: 77%;
+	position: relative;		
+}
+
+#icons-moments{
+	position: relative;
+	left:-1%;
+	color: #BC6F2F!important;
+
+}
+
+#icons-moments li a{
+	color: #D34F15!important;
+	font-weight: 400;
+	font-family: Montserrat, sans-serif; 
+
+}
 
 /*for settings*/
 
@@ -144,7 +178,7 @@
 
 /*for pagecontent responsive*/
 
-@media screen and (max-width: 499px){   
+@media screen and (max-width: 640px){   
 
 .col-wd-1{width: 8.33%;}
 .col-wd-2{width: 16.67%;}
@@ -210,8 +244,6 @@
 	margin-top: 35%;
 	width: 110%;
 	margin-left: -2%!important;
-
-
 }
 
 
@@ -222,9 +254,16 @@
   margin-left:33%;
 }
 
+
+/*moments*/
+#containera-moments{
+	width: 200%;
 }
 
-@media screen and (min-width:500px){
+
+}
+
+@media screen and (min-width:641px){
 .col-md-1{width: 8.33%;}
 .col-md-2{width: 16.67%;}
 .col-md-3{width: 25%;}
@@ -245,7 +284,7 @@
 }
 
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 960px){
 .col-xs-1{width: 8.33%;}
 .col-xs-2{width: 16.67%;}
 .col-xs-3{width: 25%;}
