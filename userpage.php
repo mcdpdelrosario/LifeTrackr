@@ -98,25 +98,30 @@ if (mysqli_connect_errno())
 
 <!-- Modal -->
 <div id="momentsSection">
-    <div class="modal fade" id="momentPost" role="dialog">
-      <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header" style="background-color:orange;">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <div class="modal-title">
+  <div class="modal fade" id="momentPost" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style="background-color:orange;">
+          <button type="button" class="close" onclick = "modalClosedFunction()">&times;</button>
+          <div class="modal-title">
             <h1 id="momentTitlePost"></h1>
             <p id="momentSubtitlePost"></p>
+          </div>
+        </div>
+        <div class="modal-body">
+          <h4 id="momentWords"></h4>
+        </div>
+        <div class="modal-footer" style="background-color:orange;">
+          <div id="postButtons">
+            <button id="momentLike" class="btn btn-default" type="submit" value="submit" onclick="likeFunction()">Like</button>
+            <button id="momentComment" type="button" class="btn btn-default" onclick="commentFunction()">Comment</button>
+          </div>
+          <div id="commentArea">
+            <div id="commentSection" class="panel panel-default" style = "display: none;">
+              <div class="panel-body">Panel Body</div>
             </div>
           </div>
-          <div class="modal-body">
-                  <h4 id="momentWords">
-                    
-                  </h4>
-          </div>
-        <div class="modal-footer" style="background-color:orange;">
-          <button id="momentLike" class="btn btn-default" type="submit" value="submit" onclick="likeFunction()">Like</button>
-          <button id="momentComment" type="button" class="btn btn-default" data-dismiss="modal" onclick="commentFunction()">Comment</button>
         </div>
       </div>
     </div>

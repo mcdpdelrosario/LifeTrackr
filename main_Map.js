@@ -117,7 +117,8 @@ function userMarkerListener(marker){
   	});
 }
 function sendUserCoordinates(){
-	setInterval(function(){ alert("Hello"); 
+	setInterval(function(){ 
+		alert("Hello"); 
 	}, 3000);
 }
 function confirmFunction(){
@@ -195,4 +196,10 @@ function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
 function deg2rad(deg) {
 	return deg * (Math.PI/180)
 }
-
+function commentFunction(){
+	$("#commentSection").slideToggle("slow");
+}
+function modalClosedFunction(){
+	$("#commentSection").slideUp("fast");
+	$("#momentPost").modal("hide");
+}
