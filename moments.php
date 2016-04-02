@@ -25,31 +25,45 @@
 
 </head>
 <body>
+    <?php
+      include "navbar.php";
+    ?>
 
-                    <?php
-                        include "navbar.php";
-                    ?>
+     <div class="grid">
+    <div class="row">
+      <div class="col-wd-12 col-md-4" id="containera-moments">
+        <div id="container1-moments">
+          <div class="col-md-4">
+            <img id="profile-pic-moments" src="img.jpg">
+          </div>
 
+          <div class="col-md-8" id="profile_name_moments">
+          </div> 
+        </div>
 
-                    
-    
-      
-    <script>
-      $(function(){
-          $(".inner-content").slice(0, 3).show(); // select the first ten
-          $("#load-more").click(function(e){ // click event for load more
-              e.preventDefault();
-              $(".inner-content:hidden").slice(0, 3).show(); // select next 10 hidden divs and show them
-              if($(".inner-content:hidden").length == 0){ // check if any hidden divs still exist
-                  alert("No more Moments!"); // alert if there are none left
-              }
-          });
-      });
-    </script>
+        <div id ="container2-moments">
 
+           <ul class="nav nav-pills" id="icons-moments">
+                <li><a href="#" >
+                  <!-- <span class="glyphicon glyphicon-user"id="message-moments"></span> -->Friends
+                  </a></li>
+                <li><a href="#" >
+                  <!-- <span class="glyphicon glyphicon-envelope"id="message-moments"> -->Messages
+                  </a></li>
+                <li><a href="#" >
+                <!--   <span class="glyphicon glyphicon-heart-empty"id="message-moments"> -->Likes
+                  </a></li>
+                <!-- <li><a href="#" >
+                  <span class="glyphicon glyphicon-cog"id="message-moments"></span>
+                  </a></li> -->
+          </ul>
+      </div>
+        
+    </div>
+   </div> 
+  </div>
+                 
 
-
-    <!-- Menu Toggle Script -->
 
 
 </body>

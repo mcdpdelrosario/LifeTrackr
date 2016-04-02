@@ -37,6 +37,7 @@
 <?php
 
 session_start();
+ include "navbar.php";
   $con = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","bdd92f8752ef7e","fdb4d70b","lifetrackr");
 
 // Check connection
@@ -54,11 +55,14 @@ if (mysqli_connect_errno())
   }
 ?>
 
-
-      <?php
-      	//include "logout.php";
-          include "navbar.php";
+   // include "logout.php";
+                       
         ?>
+
+
+                    
+                     
+                      
 
      <section id="main-content">
       
@@ -69,7 +73,7 @@ if (mysqli_connect_errno())
 <div id="momentPop">
     <div class="modal fade" id="momentModal" role="dialog">
       <div class="modal-dialog">
-        <!-- Modal content-->
+       
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
