@@ -57,7 +57,7 @@ if (mysqli_connect_errno())
 
     <!-- include "logout.php"; -->
                        
-        ?>
+
 
 
                     
