@@ -61,15 +61,15 @@ if (mysqli_connect_errno())
 
                     
                      
-   <!--                    
+                      
 
      <section id="main-content">
       
       <div id="map"></div>
-    </section> -->
+    </section>
 
 <!-- Modal -->
-<!-- <div id="momentsSection">
+<div id="momentsSection">
     <div class="modal fade" id="myModal" role="dialog">
       <div class="modal-dialog">
        
@@ -101,7 +101,7 @@ if (mysqli_connect_errno())
       </a>
 
 
- -->
+
 
 
 </body>
