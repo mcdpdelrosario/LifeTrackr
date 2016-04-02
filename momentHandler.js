@@ -5,12 +5,16 @@ function createMoment(lat,lng,message){
 	var url = "createMoments.php?moment_Lng="+lng+ "&moment_Lat=" + lat+"&moment_Message=" + message;
 	httpGetAsync(url,successQuery);
 }
-function successQuery(){
-	swal("Good job!", "Sent!", "success");
+function successQuery(text){
+	swal("Good job!", text, "success");
+	hideTemporaryMarker();
+
 }
 function pinMoment(){
 	var url = "pinMoments.php";
 	httpGetAsync(url,function(json){
-		dataMoments = JSON.parse(json);
+	 	dataMoments = JSON.parse(json);
+		// console.log(dataMoments);
 	});
+	// httpGetAsync(url,alert);
 }

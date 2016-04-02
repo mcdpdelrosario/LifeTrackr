@@ -2,9 +2,10 @@ var map,
 temporaryMarker,
 userMarker,
 arrayMarkers = [],
-zoomValue = 16,
-userRadius = 0.5,
-infoWindow;//in Km
+zoomValue = 20,
+userRadius = 0.2,
+infoWindow,
+infoMessages = [];//in Km
 function initialize() {
 	temporaryMarker = new google.maps.Marker({});
 	infoWindow = new google.maps.InfoWindow({map: null});
@@ -12,7 +13,7 @@ function initialize() {
 	map = new google.maps.Map(document.getElementById('map'), {
 		zoom: 6,
 		center: philippines,
-		disableDefaultUI: true
+		//disableDefaultUI: true
 	});
 	creatingMapListener();
 	if (navigator.geolocation) {
@@ -26,6 +27,7 @@ function initialize() {
 				map: map,
 				title:'Im kinda here I hope'
 			});
+			userMarkerListener(userMarker);
 			map.setCenter(userMarker.position);
 			map.setZoom(zoomValue);
 		}, function() {
@@ -70,10 +72,11 @@ function httpGetAsync(theUrl, callback){
 function pinMarkers(){
 	setInterval(function(){
 		pinMoment();
+
 		for(var i = 0; i < dataMoments.moment_id.length; i++){
 			var lats = dataMoments.latitude[i];
 			var lngs = dataMoments.longitude[i];
-			addMarker({ lat: parseFloat(lats), lng: parseFloat(lngs) });
+			addMarker({ lat: parseFloat(lats), lng: parseFloat(lngs) }, {msg: String(dataMoments.message[i]), username: String(dataMoments.username[i]), first_name: String(dataMoments.first_name[i]), last_name: String(dataMoments.last_name[i])},i);
 		}
 		showMarkers(map);
 	}, 5000);
@@ -81,31 +84,53 @@ function pinMarkers(){
 function showMarkers(map){
 	for (var j = 0; j < arrayMarkers.length; j++) {
 		var distance = getDistanceFromLatLonInKm(arrayMarkers[j].position.lat(),arrayMarkers[j].position.lng(),userMarker.position.lat(),userMarker.position.lng());
-		if(0.25>distance){
+		if(userRadius>distance){
     		arrayMarkers[j].setMap(map);
+    		attachListener(arrayMarkers[j], infoMessages[j]);
     	}else{
     		arrayMarkers[j].setMap(null);
     	}
   	}
+  	//hideTemporaryMarker();
 }
+
+
+function attachListener(marker, momentInfo) {
+
+  marker.addListener('click', function() {
+    document.getElementById("momentTitlePost").innerHTML=momentInfo.first_name+" "+momentInfo.last_name;
+    document.getElementById("momentSubtitlePost").innerHTML=momentInfo.username;
+    document.getElementById("momentWords").innerHTML=momentInfo.msg;
+    $("#momentPost").modal("show");
+  });
+}
+
 function findUser(){
 	map.panTo(userMarker.position);
 }
 
-function userMarkerListener(){
-
+function userMarkerListener(marker){
+	marker.addListener('click', function() {
+		temporaryMarker.setPosition(userMarker.position);
+		hideTemporaryMarker();
+		$("#momentModal").modal("show");
+  	});
+}
+function sendUserCoordinates(){
+	setInterval(function(){ alert("Hello"); 
+	}, 3000);
 }
 function confirmFunction(){
 	var comments = document.getElementById("MomentsComment").value;
 	createMoment(temporaryMarker.position.lat(),
 	temporaryMarker.position.lng(),comments);
-	$("#myModal").modal("hide");
+	$("#momentModal").modal("hide");
 	document.getElementById("MomentsComment").value = "";
-	hideTemporaryMarker();
+	
 }
 function cancelFunction(){
 	hideTemporaryMarker();
-	$("#myModal").modal("hide");
+	$("#momentModal").modal("hide");
 	document.getElementById("MomentsComment").value = "";
 }
 function createPointer(){
@@ -125,15 +150,12 @@ function creatingMapListener(){
 			//temporaryMarker.setMap(null);
 			createPointer();
 			//alert("lat: " +userlat +"\tlng: " +userlng);
-			$("#myModal").modal("show");
+			$("#momentModal").modal("show");
 			
 		}else{
 			hideTemporaryMarker();
 			swal("Too Far!", "Moment cannot be Created", "error");
-
-			
 		}	
-		
 	});
 }
 function hideTemporaryMarker(){
@@ -142,15 +164,16 @@ function hideTemporaryMarker(){
 function showTemporaryMarker(){
 	temporaryMarker.setMap(map);
 }
-function addMarker(location) {
+function addMarker(location,words,n) {
 // Add the marker at the clicked location, and add the next-available label
 // from the array of alphabetical characters.
 	var marker = new google.maps.Marker({
 		position:location,
 		map: null
 	});
-	arrayMarkers.push(marker);
-
+	infoMessages[n] = words;
+	arrayMarkers[n] = marker;
+	//arrayMarkers[n].addListener('click', popTheInfo(n));
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
@@ -172,3 +195,4 @@ function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
 function deg2rad(deg) {
 	return deg * (Math.PI/180)
 }
+

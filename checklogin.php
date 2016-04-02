@@ -12,12 +12,15 @@
 		{	
 			$logged_num = $_POST["uname_log"];
 			$signed_num = $_POST["pwd_log"];
-			$query = "select username, password from userinfo where username = '".$logged_num."' && password = '".$signed_num."'";
+			$query = "select user_id from userinfo where username = '".$logged_num."' && password = '".$signed_num."'";
 			$result = mysqli_query($con, $query) or mysqli_error($con);
 			
 			if (mysqli_num_rows($result) == 1) 
 			{
-			 	$_SESSION["myuser"] = $logged_num;
+			 	while($row=mysqli_fetch_array($result)){
+			 		$_SESSION["myuser"] = $row['user_id'];
+			 	}
+			 	
 			 	header('Location: userpage.php');
 			}
 			else 
