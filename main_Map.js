@@ -123,8 +123,12 @@ function sendUserCoordinates(){
 }
 function confirmFunction(){
 	var comments = document.getElementById("MomentsComment").value;
-	createMoment(temporaryMarker.position.lat(),
-	temporaryMarker.position.lng(),comments);
+	var sendMoments = {
+		moment_Lng: temporaryMarker.position.lng(),
+		moment_Lat: temporaryMarker.position.lat(),
+		moment_Message: comments
+	};
+	createMoment(sendMoments);
 	$("#momentModal").modal("hide");
 	document.getElementById("MomentsComment").value = "";
 	
