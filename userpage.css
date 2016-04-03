@@ -160,7 +160,7 @@
 
 /*for pagecontent responsive*/
 
-@media screen and (max-width: 499px){   
+@media screen and (max-width: 760px){   
 
 #container1-profileuser{
 	margin-left: -2%!important;
@@ -231,12 +231,14 @@
 	position: absolute;
 	/*width: 100%;*/
 }
-
+#profile-pic-moments{
+	visibility: hidden!important;
+}
 
 
 }
 
-@media screen and (min-width:500px){
+@media screen and (min-width:761px){
 
 
 #editprofile-profileuser{
@@ -247,5 +249,14 @@
 }
 
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 960px){
+}
+
+
+@media screen and (max-width: 760px)
+{
+	#profile-pic-moments{
+	visibility: hidden!important;
+}
+
 }
