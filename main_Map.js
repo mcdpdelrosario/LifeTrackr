@@ -123,20 +123,24 @@ function sendUserCoordinates(){
 }
 function confirmFunction(){
 	var comments = document.getElementById("MomentsComment").value;
-	var sendMoments = {
+	var imagefp = document.getElementById("Search").value;
 		moment_Lng: temporaryMarker.position.lng(),
+	createMoment(temporaryMarker.position.lat(),
 		moment_Lat: temporaryMarker.position.lat(),
+	temporaryMarker.position.lng(),comments,imagefp);
 		moment_Message: comments
 	};
 	createMoment(sendMoments);
 	$("#momentModal").modal("hide");
 	document.getElementById("MomentsComment").value = "";
+	document.getElementById("Search").value = "";
 	
 }
 function cancelFunction(){
 	hideTemporaryMarker();
 	$("#momentModal").modal("hide");
 	document.getElementById("MomentsComment").value = "";
+	document.getElementById("Search").value = "";
 }
 function createPointer(){
 	map.panTo(temporaryMarker.position);
