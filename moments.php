@@ -29,39 +29,15 @@
       include "navbar.php";
     ?>
 
-     <div class="grid">
-    <div class="row">
-      <div class="col-wd-12 col-md-4" id="containera-moments">
-        <div id="container1-moments">
-          <div class="col-md-4">
+<div class="containera-moments">
+     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12" id="container1-moments">
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-1">
             <img id="profile-pic-moments" src="img.jpg">
           </div>
 
-          <div class="col-md-8" id="profile_name_moments">
-          </div> 
-        </div>
 
-        <div id ="container2-moments">
-
-           <ul class="nav nav-pills" id="icons-moments">
-                <li><a href="#" >
-                  <!-- <span class="glyphicon glyphicon-user"id="message-moments"></span> -->Friends
-                  </a></li>
-                <li><a href="#" >
-                  <!-- <span class="glyphicon glyphicon-envelope"id="message-moments"> -->Messages
-                  </a></li>
-                <li><a href="#" >
-                <!--   <span class="glyphicon glyphicon-heart-empty"id="message-moments"> -->Likes
-                  </a></li>
-                <!-- <li><a href="#" >
-                  <span class="glyphicon glyphicon-cog"id="message-moments"></span>
-                  </a></li> -->
-          </ul>
-      </div>
-        
-    </div>
-   </div> 
   </div>
+</div>
                  
 
 
