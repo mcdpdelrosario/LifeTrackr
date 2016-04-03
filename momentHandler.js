@@ -7,7 +7,11 @@ function createMoment(sendMoments){
 	queryServer(url,sendMoments,successQuery);
 }
 function successQuery(data,status){
-	swal("Well done!", data +"\nStatus: " + status, "success");
+	if(status=="success"){
+		swal("Well done!", "Moment Created", "success");
+	}else{
+		swal("Error occured", data +"\nStatus: " + status, "error");
+	}
 	hideTemporaryMarker();
 
 }
@@ -19,7 +23,7 @@ function pinMoment(){
 	queryServer(url,null,function(json,status){
 		//alert(status);
 		if(status!="success"){
-			alert("Something went Wrong");
+			swal("Error occured", json +"\nStatus: " + status, "error");
 		}
 		dataMoments = JSON.parse(json);
 	});

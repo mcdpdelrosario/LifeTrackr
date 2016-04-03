@@ -71,7 +71,7 @@ if (mysqli_connect_errno())
 
 <!-- Modal -->
 <div id="momentPop">
-    <div class="modal fade" id="momentModal" role="dialog">
+    <div class="modal fade" id="momentModal" data-backdrop="static" data-keyboard="false" role="dialog">
       <div class="modal-dialog">
        
         <div class="modal-content">
@@ -98,7 +98,7 @@ if (mysqli_connect_errno())
 
 <!-- Modal -->
 <div id="momentsSection">
-  <div class="modal fade" id="momentPost" role="dialog">
+  <div class="modal fade" id="momentPost" data-backdrop="static" data-keyboard="false" role="dialog">
     <div class="modal-dialog">
       <!-- Modal content-->
       <div class="modal-content">
