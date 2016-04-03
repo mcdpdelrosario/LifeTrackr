@@ -124,11 +124,11 @@ function sendUserCoordinates(){
 function confirmFunction(){
 	var comments = document.getElementById("MomentsComment").value;
 	var imagefp = document.getElementById("Search").value;
+	var sendMoments = {
 		moment_Lng: temporaryMarker.position.lng(),
-	createMoment(temporaryMarker.position.lat(),
 		moment_Lat: temporaryMarker.position.lat(),
-	temporaryMarker.position.lng(),comments,imagefp);
-		moment_Message: comments
+		moment_Message: comments,
+		imagefp: imagefp
 	};
 	createMoment(sendMoments);
 	$("#momentModal").modal("hide");
@@ -156,11 +156,8 @@ function creatingMapListener(){
 		var userlng = userMarker.position.lng();
 		var distance = getDistanceFromLatLonInKm(wordlat,wordlng,userlat,userlng);
 		if(userRadius>distance){
-			//temporaryMarker.setMap(null);
 			createPointer();
-			//alert("lat: " +userlat +"\tlng: " +userlng);
 			$("#momentModal").modal("show");
-			
 		}else{
 			hideTemporaryMarker();
 			swal("Too Far!", "Moment cannot be Created", "error");
