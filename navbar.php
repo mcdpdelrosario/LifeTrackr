@@ -21,7 +21,7 @@
             </div>
 
          <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav" id="navbar-fix">
 <!--                 <li>
                   <a href="#menu-but" id="menu-but"><span class="glyphicon glyphicon-user"></span> Profile</a>
                 </li> -->

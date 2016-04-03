@@ -88,6 +88,7 @@ if (mysqli_connect_errno())
             </form>
           </div>
         <div class="modal-footer">
+          <input id="Search" class="btn btn-default" type="file" value="browse" size="15">
           <button id="ConfirmMoment" class="btn btn-default" type="submit" value="submit" onclick="confirmFunction()">Confirm</button>
           <button id="CancelMoment" type="button" class="btn btn-default" data-dismiss="modal" onclick="cancelFunction()">Cancel</button>
         </div>

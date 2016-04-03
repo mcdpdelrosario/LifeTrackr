@@ -11,9 +11,6 @@
   padding: 0;
   margin: 0;
   padding-top: 50px;
-
-  
-/*  background: url("notif3.jpg") no-repeat center top fixed;*/
   background-size: 100% 100%;
   background-size: cover;
   -webkit-background-size:cover;
@@ -27,7 +24,7 @@
   #navbarsettings{
  
     position: absolute;
-     background-color: white!important;
+    background-color: white!important;
     width: 100%;
     top: 0;
   }
@@ -45,10 +42,6 @@
         font-size: 110%;
         font-weight: 100;
         letter-spacing: 1px;
-    
-
-        
-
   }
 
   #signup-but{
@@ -113,7 +106,6 @@
   margin-right: 15%;
   float: right;
   height: 28px;
-
 }
 
 #mySettings
@@ -148,8 +140,8 @@ form input[type="search"] {
 
         color: #F04A00!important;
         text-decoration: none;
-        margin-left: 40%;
-        margin-top: 1%;
+         top: 29%;
+        margin-left: 49%;
         padding: 0;
         font-family: Montserrat, sans-serif;
         font-size: 150%;
@@ -171,28 +163,17 @@ form input[type="search"] {
 
 @media screen and (max-width: 640px){   
 
-.col-wd-1{width: 8.33%;}
-.col-wd-2{width: 16.67%;}
-.col-wd-3{width: 25%;}
-.col-wd-4{width: 33.33%;}
-.col-wd-5{width: 41.67%;}
-.col-wd-6{width: 50%;
-}
-.col-wd-7{width: 58.33%;}
-.col-wd-8{width: 66.67%;}
-.col-wd-9{width: 75%;}
-.col-wd-10{width: 83.33%;}
-.col-wd-11{width: 91.67%;}
-.col-wd-12{width: 100%;}
 
 .navbar{
   height: 5px;
 }
 
 .logo{
-  margin-top: -9%;
-  margin-left: 22%;
+    top: 30%;
+    left: -5%;
 }
+
+
 #hamburgerbutton.navbar-toggle {
   float: left;
   margin-left: -20%;
@@ -241,9 +222,9 @@ visibility: hidden;
 @media screen and (min-width:641px){
 
 .logo{
-  visibility: hidden;
+    top: 9px;
+    left: 20px;
 }
-
 #navbarsettings{
    top: 0%;
 }
