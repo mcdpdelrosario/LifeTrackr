@@ -85,7 +85,7 @@
 
 #container1-moments
 {
-	background-color: black;
+	background-color: #182940;
 	position: absolute;
 	top: 20%;
 	left: 10%;
@@ -101,6 +101,71 @@
 	left: 10%;
 }
 
+#name{
+	position: absolute;
+	color: black;
+	width: 100%;
+	left: 50%;
+	margin-top: 150px;
+}
+
+
+.container2-moments{
+	left: 45%;
+	margin-top: 6%;
+	width: 40%;
+	height: 90px;
+	position: absolute;
+	background-color: #B0CDD9;
+	border-radius: 5px;
+
+}
+
+#container2-profile{
+	width: 100%;
+	margin-left: -10%;
+	top: 15px;
+	position: absolute;
+}
+
+#input-moments{
+	width: 130% !important;
+	left: 20px;
+	top: 15px;
+
+	position: absolute;
+	
+	
+}
+
+#container3-moments{
+	background-color: #B0CDD9;
+	top: 300px;
+	left: 10.5%;
+	height: 41px;
+	border-radius: 5px;
+}
+
+#friends-icons{
+  	font-family: Montserrat, sans-serif;   
+  	font-size: 100%;
+  	font-weight: bold; 
+	position: absolute;
+}
+
+#messages-icons{
+	position: absolute;
+	font-family: Montserrat, sans-serif;   
+	font-weight: bold;
+  	font-size: 100%;
+}
+
+#likes-icons{
+	position: absolute;
+	font-family: Montserrat, sans-serif;   
+	font-weight: bold;
+  	font-size: 100%;
+}
 /*for settings*/
 
 
@@ -160,7 +225,7 @@
 
 /*for pagecontent responsive*/
 
-@media screen and (max-width: 760px){   
+@media screen and (max-width: 800px){   
 
 #container1-profileuser{
 	margin-left: -2%!important;
@@ -235,28 +300,97 @@
 	visibility: hidden!important;
 }
 
+#container1-moments{
+	visibility: hidden!important;
+}
+
+.container2-moments{
+	visibility: hidden!important;
+}
+#container3-moments{
+	width: 100%;
+	top: 0px;
+	left: 1px;
+}
+
+/*#icons-moments li a{
+	left: 100%;
+	position: absolute;
+}*/
+
+#friends-icons{
+	left: 100%;
+	position: absolute;
+}
+
+
+
+
+
+#messages-icons{
+	visibility: hidden !important;
+}
+
+#likes-icons{
+	position: absolute;
+	
+	visibility: hidden !important;
+}
 
 }
 
-@media screen and (min-width:761px){
+@media screen and (min-width:801px){
 
 
 #editprofile-profileuser{
 	float:right;
 }
 
+.container2-moments{
+	top: 50px;
+}
+#container3-moments{
+	top: 270px !important;
+}
+
+
+#friends-icons{
+	left: -30px;
+}
+
+#messages-icons{
+	left: 50px!important;
+}
+
+#likes-icons{
+  	left: 150px!important;
+}
 
 }
 
 
 @media screen and (min-width: 960px){
+
+.container2-moments{
+	top: 50px;
+}
+#container3-moments{
+	top: 300px !important;
 }
 
+#friends-icons{
+	left: -10px;
+}
 
-@media screen and (max-width: 760px)
-{
-	#profile-pic-moments{
-	visibility: hidden!important;
+#messages-icons{
+	position: absolute;
+	left: 95px!important;
+}
+
+#likes-icons{
+	position: absolute;
+	left: 220px!important;
 }
 
 }
+
