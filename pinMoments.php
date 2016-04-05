@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	
 	$con = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","bdd92f8752ef7e","fdb4d70b","lifetrackr");
 
 	$pin_moment = array();
@@ -14,8 +15,8 @@
 
 	$query = "SELECT moments_id, ui.username, moments_message, longitude, latitude, first_name, last_name, mome.time_stamp FROM moments AS mome 
 			  INNER JOIN userinfo AS ui 
-			  ON ui.user_id = mome.user_id
-			  WHERE mome.user_id = '".$_SESSION['myuser']."'"; 
+			  ON ui.user_id = mome.moments_user_id
+			  WHERE moments_user_id = '".$_SESSION['myuser']."'"; 
 			  //mome.username should be a variable
 			  // SELECT ui.username, moments_message, longitude, latitude, first_name, last_name FROM moments AS mome INNER JOIN userinfo AS ui ON ui.username = mome.username WHERE mome.username='mcdpdelrosario'
 
