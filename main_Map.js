@@ -123,16 +123,24 @@ function sendUserCoordinates(){
 }
 function confirmFunction(){
 	var comments = document.getElementById("MomentsComment").value;
-	createMoment(temporaryMarker.position.lat(),
-	temporaryMarker.position.lng(),comments);
+	var imagefp = document.getElementById("Search").value;
+	var sendMoments = {
+		moment_Lng: temporaryMarker.position.lng(),
+		moment_Lat: temporaryMarker.position.lat(),
+		moment_Message: comments,
+		imagefp: imagefp
+	};
+	createMoment(sendMoments);
 	$("#momentModal").modal("hide");
 	document.getElementById("MomentsComment").value = "";
+	document.getElementById("Search").value = "";
 	
 }
 function cancelFunction(){
 	hideTemporaryMarker();
 	$("#momentModal").modal("hide");
 	document.getElementById("MomentsComment").value = "";
+	document.getElementById("Search").value = "";
 }
 function createPointer(){
 	map.panTo(temporaryMarker.position);
@@ -148,11 +156,8 @@ function creatingMapListener(){
 		var userlng = userMarker.position.lng();
 		var distance = getDistanceFromLatLonInKm(wordlat,wordlng,userlat,userlng);
 		if(userRadius>distance){
-			//temporaryMarker.setMap(null);
 			createPointer();
-			//alert("lat: " +userlat +"\tlng: " +userlng);
 			$("#momentModal").modal("show");
-			
 		}else{
 			hideTemporaryMarker();
 			swal("Too Far!", "Moment cannot be Created", "error");

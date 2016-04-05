@@ -1,4 +1,4 @@
- <nav class="navbar navbar-default" id="navbarsettings">
+ <nav class="navbar navbar-default  navbar-fixed-top" id="navbarsettings">
 
     
     <div class="container bar-align">
@@ -21,7 +21,7 @@
             </div>
 
          <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav" id="navbar-fix">
 <!--                 <li>
                   <a href="#menu-but" id="menu-but"><span class="glyphicon glyphicon-user"></span> Profile</a>
                 </li> -->
@@ -131,6 +131,23 @@
         e.preventDefault();
         $("#searchwrapper").toggleClass("toggled");
     });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+  var navpos = $('#navbarsettings').offset();
+  console.log(navpos.top);
+    $(window).bind('scroll', function() {
+      if ($(window).scrollTop() > navpos.top) {
+        $('#navbarsettings').addClass('fixed');
+       }
+       else {
+         $('#navbarsettings').removeClass('fixed');
+       }
+    });
+});
+
+
     </script>
 
       

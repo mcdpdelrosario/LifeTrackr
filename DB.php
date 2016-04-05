@@ -1,5 +1,8 @@
+friends, moment, mesage, picture, userinfo 
+
 *USERINFO
-USERNAME[PK]
+USER_ID [PK]
+USERNAME
 PASSWORD
 EMAIL
 FIRSTNAME
@@ -20,7 +23,7 @@ MOMENTS_ID[PK]
 MOMENTS_MESSAGE
 LONG
 LAT
-USERNAME [FK]
+USER_ID [FK]
 IMG_ID [FK]
 TIMESTAMP
 
@@ -59,3 +62,10 @@ MOMETN_ID
 USER_ID
 EMTICON
 TIMESTAMP
+
+*COMMENTS
+comment_id
+user_id [fk]
+momnt_id [fk]
+timestamp
+comment
