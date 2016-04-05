@@ -1,5 +1,5 @@
 <?php
-	session_start();
+    session_start();
 	$con = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","bdd92f8752ef7e","fdb4d70b","lifetrackr");
 
 	$longitude=$_POST["moment_Lng"];
@@ -7,7 +7,8 @@
 	$message=$_POST["moment_Message"];
 	$image=$_POST["imagefp"];
 	// $img=$_GET["moment_Img"];
-	date_default_timezone_set('Asia/Taipei');
+	
+    date_default_timezone_set('Asia/Taipei');
 	$date=date("Y-m-d h:i:s");
 
 	$query = "INSERT INTO moments (`user_id`,`longitude`, `latitude`,`moments_message`,`time_stamp`) VALUES(".$_SESSION["myuser"].",".$longitude.",".$latitude.",'".$message."','".$date."')";
@@ -17,7 +18,6 @@
 	$blobObj->insertBlob($image,"gif");
 
 	echo $query;
-
 
 class BobDemo
 {
@@ -58,7 +58,5 @@ class BobDemo
         $this->conn = null;
     }
 }
-
-
 
 ?>

@@ -13,14 +13,16 @@
 	$pin_moment['last_name'] = array();
 
 	$query = "SELECT moments_id, ui.username, moments_message, longitude, latitude, first_name, last_name, mome.time_stamp FROM moments AS mome 
-	INNER JOIN userinfo AS ui 
-		ON ui.user_id = mome.user_id
-WHERE mome.user_id = '".$_SESSION['myuser']."'"; //mome.username should be a variable
-	// SELECT ui.username, moments_message, longitude, latitude, first_name, last_name FROM moments AS mome INNER JOIN userinfo AS ui ON ui.username = mome.username WHERE mome.username='mcdpdelrosario'
+			  INNER JOIN userinfo AS ui 
+			  ON ui.user_id = mome.user_id
+			  WHERE mome.user_id = '".$_SESSION['myuser']."'"; 
+			  //mome.username should be a variable
+			  // SELECT ui.username, moments_message, longitude, latitude, first_name, last_name FROM moments AS mome INNER JOIN userinfo AS ui ON ui.username = mome.username WHERE mome.username='mcdpdelrosario'
 
 	$result = mysqli_query($con, $query) or mysqli_error($con);
 
-	while($row = mysqli_fetch_array($result)){
+	while($row = mysqli_fetch_array($result))
+	{
 		array_push($pin_moment['moment_id'], $row['moments_id']);
 		array_push($pin_moment['username'], $row['username']);
 		array_push($pin_moment['message'], $row['moments_message']);
@@ -32,5 +34,4 @@ WHERE mome.user_id = '".$_SESSION['myuser']."'"; //mome.username should be a var
 	}
 
 	echo json_encode($pin_moment);
-
 ?>
