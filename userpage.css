@@ -1,6 +1,10 @@
 
 /*for notifications*/
 
+body{
+	/*overflow: hidden;*/
+}
+
 /*notifications code of dp*/
 .inner-content { display:none; }
 
@@ -25,237 +29,150 @@
 
 
 /*for moments*/
+#background{
+	background-color: #DAF2FF!important;
+	background-size: 100% 100%;
+	height: 700px;
+  	background-size: cover;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
 
-
-/*for profile user*/
-
-#container1-profileuser{
-	margin-top: -15%;
-	margin-left: 11%;
-	margin-right: 9%;
-	width: 75%;
+}
+#container1-moments
+{
+	background-color: #182940;
 	position: absolute;
-	/*background-color: #D93D04*/
-	background-color: #b4c0d9;
-/*	border-radius: 20px;*/
-	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;
+	top: 20%;
+	left: 10%;
+/*	width: 25%;*/
+	height: 200px;
+	border-radius: 5px;
+}
+#profile-pic-moments{	
+	position: absolute;
+	width: 100%;
+	margin-top:90px;
+	left: 10%;
 }
 
-#container1-background{
-	background-color: white;
-}
-
-#editprofile-profileuser{
-	background-color: gray;
+#name{
+	position: absolute;
 	color: black;
-	font-weight: 400;
-	margin-top: -6%;
-	margin-left:  90% !important;
+	width: 100%;
+	left: 50%;
+	margin-top: 150px;
+}
+
+
+.container2-moments{
+	left: 45%;
+	margin-top: 6%;
+	width: 40%;
+	height: 90px;
+	position: absolute;
+	background-color: #B0CDD9;
+	border-radius: 5px;
+
+}
+
+#container2-profile{
+	width: 100%;
+	margin-left: -10%;
+	top: 15px;
 	position: absolute;
 }
 
-#profile_pic{
-	width: 65% !important;
+#input-moments{
+	width: 130% !important;
+	left: 20px;
+	top: 15px;
+	position: absolute;	
 }
 
-#profile_name{
+#container3-moments{
+	background-color: #B0CDD9;
+	top: 300px;
+	left: 10.5%;
+	height: 41px;
+	border-radius: 5px;
+}
+
+#friends-icons{
+  	font-family: Montserrat, sans-serif;   
+  	font-size: 100%;
+  	font-weight: bold; 
 	position: absolute;
-	margin-top: 12%;
-	margin-left: 20%;
+	left: 10px;
 }
 
-#myname{
+#messages-icons{
+	position: absolute;
+	font-family: Montserrat, sans-serif;   
 	font-weight: bold;
+  	font-size: 100%;
+  	left: 105px;
+}
+
+#likes-icons{
+	position: absolute;
+	font-family: Montserrat, sans-serif;   
+	font-weight: bold;
+  	font-size: 100%;
+  	left: 220px;
+}
+
+#container3-special{
+		visibility: hidden;
+}
+
+.container4-moments{
+	left: 45%;
+	margin-top: 11%;
+	width: 40%;
+	height: 350px;
+	position: absolute;
+	background-color: #182940;
+	border-radius: 5px;
+	/*overflow: auto!important;*/
 	color: black!important;
 }
 
-#username{
-	margin-top: -1%;
+/*-----------------MOMENTS-----------------*/
+@media screen and (max-width: 800px){
+
+/*for moments*/
+
+#container1-moments{
+	visibility: hidden;
 }
-#container2-profileuser{
+
+#container3-moments{
+		visibility: hidden;
+}
+
+.container2-moments{
+	visibility: visible!important;
+	width: 95%;
+	left: 8px;
+	top: 45px;
+	position: absolute;
+}
+
+#container2-profile{
+	width: 70px;
+}
+
+#input-moments{
+	left: 20px;
+	top: 20px;
+	width: 100%;
+}
+/*-----------------------------------*/
+}
+
+}
+@media screen and (min-width: 960px){
 	
-	margin-top: 3%;
-	margin-left: 11%;
-	margin-right: 9%;
-	width: 75%;
-	position: absolute;
-}
-
-
-
-
-/*for settings*/
-
-
-
-/*for columns*/
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-
-}
-.grid{
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding-top: 15%;
-  position: inherit;  
-  max-width: 100% !important;
-  overflow-x: hidden !important;
-  padding-left: 2.4%;
-  opacity: 0.9;
-}
-
-.grid:before,
-.grid:after,
-.row:before,
-.row:after{
-  content: " ";
-  display: table;
-}
-
-
-.grid:after,
-.row:after{
-  clear: both;
-
-
-}
-
-[class*="col-"]{
-  width: 100%;
-  float: left;
-  min-height: 1px;
-}
-
-.col{
-  padding: 1em;
-  margin: 6px;
-  background: orange;
-  border-radius: 3px;
-  color:white!important;
-  text-align: center;
-  margin-right: 5%;
-  margin-left: 6%;
-  overflow-x: hidden;
-}
-
-/*for pagecontent responsive*/
-
-@media screen and (max-width: 499px){   
-
-.col-wd-1{width: 8.33%;}
-.col-wd-2{width: 16.67%;}
-.col-wd-3{width: 25%;}
-.col-wd-4{width: 33.33%;}
-.col-wd-5{width: 41.67%;}
-.col-wd-6{width: 50%;}
-.col-wd-7{width: 58.33%;}
-.col-wd-8{width: 66.67%;}
-.col-wd-9{width: 75%;}
-.col-wd-10{width: 83.33%;}
-.col-wd-11{width: 91.67%;}
-.col-wd-12{width: 100%;}
-
-#container1-profileuser{
-	margin-left: -2%!important;
-	margin-top: -17%;
-	width:110%;
-	position: absolute;
-	background-color: white;
-	position: absolute;
-	height: 20% !important;
-
-}
-
-#editprofile-profileuser{
-	float:right;
-}
-#profile_pic{
-	width: 30% !important;
-	margin-top: 20%;
-	margin-left: -5%;
-
-}
-
-
-#profile_name{
-	position: absolute;
-	margin-top: 17%;
-	margin-left: 21%;
-	color: white!important;	
-
-}
-
-#myname{
-	font-weight: 300;
-	color: white!important;
-}
-
-#username{
-	margin-top: -4%;
-}
-#container1-background{
-	background-color: #1c1c17;
-}
-
-
-#myname{
-	font-size: 110%;
-}
-
-#container2-profileuser{
-	margin-top: 35%;
-	width: 110%;
-	margin-left: -2%!important;
-
-
-}
-
-
-#load-more{
-  border-radius: 5em !important;
-  height: 100px;
-  width: 100px;
-  margin-left:33%;
-}
-
-}
-
-@media screen and (min-width:500px){
-.col-md-1{width: 8.33%;}
-.col-md-2{width: 16.67%;}
-.col-md-3{width: 25%;}
-.col-md-4{width: 33.33%;}
-.col-md-5{width: 41.67%;}
-.col-md-6{width: 50%;}
-.col-md-7{width: 58.33%;}
-.col-md-8{width: 66.67%;}
-.col-md-9{width: 75%;}
-.col-md-10{width: 83.33%;}
-.col-md-11{width: 91.67%;}
-.col-md-12{width: 100%;}
-
-
-#editprofile-profileuser{
-	float:right;
-}
-}
-
-
-@media screen and (min-width: 800px){
-.col-xs-1{width: 8.33%;}
-.col-xs-2{width: 16.67%;}
-.col-xs-3{width: 25%;}
-.col-xs-4{width: 33.33%;}
-.col-xs-5{width: 41.67%;}
-.col-xs-6{width: 50%;}
-.col-xs-7{width: 58.33%;}
-.col-xs-8{width: 66.67%;}
-.col-xs-9{width: 75%;}
-.col-xs-10{width: 83.33%;}
-.col-xs-11{width: 91.67%;}
-.col-xs-12{width: 100%;}
 }

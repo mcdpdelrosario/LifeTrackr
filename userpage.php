@@ -71,7 +71,7 @@ if (mysqli_connect_errno())
 
 <!-- Modal -->
 <div id="momentPop">
-    <div class="modal fade" id="momentModal" role="dialog">
+    <div class="modal fade" id="momentModal" data-backdrop="static" data-keyboard="false" role="dialog">
       <div class="modal-dialog">
        
         <div class="modal-content">
@@ -88,6 +88,7 @@ if (mysqli_connect_errno())
             </form>
           </div>
         <div class="modal-footer">
+          <input id="Search" class="btn btn-default" type="file" value="browse" size="15">
           <button id="ConfirmMoment" class="btn btn-default" type="submit" value="submit" onclick="confirmFunction()">Confirm</button>
           <button id="CancelMoment" type="button" class="btn btn-default" data-dismiss="modal" onclick="cancelFunction()">Cancel</button>
         </div>
@@ -98,7 +99,7 @@ if (mysqli_connect_errno())
 
 <!-- Modal -->
 <div id="momentsSection">
-  <div class="modal fade" id="momentPost" role="dialog">
+  <div class="modal fade" id="momentPost" data-backdrop="static" data-keyboard="false" role="dialog">
     <div class="modal-dialog">
       <!-- Modal content-->
       <div class="modal-content">

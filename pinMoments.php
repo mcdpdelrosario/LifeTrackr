@@ -14,8 +14,8 @@
 
 	$query = "SELECT moments_id, ui.username, moments_message, longitude, latitude, first_name, last_name, mome.time_stamp FROM moments AS mome 
 	INNER JOIN userinfo AS ui 
-		ON ui.user_id = mome.moments_user_id
-WHERE moments_user_id = '".$_SESSION['myuser']."'"; //mome.username should be a variable
+		ON ui.user_id = mome.user_id
+WHERE mome.user_id = '".$_SESSION['myuser']."'"; //mome.username should be a variable
 	// SELECT ui.username, moments_message, longitude, latitude, first_name, last_name FROM moments AS mome INNER JOIN userinfo AS ui ON ui.username = mome.username WHERE mome.username='mcdpdelrosario'
 
 	$result = mysqli_query($con, $query) or mysqli_error($con);
