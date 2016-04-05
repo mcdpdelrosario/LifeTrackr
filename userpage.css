@@ -1,6 +1,10 @@
 
 /*for notifications*/
 
+body{
+	/*overflow: hidden;*/
+}
+
 /*notifications code of dp*/
 .inner-content { display:none; }
 
@@ -25,64 +29,17 @@
 
 
 /*for moments*/
+#background{
+	background-color: #DAF2FF!important;
+	background-size: 100% 100%;
+	height: 700px;
+  	background-size: cover;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
 
-
-/*for profile user*/
-
-#container1-profileuser{
-	margin-top: -15%;
-	margin-left: 11%;
-	margin-right: 9%;
-	width: 75%;
-	position: absolute;
-	/*background-color: #D93D04*/
-	background-color: #b4c0d9;
-/*	border-radius: 20px;*/
-	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;
 }
-
-#container1-background{
-	background-color: white;
-}
-
-#editprofile-profileuser{
-	background-color: gray;
-	color: black;
-	font-weight: 400;
-	margin-top: -6%;
-	margin-left:  90% !important;
-	position: absolute;
-}
-
-#profile_pic{
-	width: 65% !important;
-}
-
-#profile_name{
-	position: absolute;
-	margin-top: 12%;
-	margin-left: 20%;
-}
-
-#myname{
-	font-weight: bold;
-	color: black!important;
-}
-
-#username{
-	margin-top: -1%;
-}
-#container2-profileuser{
-	
-	margin-top: 3%;
-	margin-left: 11%;
-	margin-right: 9%;
-	width: 75%;
-	position: absolute;
-}
-
-
 #container1-moments
 {
 	background-color: #182940;
@@ -93,7 +50,6 @@
 	height: 200px;
 	border-radius: 5px;
 }
-
 #profile-pic-moments{	
 	position: absolute;
 	width: 100%;
@@ -132,10 +88,7 @@
 	width: 130% !important;
 	left: 20px;
 	top: 15px;
-
-	position: absolute;
-	
-	
+	position: absolute;	
 }
 
 #container3-moments{
@@ -151,6 +104,7 @@
   	font-size: 100%;
   	font-weight: bold; 
 	position: absolute;
+	left: 10px;
 }
 
 #messages-icons{
@@ -158,6 +112,7 @@
 	font-family: Montserrat, sans-serif;   
 	font-weight: bold;
   	font-size: 100%;
+  	left: 105px;
 }
 
 #likes-icons{
@@ -165,232 +120,59 @@
 	font-family: Montserrat, sans-serif;   
 	font-weight: bold;
   	font-size: 100%;
-}
-/*for settings*/
-
-
-
-/*for columns*/
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-
-}
-.grid{
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding-top: 15%;
-  position: inherit;  
-  max-width: 100% !important;
-  overflow-x: hidden !important;
-  padding-left: 2.4%;
-  opacity: 0.9;
+  	left: 220px;
 }
 
-.grid:before,
-.grid:after,
-.row:before,
-.row:after{
-  content: " ";
-  display: table;
+#container3-special{
+		visibility: hidden;
 }
 
-
-.grid:after,
-.row:after{
-  clear: both;
-
-
-}
-
-[class*="col-"]{
-  width: 100%;
-  float: left;
-  min-height: 1px;
-}
-
-.col{
-  padding: 1em;
-  margin: 6px;
-  background: orange;
-  border-radius: 3px;
-  color:white!important;
-  text-align: center;
-  margin-right: 5%;
-  margin-left: 6%;
-  overflow-x: hidden;
-}
-
-/*for pagecontent responsive*/
-
-@media screen and (max-width: 800px){   
-
-#container1-profileuser{
-	margin-left: -2%!important;
-	margin-top: -17%;
-	width:110%;
+.container4-moments{
+	left: 45%;
+	margin-top: 11%;
+	width: 40%;
+	height: 350px;
 	position: absolute;
-	background-color: white;
-	position: absolute;
-	height: 20% !important;
-
+	background-color: #182940;
+	border-radius: 5px;
+	/*overflow: auto!important;*/
+	color: black!important;
 }
 
-#editprofile-profileuser{
-	float:right;
-}
-#profile_pic{
-	width: 30% !important;
-	margin-top: 20%;
-	margin-left: -5%;
+/*-----------------MOMENTS-----------------*/
+@media screen and (max-width: 800px){
 
-}
-
-
-#profile_name{
-	position: absolute;
-	margin-top: 17%;
-	margin-left: 21%;
-	color: white!important;	
-
-}
-
-#myname{
-	font-weight: 300;
-	color: white!important;
-}
-
-#username{
-	margin-top: -4%;
-}
-#container1-background{
-	background-color: #1c1c17;
-}
-
-
-#myname{
-	font-size: 110%;
-}
-
-#container2-profileuser{
-	margin-top: 35%;
-	width: 110%;
-	margin-left: -2%!important;
-
-
-}
-
-
-#load-more{
-  border-radius: 5em !important;
-  height: 100px;
-  width: 100px;
-  margin-left:33%;
-}
-
-#container1-moments
-{
-	background-color: black;
-	position: absolute;
-	/*width: 100%;*/
-}
-#profile-pic-moments{
-	visibility: hidden!important;
-}
+/*for moments*/
 
 #container1-moments{
-	visibility: hidden!important;
+	visibility: hidden;
+}
+
+#container3-moments{
+		visibility: hidden;
 }
 
 .container2-moments{
-	visibility: hidden!important;
+	visibility: visible!important;
+	width: 95%;
+	left: 8px;
+	top: 45px;
+	position: absolute;
 }
-#container3-moments{
+
+#container2-profile{
+	width: 70px;
+}
+
+#input-moments{
+	left: 20px;
+	top: 20px;
 	width: 100%;
-	top: 0px;
-	left: 1px;
 }
-
-/*#icons-moments li a{
-	left: 100%;
-	position: absolute;
-}*/
-
-#friends-icons{
-	left: 100%;
-	position: absolute;
-}
-
-
-
-
-
-#messages-icons{
-	visibility: hidden !important;
-}
-
-#likes-icons{
-	position: absolute;
-	
-	visibility: hidden !important;
+/*-----------------------------------*/
 }
 
 }
-
-@media screen and (min-width:801px){
-
-
-#editprofile-profileuser{
-	float:right;
-}
-
-.container2-moments{
-	top: 50px;
-}
-#container3-moments{
-	top: 270px !important;
-}
-
-
-#friends-icons{
-	left: -30px;
-}
-
-#messages-icons{
-	left: 50px!important;
-}
-
-#likes-icons{
-  	left: 150px!important;
-}
-
-}
-
-
 @media screen and (min-width: 960px){
-
-.container2-moments{
-	top: 50px;
+	
 }
-#container3-moments{
-	top: 300px !important;
-}
-
-#friends-icons{
-	left: -10px;
-}
-
-#messages-icons{
-	position: absolute;
-	left: 95px!important;
-}
-
-#likes-icons{
-	position: absolute;
-	left: 220px!important;
-}
-
-}
-

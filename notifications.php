@@ -21,12 +21,7 @@
 </head>
 <body>
 
-
-                    <?php
-                        include "navbar.php";
-                      ?>
-  
-  <?php
+<?php
 
 session_start();
   $con = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","bdd92f8752ef7e","fdb4d70b","lifetrackr");
@@ -46,6 +41,10 @@ if (mysqli_connect_errno())
   }
 ?>
 
+                    <?php
+                        include "navbar.php";
+                      ?>
+  
 
     <section id="main-content">
       <div class="panel-group" >
