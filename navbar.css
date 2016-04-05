@@ -23,10 +23,10 @@
 
   #navbarsettings{
  
-    position: absolute;
     background-color: white!important;
     width: 100%;
     top: 0;
+    position: fixed;
   }
 
   .navbar {

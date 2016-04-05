@@ -1,4 +1,4 @@
- <nav class="navbar navbar-default" id="navbarsettings">
+ <nav class="navbar navbar-default  navbar-fixed-top" id="navbarsettings">
 
     
     <div class="container bar-align">
@@ -131,6 +131,23 @@
         e.preventDefault();
         $("#searchwrapper").toggleClass("toggled");
     });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+  var navpos = $('#navbarsettings').offset();
+  console.log(navpos.top);
+    $(window).bind('scroll', function() {
+      if ($(window).scrollTop() > navpos.top) {
+        $('#navbarsettings').addClass('fixed');
+       }
+       else {
+         $('#navbarsettings').removeClass('fixed');
+       }
+    });
+});
+
+
     </script>
 
       
