@@ -11,11 +11,20 @@
     date_default_timezone_set('Asia/Taipei');
 	$date=date("Y-m-d h:i:s");
 
-	$query = "INSERT INTO moments (`moments_user_id`,`longitude`, `latitude`,`moments_message`,`time_stamp`) VALUES(".$_SESSION["myuser"].",".$longitude.",".$latitude.",'".$message."','".$date."')";
+    $blobObj = new BobDemo();
+    $blobObj->insertBlob($image,"gif");
+    //$id = $con->insert_id;
+    $id2 = "select max(img_id) maxid from pictures";
+    $id = mysqli_query($con,$id2);
+
+    $row = mysqli_fetch_array($id);
+
+    $id3 = $row["maxid"];
+
+	$query = "INSERT INTO moments (`user_id`,`longitude`, `latitude`,`moments_message`,`time_stamp`,`img_id`) VALUES(".$_SESSION["myuser"].",".$longitude.",".$latitude.",'".$message."','".$date."','".$id3."')";
 	$result = mysqli_query($con,$query);
 
-	$blobObj = new BobDemo();
-	$blobObj->insertBlob($image,"gif");
+
 
 	echo $query;
 
