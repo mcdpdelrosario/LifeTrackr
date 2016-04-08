@@ -22,13 +22,16 @@
 			$query = "INSERT INTO userinfo(username, first_name, last_name, password, email, time_stamp) VALUES ('".$uname_su."','".$fname_su."','".$lname_su."','".$pwd_su."','".$eadd_su."','".$createDate."')";
 			$result = mysqli_query($con, $query) or mysqli_error($con);
 
+			$query = "SELECT user_id FROM userinfo WHERE username = '".$logged_num."' && password = '".$signed_num."'";
+			$result = mysqli_query($con, $query) or mysqli_error($con);
+
 			if(!$result) 
 			{
 				echo mysqli_error($con);
 			} 
 			else 
 			{
-				$_SESSION["myuser"] = $uname_su;
+				$_SESSION["myuser"] = $row['user_id'];
 				header('Location: userpage.php');
 			}
 		}
