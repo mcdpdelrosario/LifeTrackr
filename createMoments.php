@@ -13,8 +13,9 @@
 	$query = "INSERT INTO moments (`moments_user_id`,`longitude`, `latitude`,`moments_message`,`time_stamp`) VALUES(".$_SESSION["myuser"].",".$longitude.",".$latitude.",'".$message."','".$date."')";
 	$result = mysqli_query($con,$query);
 
+	$id = mysql_insert_id();
 	$blobObj = new BobDemo();
-	$blobObj->insertBlob($image,"gif");
+	$blobObj->insertBlob($image,"gif",$id);
 
 	echo $query;
 
@@ -45,9 +46,9 @@ class BobDemo
         }
     }
     
-    function insertBlob($filePath,$mime){
+    function insertBlob($filePath,$mime,$id){
         $blob = fopen($filePath,'rb');
-        $sql = "INSERT INTO pictures(img_dt,img) VALUES(:mime,:data)";
+        $sql = "INSERT INTO pictures(img_dt,img,moment_id) VALUES(:mime,:data,".$id.")";
         $stmt = $this->conn->prepare($sql);
         $stmt->bindParam(':mime',$mime);
         $stmt->bindParam(':data',$blob,PDO::PARAM_LOB);
