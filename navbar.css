@@ -102,7 +102,7 @@
 
 
 #myNavbars{
-  margin-top:-3%;
+  margin-top:-2.8%;
   margin-right: 15%;
   float: right;
   height: 28px;
@@ -352,47 +352,6 @@ visibility: hidden;
     }
 }
 
-
-/*for dp search*/
-#mySearches{
-margin-top: -3.4%;
-  margin-left:90%;
-  position: absolute;
-}
-
-
-#searchwrapper {
-    padding-left: 0;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-
-#searchwrapper.toggled {
-    padding-left: 250px;
-}
-
-#sidebar-searchwrapper {
-    z-index: 1000;
-    position: fixed;
-    left: 250px;
-    width: 0;
-    height: 100%;
-    margin-left: -250px;
-    overflow-y: auto;
-    background: #000;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    visibility: hidden;
-}
-
-#searchwrapper.toggled #sidebar-searchwrapper {
-    width: 100%;
-    visibility: visible;
-}
 
 
 /**/
