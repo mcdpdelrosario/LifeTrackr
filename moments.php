@@ -71,7 +71,7 @@ if (mysqli_connect_errno())
     </div>
 
 
-   <div class="container2-moments">  
+   <div class="popup" data-popup= "popup-1" id="container2-moments">  
       <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
         <div class="col-lg-2 col-md-1 col-sm-1 col-xs-3">
             <img id="container2-profile" src="img.jpg">
@@ -125,40 +125,7 @@ if (mysqli_connect_errno())
        
    <div class="container4-moments">  
       <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-        Put yo moments here
-        a;sjaslkdjsakjdsakldjkdjakd
-        laskdjasldjaslkdjsa
-        lasjdlaskjdslakd
-        lasdjalskjdaskjdsakldjaskldjas
-        ladjlaskjdalskjdlaskd
-        laksjdalskdjaslkjdaslkjdsa
-        lasjdlkasjd;asjds
-        klajdlkasjdklsad
-        ;kasjdlkasjdlksadjlaskdjsalkd
-        lkasjdlkasjdlkasjdlaskjdsa
-        kasjdlkasjdaskjdskad
-        laksjdaskjdaslkdjalk
-        laksdjaskljdaslkjdsalkd
-        dalskdjaslkjdaslkjdsa
-        lasjdlkasjd;asjds
-        klajdlkasjdklsad
-        ;kasjdlkasjdlksadjlaskdjsalkd
-        lkasjdlkasjdlkasjdlaskjdsa
-        kasjdlkasjdaskjdskad
-      
-        1234
-             lkasjdlkasjdlkasjdlaskjdsa
-        kasjdlkasjdaskjdskad
-        laksjdaskjdaslkdjalk
-        laksdjaskljdaslkjdsalkd
-        dalskdjaslkjdaslkjdsa
-        lasjdlkasjd;asjds
-        klajdlkasjdklsad
-        ;kasjdlkasjdlksadjlaskdjsalkd
-        lkasjdlkasjdlkasjdlaskjdsa
-        kasjdlkasjdaskjdskad
-      
-        1234
+        
         
       </div>
     </div> 
@@ -166,6 +133,30 @@ if (mysqli_connect_errno())
       
   </div>  
 </div>
+
+<div class="containerd-moments">
+
+	<div class = "row">
+		  <div class ="col-xs-12 col-sm-12" id="container1-phone-moments">
+
+			<span class="glyphicon glyphicon-user" id="user-phone" style="visibility: hidden"></span>
+
+      
+    	 	<!-- <span class="glyphicon glyphicon-edit" id="post-phone" style="visibility: hidden"></span>
+ -->
+    	 	<span class="glyphicon glyphicon-thumbs-up" id="like-phone" style="visibility: hidden"></span>
+
+			  <!-- <button type="button" class="btn btn-default"id="post-phone">
+    			<span class="glyphicon glyphicon-edit" ></span>
+  				</button> -->
+
+  				  <button type="button" class="btn btn-default" id="post-phone"  style="visibility: hidden">
+   				<span class="glyphicon glyphicon-edit" id="post1-phone"></span> 
+  					</button>
+    	 	    <!-- <button type="button"><span class="glyphicon glyphicon-edit" id="post-phone" style="visibility: hidden"></span></button> -->
+        </div>
+
+     </div>   
 </div>
         
 </body>
