@@ -126,7 +126,7 @@ if (mysqli_connect_errno())
  
       <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12"id ="container4-moments" >
        
-          
+
 
       </div>
     </div> 
@@ -140,12 +140,16 @@ if (mysqli_connect_errno())
 	<div class = "row">
 		  <div class ="col-xs-12 col-sm-12" id="container1-phone-moments">
 
-			<span class="glyphicon glyphicon-user" id="user-phone" style="visibility: hidden"></span>
-
+			
+        <button type="button" class="btn btn-default" id="user-phone"  style="visibility: hidden" data-toggle="modal" data-target="#myModal">
+          <span class="glyphicon glyphicon-user" id="post1-phone"></span> 
+            </button>
       
     	 	<!-- <span class="glyphicon glyphicon-edit" id="post-phone" style="visibility: hidden"></span>
  -->
-    	 	<span class="glyphicon glyphicon-thumbs-up" id="like-phone" style="visibility: hidden"></span>
+    	 	  <button type="button" class="btn btn-default" id="like-phone"  style="visibility: hidden" data-toggle="modal" data-target="#myModal">
+          <span class="glyphicon glyphicon-thumbs-up" id="post1-phone"></span> 
+            </button>
 
 			  <!-- <button type="button" class="btn btn-default"id="post-phone">
     			<span class="glyphicon glyphicon-edit" ></span>
