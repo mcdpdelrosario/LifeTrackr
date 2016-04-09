@@ -71,7 +71,7 @@ if (mysqli_connect_errno())
     </div>
 
 
-   <div class="popup" data-popup= "popup-1" id="container2-moments">  
+   <div id="container2-moments">  
       <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
         <div class="col-lg-2 col-md-1 col-sm-1 col-xs-3">
             <img id="container2-profile" src="img.jpg">
@@ -79,7 +79,7 @@ if (mysqli_connect_errno())
 
         <div class="col-lg-10 col-md-8 col-sm-8 col-xs-6">
           
-           <input type="text" class="form-control" placeholder=" Make now a moment." id="input-moments"/>
+           <input type="text" class="form-control" placeholder=" Make now a moment." id="input-moments"  size="15"/>
 
         </div>
     
@@ -150,7 +150,7 @@ if (mysqli_connect_errno())
     			<span class="glyphicon glyphicon-edit" ></span>
   				</button> -->
 
-  				  <button type="button" class="btn btn-default" id="post-phone"  style="visibility: hidden">
+  				  <button type="button" class="btn btn-default" id="post-phone"  style="visibility: hidden" data-toggle="modal" data-target="#myModal">
    				<span class="glyphicon glyphicon-edit" id="post1-phone"></span> 
   					</button>
     	 	    <!-- <button type="button"><span class="glyphicon glyphicon-edit" id="post-phone" style="visibility: hidden"></span></button> -->
@@ -158,6 +158,47 @@ if (mysqli_connect_errno())
 
      </div>   
 </div>
+
+ <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header"  style="background-color:orange;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Make now a moment</h4>
+        </div>
+        <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <textarea class="form-control" rows="5" id="MomentsComment"></textarea>
+              </div>
+            </form>
+          </div>
+        <div class="modal-footer">	
+          <button type="button" class="btn btn-default" data-dismiss="modal">Post</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+<script>
+	
+// 	$(function(){
+//     $('#myModal').on('show.bs.modal', function(){
+//         var myModal = $(this);
+//         clearTimeout(myModal.data('hideInterval'));
+//         myModal.data('hideInterval', setTimeout(function(){
+//             myModal.modal('hide');
+//         }, 5000));
+//     });
+// });
+
+
+</script>
         
 </body>
 </html>
