@@ -119,21 +119,22 @@ if (mysqli_connect_errno())
 </div>
 </div>
 
-<div class="containerc-moments">
-  <div class="row">
+<!-- <div class="containerc-moments">
+  <div class="row"> -->
     
        
-   <div class="container4-moments">  
-      <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-        
-        
+ 
+      <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12"id ="container4-moments" >
+       
+          
+
       </div>
     </div> 
 
       
-  </div>  
+ <!--  </div>  
 </div>
-
+ -->
 <div class="containerd-moments">
 
 	<div class = "row">

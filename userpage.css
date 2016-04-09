@@ -189,13 +189,13 @@ body{
 
 #user-phone{
 	visibility: visible!important;
-	position: fixed;
+	position: absolute;
 	border-radius: 50%;
     width: 40px;
     height: 40px;
     padding: 8px;
 	left:10%;
-	top: 60px;
+	top: -279px;
     background: #fff;
     border: 2px solid #666;
     color: #666;
@@ -204,13 +204,13 @@ body{
 
 #post-phone{
 	visibility: visible!important;
-	position: fixed;
+	position: absolute;
 	border-radius: 50%;
     width: 40px;
     height: 40px;
     padding: 8px;
-	left:45%;
-	top: 60px;
+	left:44%;
+	top: -279px;
     background: #fff;
     border: 2px solid #666;
     color: #666;
@@ -226,33 +226,41 @@ body{
 
 #like-phone{
 	visibility: visible!important;
-	position: fixed;
+	position: absolute;
 	border-radius: 50%;
     width: 40px;
     height: 40px;
     padding: 8px;
 	left:80%;
-	top: 60px;
+	top: -279px;
     background: #fff;
     border: 2px solid #666;
     color: #666;
     text-align: center;
 }	
 
-.container4-moments{
-	width: 98%;
-	left: 3px;
+#container4-moments{
+	/*width: 60%;*/
+	width: 85%;
+	left: 25px;
 	border-radius: 5px;
-	height: 330px;
-	top: 75px;
-	background-color: transparent!important;
+	height: 250px;
+	top: 25px;
+	background-color: black!important;
+	color: white;
 }
 
-#input-moments-modal{
+#container4-content{
+	width: 30%;
+	left: 1px;
+	position: absolute;
+}
+
+/*#input-moments-modal{
 	left: 1px!important;
 	overflow-y: auto!important;
 }	
-
+*/
 #myModal{
 	top: 50px!important;
 }
@@ -269,7 +277,6 @@ body{
 	.containerd-moments{
 	visibility: hidden!important;
 }
-
 
 
 }
