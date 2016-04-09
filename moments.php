@@ -80,7 +80,6 @@ if (mysqli_connect_errno())
         <div class="col-lg-10 col-md-8 col-sm-8 col-xs-6">
           
            <input type="text" class="form-control" placeholder=" Make now a moment." id="input-moments"/>
-           <a href="#"><button class="btn btn-default" id="post-moments">Post</button></a>
 
         </div>
     
@@ -146,9 +145,21 @@ if (mysqli_connect_errno())
         ;kasjdlkasjdlksadjlaskdjsalkd
         lkasjdlkasjdlkasjdlaskjdsa
         kasjdlkasjdaskjdskad
-          
       
         1234
+             lkasjdlkasjdlkasjdlaskjdsa
+        kasjdlkasjdaskjdskad
+        laksjdaskjdaslkdjalk
+        laksdjaskljdaslkjdsalkd
+        dalskdjaslkjdaslkjdsa
+        lasjdlkasjd;asjds
+        klajdlkasjdklsad
+        ;kasjdlkasjdlksadjlaskdjsalkd
+        lkasjdlkasjdlkasjdlaskjdsa
+        kasjdlkasjdaskjdskad
+      
+        1234
+        
       </div>
     </div> 
 
