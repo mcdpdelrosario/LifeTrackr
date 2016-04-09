@@ -76,7 +76,7 @@ function pinMarkers(){
 		for(var i = 0; i < dataMoments.moment_id.length; i++){
 			var lats = dataMoments.latitude[i];
 			var lngs = dataMoments.longitude[i];
-			addMarker({ lat: parseFloat(lats), lng: parseFloat(lngs) }, {msg: String(dataMoments.message[i]), username: String(dataMoments.username[i]), first_name: String(dataMoments.first_name[i]), last_name: String(dataMoments.last_name[i])},i);
+			addMarker({ lat: parseFloat(lats), lng: parseFloat(lngs) }, {msg: String(dataMoments.message[i]), user_id: String(dataMoments.user_id[i]), first_name: String(dataMoments.first_name[i]), last_name: String(dataMoments.last_name[i])},i);
 		}
 		showMarkers(map);
 	}, 5000);
@@ -99,7 +99,7 @@ function attachListener(marker, momentInfo) {
 
   marker.addListener('click', function() {
     document.getElementById("momentTitlePost").innerHTML=momentInfo.first_name+" "+momentInfo.last_name;
-    document.getElementById("momentSubtitlePost").innerHTML=momentInfo.username;
+    document.getElementById("momentSubtitlePost").innerHTML=momentInfo.user_id;
     document.getElementById("momentWords").innerHTML=momentInfo.msg;
     $("#momentPost").modal("show");
   });
