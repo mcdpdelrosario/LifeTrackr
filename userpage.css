@@ -133,11 +133,12 @@ body{
 	width: 45%;
 	height: 350px;
 	position: absolute;
-	background-color: #182940;
+	background-color: transparent!important;
 	border-radius: 5px;
 	/*overflow: auto!important;*/
 	color: black!important;
 }
+
 
 /*-----------------MOMENTS-----------------*/
 @media screen and (max-width: 800px){
@@ -167,6 +168,7 @@ body{
 #input-moments{
 	left: 20px;
 	top: 20px;
+
 	width: 100%;
 }
 
@@ -183,9 +185,6 @@ body{
 	left: 1px;
 	position: absolute;
 	border-radius: 5px;*/
-	
-
-
 }
 
 #user-phone{
@@ -244,12 +243,19 @@ body{
 	width: 98%;
 	left: 3px;
 	border-radius: 5px;
-	height: 380px;
+	height: 330px;
 	top: 75px;
 	background-color: transparent!important;
 }
 
+#input-moments-modal{
+	left: 1px!important;
+	overflow-y: auto!important;
+}	
 
+#myModal{
+	top: 50px!important;
+}
 
 /*-----------------------------------*/
 }
@@ -263,5 +269,7 @@ body{
 	.containerd-moments{
 	visibility: hidden!important;
 }
+
+
 
 }
