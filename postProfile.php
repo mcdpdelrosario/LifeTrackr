@@ -21,14 +21,7 @@
                         $query = "SELECT m.user_id, m.moments_id, m.img_id, m.moments_message, m.longitude, m.latitude, m.time_stamp, username, first_name, last_name, ui.img_id AS user_img_id FROM moments AS m 
                                 INNER JOIN userinfo AS ui 
                                     ON m.user_id = ui.user_id 
-                                INNER JOIN friends AS f  
-                                    ON m.user_id = f.user_id_fr 
-                                WHERE f.user_id_user=".$_SESSION['myuser']." AND status =1 
-                                UNION ALL 
-                                SELECT m2.user_id, m2.moments_id, m2.img_id, moments_message, longitude, latitude, m2.time_stamp, username, first_name, last_name, ui2.img_id FROM moments AS m2 
-                                INNER JOIN userinfo AS ui2 
-                                    ON m2.user_id = ui2.user_id 
-                                    WHERE ui2.user_id=".$_SESSION['myuser']."
+                                WHERE ui.user_id=".$_SESSION['myuser']."
                                 ORDER BY time_stamp DESC";
                         $result = mysqli_query($con, $query) or mysqli_error($con);
                 while($row = mysqli_fetch_array($result)){
