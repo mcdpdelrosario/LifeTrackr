@@ -1,0 +1,282 @@
+/*for notifications*/
+
+body{
+	/*overflow: hidden;*/
+	background-color: #DAF2FF!important;
+	background-size: 100% 100%;
+	/*height: 700px;*/
+	height: 100%;
+  	background-size: cover;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  overflow-y: auto!important;
+}
+
+/*notifications code of dp*/
+.inner-content { display:none; }
+
+#load-more{
+  border-radius: 5em !important;
+  height: 100px;
+  width: 100px;
+  margin-left:45%;
+}
+
+
+/*userpage*/
+
+/*for rick*/
+#map{
+  height: 100%;
+}
+/*.modal-footer{
+  padding-right:35%;
+}
+*/
+
+
+#background{
+	
+
+}
+#container1-moments
+{
+	background-color: #182940;
+	position: absolute;
+	top: 20%;
+	left: 10%;
+/*	width: 25%;*/
+	height: 200px;
+	border-radius: 5px;
+}
+#profile-pic-moments{	
+	position: absolute;
+	width: 100%;
+	margin-top:90px;
+	left: 10%;
+}
+#name{
+	position: absolute;
+	color: black;
+	width: 100%;
+	left: 50%;
+	margin-top: 150px;
+}
+
+
+#container2-moments{
+	left: 45%;
+	margin-top: 6%;
+	width: 45%;
+	height: 95px;
+	position: absolute;
+	background-color: #B0CDD9;
+	border-radius: 5px;
+
+}
+
+#container2-profile{
+	width: 100%;
+	margin-left: -10%;
+	top: 15px;
+	position: absolute;
+}
+
+#input-moments{
+	width: 130% !important;
+	left: 20px;
+	top: 15px;
+	position: absolute;	
+}
+
+#container3-moments{
+	background-color: #B0CDD9;
+	top: 300px;
+	left: 10.5%;
+	height: 41px;
+	border-radius: 5px;
+}
+
+#friends-icons{
+  	font-family: Montserrat, sans-serif;   
+  	font-size: 100%;
+  	font-weight: bold; 
+	position: absolute;
+	left: 10px;
+}
+
+#messages-icons{
+	position: absolute;
+	font-family: Montserrat, sans-serif;   
+	font-weight: bold;
+  	font-size: 100%;
+  	left: 105px;
+}
+
+#likes-icons{
+	position: absolute;
+	font-family: Montserrat, sans-serif;   
+	font-weight: bold;
+  	font-size: 100%;
+  	left: 220px;
+}
+
+#container3-special{
+		visibility: hidden;
+}
+
+.container4-moments{
+	left: 45%;
+	margin-top: 11%;
+	width: 45%;
+	height: 350px;
+	position: absolute;
+	background-color: transparent!important;
+	border-radius: 5px;
+	/*overflow: auto!important;*/
+	color: black!important;
+}
+
+
+/*-----------------MOMENTS-----------------*/
+@media screen and (max-width: 800px){
+
+/*for moments*/
+
+#container1-moments{
+	visibility: hidden;
+}
+
+#container3-moments{
+		visibility: hidden;
+}
+
+#container2-moments{
+	visibility: hidden!important;
+	width: 95%;
+	left: 8px;
+	top: 45px;
+	position: absolute;
+}
+
+#container2-profile{
+	width: 70px;
+}
+
+#input-moments{
+	left: 20px;
+	top: 20px;
+
+	width: 100%;
+}
+
+.containerd-moments{
+	visibility: visible!important;
+}
+
+#container1-phone-moments{
+	/*background-color: transparent;
+	color: orange;
+	width: 100%;
+	height: 30px;
+	top: 52px;
+	left: 1px;
+	position: absolute;
+	border-radius: 5px;*/
+}
+
+#user-phone{
+	visibility: visible!important;
+	position: absolute;
+	border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+	left:10%;
+	top: -279px;
+    background: #fff;
+    border: 2px solid #666;
+    color: #666;
+    text-align: center;
+}	
+
+#post-phone{
+	visibility: visible!important;
+	position: absolute;
+	border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+	left:44%;
+	top: -279px;
+    background: #fff;
+    border: 2px solid #666;
+    color: #666;
+    text-align: center;
+}	
+
+#post1-phone{
+	left: 12px!important;
+	top: 9px!important;
+	position: absolute;
+}
+
+
+#like-phone{
+	visibility: visible!important;
+	position: absolute;
+	border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+	left:80%;
+	top: -279px;
+    background: #fff;
+    border: 2px solid #666;
+    color: #666;
+    text-align: center;
+}	
+
+#container4-moments{
+	/*width: 60%;*/
+	width: 85%;
+	left: 25px;
+	border-radius: 5px;
+	height: 250px;
+	top: 25px;
+	background-color: black!important;
+	color: white;
+}
+
+#container4-content{
+	width: 30%;
+	left: 1px;
+	position: absolute;
+}
+
+/*#input-moments-modal{
+	left: 1px!important;
+	overflow-y: auto!important;
+}	
+*/
+#myModal{
+	top: 50px!important;
+}
+
+/*-----------------------------------*/
+}
+
+}
+@media screen and (min-width: 960px){
+	#post-phone{
+		visibility: hidden!important;
+	}
+
+	.containerd-moments{
+	visibility: hidden!important;
+}
+
+
+}
