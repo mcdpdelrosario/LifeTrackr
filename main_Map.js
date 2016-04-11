@@ -204,13 +204,20 @@ function deg2rad(deg) {
 	return deg * (Math.PI/180)
 }
 function commentFunction(){
-	$("#commentSection").slideToggle("slow");
+	$("#commentArea").slideToggle("slow");
 }
 function modalClosedFunction(){
-	$("#commentSection").slideUp("fast");
+	$("#commentArea").slideUp("fast");
 	$("#momentPost").modal("hide");
+	document.getElementById("commentTextArea").value = "";
 }
 
 function likeFunction(){
 	likeAMoment({moment_id: clickedMoment, user_id: 21});
+}
+
+function enterComment(){
+	var comment = document.getElementById("commentTextArea").value;
+	document.getElementById("commentTextArea").value = "";
+	createComment({moment_id: clickedMoment, comment: comment});
 }
