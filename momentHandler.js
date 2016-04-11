@@ -58,3 +58,19 @@ function likeStatus(data,status){
 		swal("Error occured", data +"\nStatus: " + status, "error");
 	}
 }
+
+function createComment(commentData){
+	var url = ".php";
+	swal("Comment", "Moment id: "+commentData.moment_id+"\nComment: "+commentData.comment, "success");
+	//queryServer(url,momentData,likeStatus);
+}
+function commentStatus(data,status){
+	if(status=="success")
+	{
+		swal("Well done!", "Comment SuccessFull", "success");
+	}
+	else
+	{
+		swal("Error occured", data +"\nStatus: " + status, "error");
+	}
+}

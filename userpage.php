@@ -109,10 +109,16 @@
               <button id="momentComment" type="button" class="btn btn-default" onclick="commentFunction()">Comment</button>
             </div>
             
-            <div id="commentArea">
-              <div id="commentSection" class="panel panel-default" style = "display: none;">
+            <div id="commentArea"  style = "display: none;">
+              <div id="commentSection" class="panel panel-default">
                 <div class="panel-body">Panel Body</div>
               </div>
+              <form>
+                <div class="form-group">
+                  <textarea class="form-control" rows="3" id="commentTextArea"></textarea>
+                </div>
+              </form>
+              <button id="submitComment" type="button" class="btn btn-default" onclick="enterComment()">Submit</button>
             </div>
           </div>
         </div>
