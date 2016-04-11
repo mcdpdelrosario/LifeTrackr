@@ -1,6 +1,6 @@
 <?php
-    $moment_id=$_GET['moment_id'];
-    $user_id=$_GET['user_id'];
+    $moment_id=$_POST['moment_id'];
+    $user_id=$_POST['user_id'];
     date_default_timezone_set('Asia/Taipei');
     $date=date("Y-m-d h:i:s");
 	session_start();
