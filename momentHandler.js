@@ -29,8 +29,9 @@ function pinMoment()
 	queryServer(url,null,function(json,status)
 	{
 		//alert(status);
-		if(status!="success")
-		{
+		if(status=="success"){
+			
+		}else{
 			swal("Error occured", json +"\nStatus: " + status, "error");
 		}
 		dataMoments = JSON.parse(json);
@@ -40,4 +41,20 @@ function pinMoment()
 function queryServer(url,data,callback)
 {
 	$.post(url,data,callback);
+}
+
+function likeAMoment(momentData){
+	var url = "likeMoments.php";
+	queryServer(url,momentData,likeStatus);
+}
+
+function likeStatus(data,status){
+	if(status=="success")
+	{
+		swal("Well done!", "Like/Unlike SuccessFull", "success");
+	}
+	else
+	{
+		swal("Error occured", data +"\nStatus: " + status, "error");
+	}
 }

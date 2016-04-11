@@ -5,7 +5,8 @@ arrayMarkers = [],
 zoomValue = 20,
 userRadius = 0.2,
 infoWindow,
-infoMessages = [];//in Km
+infoMessages = [],
+clickedMoment;//in Km
 function initialize() {
 	temporaryMarker = new google.maps.Marker({});
 	infoWindow = new google.maps.InfoWindow({map: null});
@@ -43,9 +44,9 @@ function initialize() {
 
 function handleLocationError(browserHasGeolocation) {
 	if(browserHasGeolocation){
-		alert('Error: The Geolocation service failed.');
+		swal("Error!", "The Geolocation service failed", "error");
 	}else{
-		alert('Error: Browser does not support Geolocation.');
+		swal("Error!", "Browser does not support Geolocation", "error");
 	}
 }
 function updateUserPosition(){
@@ -76,7 +77,7 @@ function pinMarkers(){
 		for(var i = 0; i < dataMoments.moment_id.length; i++){
 			var lats = dataMoments.latitude[i];
 			var lngs = dataMoments.longitude[i];
-			addMarker({ lat: parseFloat(lats), lng: parseFloat(lngs) }, {msg: String(dataMoments.message[i]), user_id: String(dataMoments.user_id[i]), first_name: String(dataMoments.first_name[i]), last_name: String(dataMoments.last_name[i])},i);
+			addMarker({ lat: parseFloat(lats), lng: parseFloat(lngs) }, {moment_id: parseInt(dataMoments.moment_id[i]), msg: String(dataMoments.message[i]), user_id: String(dataMoments.user_id[i]), first_name: String(dataMoments.first_name[i]), last_name: String(dataMoments.last_name[i])},i);
 		}
 		showMarkers(map);
 	}, 5000);
@@ -101,6 +102,7 @@ function attachListener(marker, momentInfo) {
     document.getElementById("momentTitlePost").innerHTML=momentInfo.first_name+" "+momentInfo.last_name;
     document.getElementById("momentSubtitlePost").innerHTML=momentInfo.user_id;
     document.getElementById("momentWords").innerHTML=momentInfo.msg;
+    clickedMoment = momentInfo.moment_id;
     $("#momentPost").modal("show");
   });
 }
@@ -207,4 +209,8 @@ function commentFunction(){
 function modalClosedFunction(){
 	$("#commentSection").slideUp("fast");
 	$("#momentPost").modal("hide");
+}
+
+function likeFunction(){
+	likeAMoment({moment_id: clickedMoment, user_id: 21});
 }
