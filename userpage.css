@@ -1,0 +1,579 @@
+/*for notifications*/
+/*working until profile_user*/
+body{
+	/*overflow: hidden;*/
+	background-color: #f6fafc !important;
+	/*background-color: #DAF2FF!important;*/
+	background-size: 100% 100%;
+	/*height: 700px;*/
+	height: 100%;
+  	background-size: cover;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  overflow-y: auto!important;
+  overflow-x: hidden!important;
+}
+
+/*notifications code of dp*/
+.inner-content { display:none; }
+
+#load-more{
+  border-radius: 5em !important;
+  height: 100px;
+  width: 100px;
+  margin-left:45%;
+}
+
+
+/*userpage*/
+
+/*for rick*/
+#map{
+  height: 100%;
+}
+/*.modal-footer{
+  padding-right:35%;
+}
+*/
+
+/*moments*/
+#background{
+	
+
+}
+#container1-moments
+{
+	background-color: #193062;
+	/*background-color: #91f0e1;*/
+	position: absolute;
+	top: 20%;
+	left: 10%;
+/*	width: 25%;*/
+	height: 200px;
+	border-radius: 2px;
+}
+#profile-pic-moments{	
+	position: absolute;
+	width: 100%;
+	margin-top:90px;
+	left: 10%;
+	border-radius: 0.5em;
+	border: 5em;
+	
+}
+#name{
+	position: absolute;
+	color: white!important;
+	font-weight: bold;
+	width: 100%;
+	left: 40%;
+	margin-top: 150px;
+}
+
+
+#container2-moments{
+	left: 1%;
+	margin-top: -20%;
+	width: 100%;
+	height: 95px;
+	position: absolute!important;
+	background-color: #B0CDD9;
+	border-radius: 5px;
+
+}
+
+#container2-profile{
+	width: 100%;
+	margin-left: -10%;
+	top: 15px;
+	position: absolute;
+}
+
+#input-moments{
+	width: 130% !important;
+	left: 20px;
+	top: 15px;
+	position: absolute;	
+}
+
+#container3-moments{
+	background-color: #c3def3 !important;
+	
+	top: 333px;
+	left: 10%;
+	height: 41px;
+	border-radius: 5px;
+	position: fixed;
+	color: #373748!important;
+	/*background-color: black!important;*/
+	border-color: white!important;
+	border-radius: 2px;
+}
+
+#friends-icons{
+  	font-family: Montserrat, sans-serif;   
+  	font-size: 100%;
+  	font-weight: bold; 
+	position: absolute;
+	left: 10px;
+}
+
+#messages-icons{
+	position: absolute;
+	font-family: Montserrat, sans-serif;   
+	font-weight: bold;
+  	font-size: 100%;
+  	left: 105px;
+}
+
+#likes-icons{
+	position: absolute;
+	font-family: Montserrat, sans-serif;   
+	font-weight: bold;
+  	font-size: 100%;
+  	left: 220px;
+}
+
+#container3-special{
+		visibility: hidden;
+}
+
+#container4-moments{
+	left: 45%;
+	margin-top: 15%;
+	width: 45%;
+	height: 350px;
+	background-color: transparent!important;
+	border-radius: 5px;
+	/*overflow: auto!important;*/
+	color: black!important;
+}
+
+#Post_desktop_moments{
+	position: absolute;
+	top: 55px;
+	left: 120%;
+}
+
+
+/*-----------------MOMENTS-----------------*/
+
+
+
+
+
+/*profile_user*/
+
+#container1-profileuser{
+	margin-top: -21.5%;
+	margin-left: -1.3%;
+	/*margin-right: 9%;*/
+	width: 97%;
+	position: absolute;
+	/*background-color: #D93D04*/
+	background-color: #B0CDD9;
+/*	border-radius: 20px;*/
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-width: 2px;
+}
+
+#container1-background{
+	background-color: white;
+}
+
+#editprofile-profileuser{
+	
+	color: black;
+	font-weight: 400;
+	position: absolute;
+	margin-left: 80%!important;
+	margin-top: 12% !important;
+}
+
+#profile1-button{
+	visibility: hidden!important;
+}
+
+#profile_pic{
+	width: 60% !important;
+}
+
+#profile_name{
+	position: absolute;
+	margin-top: 100px;
+	margin-left: 20%;
+}
+
+
+#myname{
+	font-weight: bold;
+	color: black!important;
+}
+
+
+#username{
+	margin-top: -1%;
+}
+
+#editprofile-profileuser1{
+	visibility: hidden;
+}
+
+#container2-profileuser{
+	margin-top: 16%;
+	width: 78%;
+	margin-left: 12.5%!important;
+	position: absolute;
+
+}
+
+
+/*notifications*/
+
+#container1-notification{
+	width: 80%!important;
+	left: 10%!important;
+	top: 10%!important;
+	position: absolute;
+}
+
+#notification-load-more{
+  border-radius: 5em !important;
+  height: 100px;
+  width: 100px;
+  margin-left:40%!important;
+}
+
+
+@media screen and (max-width: 499px){
+	#container1-profileuser{
+	margin-left: -11%!important;
+	top: -23%;
+	width:119%;
+	height: 70%!important;
+	position: absolute;
+	background-color: transparent!important;
+
+}
+
+#container1-background{
+	background-color: #1c1c17;
+
+}
+
+
+#profile_pic{
+	width: 60% !important;
+}
+
+
+#editprofile-profileuser{
+	visibility: hidden;
+}
+
+#editprofile-profileuser1{
+	visibility: visible;
+}
+#editprofile-profileuser1 button{
+	border: none;
+	background-color: transparent!important;
+	position: absolute;
+	left: 70%!important;
+	top: 95px!important;
+	position: absolute;
+	
+	
+}
+#cogbutton{
+	color: white!important;
+	font-size: 20px;
+
+	
+}
+
+#profile_name{
+	position: absolute;
+	margin-top: 14%!important;
+	margin-left: 29%;
+	color: white!important;
+}
+#myname{
+	color: white!important;
+	font-size: 90%!important;
+}
+
+#container2-profileuser{
+	margin-top: 42%!important;
+	width: 110%;
+	height: 300px;
+	margin-left: 3%!important;
+	position: absolute;
+/*	background-color: black!important;*/
+
+}
+
+#container3-prof
+{
+	/*background-color: white!important;*/
+	margin-top: -5%!important;
+	width: 110%!important;
+	position: absolute;
+	left: 1%;
+	/*background-color: black;*/
+}
+
+#load-more{
+  border-radius: 5em !important;
+  height: 100px;
+  width: 100px;
+  margin-left:29%!important;
+}
+
+#panel-profile-user
+{
+	top: 300px;
+	position: absolute;
+}
+
+
+@media screen and (min-width: 500px) and (max-width: 800px){
+
+/*profile_user*/
+#container1-profileuser{
+	margin-left: -5%!important;
+	top: -27%;
+	width:100%;
+	height: 40%!important;
+	position: absolute;
+	background-color: white;
+	position: absolute;
+
+}
+
+#container1-background{
+	background-color: #1c1c17;
+
+}
+
+ #editprofile-profileuser{
+	
+	color: black;
+	font-weight: 400;
+	position: absolute;
+	margin-left: 70%!important;
+	margin-top: 15% !important;
+}
+
+#profile_pic{
+	width: 60% !important;
+}
+
+#profile_name{
+	position: absolute;
+	margin-top: 13%!important;
+	margin-left: 28%;
+	color: white!important;
+}
+
+#profile-button{
+	background-color: gray!important;
+	color: black!important;
+}
+#myname{
+	color: white!important;
+	font-size: 110%!important;
+}
+
+#container2-profileuser{
+	margin-top: 39%!important;
+	width: 103%;
+	margin-left: 1%!important;
+	position: absolute;
+
+}
+
+
+
+} 
+
+/*only for few divs*/
+
+@media screen and (max-width: 800px)
+{
+	/*for moments*/
+#container1-moments{
+	visibility: hidden;
+}
+
+#container3-moments{
+		visibility: hidden;
+}
+
+#container2-moments{
+	visibility: hidden!important;
+	width: 95%;
+	left: 8px;
+	top: 45px;
+	position: absolute;
+}
+
+#container2-profile{
+	width: 70px;
+}
+
+#input-moments{
+	left: 20px;
+	top: 20px;
+
+	width: 100%;
+}
+
+.containerd-moments{
+	visibility: visible!important;}
+
+#container1-phone-moments{
+	visibility: visible!important;
+
+}
+
+#user-phone{
+	visibility: visible!important;
+	position: absolute;
+	border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+	left:10%;
+	top: -300px;
+    background: #fff;
+    border: 2px solid #666;
+    color: #666;
+    text-align: center;
+}	
+
+#post-phone{
+	visibility: visible!important;
+	position: absolute;
+	border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+	left:44%;
+	top: -300px;
+    background: #fff;
+    border: 2px solid #666;
+    color: #666;
+    text-align: center;
+}	
+
+#post1-phone{
+	left: 12px!important;
+	top: 9px!important;
+	position: absolute;
+}
+
+
+#like-phone{
+	visibility: visible!important;
+	position: absolute;
+	border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+	left:80%;
+	top: -300px;
+    background: #fff;
+    border: 2px solid #666;
+    color: #666;
+    text-align: center;
+}	
+
+#container4-moments{
+	/*width: 60%;*/
+	width: 85%;
+	left: 22px;
+	border-radius: 5px;
+	height: 250px;
+	top: 3px;
+	background-color: transparent!important;
+	color: white;
+}
+
+#container4-content{
+	width: 30%;
+	left: 1px;
+	position: absolute;
+}
+
+
+#myModal{
+	top: 50px!important;
+}
+
+/*notification*/
+#container1-notification{
+top: 13%!important;	
+}
+
+#notification-load-more{
+  margin-left:15%!important;
+}
+
+
+
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px)
+{
+ #editprofile-profileuser{
+	
+	color: black;
+	font-weight: 400;
+	position: absolute;
+	margin-left: 70%!important;
+	margin-top: 10% !important;
+}
+
+#profile_pic{
+	width: 60% !important;
+}
+
+#profile_name{
+	position: absolute;
+	margin-top: 5%!important;
+	margin-left: 20%;
+}
+
+
+#container2-profileuser{
+	margin-top: 20%!important;
+	width: 78%;
+	margin-left: 12.5%!important;
+	position: absolute;
+
+}
+
+#Post_desktop_moments{
+	left: 115%;
+
+}
+
+
+
+}
+
+
+@media screen and (min-width: 1300px)
+{
+	#post-phone{
+		visibility: hidden!important;
+	}
+
+	.containerd-moments{
+		visibility: hidden!important;
+	}
+}
+

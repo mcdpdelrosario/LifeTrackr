@@ -1,0 +1,33 @@
+1. moments.php
+	- friends (modal) 
+		[x] friends list *friendsList.php
+		[x] friend requests *friendRequest.php *acceptFriend
+	- messages (modal)
+		[] view messages
+		[] send messages
+	- likes (modal)
+		[] view liked posts
+	- newsfeed (posts of user and friends) 
+		[x] post moments *postMoments.php
+		[x] user will be able to like posts *likeMoments.php
+		[] user will be able to comment
+2. notifications.php
+	- notifications
+		[] show notifications for likes
+		[] show notifications for messages
+		[] show notifications for comments
+		[] show notifications for friend requests
+3. profile_user.php (hindi ibig sabihin current user, for all users dapat nagaapply)
+	[x] posts of user *postProfile.php
+	[x] profile settings *goprofiler.php
+	[x] add friend *addFriend.php
+	[] remove friend 
+4. userpage.php
+	- additional buttons
+		[] center button
+		[] 
+5. search
+	[x] able to search user
+	[] able to search moments
+	[] fully functioning search
+
