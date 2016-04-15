@@ -6,25 +6,23 @@
 	$latitude=$_POST["moment_Lat"];
 	$message=$_POST["moment_Message"];
 	$image=$_POST["imagefp"];
-	// $img=$_GET["moment_Img"];
 	
     date_default_timezone_set('Asia/Taipei');
 	$date=date("Y-m-d h:i:s");
 
     $blobObj = new BobDemo();
     $blobObj->insertBlob($image,"gif");
-    //$id = $con->insert_id;
+    
     $id2 = "select max(img_id) maxid from pictures";
     $id = mysqli_query($con,$id2);
-
     $row = mysqli_fetch_array($id);
-
     $id3 = $row["maxid"];
-
+    echo $id3;
 	$query = "INSERT INTO moments (`user_id`,`longitude`, `latitude`,`moments_message`,`time_stamp`,`img_id`) VALUES(".$_SESSION["myuser"].",".$longitude.",".$latitude.",'".$message."','".$date."','".$id3."')";
+
+//$query = "INSERT INTO moments (`user_id`,`longitude`, `latitude`,`moments_message`,`time_stamp`) VALUES(".$_SESSION["myuser"].",".$longitude.",".$latitude.",'".$message."','".$date."')";
+
 	$result = mysqli_query($con,$query);
-
-
 
 	echo $query;
 
