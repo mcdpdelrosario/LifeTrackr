@@ -231,6 +231,22 @@ body{
 }
 
 
+/*notifications*/
+
+#container1-notification{
+	width: 80%!important;
+	left: 10%!important;
+	top: 10%!important;
+	position: absolute;
+}
+
+#notification-load-more{
+  border-radius: 5em !important;
+  height: 100px;
+  width: 100px;
+  margin-left:40%!important;
+}
+
 
 @media screen and (max-width: 499px){
 	#container1-profileuser{
@@ -322,7 +338,6 @@ body{
 	position: absolute;
 }
 
-}
 
 @media screen and (min-width: 500px) and (max-width: 800px){
 
@@ -497,6 +512,17 @@ body{
 #myModal{
 	top: 50px!important;
 }
+
+/*notification*/
+#container1-notification{
+top: 13%!important;	
+}
+
+#notification-load-more{
+  margin-left:15%!important;
+}
+
+
 
 }
 
