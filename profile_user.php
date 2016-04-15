@@ -21,7 +21,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="dist/sweetalert.min.js"></script>
-  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-QcrS-bymcrFPClDmuA4A3RMVZsvQCuQ&signed_in=false"></script> -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-QcrS-bymcrFPClDmuA4A3RMVZsvQCuQ&signed_in=false"></script>
   <script src="main_Map.js"></script>
   <script src="momentHandler.js"></script>
 
@@ -32,22 +32,19 @@
     session_start();
     $con = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","bdd92f8752ef7e","fdb4d70b","lifetrackr");
     // Check connection
-    $useruser=$_GET['userid'];
-
-
+    
     if (mysqli_connect_errno())
     {
       echo "Failed to connect to MySQL: " . mysqli_connect_error();
     } 
     else 
     {
-      $query = "SELECT first_name,last_name,username FROM userinfo WHERE user_id = ".$useruser."";
+      $query = "SELECT first_name,last_name FROM userinfo WHERE user_id = '".$_SESSION["myuser"]."'";
       $result = mysqli_query($con, $query) or mysqli_error($con);
       while ($row = mysqli_fetch_array($result)) 
       {
         $_SESSION["fname"] = $row['first_name'];
         $_SESSION["lname"] = $row['last_name'];
-        $_SESSION["username"] = $row['username'];
       }
     }
     include "navbar.php";
@@ -71,27 +68,12 @@
                           </div>
                           <div class="col-lg-5 col-md-7 col-sm-5 col-xs-6" id="profile_name">
                             <a href="profile_user.php"><h4 id="myname"><?=$_SESSION["fname"]?> <?=$_SESSION["lname"]?> <br> </h4></a>
-                            <p id="username">@<?=$_SESSION["username"]?></p>
+                            <p id="username">@<?=$_SESSION["myuser"]?></p>
                            </div>
-                           <?php
-                              if($useruser==$_SESSION['myuser']){
-                                ?>
-                          <div class="col-lg-3 col-md-7 col-sm-5"id="editprofile-profileuser">
-                            <a href="profiler.php"><button class="btn btn-default edit-profile" id="profile-button" >Edit Profile</button></a>
-                          </div> 
-                                <?php
-                              }else{
-
-                                ?>
-                                <div class="col-lg-3 col-md-7 col-sm-5"id="editprofile-profileuser">
-                                <a href="profiler.php"><button class="btn btn-default edit-profile" id="profile-button" >Add Friend</button></a>
-                              </div> 
-
-                                <?php
-
-                              }
-                           ?>
                            
+                           <div class="col-lg-3 col-md-7 col-sm-5"id="editprofile-profileuser">
+                            <a href="profiler.php"><button class="btn btn-default edit-profile" id="profile-button" data target="profiler.php" >Edit Profile</button></a>
+                          </div> 
 
                             <div class="col-lg-3 col-md-7 col-sm-5"id="editprofile-profileuser1">
                                 <a href="profiler.php"> <button type="button" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-cog" id="cogbutton"></span></button></a>
@@ -119,26 +101,37 @@
                     {
                     echo "Failed to connect to MySQL: " . mysqli_connect_error();
                     } else {
-                        $query = "SELECT m.img_id, moments_message, longitude, latitude, m.time_stamp, username, first_name, last_name, ui.img_id FROM moments AS m
-                              INNER JOIN userinfo AS ui
-                                ON m.user_id = ui.user_id
-                                WHERE ui.user_id = ".$useruser." ORDER BY time_stamp DESC";
+                        $query = "SELECT * FROM userinfo AS ui INNER JOIN moments AS mmnt ON ui.username = mmnt.username WHERE mmnt.username = '".$_SESSION["myuser"]."' ORDER BY time_taken DESC";
                         $result = mysqli_query($con, $query) or mysqli_error($con);
                         while ($row = mysqli_fetch_array($result)) {
-                           $longlat = $row['longitude'].','.$row['latitude'];
-                           // echo $longlat;
+                           // $_SESSION["uname_notif"] = $row['username'];
+                           $_SESSION["fname_my_moment"] = $row['first_name'];
+                           $_SESSION["lname_my_moment"] = $row['last_Name'];
+                           $_SESSION["uname_my_moment"] = $row['username'];
+                           $_SESSION["message_moments"] = $row['moments_message'];
+                           $_SESSION["longtitude_moments"] = $row['longitude'];
+                           $_SESSION["latitude_moments"] = $row['latitude'];
+                           $_SESSION["time_taken"] = $row['time_stamp'];
+                           $longlat = $_SESSION["longtitude_moments"].','.$_SESSION["latitude_moments"];
                            ?>
                           
-                                  <p><b><?=$row['first_name']?> <?=$row['last_name']?></b> @<?=$row['username']?> <?=$row['time_stamp']?></p>
-                                  <img src="http://maps.googleapis.com/maps/api/staticmap?location=<?=$longlat?>&zoom=19&size=400x300&sensor=false&maptype=satellite">
-                                  <p><?=$row['moments_message']?></p>
+                           <div class="inner-content">
+                                  <p><b><?=$_SESSION["fname_my_moment"]?> <?=$_SESSION["lname_my_moment"]?></b> @<?=$_SESSION["uname_my_moment"]?> <?=$_SESSION["time_taken"]?></p>
+                                  <?php
+                                    echo "<img src='http://maps.googleapis.com/maps/api/staticmap?center=".$longlat."&zoom=19&size=400x300&sensor=true&maptype=satellite'>";
+                                    ?>
+                                  <p><?=$_SESSION["message_moments"]?></p>
                                   <hr>
+                           </div>
 
                       <?php
                         }
                       }
                   ?>
                 
+                  <br>
+                  <!-- <a href="#" id="load-more">Load More</a> -->
+                  <button class="btn btn-default" id="load-more"><span class="glyphicon glyphicon-repeat"></span><br>Load</button>
           </div>
 
       </div>
