@@ -27,12 +27,13 @@
     }
   ?>
   
-  <a id="listdropdown-name" href="profile_user.php?userid=<?=$_SESSION['myuser']?>">
+  <a id="listdropdown-name" href="profile_user.php?user=$_SESSION['myuser']">
     <?php
       echo $_SESSION["fname"]." ". $_SESSION["lname"];
     ?>
   </a>                        
 </li>	
+
 
 
 <li>
