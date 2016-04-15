@@ -66,35 +66,19 @@ if (mysqli_connect_errno())
           </div>
           
           <div class="col-lg-8 col-md-4 col-sm-4 col-xs-1" id="name">
-            Angel
+            Angel Opulencia
           </div>
 
     </div>
 
-
-   <div id="container2-moments">  
-      <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-        <div class="col-lg-2 col-md-1 col-sm-1 col-xs-3">
-            <img id="container2-profile" src="img.jpg">
-        </div>
-
-        <div class="col-lg-10 col-md-8 col-sm-8 col-xs-6">
-          
-           <input type="text" class="form-control" placeholder=" Make now a moment." id="input-moments"  size="15"/>
-
-        </div>
-    
-      </div>
-    </div> 
-
   </div>
-
-
 </div>
+
 
 
 <div class="containerb-moments">
 <div class="row">
+
   <div class="col-lg-3 col-md-4 col-sm-4 col-xs-1" id="container3-moments">
       <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-1 col-xs-1" id="icons-moments">
@@ -126,6 +110,60 @@ if (mysqli_connect_errno())
        
  
       <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12"id ="container4-moments" >
+        <div id="container2-moments">  
+      <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+        <div class="col-lg-2 col-md-1 col-sm-1 col-xs-3">
+            <img id="container2-profile" src="img.jpg">
+        </div>
+
+        <div class="col-lg-10 col-md-8 col-sm-8 col-xs-6">
+          
+           <input type="text" class="form-control" placeholder=" Make now a moment." id="input-moments"  size="15"/>
+
+           <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" id="Post_desktop_moments">Post</button>
+
+        </div>
+    
+      </div>
+    </div> 
+
+        
+        <?php
+          if (mysqli_connect_errno())
+                    {
+                    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                    } else {
+                        $query_postmoment = "SELECT m.user_id, m.moments_id, m.img_id, m.moments_message, m.longitude, m.latitude, m.time_stamp, username, first_name, last_name, ui.img_id AS user_img_id FROM moments AS m 
+                                INNER JOIN userinfo AS ui 
+                                    ON m.user_id = ui.user_id 
+                                INNER JOIN friends AS f  
+                                    ON m.user_id = f.user_id_fr 
+                                WHERE f.user_id_user=".$_SESSION['myuser']." AND status =1 
+                                UNION ALL 
+                                SELECT m2.user_id, m2.moments_id, m2.img_id, moments_message, longitude, latitude, m2.time_stamp, username, first_name, last_name, ui2.img_id FROM moments AS m2 
+                                INNER JOIN userinfo AS ui2 
+                                    ON m2.user_id = ui2.user_id 
+                                    WHERE ui2.user_id=".$_SESSION['myuser']."
+                                ORDER BY time_stamp DESC";
+                        $result_postmoment = mysqli_query($con, $query_postmoment) or mysqli_error($con);
+                        while($row = mysqli_fetch_array($result_postmoment)){
+                            $longlat=$row['longitude'].','.$row['latitude'];
+                        ?>
+                          <div class="panel panel-default">
+                            <div class="panel-heading"><?=$row['first_name']?> <?=$row['last_name']?> @<?=$row['username']?></div>
+                            <div class="panel-body"><?php
+
+                                    echo "<img src='http://maps.googleapis.com/maps/api/staticmap?center=".$longlat."&zoom=14&size=400x300&sensor=true'>";
+
+                                    ?>
+                                  <p><?=$row['moments_message']?></p></div>
+                          </div>
+                        <?php
+                        }
+                    }
+
+        ?>
+
        
 
 

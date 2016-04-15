@@ -27,7 +27,7 @@
     }
   ?>
   
-  <a id="listdropdown-name" href="#">
+  <a id="listdropdown-name" href="profile_user.php?user=$_SESSION['myuser']">
     <?php
       echo $_SESSION["fname"]." ". $_SESSION["lname"];
     ?>
@@ -35,7 +35,7 @@
 </li>	
 
 <li>
-  <a id="listdropdown-buts" href="#"></a>
+  <a id="listdropdown-buts" href=""></a>
 </li>
 
 <li>

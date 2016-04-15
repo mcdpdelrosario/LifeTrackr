@@ -95,6 +95,8 @@
   min-height:6%;
   width:100%;
   background-color: #4CAF50;
+  color: white;
+  font-weight: bold!important;
 }
 
 
@@ -189,7 +191,7 @@
 
 .caption {
   
-  color: white !important;
+  color: #676d70 !important;
   font-family: Montserrat, sans-serif !important;
   font-family: 'Amatic SC';
   margin-left:2%;

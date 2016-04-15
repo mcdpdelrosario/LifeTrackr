@@ -1,5 +1,3 @@
-<!-- working -->
-
 <html lang="en">
 <head>
 
@@ -55,44 +53,44 @@
 
   <div class = "grid">
     <div class = "row">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs- 12" id="container1-profileuser">
-        <div class="panel panel-default lefty">
-        
-          <div class="panel-body" id="container1-background">
-            <div id="left-panel">
-              <div class="col-lg-4 col-md-5 col-sm-5 col-xs-7">
-                <img id="profile_pic" src="img.jpg">
-              </div>
-              <div class="col-lg-5 col-md-7 col-sm-5 col-xs-6" id="profile_name">
-                <a href="profile_user.php"><h4 id="myname"><?=$_SESSION["fname"]?> <?=$_SESSION["lname"]?> <br> </h4></a>
-                <p id="username">@<?=$_SESSION["myuser"]?></p>
-               </div>
-               
-               <div class="col-lg-3 col-md-7 col-sm-5"id="editprofile-profileuser">
-                <a href="profiler.php"><button class="btn btn-default edit-profile" id="profile-button" >Edit Profile</button></a>
-              </div> 
-
-                <div class="col-lg-3 col-md-7 col-sm-5"id="editprofile-profileuser1">
-                    <a href="profiler.php"> <button type="button" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-cog" id="cogbutton"></span></button></a>
-              </div>
-
-
-            </div>
-          </div>
-        </div>
-      </div>
+      
       
 
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="container2-profileuser">
-        <div class="panel panel-default">
-       <div class="panel-body righty">
-            <div id="right-panel">
+          <div class="panel-heading" id="container2-prof">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs- 12" id="container1-profileuser">
+                    <div class="panel panel-default lefty">
+                    
+                      <div class="panel-body" id="container1-background">
+                        <div id="left-panel">
+                          <div class="col-lg-4 col-md-5 col-sm-5 col-xs-7">
+                            <img id="profile_pic" src="img.jpg">
+                          </div>
+                          <div class="col-lg-5 col-md-7 col-sm-5 col-xs-6" id="profile_name">
+                            <a href="profile_user.php"><h4 id="myname"><?=$_SESSION["fname"]?> <?=$_SESSION["lname"]?> <br> </h4></a>
+                            <p id="username">@<?=$_SESSION["myuser"]?></p>
+                           </div>
+                           
+                           <div class="col-lg-3 col-md-7 col-sm-5"id="editprofile-profileuser">
+                            <a href="profiler.php"><button class="btn btn-default edit-profile" id="profile-button" >Edit Profile</button></a>
+                          </div> 
+
+                            <div class="col-lg-3 col-md-7 col-sm-5"id="editprofile-profileuser1">
+                                <a href="profiler.php"> <button type="button" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-cog" id="cogbutton"></span></button></a>
+                          </div>
+
+
+                        </div>
+                      </div>
+                    </div>
+          </div>
+          </div>
+       <div class="panel-body righty" id="container3-prof">
+        <!--     <div id="right-panel">
               <ul class="nav nav-tabs">
                 <li class="active"><a href="profile_user.php">Home</a></li>
-                <li><a href="#">Menu 1</a></li>
-                <li><a href="#">Menu 2</a></li>
               </ul>
-            </div>
+            </div> -->
 
             
               <?php
@@ -135,7 +133,7 @@
                   <!-- <a href="#" id="load-more">Load More</a> -->
                   <button class="btn btn-default" id="load-more"><span class="glyphicon glyphicon-repeat"></span><br>Load</button>
           </div>
-        </div>
+
       </div>
 
 
