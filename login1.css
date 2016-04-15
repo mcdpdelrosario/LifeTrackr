@@ -104,6 +104,8 @@
   min-height:6%;
   width:100%;
   background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
 }
 
 
@@ -111,6 +113,7 @@
 
 .box {
     padding: 0 10px 0 10px;
+    
 }
 
 #home-but{
@@ -130,6 +133,14 @@
 
 }
 
+#begin_tracking h3{
+ font-style: italic!important;
+
+}
+
+#panel1{
+  background-color: #413e3e!important;
+}
 
 
 *,
