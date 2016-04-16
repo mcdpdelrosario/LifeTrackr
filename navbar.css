@@ -1,0 +1,357 @@
+
+ /*The new login css = login1.css*/
+
+ *{box-sizing: border-box}
+
+
+
+  body{
+  font-family: Montserrat, sans-serif;             
+  overflow-x: hidden !important; 
+  padding: 0;
+  margin: 0;
+  padding-top: 50px;
+  background-size: 100% 100%;
+  background-size: cover;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+
+
+}
+
+  #navbarsettings{
+ 
+    background-color: white!important;
+    width: 100%;
+    top: 0;
+    position: fixed;
+  }
+
+  .navbar {
+      font-family: Montserrat, sans-serif;
+      font-size: 11px !important;
+   
+  }
+  .navbar li a, .navbar {
+        color: #0E182C!important;
+        text-decoration: none;
+        color: #000000;
+        font-family: Montserrat, sans-serif;
+        font-size: 110%;
+        font-weight: 100;
+        letter-spacing: 1px;
+  }
+
+  #signup-but{
+    position: relative;
+    color: #000;
+    text-decoration: none;
+  }
+
+  #signup-but:hover{
+   color: #000;
+  }
+  
+  #signup-but:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+#signup-but:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+  .navbar-nav li a:hover { 
+    
+         }
+
+
+  .navbar-nav li.active a { 
+    background-color: white !important;
+    color: #ff8c5b!important;
+    height: 10%;
+  }
+  .navbar-brand{
+  color: #ff8c5b!important;
+  margin-top: 1% !important;
+  letter-spacing: 2px;
+  }
+
+#search-but{
+  margin-top: 1%;
+  margin-right: 3%;
+  position: absolute;
+  float: left;
+  
+}
+
+
+
+
+#myNavbars{
+  margin-top:-2.8%;
+  margin-right: 15%;
+  float: right;
+  height: 28px;
+}
+
+#mySettings
+{
+  margin-top: -3.4%;
+  margin-left:85%;
+  position: absolute;
+}
+
+#dropdown-settings{
+  margin-left: -360%;
+  position: absolute;
+  font-size: 110%;
+  margin-top: 10%;
+}
+
+#listdropdown-name{
+  font-weight: bold;
+}
+
+form input[type="search"] {
+  height: 25px;
+  width: 170px;
+  margin: 0;
+  padding: 0;
+  margin-top: 2% !important;
+  margin-right: 5% !important;
+  font-size: 120%;
+  border: 1px solid #CCCCCC;
+}
+.logo{
+
+        color: #F04A00!important;
+        text-decoration: none;
+         top: 29%;
+        margin-left: 49%;
+        padding: 0;
+        font-family: Montserrat, sans-serif;
+        font-size: 150%;
+        font-weight: 400;
+        letter-spacing: 3px;
+        position: absolute;
+         display: inline-block;
+}
+
+
+@media screen and (max-width: 800px) {
+  .navbar.navbar-default {
+      position:fixed; top:0; left:0; z-index:1030;
+     padding-left: 20%;
+   }
+
+}
+
+
+@media screen and (max-width: 640px){   
+
+
+.navbar{
+  height: 5px;
+}
+
+.logo{
+    top: 30%;
+    left: -5%;
+}
+
+
+#hamburgerbutton.navbar-toggle {
+  float: left;
+  margin-left: -20%;
+  
+}
+
+#myNavbars{
+  height: 100%;
+  overflow: hidden;
+  width:100%;
+  margin: 0;
+} 
+
+#search-but{
+  margin-right: 30%;
+  margin-top: -1%;
+}
+
+#list-but{
+  margin-right: 100%;
+}
+
+#signup-but:hover:before {
+visibility: hidden;
+}
+
+#signup-but:hover{
+ color: #F04A00!important;
+  }
+
+#myNavbar{
+  margin-left: -36%;
+}
+
+
+#myNavbar.navbar-collapse {
+  background: white;
+}
+
+
+#navbarsettings{
+   top: 0%;
+}
+}
+
+@media screen and (min-width:641px){
+
+.logo{
+    top: 9px;
+    left: 20px;
+}
+#navbarsettings{
+   top: 0%;
+}
+
+}
+
+@media screen and (min-width:960px){
+
+.logo{
+  visibility: visible;
+}
+
+#navbarsettings{
+  top:0;
+}
+
+}
+
+#map{
+  height: 100%;
+}
+#postButtons{
+  text-align: center;
+}
+#commentArea{
+  text-align: left;
+}
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    visibility: hidden;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 100%;
+    visibility: visible;
+}
+
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+}
+
+
+
+/**/
