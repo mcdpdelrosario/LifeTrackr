@@ -159,6 +159,10 @@ if (mysqli_connect_errno())
 
                                     ?>
                                   <p><?=$row['moments_message']?></p></div>
+                            <div class="panel-footer">
+                              <button class="btn btn-default">Like</button>
+
+                            </div>
                           </div>
                         <?php
                         }
