@@ -37,29 +37,29 @@
   <?php
     session_start();
      include "navbar.php";
-   //  $con = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","bdd92f8752ef7e","fdb4d70b","lifetrackr");
-   //  // Check connection
+    $con = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","bdd92f8752ef7e","fdb4d70b","lifetrackr");
+    // Check connection
 
-   //  $userid=$_GET['userid'];
+    // $userid=$_GET['userid'];
     
-   //  if (mysqli_connect_errno())
-   //  {
-   //    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-   //  } 
-   //  else 
-   //  {
-		 //  $query = "SELECT * FROM userinfo WHERE user_id = ".$userid."";
-			// $result = mysqli_query($con, $query) or mysqli_error($con);
+    if (mysqli_connect_errno())
+    {
+      echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    } 
+    else 
+    {
+		  $query = "SELECT * FROM userinfo WHERE user_id = ".$userid."";
+			$result = mysqli_query($con, $query) or mysqli_error($con);
 			
-   //    while ($row = mysqli_fetch_array($result)) 
-   //    {
-			//   $_SESSION["uname"] = $row['username'];
-   //      $_SESSION["pword"] = $row['password'];
-			// 	$_SESSION["lname"] = $row['last_name'];
-   //      $_SESSION["fname"] = $row['first_name'];
-   //      $_SESSION["email"] = $row['email'];
-			// }
-	  //  }
+      while ($row = mysqli_fetch_array($result)) 
+      {
+			  $_SESSION["uname"] = $row['username'];
+        $_SESSION["pword"] = $row['password'];
+				$_SESSION["lname"] = $row['last_name'];
+        $_SESSION["fname"] = $row['first_name'];
+        $_SESSION["email"] = $row['email'];
+			}
+	   }
   ?>
 
 
