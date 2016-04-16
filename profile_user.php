@@ -72,7 +72,7 @@
                            </div>
                            
                            <div class="col-lg-3 col-md-7 col-sm-5"id="editprofile-profileuser">
-                            <a href="profiler.php"><button class="btn btn-default edit-profile" id="profile-button" >Edit Profile</button></a>
+                            <a href="profiler.php"><button class="btn btn-default edit-profile" id="profile-button" data target="profiler.php" >Edit Profile</button></a>
                           </div> 
 
                             <div class="col-lg-3 col-md-7 col-sm-5"id="editprofile-profileuser1">

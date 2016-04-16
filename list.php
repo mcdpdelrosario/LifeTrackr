@@ -34,9 +34,7 @@
   </a>                        
 </li>	
 
-<li>
-  <a id="listdropdown-buts" href=""></a>
-</li>
+
 
 <li>
   <a href="#" id="listdropdown-buts">My Commits</a>
