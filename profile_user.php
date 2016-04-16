@@ -10,7 +10,6 @@
   
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <!-- <link href="userpage.css" rel="stylesheet" media="screen and (min-width:0)"> -->
   <link href="navbar.css" rel="stylesheet" media="screen and (min-width:0)">
   <link href="userpage.css" rel="stylesheet" media="screen and (min-width:0)">
   <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
@@ -32,19 +31,20 @@
     session_start();
     $con = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","bdd92f8752ef7e","fdb4d70b","lifetrackr");
     // Check connection
-    
+    $userid=$_GET['user'];
     if (mysqli_connect_errno())
     {
       echo "Failed to connect to MySQL: " . mysqli_connect_error();
     } 
     else 
     {
-      $query = "SELECT first_name,last_name FROM userinfo WHERE user_id = '".$_SESSION["myuser"]."'";
+      $query = "SELECT first_name,last_name,username FROM userinfo WHERE user_id = '".$userid."'";
       $result = mysqli_query($con, $query) or mysqli_error($con);
       while ($row = mysqli_fetch_array($result)) 
       {
-        $_SESSION["fname"] = $row['first_name'];
-        $_SESSION["lname"] = $row['last_name'];
+        $_SESSION["fname_prof"] = $row['first_name'];
+        $_SESSION["lname_prof"] = $row['last_name'];
+        $_SESSION["username"] = $row['username'];
       }
     }
     include "navbar.php";
@@ -67,12 +67,12 @@
                             <img id="profile_pic" src="img.jpg">
                           </div>
                           <div class="col-lg-5 col-md-7 col-sm-5 col-xs-6" id="profile_name">
-                            <a href="profile_user.php"><h4 id="myname"><?=$_SESSION["fname"]?> <?=$_SESSION["lname"]?> <br> </h4></a>
-                            <p id="username">@<?=$_SESSION["myuser"]?></p>
+                            <a href="profile_user.php"><h4 id="myname"><?=$_SESSION["fname_prof"]?> <?=$_SESSION["lname_prof"]?> <br> </h4></a>
+                            <p id="username">@<?=$_SESSION["username"]?></p>
                            </div>
                            
                            <div class="col-lg-3 col-md-7 col-sm-5"id="editprofile-profileuser">
-                            <a href="profiler.php"><button class="btn btn-default edit-profile" id="profile-button" data target="profiler.php" >Edit Profile</button></a>
+                            <a href="profiler.php?userid=<?=$_SESSION['myuser']?>"><button class="btn btn-default edit-profile" id="profile-button" >Edit Profile</button></a>
                           </div> 
 
                             <div class="col-lg-3 col-md-7 col-sm-5"id="editprofile-profileuser1">
@@ -101,28 +101,21 @@
                     {
                     echo "Failed to connect to MySQL: " . mysqli_connect_error();
                     } else {
-                        $query = "SELECT * FROM userinfo AS ui INNER JOIN moments AS mmnt ON ui.username = mmnt.username WHERE mmnt.username = '".$_SESSION["myuser"]."' ORDER BY time_taken DESC";
+                        $query = "select m.time_stamp, moments_message, longitude, latitude, first_name, last_name, username from userinfo as ui 
+  inner join moments as m 
+  on ui.user_id = m.user_id
+    where ui.user_id = ".$userid." ORDER BY time_stamp DESC";
                         $result = mysqli_query($con, $query) or mysqli_error($con);
                         while ($row = mysqli_fetch_array($result)) {
-                           // $_SESSION["uname_notif"] = $row['username'];
-                           $_SESSION["fname_my_moment"] = $row['first_name'];
-                           $_SESSION["lname_my_moment"] = $row['last_Name'];
-                           $_SESSION["uname_my_moment"] = $row['username'];
-                           $_SESSION["message_moments"] = $row['moments_message'];
-                           $_SESSION["longtitude_moments"] = $row['longitude'];
-                           $_SESSION["latitude_moments"] = $row['latitude'];
-                           $_SESSION["time_taken"] = $row['time_stamp'];
-                           $longlat = $_SESSION["longtitude_moments"].','.$_SESSION["latitude_moments"];
+                          $longlat=$row['longitude'].",".$row['latitude'];
                            ?>
                           
-                           <div class="inner-content">
-                                  <p><b><?=$_SESSION["fname_my_moment"]?> <?=$_SESSION["lname_my_moment"]?></b> @<?=$_SESSION["uname_my_moment"]?> <?=$_SESSION["time_taken"]?></p>
+                                  <p><b><?=$row['first_name']?> <?=$row['last_name']?></b> @<?=$row['username']?> <?=$row['time_stamp']?></p>
                                   <?php
                                     echo "<img src='http://maps.googleapis.com/maps/api/staticmap?center=".$longlat."&zoom=19&size=400x300&sensor=true&maptype=satellite'>";
                                     ?>
-                                  <p><?=$_SESSION["message_moments"]?></p>
+                                  <p><?=$row['moments_message']?></p>
                                   <hr>
-                           </div>
 
                       <?php
                         }
@@ -130,9 +123,8 @@
                   ?>
                 
                   <br>
-                  <!-- <a href="#" id="load-more">Load More</a> -->
-                  <button class="btn btn-default" id="load-more"><span class="glyphicon glyphicon-repeat"></span><br>Load</button>
           </div>
+
 
       </div>
 
