@@ -44,10 +44,24 @@ body{
 
 .col{
 	width:100%!important;
-	background-color: yellow!important;
+	background-color: transparent!important;
 }
 
 /*moments*/
 #container1-moments{
-	top: 500px!important;
+	margin-top: 50px!important;
+	width: 80%!important;
+	height: 38%!important;
+	/*border-radius: 7px!important;*/
+	border-style: solid;
+    /*top*/
+    border-width: 2px 2px 2px 2px;		
+
+    border-color: black!important;
+}
+
+#profilepic-moments{
+	width: 40%!important;
+	margin-left: 2%!important;
+	margin-top: 5%!important;
 }

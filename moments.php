@@ -62,18 +62,22 @@ session_start();
 
     <div class = "row">
 
-        <div class="col-lg-1 col-lg-offset-1">
+        <div class="col-lg-4 col-lg-offset-1">
 
-          <div class="col" id="container1-moments">1col</div>
+          <div class="col" id="container1-moments">
+
+            <img id="profilepic-moments" src="img.jpg">
+        
+          </div>
 
         </div>
-        <div class ="col-lg-offset-1 col-lg-4">
+      <!--   <div class ="col-lg-offset-1 col-lg-4">
           <div class ="col">4 column</div>
         </div>
 
         <div class ="col-lg-offset-1 col-lg-4 ">
           <div class ="col">6column</div>
-        </div>
+        </div> -->
    </div>
  
 
