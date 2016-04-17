@@ -45,7 +45,7 @@
       <div class="modal-dialog"> 
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button type="button" class="close" data-dismiss="modal" onclick="cancelFunction()">&times;</button>
             <h4 class="modal-title">Moments</h4>
           </div>
           
@@ -112,7 +112,9 @@
   <a id="findButton" onclick="findUser()" class="btn btn-default">
     <span class="glyphicon glyphicon-screenshot"></span>
   </a>
-
+  <a id="commitButton" onclick="futureMode()" class="btn btn-default">
+  M
+  </a>
 </body>
 
 </html>
