@@ -142,7 +142,7 @@ body{
 
 #container4-moments{
 	left: 45%;
-	margin-top: 15%;
+	margin-top: 6%;
 	width: 45%;
 	height: 350px;
 	background-color: transparent!important;
@@ -564,7 +564,7 @@ body{
 	visibility: visible!important;}
 
 #container1-phone-moments{
-	visibility: visible!important;
+	visibility: hidden!important;
 
 }
 

@@ -40,7 +40,7 @@
     $con = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","bdd92f8752ef7e","fdb4d70b","lifetrackr");
     // Check connection
 
-    // $userid=$_GET['userid'];
+    $userid=$_GET['userid'];
     
     if (mysqli_connect_errno())
     {

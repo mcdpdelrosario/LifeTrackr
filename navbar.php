@@ -31,9 +31,7 @@
                 <li>
                   <a href="moments.php" id="signup-but"><span class="glyphicon glyphicon-film"></span> Dashboard</a>
                 </li>
-                <li>
-                  <a href="notifications.php" id="signup-but" class="popper" data-toggle="popover" data-trigger="focus"><span class="glyphicon glyphicon-bell"></span> Notifications</a>
-                </li>
+                
 
                 
                   
