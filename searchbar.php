@@ -5,32 +5,20 @@
   
   <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   <!--<script src="//code.jquery.com/jquery-1.10.2.js"></script>-->
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>\
   <script>
   $(function() {
     $( "#skills" ).autocomplete({
-      source: 'search.php'
+      source: 'search.php',
+      select: function( event, ui ) { 
+          var code = ui.item.id;
+          if(code != '') {
+            location.href = '/LifeTrackr/profile_user.php?user=' + code;
+            }
+      } 
     });
   });
   </script>
-
-<!--<script>
-$(function onclick(){
-    $( "#skills" ).autocomplete({
-      source: 'search1.php'
-});
-  });
-</script>-->
-
-<script>
-[$data].onkeyup = function(e){
-  e = e || event;
-  if (e.keyCode === 13 && !e.ctrlKey) {
-    // start your submit function
-  }
-  return true;
- }
-</script>
 
 </head>
 <body>
@@ -38,6 +26,8 @@ $(function onclick(){
 <div class="ui-widget">
   <label for="skills"></label>
   <input id="skills">
+
 </div>
+<button >
 </body>
 </html>
