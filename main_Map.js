@@ -334,3 +334,15 @@ function createMomentdash(){
 	};
 	createMoment(sendMoments);
 }
+
+function createMomentDash(){
+	var imagefp = null;
+	var comment = document.getElementById("input-moments").value;
+	sendMoments = {
+		moment_Lng: userMarker.position.lng(),
+		moment_Lat: userMarker.position.lat(),
+		moment_Message: comment,
+		imagefp: imagefp
+	};
+	createMoment(sendMoments);
+}
