@@ -32,14 +32,23 @@ body{
 
 /*userpage*/
 
-/*for rick*/
+/*Rick Yes*/
 #map{
   height: 100%;
 }
-/*.modal-footer{
-  padding-right:35%;
+
+#commitButton{
+	bottom: 5px;
+	right: 5px;
 }
-*/
+
+#findButton{
+	bottom: 5px;
+	left: 5px;
+
+}
+
+/*Rick No*/
 
 
 
