@@ -13,7 +13,7 @@
 		{	
 			$logged_num = $_POST["uname_log"];
 			$signed_num = $_POST["pwd_log"];
-			
+			$_SESSION['checker']=0;
 			$query = "SELECT * FROM userinfo WHERE username = '".$logged_num."' && password = '".$signed_num."'";
 			$result = mysqli_query($con, $query) or mysqli_error($con);
 			
@@ -26,14 +26,15 @@
 			 		$_SESSION['lastname'] = $row['last_name'];
 			 		$_SESSION['username'] = $row['username'];
 			 		$_SESSION['imgid'] = $row['img_id'];
-			 		$_SESSION["flag"] = "TRUE";
+			 		$_SESSION['checker']=1;
 			 	}
 			 	
 			 	header('Location: userpage.php');
 			}
 			else 
 			{
-				header('Location: index.html');
+				$_SESSION['checker']=0;
+				header('Location: index.php');
 			}
 		}
 	}
