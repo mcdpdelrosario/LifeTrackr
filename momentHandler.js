@@ -79,6 +79,9 @@ function getImage(momentData){
 	var url ="canvas.php";
 	queryServer(url,momentData,imageSuccess);
 }
-function imageSuccess(data){
+var imageMoment;
+function imageSuccess(json){
+	imageMoment = JSON.parse(data);
 	alert(data);
+	
 }
