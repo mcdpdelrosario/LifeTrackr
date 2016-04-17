@@ -14,14 +14,18 @@
 			$logged_num = $_POST["uname_log"];
 			$signed_num = $_POST["pwd_log"];
 			
-			$query = "SELECT user_id FROM userinfo WHERE username = '".$logged_num."' && password = '".$signed_num."'";
+			$query = "SELECT * FROM userinfo WHERE username = '".$logged_num."' && password = '".$signed_num."'";
 			$result = mysqli_query($con, $query) or mysqli_error($con);
 			
 			if (mysqli_num_rows($result) == 1) 
 			{
 			 	while($row=mysqli_fetch_array($result))
 			 	{
-			 		$_SESSION["myuser"] = $row['user_id'];
+			 		$_SESSION["userid"] = $row['user_id'];
+			 		$_SESSION['firstname'] = $row['first_name'];
+			 		$_SESSION['lastname'] = $row['last_name'];
+			 		$_SESSION['username'] = $row['username'];
+			 		$_SESSION['imgid'] = $row['img_id'];
 			 		$_SESSION["flag"] = "TRUE";
 			 	}
 			 	
