@@ -1,0 +1,109 @@
+/*for notifications*/
+/*working until profile_user*/
+body{
+	/*overflow: hidden;*/
+	/*background-color: #f6fafc !important;*/
+	/*background-color: #DAF2FF!important;*/
+	background-color: #251d1d!important;
+	/*background-color: #33e4c;*/
+	background-size: 100% 100%;
+	/*height: 700px;*/
+	height: 100%;
+  	background-size: cover;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  overflow-y: auto!important;
+  overflow-x: hidden!important;
+  font-family: Montserrat, sans-serif!important;       
+}
+
+/*notifications code of dp*/
+.inner-content { display:none; }
+
+#load-more{
+  border-radius: 5em !important;
+  height: 100px;
+  width: 100px;
+  margin-left:45%;
+}
+
+
+/*userpage*/
+
+/*for rick*/
+#map{
+  height: 100%;
+}
+/*.modal-footer{
+  padding-right:35%;
+}
+*/
+
+
+
+.col{
+	width:100%!important;
+	background-color: white!important;
+}
+
+/*moments*/
+
+
+#container1-moments{
+	margin-top: 50px!important;
+	height: 180px!important;
+    border-width: 2px 2px 2px 2px;	
+    border-style: solid;	
+    border-color: black!important;
+}
+
+
+#profilepic-moments{
+	width: 100%!important;
+	margin-left: 5%!important;
+	margin-top: 30%!important;
+}
+
+#names-moments{
+	color: white!important;
+	background-color: black;
+	margin-top: 30%!important;
+	font-size: 15px!important;
+	/*top: 10%!important;
+	margin-left: 50%;
+	margin-top: 30%!important;
+	position: absolute;*/
+}
+
+
+#colme{
+	background-color: black!important;
+}
+
+@media screen and (max-width:499px){
+
+/*#container1-moments{
+	height: 250px!important;
+}
+*/
+}
+
+@media screen and (min-width:640px) and (max-width: 1300px){
+
+#container1-moments{
+	height: 200px!important;
+	/*width: 350px!important;	*/
+}
+
+#names-moments{
+	font-size: 12px!important;
+}
+}
+
+
+@media screen and (min-width:960px){
+
+
+}	

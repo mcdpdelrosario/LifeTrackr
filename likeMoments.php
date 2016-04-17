@@ -1,0 +1,30 @@
+<?php
+    $moment_id=$_POST['moment_id'];
+    date_default_timezone_set('Asia/Taipei');
+    $date=date("Y-m-d h:i:s");
+	session_start();
+	$con = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","bdd92f8752ef7e","fdb4d70b","lifetrackr");
+
+	if (mysqli_connect_errno()){
+                    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                    } else {
+                        $query_check= "SELECT * FROM likes WHERE moment_id=".$moment_id." AND $_SESSION['userid']=".$$_SESSION['userid']."";
+                        $result = mysqli_query($con, $query_check) or mysqli_error($con);
+                        if(mysqli_num_rows($result) == 1){
+                            $query = "DELETE FROM likes WHERE moment_id=".$moment_id." AND $_SESSION['userid']=".$$_SESSION['userid']."";
+                            mysqli_query($con, $query) or mysqli_error($con);
+                        }else{
+                            $query = "INSERT INTO likes(moment_id,$_SESSION['userid'],time_stamp) VALUES(".$moment_id.",".$$_SESSION['userid'].",'".$date."')";
+                            $result = mysqli_query($con, $query) or mysqli_error($con);
+                            $query = "SELECT max(like_id) FROM likes WHERE $_SESSION['userid']=".$_SESSION['userid']."";
+                            $result_getlikes = mysqli_query($con, $query) or mysqli_error($con);
+                            if(mysqli_num_rows($result_getlikes)==1){
+                            while($row = mysqli_fetch_array($result_getlikes)){
+                                $query = "INSERT INTO notifications($_SESSION['userid'],link_id,notification_type,time_stamp) VALUES(".$$_SESSION['userid'].",".$row[0].",0,'".$date."')";
+                                mysqli_query($con, $query) or mysqli_error($con);
+                            }
+                        }
+                        }
+                      }
+
+?>
