@@ -27,6 +27,5 @@
   <label for="skills"></label>
   <input id="skills">
 </div>
-<button >
 </body>
 </html>
