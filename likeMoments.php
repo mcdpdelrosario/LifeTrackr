@@ -21,8 +21,7 @@
                             $result_getlikes = mysqli_query($con, $query) or mysqli_error($con);
                             if(mysqli_num_rows($result_getlikes)==1){
                             while($row = mysqli_fetch_array($result_getlikes)){
-                                echo $_SESSION['myuser'];
-                                echo $query = "INSERT INTO notifications(user_id,link_id,notification_type,time_stamp) VALUES(".$user_id.",".$row[0].",0,'".$date."')";
+                                $query = "INSERT INTO notifications(user_id,link_id,notification_type,time_stamp) VALUES(".$user_id.",".$row[0].",0,'".$date."')";
                                 mysqli_query($con, $query) or mysqli_error($con);
                             }
                         }

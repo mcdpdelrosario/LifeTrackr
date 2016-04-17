@@ -9,7 +9,6 @@
                     echo "Failed to connect to MySQL: " . mysqli_connect_error();
                     } else {
                           $query = "INSERT INTO `friends`(`user_id_user`, `user_id_fr`, `status`, `time_stamp`) VALUES ('".$_SESSION['myuser']."','".$user_id_fr."',0,'".$date."')";
-                        		$result = mysqli_query($con, $query) or mysqli_error($con);
-                        		header('Location: userlist.php');
+                          mysqli_query($con, $query) or mysqli_error($con);	
 			}
 ?>
