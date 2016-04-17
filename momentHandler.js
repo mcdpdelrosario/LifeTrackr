@@ -75,3 +75,10 @@ function commentStatus(data,status){
 	// 	swal("Error occured", data +"\nStatus: " + status, "error");
 	// }
 }
+function getImage(momentData){
+	var url ="canvas.php";
+	queryServer(url,momentData,imageSuccess);
+}
+function imageSuccess(data){
+	alert(data);
+}
