@@ -40,21 +40,6 @@
 session_start();
  include "navbar.php";
   $con = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","bdd92f8752ef7e","fdb4d70b","lifetrackr");
-
-// // Check connection
-// if (mysqli_connect_errno())
-//   {
-//   echo "Failed to connect to MySQL: " . mysqli_connect_error();
-//   } else {
-//       $query = "select first_name,last_name, username from userinfo where user_id = '".$_SESSION["myuser"]."'";
-//       $result = mysqli_query($con, $query) or mysqli_error($con);
-//       while ($row = mysqli_fetch_array($result)) {
-//           $_SESSION["fname"] = $row['first_name'];
-//         $_SESSION["lname"] = $row['last_name'];
-//         $_SESSION["uname"] = $row['username'];
-//       }
-      
-//   }
 ?>
 
     <!-- include "logout.php"; -->
@@ -72,8 +57,8 @@ session_start();
 
                <div class "col-lg-offset-1 col-lg-6 col-md-offset-1 col-md -6 col-sm-offset-1 col-sm-offset-1" id="name-moments">
 
-                    <a href="#"><?=$_SESSION['firstname']?> <?=$_SESSION['lastname']?></a></br>
-                    <a href="#" id="username-moments">@<?=$_SESSION['username']?></a>
+                    <a href="profile_user.php?user=<?=$_SESSION['userid']?>"><?=$_SESSION['firstname']?> <?=$_SESSION['lastname']?></br>
+                    @<?=$_SESSION['username']?></a>
 
                 </div>
 
@@ -87,10 +72,11 @@ session_start();
           </div>
 
           <div class="col-lg-8 col-lg-offset-1 col-md-7 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-offset-1 col-xs-4" id="post-moments">
-
-              <input type="text" class="form-control" placeholder=" Make now a moment." id="input-moments"  size="15"/>
-
-              <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" id="postbutton-moments">Post</button>
+              <form>
+                  <input type="text" class="form-control" placeholder=" Make now a moment." id="input-moments"  size="15"/>
+              </form>
+              <button id="ConfirmMoment" class="btn btn-default" type="submit" value="submit" onclick="createMomentdash()">Post</button>
+              
           </div>    
 
        </div>
@@ -118,13 +104,15 @@ session_start();
                             $latlong=$row['latitude'].','.$row['longitude'];
                         ?>
                           <div class="panel panel-default">
-                            <div class="panel-heading"><?=$row['first_name']?> <?=$row['last_name']?> @<?=$row['username']?></div>
+                            <div class="panel-heading"><a href="profile_user.php?user=<?=$row['user_id']?>"><?=$row['first_name']?> <?=$row['last_name']?> @<?=$row['username']?></a>
+                            <p></br> <?=$row['time_stamp']?></p>
+                            </div>
                             <div class="panel-body">
                               <img src='http://maps.googleapis.com/maps/api/staticmap?center=<?=$latlong?>&zoom=18&size=400x300&sensor=true&maptype=satellite'>
                                 <hr>
                                   <p><?=$row['moments_message']?></p></div>
                             <div class="panel-footer">
-                              <button class="btn btn-default">Like</button>
+                              <p><a href="likeMoments.php?moment_id=<?=$row['moments_id']?>&moment_user_id=<?=$row['user_id']?>"><button class="btn btn-default">Like</button>  <button class="btn btn-default">Comment</button></p>
 
                             </div>
                           </div>
@@ -145,12 +133,69 @@ session_start();
 
   <div class="col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-12" id="container3-moments">
        <ul class="nav nav-pills"id="pills-moments">
-        <li class="pills-class-moments"><a href="#">Friends</a></li>
+        <li class="pills-class-moments"data-toggle="modal" data-target="#friendsModal" id="friends-tab"><a href="#">Friends</a></li>
         <li  class="pills-class-moments"><a href="#">Likes</a></li>
-        <li  class="pills-class-moments"><a href="#">Messages</a></li>
+        <li  class="pills-class-moments" data-toggle="modal" data-target="#messageModal"><a href="#">Messages</a></li>
       </ul>
 
 </div>
+
+<div class="modal fade" id="messageModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="modal fade" id="friendsModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Friends List</h3>
+        </div>
+        <div id="friendsList"class="modal-body">
+        <?php
+          $query="select user_id_fr,first_name, last_name, username, img_id from friends as f
+          inner join userinfo as ui
+          on f.user_id_fr = ui.user_id
+        where status=1 and user_id_user = ".$_SESSION['userid']."";
+          $result=mysqli_query($con,$query);
+          while($row=mysqli_fetch_array($result)){
+?>
+          <div class="panel-body">
+            <a href="profile_user.php?user=<?=$row['user_id_fr']?>"><?=$row['first_name']?> <?=$row['last_name']?></br>@<?=$row['username']?></a>
+          </div>
+<?php
+
+
+          }
+
+        ?>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 
 
 </body>

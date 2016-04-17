@@ -60,6 +60,9 @@
                             <a href="profile_user.php"><h4 id="myname"><?=$row['first_name']?> <?=$row['last_name']?> <br> </h4></a>
                             <p id="username">@<?=$row['username']?></p>
                            </div> -->
+                                  <div class="panel-footer">
+                                    <p><button class="btn btn-default">Like</button>  <button class="btn btn-default">Comment</button></p>
+                                  </div>
                           </div> 
                     </div>      
                            
