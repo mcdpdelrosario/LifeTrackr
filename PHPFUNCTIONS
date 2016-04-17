@@ -13,10 +13,15 @@
 		[] user will be able to comment
 2. notifications.php
 	- notifications
-		[] show notifications for likes
+		[x] show notifications for likes *getNotifications.php
 		[] show notifications for messages
 		[] show notifications for comments
-		[] show notifications for friend requests
+		[x] show notifications for friend requests *getNotifications.php
+		notification types
+			- likes = 0
+			- messages = 1
+			- comments = 2
+			- friend requests = 3
 3. profile_user.php (hindi ibig sabihin current user, for all users dapat nagaapply)
 	[x] posts of user *postProfile.php
 	[x] profile settings *goprofiler.php

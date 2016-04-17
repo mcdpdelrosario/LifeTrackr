@@ -38,14 +38,10 @@
     } 
     else 
     {
-      $query = "SELECT first_name,last_name,username FROM userinfo WHERE user_id = '".$userid."'";
-      $result = mysqli_query($con, $query) or mysqli_error($con);
-      while ($row = mysqli_fetch_array($result)) 
-      {
-        $_SESSION["fname_prof"] = $row['first_name'];
-        $_SESSION["lname_prof"] = $row['last_name'];
-        $_SESSION["username"] = $row['username'];
-      }
+        $query="SELECT username, first_name, last_name FROM userinfo WHERE user_id=".$userid."";
+        $result=mysqli_query($con,$query) or mysqli_error($con);
+        $row=mysqli_fetch_array($result);
+      
     }
     include "navbar.php";
   ?>                           
@@ -67,8 +63,8 @@
                             <img id="profile_pic" src="img.jpg">
                           </div>
                           <div class="col-lg-5 col-md-7 col-sm-5 col-xs-6" id="profile_name">
-                            <a href="profile_user.php"><h4 id="myname"><?=$_SESSION["fname_prof"]?> <?=$_SESSION["lname_prof"]?> <br> </h4></a>
-                            <p id="username">@<?=$_SESSION["username"]?></p>
+                            <a href="profile_user.php"><h4 id="myname"><?=$row['first_name']?> <?=$row['last_name']?> <br> </h4></a>
+                            <p id="username">@<?=$row['username']?></p>
                            </div>
                            
                            <div class="col-lg-3 col-md-7 col-sm-5"id="editprofile-profileuser">
@@ -102,18 +98,17 @@
                     echo "Failed to connect to MySQL: " . mysqli_connect_error();
                     } else {
                         $query = "select m.time_stamp, moments_message, longitude, latitude, first_name, last_name, username from userinfo as ui 
-  inner join moments as m 
-  on ui.user_id = m.user_id
-    where ui.user_id = ".$userid." ORDER BY time_stamp DESC";
+                          inner join moments as m 
+                          on ui.user_id = m.user_id
+                            where ui.user_id = ".$userid." ORDER BY time_stamp DESC";
                         $result = mysqli_query($con, $query) or mysqli_error($con);
                         while ($row = mysqli_fetch_array($result)) {
-                          $longlat=$row['longitude'].",".$row['latitude'];
+                          $latlong=$row['latitude'].",".$row['longitude'];
                            ?>
                           
                                   <p><b><?=$row['first_name']?> <?=$row['last_name']?></b> @<?=$row['username']?> <?=$row['time_stamp']?></p>
-                                  <?php
-                                    echo "<img src='http://maps.googleapis.com/maps/api/staticmap?center=".$longlat."&zoom=19&size=400x300&sensor=true&maptype=satellite'>";
-                                    ?>
+                                  <img src='http://maps.googleapis.com/maps/api/staticmap?center=<?=$latlong?>&zoom=19&size=400x300&sensor=true&maptype=satellite'>
+                                  <hr>
                                   <p><?=$row['moments_message']?></p>
                                   <hr>
 
