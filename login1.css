@@ -12,7 +12,7 @@
   margin: 0;
   padding-top: 50px;
 
-  background: url("photog2.jpg") no-repeat center top fixed;
+  background: url("pics/loginpage.jpg") no-repeat center top fixed;
   background-size: 100% 100%;
   background-size: cover;
   -webkit-background-size:cover;
@@ -104,6 +104,8 @@
   min-height:6%;
   width:100%;
   background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
 }
 
 
@@ -111,6 +113,7 @@
 
 .box {
     padding: 0 10px 0 10px;
+    
 }
 
 #home-but{
@@ -130,6 +133,14 @@
 
 }
 
+#begin_tracking h3{
+ font-style: italic!important;
+
+}
+
+#panel1{
+  background-color: #413e3e!important;
+}
 
 
 *,
@@ -273,7 +284,7 @@ padding-right: 2.4px;
 }
 body{
 
- background: url("photog5.jpg") no-repeat center top fixed;
+ background: url("pics/loginphone.jpg") no-repeat center top fixed;
   background-size: 100% 100%;
   background-size: cover;
   -webkit-background-size:cover;
