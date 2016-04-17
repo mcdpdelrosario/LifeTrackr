@@ -27,7 +27,7 @@
     }
   ?>
   
-  <a id="listdropdown-name" href="profile_user.php?user=$_SESSION['myuser']">
+  <a id="listdropdown-name" href="profile_user.php?user=<?=$_SESSION['myuser']?>">
     <?php
       echo $_SESSION["fname"]." ". $_SESSION["lname"];
     ?>
@@ -35,15 +35,3 @@
 </li>	
 
 
-
-<li>
-  <a href="#" id="listdropdown-buts">My Commits</a>
-</li>
-				
-<li>
-  <a href="#" id="listdropdown-buts">Settings</a>
-</li>
-
-<li>
-  <a href="#" id="listdropdown-buts">Logout</a>
-</li>

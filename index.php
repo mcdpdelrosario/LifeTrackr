@@ -13,6 +13,25 @@
     });
   });
   </script>
+
+<!--<script>
+$(function onclick(){
+    $( "#skills" ).autocomplete({
+      source: 'search1.php'
+});
+  });
+</script>-->
+
+<script>
+[$data].onkeyup = function(e){
+  e = e || event;
+  if (e.keyCode === 13 && !e.ctrlKey) {
+    // start your submit function
+  }
+  return true;
+ }
+</script>
+
 </head>
 <body>
  
