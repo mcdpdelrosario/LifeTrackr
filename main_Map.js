@@ -6,14 +6,29 @@ zoomValue = 20,
 userRadius = 0.2,
 infoWindow,
 infoMessages = [],
-clickedMoment;//in Km
+clickedMoment,
+futureFlag = 0;//in Km
 function initialize() {
 	temporaryMarker = new google.maps.Marker({});
-	infoWindow = new google.maps.InfoWindow({map: null});
+	infoWindow = new google.maps.InfoWindow({map: null,
+	maxWidth: 200
+	});
 	var philippines = { lat: 13, lng: 122 };
+
+	var mapStyles = [
+	  {
+	    stylers: [
+	      { hue: "#cc5200" },
+	      { saturation: -20 }
+	    ]
+	  }
+	];
+
+
 	map = new google.maps.Map(document.getElementById('map'), {
 		zoom: 6,
 		center: philippines,
+		styles: mapStyles
 		//disableDefaultUI: true
 	});
 	creatingMapListener();
@@ -26,7 +41,7 @@ function initialize() {
 				},
 				label: 'X',
 				map: map,
-				title:'Im kinda here I hope'
+				title:'Im kinda here I hope',
 			});
 			userMarkerListener(userMarker);
 			map.setCenter(userMarker.position);
@@ -77,7 +92,7 @@ function pinMarkers(){
 		for(var i = 0; i < dataMoments.moment_id.length; i++){
 			var lats = dataMoments.latitude[i];
 			var lngs = dataMoments.longitude[i];
-			addMarker({ lat: parseFloat(lats), lng: parseFloat(lngs) }, {moment_id: parseInt(dataMoments.moment_id[i]), msg: String(dataMoments.message[i]), user_id: String(dataMoments.user_id[i]), first_name: String(dataMoments.first_name[i]), last_name: String(dataMoments.last_name[i])},i);
+			prepareMarker({ lat: parseFloat(lats), lng: parseFloat(lngs) }, {moment_id: parseInt(dataMoments.moment_id[i]), msg: String(dataMoments.message[i]), user_id: String(dataMoments.user_id[i]), first_name: String(dataMoments.first_name[i]), last_name: String(dataMoments.last_name[i])},i);
 		}
 		showMarkers(map);
 	}, 5000);
@@ -105,7 +120,26 @@ function attachListener(marker, momentInfo) {
     clickedMoment = momentInfo.moment_id;
     $("#momentPost").modal("show");
   });
+
+  
+  marker.addListener('mouseover', function() {
+  	
+
+  	var infoContent = '<div><p>'+momentInfo.first_name+" "+momentInfo.last_name+'<br>'+momentInfo.msg+'</div></p>';
+  	infoWindow.setContent(infoContent);
+    infoWindow.open(map,marker);
+
+  });
+
+  marker.addListener('mouseout', function() {
+    infoWindow.close();
+  });
+
+
+
 }
+
+
 
 function findUser(){
 	map.panTo(userMarker.position);
@@ -172,16 +206,21 @@ function hideTemporaryMarker(){
 function showTemporaryMarker(){
 	temporaryMarker.setMap(map);
 }
-function addMarker(location,words,n) {
+function prepareMarker(location,words,n) {
 // Add the marker at the clicked location, and add the next-available label
 // from the array of alphabetical characters.
+	
+	infoMessages[n] = words;
+	arrayMarkers[n] = addMarker(location);
+	//arrayMarkers[n].addListener('click', popTheInfo(n));
+}
+
+function addMarker(location){
 	var marker = new google.maps.Marker({
 		position:location,
 		map: null
 	});
-	infoMessages[n] = words;
-	arrayMarkers[n] = marker;
-	//arrayMarkers[n].addListener('click', popTheInfo(n));
+	return marker;
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
@@ -220,4 +259,7 @@ function enterComment(){
 	var comment = document.getElementById("commentTextArea").value;
 	document.getElementById("commentTextArea").value = "";
 	createComment({moment_id: clickedMoment, comment: comment});
+}
+function futureMode(){
+	futureFlag = 1;
 }
