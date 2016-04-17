@@ -7,9 +7,23 @@ userRadius = 0.2,
 infoWindow,
 infoMessages = [],
 clickedMoment,
-futureFlag = 0;//in Km
+futureFlag = 0,
+fastMarker;//in Km
 function initialize() {
-	temporaryMarker = new google.maps.Marker({});
+	fastMarker = new google.maps.Marker({
+		icon: {
+			path: google.maps.SymbolPath.BACKWARD_OPEN_ARROW,
+	        strokeColor: "red",
+	        scale: 4
+		}
+	});
+	temporaryMarker = new google.maps.Marker({
+		icon: {
+			path: google.maps.SymbolPath.BACKWARD_OPEN_ARROW,
+	        strokeColor: "green",
+	        scale: 4
+		}
+	});
 	infoWindow = new google.maps.InfoWindow({map: null,
 	maxWidth: 200
 	});
@@ -31,6 +45,7 @@ function initialize() {
 		styles: mapStyles
 		//disableDefaultUI: true
 	});
+	pinMarkers();
 	creatingMapListener();
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(function(position) {
@@ -39,9 +54,13 @@ function initialize() {
 					lat: position.coords.latitude, //from geolocation
 					lng: position.coords.longitude //from geolocation
 				},
-				label: 'X',
 				map: map,
 				title:'Im kinda here I hope',
+				icon: {
+					path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
+			        strokeColor: "orange",
+			        scale: 6
+				}
 			});
 			userMarkerListener(userMarker);
 			map.setCenter(userMarker.position);
@@ -54,7 +73,7 @@ function initialize() {
 		handleLocationError(false);
 	}
 	updateUserPosition();
-	pinMarkers();
+	
 }
 
 function handleLocationError(browserHasGeolocation) {
@@ -87,12 +106,12 @@ function httpGetAsync(theUrl, callback){
 
 function pinMarkers(){
 	setInterval(function(){
+		fastMarker.setMap(null);
 		pinMoment();
-
 		for(var i = 0; i < dataMoments.moment_id.length; i++){
 			var lats = dataMoments.latitude[i];
 			var lngs = dataMoments.longitude[i];
-			prepareMarker({ lat: parseFloat(lats), lng: parseFloat(lngs) }, {moment_id: parseInt(dataMoments.moment_id[i]), msg: String(dataMoments.message[i]), user_id: String(dataMoments.user_id[i]), first_name: String(dataMoments.first_name[i]), last_name: String(dataMoments.last_name[i])},i);
+			prepareMarker({ lat: parseFloat(lats), lng: parseFloat(lngs) }, {moment_id: parseInt(dataMoments.moment_id[i]), msg: String(dataMoments.message[i]), username: String(dataMoments.username[i]), first_name: String(dataMoments.first_name[i]), last_name: String(dataMoments.last_name[i])},i);
 		}
 		showMarkers(map);
 	}, 5000);
@@ -115,7 +134,7 @@ function attachListener(marker, momentInfo) {
 
   marker.addListener('click', function() {
     document.getElementById("momentTitlePost").innerHTML=momentInfo.first_name+" "+momentInfo.last_name;
-    document.getElementById("momentSubtitlePost").innerHTML=momentInfo.user_id;
+    document.getElementById("momentSubtitlePost").innerHTML=momentInfo.username;
     document.getElementById("momentWords").innerHTML=momentInfo.msg;
     clickedMoment = momentInfo.moment_id;
     $("#momentPost").modal("show");
@@ -160,18 +179,40 @@ function sendUserCoordinates(){
 function confirmFunction(){
 	var comments = document.getElementById("MomentsComment").value;
 	var imagefp = document.getElementById("Search").value;
-	var sendMoments = {
-		moment_Lng: temporaryMarker.position.lng(),
-		moment_Lat: temporaryMarker.position.lat(),
-		moment_Message: comments,
-		imagefp: imagefp
-	};
+	var sendMoments;
+	if(futureFlag==0){
+		sendMoments = {
+			moment_Lng: temporaryMarker.position.lng(),
+			moment_Lat: temporaryMarker.position.lat(),
+			moment_Message: comments,
+			imagefp: imagefp
+		};
+		fastMarker.setIcon({
+			path: google.maps.SymbolPath.BACKWARD_OPEN_ARROW,
+	        strokeColor: "red",
+	        scale: 4
+		});
+	}else{
+		sendMoments = {
+			moment_Lng: temporaryMarker.position.lng(),
+			moment_Lat: temporaryMarker.position.lat(),
+			moment_Message: comments,
+			imagefp: imagefp
+		};
+		fastMarker.setIcon({
+			path: google.maps.SymbolPath.BACKWARD_OPEN_ARROW,
+	        strokeColor: "blue",
+	        scale: 4
+		});
+	}
+	fastMarker.setPosition(temporaryMarker.position);
 	createMoment(sendMoments);
 	$("#momentModal").modal("hide");
 	document.getElementById("MomentsComment").value = "";
 	document.getElementById("Search").value = "";
 	
 }
+
 function cancelFunction(){
 	hideTemporaryMarker();
 	$("#momentModal").modal("hide");
@@ -180,7 +221,6 @@ function cancelFunction(){
 }
 function createPointer(){
 	map.panTo(temporaryMarker.position);
-	temporaryMarker.setLabel("4");
 	showTemporaryMarker();
 }
 function creatingMapListener(){
@@ -191,12 +231,16 @@ function creatingMapListener(){
 		var userlat = userMarker.position.lat();
 		var userlng = userMarker.position.lng();
 		var distance = getDistanceFromLatLonInKm(wordlat,wordlng,userlat,userlng);
+		if(futureFlag==0){
 		if(userRadius>distance){
 			createPointer();
 			$("#momentModal").modal("show");
 		}else{
 			hideTemporaryMarker();
 			swal("Too Far!", "Moment cannot be Created", "error");
+		}}else{
+			createPointer();
+			$("#momentModal").modal("show");
 		}	
 	});
 }
@@ -216,9 +260,20 @@ function prepareMarker(location,words,n) {
 }
 
 function addMarker(location){
+	var markercolor;
+	if(futureFlag==1){
+		markercolor = "blue";
+	}else{
+		markercolor = "red";
+	}
 	var marker = new google.maps.Marker({
 		position:location,
-		map: null
+		map: null,
+		icon: {
+			path: google.maps.SymbolPath.BACKWARD_OPEN_ARROW,
+	        strokeColor: markercolor,
+	        scale: 4
+		}
 	});
 	return marker;
 }
@@ -252,7 +307,7 @@ function modalClosedFunction(){
 }
 
 function likeFunction(){
-	likeAMoment({moment_id: clickedMoment, user_id: 21});
+	likeAMoment({moment_id: clickedMoment, username: 21});
 }
 
 function enterComment(){
@@ -261,5 +316,21 @@ function enterComment(){
 	createComment({moment_id: clickedMoment, comment: comment});
 }
 function futureMode(){
-	futureFlag = 1;
+	if(futureFlag == 0){
+		futureFlag = 1;
+	}else{
+		futureFlag = 0;
+	}
+}
+
+function createMomentdash(){
+	var imagefp = null;
+	var comment = document.getElementById("input-moments").value;
+	sendMoments = {
+		moment_Lng: userMarker.position.lng(),
+		moment_Lat: userMarker.position.lat(),
+		moment_Message: comment,
+		imagefp: imagefp
+	};
+	createMoment(sendMoments);
 }

@@ -44,7 +44,7 @@
     <div class="modal fade" id="momentModal" data-backdrop="static" data-keyboard="false" role="dialog">
       <div class="modal-dialog"> 
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header" style="background-color:#ff6600;color:#e6e6e6;">
             <button type="button" class="close" data-dismiss="modal" onclick="cancelFunction()">&times;</button>
             <h4 class="modal-title">Moments</h4>
           </div>
@@ -73,20 +73,24 @@
       <div class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
-          <div class="modal-header" style="background-color:orange;">
+          <div class="modal-header" style="background-color:#ff6600;color:#e6e6e6;">
             <button type="button" class="close" onclick = "modalClosedFunction()">&times;</button>
-            
+
             <div class="modal-title">
               <h1 id="momentTitlePost"></h1>
               <p id="momentSubtitlePost"></p>
             </div>
+
           </div>
-          
           <div class="modal-body">
             <h4 id="momentWords"></h4>
+            <center>
+          <canvas id="myCanvas" width="400" height="200" style="border:1px solid #000000;">
+             </canvas> 
+             </center>
           </div>
           
-          <div class="modal-footer" style="background-color:orange;">
+          <div class="modal-footer">
             <div id="postButtons">
               <button id="momentLike" class="btn btn-default" type="submit" value="submit" onclick="likeFunction()">Like</button>
               <button id="momentComment" type="button" class="btn btn-default" onclick="commentFunction()">Comment</button>

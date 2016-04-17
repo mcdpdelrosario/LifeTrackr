@@ -9,6 +9,8 @@ function createMoment(sendMoments)
 
 function successQuery(data,status)
 {
+	hideTemporaryMarker();
+	fastMarker.setMap(map);
 	if(status=="success")
 	{
 		swal("Well done!", "Moment Created", "success");
@@ -17,15 +19,13 @@ function successQuery(data,status)
 	{
 		swal("Error occured", data +"\nStatus: " + status, "error");
 	}
-	hideTemporaryMarker();
+	
+
 }
 
 function pinMoment()
 {
 	var url = "pinMoments.php";
-	// httpGetAsync(url,function(json){
-	//  	dataMoments = JSON.parse(json);
-	// });
 	queryServer(url,null,function(json,status)
 	{
 		//alert(status);
