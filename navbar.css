@@ -24,7 +24,7 @@
 
   #navbarsettings{
  
-    background-color: black!important;
+    background-color: white!important;
     width: 100%;
     top: 0;
     position: fixed;
@@ -33,12 +33,12 @@
   .navbar {
       font-family: Montserrat, sans-serif;
       font-size: 11px !important;
-      border-color: #130F07!important;
+      border-color: white!important;
    
   }
   .navbar li a, .navbar {
         /*color: #0E182C!important;*/
-        color: white!important;
+        color: black!important;
         text-decoration: none;
         color: #000000;
         font-family: Montserrat, sans-serif;
@@ -116,6 +116,7 @@
   margin-top: -45px;
   margin-left:85%;
   position: absolute;
+ /* background-color: black!important;*/
 }
 
 #dropdown-settings{
@@ -123,6 +124,7 @@
   position: absolute;
   font-size: 110%;
   margin-top: 10%;
+  
 }
 
 #listdropdown-name{
