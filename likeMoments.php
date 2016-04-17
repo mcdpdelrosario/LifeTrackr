@@ -8,19 +8,19 @@
 	if (mysqli_connect_errno()){
                     echo "Failed to connect to MySQL: " . mysqli_connect_error();
                     } else {
-                        $query_check= "SELECT * FROM likes WHERE moment_id=".$moment_id." AND $_SESSION['userid']=".$$_SESSION['userid']."";
+                        $query_check= "SELECT * FROM likes WHERE moment_id=".$moment_id." AND user_id=".$_SESSION['userid']."";
                         $result = mysqli_query($con, $query_check) or mysqli_error($con);
                         if(mysqli_num_rows($result) == 1){
-                            $query = "DELETE FROM likes WHERE moment_id=".$moment_id." AND $_SESSION['userid']=".$$_SESSION['userid']."";
+                            $query = "DELETE FROM likes WHERE moment_id=".$moment_id." AND user_id=".$_SESSION['userid']."";
                             mysqli_query($con, $query) or mysqli_error($con);
                         }else{
-                            $query = "INSERT INTO likes(moment_id,$_SESSION['userid'],time_stamp) VALUES(".$moment_id.",".$$_SESSION['userid'].",'".$date."')";
+                            $query = "INSERT INTO likes(moment_id,user_id,time_stamp) VALUES(".$moment_id.",".$_SESSION['userid'].",'".$date."')";
                             $result = mysqli_query($con, $query) or mysqli_error($con);
-                            $query = "SELECT max(like_id) FROM likes WHERE $_SESSION['userid']=".$_SESSION['userid']."";
+                            $query = "SELECT max(like_id) FROM likes WHERE user_id=".$_SESSION['userid']."";
                             $result_getlikes = mysqli_query($con, $query) or mysqli_error($con);
                             if(mysqli_num_rows($result_getlikes)==1){
                             while($row = mysqli_fetch_array($result_getlikes)){
-                                $query = "INSERT INTO notifications($_SESSION['userid'],link_id,notification_type,time_stamp) VALUES(".$$_SESSION['userid'].",".$row[0].",0,'".$date."')";
+                                $query = "INSERT INTO notifications(user_id,link_id,notification_type,time_stamp) VALUES(".$_SESSION['userid'].",".$row[0].",0,'".$date."')";
                                 mysqli_query($con, $query) or mysqli_error($con);
                             }
                         }
