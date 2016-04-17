@@ -60,26 +60,25 @@ session_start();
     <!-- include "logout.php"; -->
   
 
-    <div class = "row">
+   <div class = "row">
 
-        <div class="col-lg-4 col-lg-offset-1">
+        <div class="col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-5 col-sm-offset-1 col-xs-5 col-xs-offset-1" id="container1-moments">
+          <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-5 col-xs-6">
+                       <img id="profilepic-moments" src="img.jpg">
+                </div>
 
-          <div class="col" id="container1-moments">
+                <div class ="col-lg-offset-1 col-lg-6 col-md-offset-1 col-md-6 col-sm-offset-1 col-sm-6 col-xs-6" id="names-moments">
+                         <a href="#"><?=$_SESSION['fname']?> <?=$_SESSION['lname']?></a></br>
+                        <a href="#"><?=$_SESSION['uname']?></a>
+                </div>
+          </div>      
+      </div>
 
-            <img id="profilepic-moments" src="img.jpg">
-        
-          </div>
-
-        </div>
-      <!--   <div class ="col-lg-offset-1 col-lg-4">
-          <div class ="col">4 column</div>
-        </div>
-
-        <div class ="col-lg-offset-1 col-lg-4 ">
+<!--        <div class ="col-lg-offset-1 col-lg-4 ">
           <div class ="col">6column</div>
-        </div> -->
-   </div>
- 
+      </div>
+  -->
 
 </body>
 </html>

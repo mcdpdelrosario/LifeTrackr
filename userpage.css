@@ -16,6 +16,7 @@ body{
   background-size:cover;
   overflow-y: auto!important;
   overflow-x: hidden!important;
+  font-family: Montserrat, sans-serif!important;       
 }
 
 /*notifications code of dp*/
@@ -44,24 +45,65 @@ body{
 
 .col{
 	width:100%!important;
-	background-color: transparent!important;
+	background-color: white!important;
 }
 
 /*moments*/
+
+
 #container1-moments{
 	margin-top: 50px!important;
-	width: 80%!important;
-	height: 38%!important;
-	/*border-radius: 7px!important;*/
-	border-style: solid;
-    /*top*/
-    border-width: 2px 2px 2px 2px;		
-
+	height: 180px!important;
+    border-width: 2px 2px 2px 2px;	
+    border-style: solid;	
     border-color: black!important;
 }
 
+
 #profilepic-moments{
-	width: 40%!important;
-	margin-left: 2%!important;
-	margin-top: 5%!important;
+	width: 100%!important;
+	margin-left: 5%!important;
+	margin-top: 30%!important;
 }
+
+#names-moments{
+	color: white!important;
+	background-color: black;
+	margin-top: 30%!important;
+	font-size: 15px!important;
+	/*top: 10%!important;
+	margin-left: 50%;
+	margin-top: 30%!important;
+	position: absolute;*/
+}
+
+
+#colme{
+	background-color: black!important;
+}
+
+@media screen and (max-width:499px){
+
+/*#container1-moments{
+	height: 250px!important;
+}
+*/
+}
+
+@media screen and (min-width:640px) and (max-width: 1300px){
+
+#container1-moments{
+	height: 200px!important;
+	/*width: 350px!important;	*/
+}
+
+#names-moments{
+	font-size: 12px!important;
+}
+}
+
+
+@media screen and (min-width:960px){
+
+
+}	
