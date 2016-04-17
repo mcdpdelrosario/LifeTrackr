@@ -36,6 +36,18 @@
 
   <div class = "row">
 
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"id="pills-containers">
+
+            <ul class="nav nav-pills"id="pills1-containers">
+                <li class="pills-class-moments"><a href="#">Friends</a></li>
+                <li  class="pills-class-moments"><a href="#">Likes</a></li>
+                <li  class="pills-class-moments"><a href="#">Messages</a></li>
+            </ul>
+        </div>
+
+   </div>
+
+
         <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-3 col-sm-offset-1 col-xs-offset-1 col-xs-2"style="background-color:yellow;" id="container1-notifications">
 
           <h3>Notifications</h3>
@@ -113,7 +125,6 @@
           ?>
           </div>
         </div>
-   </div>
 
 
 
