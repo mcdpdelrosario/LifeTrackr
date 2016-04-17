@@ -38,14 +38,19 @@ body{
 }
 
 #commitButton{
-	bottom: 5px;
+	top: 55px;
 	right: 5px;
+	position: absolute;
+	background-color: lightblue;
+	color: black;
 }
 
 #findButton{
 	bottom: 5px;
 	left: 5px;
-
+	position: absolute;
+	background-color: orange;
+	color: black;
 }
 
 /*Rick No*/
