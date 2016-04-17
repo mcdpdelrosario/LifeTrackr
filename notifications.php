@@ -46,6 +46,24 @@
     include "navbar.php";
   ?>
 
+
+
+    <div class = "row">
+
+        <div class="col-lg-1 col-lg-offset-1">
+
+          <div class="col">1col</div>
+
+        </div>
+        <div class ="col-lg-offset-1 col-lg-4">
+          <div class ="col">4 column</div>
+        </div>
+
+        <div class ="col-lg-offset-1 col-lg-4 ">
+          <div class ="col">6column</div>
+        </div>
+   </div>
+      
 </body>
 
 </html>
