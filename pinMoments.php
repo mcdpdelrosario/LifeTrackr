@@ -12,13 +12,22 @@
 	$pin_moment['time_stamp'] = array();
 	$pin_moment['first_name'] = array();
 	$pin_moment['last_name'] = array();
+	$pin_moment['username'] = array();
+	$pin_moment['img_user'] = array();
+	$pin_moment['img_moment'] = array();
 
-	$query = "SELECT moments_id, ui.user_id, moments_message, longitude, latitude, first_name, last_name, mome.time_stamp, ui.username FROM moments AS mome 
-			  INNER JOIN userinfo AS ui 
-			  ON ui.user_id = mome.user_id
-			  WHERE mome.user_id = '".$_SESSION['userid']."'"; 
-			  //mome.user_id should be a variable
-			  // SELECT ui.user_id, moments_message, longitude, latitude, first_name, last_name FROM moments AS mome INNER JOIN userinfo AS ui ON ui.user_id = mome.user_id WHERE mome.user_id='mcdpdelrosario'
+	$query = "SELECT m.user_id, m.moments_id, m.img_id, m.moments_message, m.longitude, m.latitude, m.time_stamp, username, first_name, last_name, ui.img_id AS user_img_id FROM moments AS m 
+                                INNER JOIN userinfo AS ui 
+                                    ON m.user_id = ui.user_id 
+                                INNER JOIN friends AS f  
+                                    ON m.user_id = f.user_id_fr 
+                                WHERE f.user_id_user=".$_SESSION['userid']." AND status =1 
+                                UNION ALL 
+                                SELECT m2.user_id, m2.moments_id, m2.img_id, moments_message, longitude, latitude, m2.time_stamp, username, first_name, last_name, ui2.img_id FROM moments AS m2 
+                                INNER JOIN userinfo AS ui2 
+                                    ON m2.user_id = ui2.user_id 
+                                    WHERE ui2.user_id=".$_SESSION['userid']."
+                                ORDER BY time_stamp DESC";
 
 	$result = mysqli_query($con, $query) or mysqli_error($con);
 
@@ -32,6 +41,9 @@
 		array_push($pin_moment['time_stamp'], $row['time_stamp']); 
 		array_push($pin_moment['first_name'], $row['first_name']); 
 		array_push($pin_moment['last_name'], $row['last_name']); 
+		array_push($pin_moment['username'], $row['username']); 
+		array_push($pin_moment['img_user'], $row['user_img_id']); 
+		array_push($pin_moment['img_moment'], $row['img_id']); 
 	}
 
 	echo json_encode($pin_moment);
