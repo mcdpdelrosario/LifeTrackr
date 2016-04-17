@@ -135,6 +135,9 @@
                                   <img src='http://maps.googleapis.com/maps/api/staticmap?center=<?=$latlong?>&zoom=19&size=400x300&sensor=true&maptype=satellite'>
                                   <hr>
                                   <p><?=$row['moments_message']?></p>
+                                  <div class="panel-footer">
+                                    <p><button class="btn btn-default">Like</button>  <button class="btn btn-default">Comment</button></p>
+                                  </div>
                                   <hr>
 
                       <?php
