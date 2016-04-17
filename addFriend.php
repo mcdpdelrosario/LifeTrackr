@@ -10,12 +10,13 @@
                     } else {
                           $query = "INSERT INTO `friends`(`user_id_user`, `user_id_fr`, `status`, `time_stamp`) VALUES ('".$_SESSION['userid']."','".$user_id_fr."',0,'".$date."')";
                           mysqli_query($con, $query) or mysqli_error($con);	
-                          $query_check="SELECT max(friends) FROM friends WHERE user_id_fr=".$user_id_fr."";
+                          $query_check="SELECT max(friends_id) FROM friends WHERE user_id_fr=".$user_id_fr."";
                           $result_check = mysqli_query($con,$query_check);
                           
                           if(mysqli_num_rows($result_check)==1){
+                          	echo "pasok";
                             while($row = mysqli_fetch_array($result_check)){
-                                $query = "INSERT INTO notifications(user_id,link_id,notification_type,time_stamp) VALUES(".$_SESSION['userid'].",".$row[0].",0,'".$date."')";
+                                $query = "INSERT INTO notifications(user_id,user_owner,link_id,notification_type,time_stamp) VALUES(".$_SESSION['userid'].",".$user_id_fr.",".$row[0].",3,'".$date."')";
                                 mysqli_query($con, $query) or mysqli_error($con);
                             }
                         }
