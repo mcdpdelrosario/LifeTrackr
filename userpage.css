@@ -1,0 +1,40 @@
+/*for notifications*/
+/*working until profile_user*/
+body{
+	/*overflow: hidden;*/
+	/*background-color: #f6fafc !important;*/
+	/*background-color: #DAF2FF!important;*/
+	background-color: #251d1d!important;
+	background-size: 100% 100%;
+	/*height: 700px;*/
+	height: 100%;
+  	background-size: cover;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  overflow-y: auto!important;
+  overflow-x: hidden!important;
+}
+
+/*notifications code of dp*/
+.inner-content { display:none; }
+
+#load-more{
+  border-radius: 5em !important;
+  height: 100px;
+  width: 100px;
+  margin-left:45%;
+}
+
+
+/*userpage*/
+
+/*for rick*/
+#map{
+  height: 100%;
+}
+/*.modal-footer{
+  padding-right:35%;
+}
+*/
