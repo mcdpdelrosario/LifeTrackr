@@ -60,7 +60,7 @@
                       <div class="panel-body" id="container1-background">
                         <div id="left-panel">
                           <div class="col-lg-4 col-md-5 col-sm-5 col-xs-7">
-                            <img id="profile_pic" src="img.jpg">
+                            <img id="profile_pic" src="#">
                           </div>
                           <div class="col-lg-5 col-md-7 col-sm-5 col-xs-6" id="profile_name">
                             <a href="profile_user.php"><h4 id="myname"><?=$row['first_name']?> <?=$row['last_name']?> <br> </h4></a>
@@ -68,7 +68,33 @@
                            </div>
                            
                            <div class="col-lg-3 col-md-7 col-sm-5"id="editprofile-profileuser">
-                            <a href="profiler.php?userid=<?=$_SESSION['myuser']?>"><button class="btn btn-default edit-profile" id="profile-button" >Edit Profile</button></a>
+                           <?php
+
+                           if($userid==$_SESSION['userid']){
+                            ?>
+                            <a href="profiler.php?userid=<?=$_SESSION['userid']?>"><button class="btn btn-default edit-profile" id="profile-button" >Edit Profile</button></a>
+                            <?php
+                          }else{
+                            $query="SELECT user_id_fr,status FROM friends WHERE user_id_user=".$_SESSION['userid']." AND user_id_fr=".$userid."";
+                            $result=mysqli_query($con,$query);
+                            $row=mysqli_fetch_array($result);
+                            if(mysqli_num_rows($result)==1&&$row['status']==0){
+                              ?>
+                                <a href="deleteFriend.php?friend=<?=$userid?>"><button class="btn btn-default edit-profile" id="cancelfriend-button" >Pending</button></a>
+                              <?php
+                            }else if(mysqli_num_rows($result)==0){
+                              ?>
+                                <a href="addFriend.php?friend=<?=$userid?>"><button class="btn btn-default edit-profile" id="add-button" >Add Friend</button></a>
+                              <?php
+                            }else if(mysqli_num_rows($result)==1&&$row['status']==1){
+                              ?>
+                                <a href="deleteFriend.php?friend=<?=$userid?>"><button class="btn btn-default edit-profile" id="delete-button">Friend</button></a>
+                                <?php
+                            }
+                            
+                          }
+                            
+                            ?>
                           </div> 
 
                             <div class="col-lg-3 col-md-7 col-sm-5"id="editprofile-profileuser1">
