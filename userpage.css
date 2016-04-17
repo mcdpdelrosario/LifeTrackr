@@ -151,7 +151,7 @@ body{
 }
 
  .pills-class-moments:hover > ul{
-	background-color: blue!important;
+	background-color: #FFA758!important;
 }
 
 /*--------------------------------MOMENTS------------------------------*/
@@ -160,10 +160,23 @@ body{
 
 /*notifications*/
 #container1-notifications{
+	background-color: #FFA758!important;
+	border-width: 4px 1px 8px 1px;	
+    border-style: solid;
+     border-color: #FFA758!important;	
 	margin-top:50px!important;
 }
 
+#container1-notifications h3{
+	/*color: white;*/
+	text-align: center;
+	text-transform: uppercase;
+
+}
+
+
 #container2-notifications{
+	background-color: transparent;!important;
 	margin-top:50px!important;
 }
 

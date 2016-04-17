@@ -48,19 +48,19 @@
    </div>
 
 
-        <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-3 col-sm-offset-1 col-xs-offset-1 col-xs-2"style="background-color:yellow;" id="container1-notifications">
+        <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-3 col-sm-offset-1 col-xs-offset-1 col-xs-2"style="background-color:#FFA758;" id="container1-notifications">
 
           <h3>Notifications</h3>
           <ul class="nav nav-pills nav-stacked">
-            <li class="active"><a href="notifications.php">All <span class="glyphicon glyphicon-menu-right notiglyph"></span></a></li>
-            <li><a href="activityNotifications.php">Activities <span class="glyphicon glyphicon-menu-right notiglyph"></span></a></li>
-            <li><a href="messagesNotifications.php">Messages <span class="glyphicon glyphicon-menu-right notiglyph"></span></a></li>
-            <li><a href="friendRequestNotifications.php">Friend Requests <span class="glyphicon glyphicon-menu-right notiglyph"></span></a></li>
+            <li id="all_notif"  class="active"><a href="notifications.php">All <span class="glyphicon glyphicon-menu-right notiglyph"></span></a></li>
+            <li id="actv_notif"><a href="activityNotifications.php">Activities <span class="glyphicon glyphicon-menu-right notiglyph"></span></a></li>
+            <li id="msg_notif"><a href="messagesNotifications.php">Messages <span class="glyphicon glyphicon-menu-right notiglyph"></span></a></li>
+            <li id="fr_notif"><a href="friendRequestNotifications.php">Friend Requests <span class="glyphicon glyphicon-menu-right notiglyph"></span></a></li>
           </ul>
 
         </div>
 
-        <div class ="col-lg-offset-1 col-lg-5 col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 col-xs-12" style="background-color:red;" id="container2-notifications">
+        <div class ="col-lg-offset-1 col-lg-5 col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 col-xs-12"  id="container2-notifications">
           <div class="panel panel-default">
           <?php
             if (mysqli_connect_errno()){
