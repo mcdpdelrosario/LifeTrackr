@@ -15,7 +15,7 @@
                           
                           if(mysqli_num_rows($result_check)==1){
                             while($row = mysqli_fetch_array($result_check)){
-                                $query = "INSERT INTO notifications(user_id,user_owner,link_id,notification_type,time_stamp) VALUES(".$_SESSION['userid'].",".$row[0].",0,'".$date."')";
+                                $query = "INSERT INTO notifications(user_id,link_id,notification_type,time_stamp) VALUES(".$_SESSION['userid'].",".$row[0].",0,'".$date."')";
                                 mysqli_query($con, $query) or mysqli_error($con);
                             }
                         }
