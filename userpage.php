@@ -112,7 +112,7 @@
   <a id="findButton" onclick="findUser()" class="btn btn-default">
     <span class="glyphicon glyphicon-screenshot"></span>
   </a>
-  <a id="commmitButton" onclick="futureMode()" class="btn btn-default">
+  <a id="commitButton" onclick="futureMode()" class="btn btn-default">
   M
   </a>
 </body>
