@@ -38,3 +38,15 @@ body{
   padding-right:35%;
 }
 */
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	/*will inherti from the box sizing*/
+}
+
+.col{
+	width:100%!important;
+	background-color: yellow!important;
+}
