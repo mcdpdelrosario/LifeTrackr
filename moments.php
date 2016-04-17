@@ -112,7 +112,7 @@ session_start();
                                 <hr>
                                   <p><?=$row['moments_message']?></p></div>
                             <div class="panel-footer">
-                              <p><button class="btn btn-default">Like</button>  <button class="btn btn-default">Comment</button></p>
+                              <p><a href="likeMoments.php?moment_id=<?=$row['moments_id']?>&moment_user_id=<?=$row['user_id']?>"><button class="btn btn-default">Like</button>  <button class="btn btn-default">Comment</button></p>
 
                             </div>
                           </div>
