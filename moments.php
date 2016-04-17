@@ -1,184 +1,157 @@
-<!DOCTYPE html>
+<!-- The new loginpage -->
+
+<!-- working -->
 <html lang="en">
 <head>
+
   <title>LifeTrackr</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1 ,maximum-scale=1,user-scalable=no">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+  
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <!-- <link href="userpage.css" rel="stylesheet" media="screen and (min-width:0)"> -->
+   <link href="navbar.css" rel="stylesheet" media="screen and (min-width:0)">
+    <link href="userpage.css" rel="stylesheet" media="screen and (min-width:0)">
   <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <link href="userpage.css" rel="stylesheet">
-  <link href="sidebar.css" rel="stylesheet">
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-  <script src='//ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
-  <!-- <script src='dynamicpage.js'></script> -->
-  <!-- <script src='switchpage.js'></script> -->
 
-  <!-- <link href="css/simple-sidebar.css" rel="stylesheet"> -->
+  <script src="dist/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
 
-   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-QcrS-bymcrFPClDmuA4A3RMVZsvQCuQ&signed_in=false"></script>
-  <!-- <script src="googlemaps_moments.js"></script> -->
 
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-QcrS-bymcrFPClDmuA4A3RMVZsvQCuQ&signed_in=false"></script>
+  <script src="main_Map.js"></script>
+  <script src="momentHandler.js"></script>
 </head>
 <body>
 
+ <div id="background"> 
 <?php
 
 session_start();
+ include "navbar.php";
   $con = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","bdd92f8752ef7e","fdb4d70b","lifetrackr");
 
-// Check connection
-if (mysqli_connect_errno())
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  } else {
-      $query = "select firstName,lastName from userinfo where userName = '".$_SESSION["myuser"]."'";
-      $result = mysqli_query($con, $query) or mysqli_error($con);
-      while ($row = mysqli_fetch_array($result)) {
-          $_SESSION["fname"] = $row[0];
-        $_SESSION["lname"] = $row[1];
-      }
+// // Check connection
+// if (mysqli_connect_errno())
+//   {
+//   echo "Failed to connect to MySQL: " . mysqli_connect_error();
+//   } else {
+//       $query = "select first_name,last_name, username from userinfo where user_id = '".$_SESSION["myuser"]."'";
+//       $result = mysqli_query($con, $query) or mysqli_error($con);
+//       while ($row = mysqli_fetch_array($result)) {
+//           $_SESSION["fname"] = $row['first_name'];
+//         $_SESSION["lname"] = $row['last_name'];
+//         $_SESSION["uname"] = $row['username'];
+//       }
       
-  }
+//   }
 ?>
 
- <nav class="navbar navbar-default navbar-fixed-top">
+    <!-- include "logout.php"; -->
+  
 
-    
-    <div class="container bar-align">
+   <div class = "row">
 
-    
-        <div class="navbar-header active">
-             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" id = "hamburgerbutton"><span class="glyphicon glyphicon-menu-hamburger"></span> 
-            </button>
+        <div class="col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-12" id="container1-moments">
+          <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-6 col-xs-3">
+                       <img id="profilepic-moments" src="img.jpg">
+                </div>
+                
+              
 
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbars" id = "searchbutton"><span class="glyphicon glyphicon-search"></span> 
-            </button>
+               <div class "col-lg-offset-1 col-lg-6 col-md-offset-1 col-md -6 col-sm-offset-1 col-sm-offset-1" id="name-moments">
 
-        </div>
+                    <a href="#"><?=$_SESSION['firstname']?> <?=$_SESSION['lastname']?></a></br>
+                    <a href="#" id="username-moments">@<?=$_SESSION['username']?></a>
 
-        <div class = "logo">
-            LF
-            </div>
+                </div>
 
-         <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-<!--                 <li>
-                  <a href="#menu-but" id="menu-but"><span class="glyphicon glyphicon-user"></span> Profile</a>
-                </li> -->
-                <li>
-                  <a href="userpage.php" id="signup-but"><span class="glyphicon glyphicon-home"></span> Home</a>
-                </li>
-                <li>
-                  <a href="moments.php" id="signup-but"><span class="glyphicon glyphicon-film"></span> Moments</a>
-                </li>
-                <li>
-                  <a href="notifications.php" id="signup-but" class="popper" data-toggle="popover" data-trigger="focus"><span class="glyphicon glyphicon-bell"></span> Notifications</a>
-                </li>    
-              </ul>
-      
-        </div>
-    </div>
-        <div class="collapse navbar-collapse" id="myNavbars">
-           <ul class="nav navbar-nav">
-             <li>
-                      <form>
-                      <input type="search" class="form-control" placeholder=" Search" />
-                     <i class="form-control-feedback glyphicon glyphicon-search" id = "search-but"></i></form>   
-                </li>
-           </ul>
-         </div> 
+          </div>      
+      </div>
 
+       <div class="col-lg-offset-1 col-lg-7 col-md-offset-1 col-md-4 col-sm-offset-1 col-sm-4 col-xs-12" id="container2-moments"> 
+        <div class="row">
+          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <img id="profilepic1-moments" src="img.jpg">
+          </div>
 
-  </nav>
-    <?php
-        
+          <div class="col-lg-8 col-lg-offset-1 col-md-7 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-offset-1 col-xs-4" id="post-moments">
 
-      ?>
-    <section id="main-content">
-        <div class="panel-group" >
-        <div class="panel panel-default">
-          <!-- <form action="goprofiler.php" method="post"> -->
-            <div class="panel-heading plogh">
-              <center><h4>Moments</h4></center>
-            </div>
-            <div class="panel-body plogb">
-            <div class="col-xs-2"></div>
-                <div class="col-xs-8">
+              <input type="text" class="form-control" placeholder=" Make now a moment." id="input-moments"  size="15"/>
 
-                  <?php
-                    $con = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","bdd92f8752ef7e","fdb4d70b","lifetrackr");
+              <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" id="postbutton-moments">Post</button>
+          </div>    
 
-                  // Check connection
-                  if (mysqli_connect_errno())
+       </div>
+
+       <div id ="container4-moments">
+         <?php
+          if (mysqli_connect_errno())
                     {
                     echo "Failed to connect to MySQL: " . mysqli_connect_error();
                     } else {
-                        $query = "SELECT * FROM userinfo AS ui INNER JOIN moments AS mmnt ON ui.userName = mmnt.username WHERE mmnt.username = '".$_SESSION["myuser"]."' ORDER BY time_taken DESC";
-                        $result = mysqli_query($con, $query) or mysqli_error($con);
-                        while ($row = mysqli_fetch_array($result)) {
-                           // $_SESSION["uname_notif"] = $row['username'];
-                           $_SESSION["fname_my_moment"] = $row['firstName'];
-                           $_SESSION["lname_my_moment"] = $row['lastName'];
-                           $_SESSION["uname_my_moment"] = $row['username'];
-                           $_SESSION["message_moments"] = $row['moments_message'];
-                           $_SESSION["longtitude_moments"] = $row['longtitude'];
-                           $_SESSION["latitude_moments"] = $row['latitude'];
-                           $_SESSION["time_taken"] = $row['time_taken'];
-                           $longlat = $_SESSION["longtitude_moments"].','.$_SESSION["latitude_moments"];
-                           ?>
-                          
-                           <div class="inner-content">
-                             <div class="panel panel-default">
-                                <div class="panel-heading">
-                                  <p><b><?=$_SESSION["fname_my_moment"]?> <?=$_SESSION["lname_my_moment"]?></b> @<?=$_SESSION["uname_my_moment"]?> <?=$_SESSION["time_taken"]?></p>
-                                </div>
-                                <div class="panel-body">
-                                  <?php
+                        $query_postmoment = "SELECT m.user_id, m.moments_id, m.img_id, m.moments_message, m.longitude, m.latitude, m.time_stamp, username, first_name, last_name, ui.img_id AS user_img_id FROM moments AS m 
+                                INNER JOIN userinfo AS ui 
+                                    ON m.user_id = ui.user_id 
+                                INNER JOIN friends AS f  
+                                    ON m.user_id = f.user_id_fr 
+                                WHERE f.user_id_user=".$_SESSION['userid']." AND status =1 
+                                UNION ALL 
+                                SELECT m2.user_id, m2.moments_id, m2.img_id, moments_message, longitude, latitude, m2.time_stamp, username, first_name, last_name, ui2.img_id FROM moments AS m2 
+                                INNER JOIN userinfo AS ui2 
+                                    ON m2.user_id = ui2.user_id 
+                                    WHERE ui2.user_id=".$_SESSION['userid']."
+                                ORDER BY time_stamp DESC";
+                        $result_postmoment = mysqli_query($con, $query_postmoment) or mysqli_error($con);
+                        while($row = mysqli_fetch_array($result_postmoment)){
+                            $latlong=$row['latitude'].','.$row['longitude'];
+                        ?>
+                          <div class="panel panel-default">
+                            <div class="panel-heading"><?=$row['first_name']?> <?=$row['last_name']?> @<?=$row['username']?></div>
+                            <div class="panel-body">
+                              <img src='http://maps.googleapis.com/maps/api/staticmap?center=<?=$latlong?>&zoom=18&size=400x300&sensor=true&maptype=satellite'>
+                                <hr>
+                                  <p><?=$row['moments_message']?></p></div>
+                            <div class="panel-footer">
+                              <button class="btn btn-default">Like</button>
 
-                                    echo "<img src='http://maps.googleapis.com/maps/api/staticmap?center=".$longlat."&zoom=14&size=400x300&sensor=true'>";
-
-                                    ?>
-                                  <p><?=$_SESSION["message_moments"]?></p>
-                                </div>
-                             </div>
-                           </div>
-                      <?php
+                            </div>
+                          </div>
+                        <?php
                         }
-                      }
-                  ?>   
-                  <br>
-                  <!-- <a href="#" id="load-more">Load More</a> -->
-                  <button class="btn btn-default" id="load-more"><span class="glyphicon glyphicon-repeat"></span><br>Load</button>
-                  </div>
-                </div>
-            </div>
-        </div>
-    </section>
-      
-    <script>
-      $(function(){
-          $(".inner-content").slice(0, 3).show(); // select the first ten
-          $("#load-more").click(function(e){ // click event for load more
-              e.preventDefault();
-              $(".inner-content:hidden").slice(0, 3).show(); // select next 10 hidden divs and show them
-              if($(".inner-content:hidden").length == 0){ // check if any hidden divs still exist
-                  alert("No more Moments!"); // alert if there are none left
-              }
-          });
-      });
-    </script>
-    <script src="js/jquery-2.2.1.min.js"></script>
+                    }
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+        ?>
 
+       
+   </div>       
 
-    <!-- Menu Toggle Script -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-12" id="container3-moments">
+       <ul class="nav nav-pills"id="pills-moments">
+        <li><a href="#">Friends</a></li>
+        <li><a href="#">Likes</a></li>
+        <li><a href="#">Messages</a></li>
+      </ul>
+
+</div>
+
 
 </body>
 </html>
