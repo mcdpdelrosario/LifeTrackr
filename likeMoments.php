@@ -1,5 +1,6 @@
 <?php
-    $moment_id=$_POST['moment_id'];
+    $moment_id=$_GET['moment_id'];
+    $moment_user_id=$_GET['moment_user_id'];
     date_default_timezone_set('Asia/Taipei');
     $date=date("Y-m-d h:i:s");
 	session_start();
@@ -20,9 +21,10 @@
                             $result_getlikes = mysqli_query($con, $query) or mysqli_error($con);
                             if(mysqli_num_rows($result_getlikes)==1){
                             while($row = mysqli_fetch_array($result_getlikes)){
-                                $query = "INSERT INTO notifications(user_id,link_id,notification_type,time_stamp) VALUES(".$_SESSION['userid'].",".$row[0].",0,'".$date."')";
-                                mysqli_query($con, $query) or mysqli_error($con);
+                                $query = "INSERT INTO notifications(user_id,user_owner,link_id,notification_type,time_stamp) VALUES(".$_SESSION['userid'].",".$moment_user_id.",".$row[0].",0,'".$date."')";
+                                mysqli_query($con, $query) or mysqli_error($con);   
                             }
+                            header('Location: moments.php');
                         }
                         }
                       }
