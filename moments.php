@@ -39,26 +39,43 @@
 
 session_start();
  include "navbar.php";
-  $con = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","bdd92f8752ef7e","fdb4d70b","lifetrackr");
+//   $con = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","bdd92f8752ef7e","fdb4d70b","lifetrackr");
 
-// Check connection
-if (mysqli_connect_errno())
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  } else {
-      $query = "select first_name,last_name, username from userinfo where user_id = '".$_SESSION["myuser"]."'";
-      $result = mysqli_query($con, $query) or mysqli_error($con);
-      while ($row = mysqli_fetch_array($result)) {
-          $_SESSION["fname"] = $row['first_name'];
-        $_SESSION["lname"] = $row['last_name'];
-        $_SESSION["uname"] = $row['username'];
-      }
+// // Check connection
+// if (mysqli_connect_errno())
+//   {
+//   echo "Failed to connect to MySQL: " . mysqli_connect_error();
+//   } else {
+//       $query = "select first_name,last_name, username from userinfo where user_id = '".$_SESSION["myuser"]."'";
+//       $result = mysqli_query($con, $query) or mysqli_error($con);
+//       while ($row = mysqli_fetch_array($result)) {
+//           $_SESSION["fname"] = $row['first_name'];
+//         $_SESSION["lname"] = $row['last_name'];
+//         $_SESSION["uname"] = $row['username'];
+//       }
       
-  }
+//   }
 ?>
 
     <!-- include "logout.php"; -->
   
+
+    <div class = "row">
+
+        <div class="col-lg-1 col-lg-offset-1">
+
+          <div class="col" id="container1-moments">1col</div>
+
+        </div>
+        <div class ="col-lg-offset-1 col-lg-4">
+          <div class ="col">4 column</div>
+        </div>
+
+        <div class ="col-lg-offset-1 col-lg-4 ">
+          <div class ="col">6column</div>
+        </div>
+   </div>
+ 
 
 </body>
 </html>

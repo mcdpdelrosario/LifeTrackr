@@ -32,7 +32,9 @@
                   <a href="moments.php" id="signup-but"><span class="glyphicon glyphicon-film"></span> Dashboard</a>
                 </li>
                 
-
+                <li>
+                  <a href="moments.php" id="signup-but"><span class="glyphicon glyphicon-film"></span>Notifications</a>
+                </li>
                 
                   
         </div>
@@ -42,7 +44,7 @@
              <li>
                       <form>
                       <?php
-                      include "index.php"
+                      include "searchbar.php"
                       ?>
                      <!-- <input type="search" class="form-control" placeholder=" Search" />
                      <i class="form-control-feedback glyphicon glyphicon-search" id = "search-but"></i>-->
