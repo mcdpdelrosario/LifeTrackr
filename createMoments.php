@@ -18,7 +18,7 @@
     $row = mysqli_fetch_array($id);
     $id3 = $row["maxid"];
     echo $id3;
-	$query = "INSERT INTO moments (`user_id`,`longitude`, `latitude`,`moments_message`,`time_stamp`,`img_id`) VALUES(".$_SESSION["myuser"].",".$longitude.",".$latitude.",'".$message."','".$date."','".$id3."')";
+	$query = "INSERT INTO moments (`user_id`,`longitude`, `latitude`,`moments_message`,`time_stamp`,`img_id`) VALUES(".$_SESSION['userid'].",".$longitude.",".$latitude.",'".$message."','".$date."','".$id3."')";
 
 //$query = "INSERT INTO moments (`user_id`,`longitude`, `latitude`,`moments_message`,`time_stamp`) VALUES(".$_SESSION["myuser"].",".$longitude.",".$latitude.",'".$message."','".$date."')";
 
