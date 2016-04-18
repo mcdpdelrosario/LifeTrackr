@@ -76,7 +76,7 @@
             <div class="col-xs-8">
 
               <div class="form-group" id="image-profiler">
-                 <img id="profile-pic-profiler" src="img.jpg" class="img-circle">
+                 <img id="profile-pic-profiler" src="#" class="img-circle">
               </div>
 
               <!-- <button class="btn btn-default" type="submit" value="submit" id="upload-profiler">Upload</button> -->

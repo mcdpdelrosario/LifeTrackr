@@ -112,7 +112,7 @@ function pinMarkers(){
 		for(var i = 0; i < dataMoments.moment_id.length; i++){
 			var lats = dataMoments.latitude[i];
 			var lngs = dataMoments.longitude[i];
-			prepareMarker({ lat: parseFloat(lats), lng: parseFloat(lngs) }, {moment_id: parseInt(dataMoments.moment_id[i]), msg: String(dataMoments.message[i]), username: String(dataMoments.username[i]), first_name: String(dataMoments.first_name[i]), last_name: String(dataMoments.last_name[i])},i);
+			prepareMarker({ lat: parseFloat(lats), lng: parseFloat(lngs) }, {user_id: parseInt(dataMoments.user_id[i]),moment_id: parseInt(dataMoments.moment_id[i]), msg: String(dataMoments.message[i]), username: String(dataMoments.username[i]), first_name: String(dataMoments.first_name[i]), last_name: String(dataMoments.last_name[i])},i);
 		}
 		showMarkers(map);
 	}, 5000);
@@ -138,7 +138,7 @@ function attachListener(marker, momentInfo) {
     document.getElementById("momentTitlePost").innerHTML=momentInfo.first_name+" "+momentInfo.last_name;
     document.getElementById("momentSubtitlePost").innerHTML=momentInfo.username;
     document.getElementById("momentWords").innerHTML=momentInfo.msg;
-    clickedMoment = momentInfo.moment_id;
+    clickedMoment = momentInfo;
     $("#momentPost").modal("show");
   });
 
@@ -180,14 +180,14 @@ function sendUserCoordinates(){
 }
 function confirmFunction(){
 	var comments = document.getElementById("MomentsComment").value;
-	var imagefp = document.getElementById("Search").value;
+	//var imagefp = document.getElementById("Search").value;
 	var sendMoments;
 	if(futureFlag==0){
 		sendMoments = {
 			moment_Lng: temporaryMarker.position.lng(),
 			moment_Lat: temporaryMarker.position.lat(),
 			moment_Message: comments,
-			imagefp: imagefp
+			//imagefp: imagefp
 		};
 		fastMarker.setIcon({
 			path: google.maps.SymbolPath.BACKWARD_OPEN_ARROW,
@@ -199,7 +199,7 @@ function confirmFunction(){
 			moment_Lng: temporaryMarker.position.lng(),
 			moment_Lat: temporaryMarker.position.lat(),
 			moment_Message: comments,
-			imagefp: imagefp
+			//imagefp: imagefp
 		};
 		fastMarker.setIcon({
 			path: google.maps.SymbolPath.BACKWARD_OPEN_ARROW,
@@ -211,7 +211,7 @@ function confirmFunction(){
 	createMoment(sendMoments);
 	$("#momentModal").modal("hide");
 	document.getElementById("MomentsComment").value = "";
-	document.getElementById("Search").value = "";
+	//document.getElementById("Search").value = "";
 	
 }
 
@@ -219,7 +219,7 @@ function cancelFunction(){
 	hideTemporaryMarker();
 	$("#momentModal").modal("hide");
 	document.getElementById("MomentsComment").value = "";
-	document.getElementById("Search").value = "";
+	//document.getElementById("Search").value = "";
 }
 function createPointer(){
 	map.panTo(temporaryMarker.position);
@@ -300,22 +300,24 @@ function deg2rad(deg) {
 	return deg * (Math.PI/180)
 }
 function commentFunction(){
-	$("#commentArea").slideToggle("slow");
+	//$("#commentArea").slideToggle("slow");
 }
 function modalClosedFunction(){
-	$("#commentArea").slideUp("fast");
+	//$("#commentArea").slideUp("fast");
 	$("#momentPost").modal("hide");
-	document.getElementById("commentTextArea").value = "";
+	//document.getElementById("commentTextArea").value = "";
 }
 
 function likeFunction(){
-	likeAMoment({moment_id: clickedMoment});
+	console.log(clickedMoment);
+	likeAMoment({moment_id: clickedMoment.moment_id,user_id: clickedMoment.user_id});
 }
 
 function enterComment(){
-	var comment = document.getElementById("commentTextArea").value;
-	document.getElementById("commentTextArea").value = "";
-	createComment({moment_id: clickedMoment, comment: comment});
+
+	// var comment = document.getElementById("commentTextArea").value;
+	// document.getElementById("commentTextArea").value = "";
+	// createComment({moment_id: clickedMoment.moment_id, comment: comment});
 }
 function futureMode(){
 	if(futureFlag == 0){

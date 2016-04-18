@@ -1,6 +1,6 @@
 <?php
-    $moment_id=$_GET['moment_id'];
-    $moment_user_id=$_GET['moment_user_id'];
+    $moment_id=$_POST['moment_id'];
+    $moment_user_id=$_POST['moment_user_id'];
     date_default_timezone_set('Asia/Taipei');
     $date=date("Y-m-d h:i:s");
 	session_start();
@@ -14,7 +14,6 @@
                         if(mysqli_num_rows($result) == 1){
                             $query = "DELETE FROM likes WHERE moment_id=".$moment_id." AND user_id=".$_SESSION['userid']."";
                             mysqli_query($con, $query) or mysqli_error($con);
-                            header('Location: moments.php');
                         }else{
                             $query = "INSERT INTO likes(moment_id,user_id,time_stamp) VALUES(".$moment_id.",".$_SESSION['userid'].",'".$date."')";
                             $result = mysqli_query($con, $query) or mysqli_error($con);
@@ -29,4 +28,6 @@
                         }
                         }
                       }
+
+
 ?>

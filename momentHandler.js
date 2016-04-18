@@ -29,12 +29,14 @@ function pinMoment()
 	queryServer(url,null,function(json,status)
 	{
 		//alert(status);
+		//alert(json);
 		if(status=="success"){
 			
 		}else{
 			swal("Error occured", json +"\nStatus: " + status, "error");
 		}
 		dataMoments = JSON.parse(json);
+		//console.log(dataMoments);
 	});
 }
 
@@ -42,11 +44,16 @@ function queryServer(url,data,callback)
 {
 	$.post(url,data,callback);
 }
-
 function likeAMoment(momentData){
-	var url = "likeMoments.php";
+	var url = "advLike.php"
+	// var url = "likeMoments.php?moment_id="+momentData.moment_id+"&moment_user_id="+momentData.user_id;
 	queryServer(url,momentData,likeStatus);
+	// $.get(URL,function(data){
+	// 	console.log("Something");
+	// }); 
+
 }
+
 
 function likeStatus(data,status){
 	if(status=="success")
@@ -60,20 +67,21 @@ function likeStatus(data,status){
 }
 
 function createComment(commentData){
-	var url = "createComment.php";
+	//var url = "createComment.php";
+	//console.log(commentData);
 	//swal("Comment", "Moment id: "+commentData.moment_id+"\nComment: "+commentData.comment, "success");
-	queryServer(url,commentData,commentStatus);
+	//queryServer(url,commentData,commentStatus);
 }
-function commentStatus(data,status){
-	alert(data);
-	// if(status=="success")
-	// {
-	// 	swal("Well done!", "Comment SuccessFull", "success");
-	// }
-	// else
-	// {
-	// 	swal("Error occured", data +"\nStatus: " + status, "error");
-	// }
+function commentStatus(data){
+	
+	if(data==1)
+	{
+		swal("Well done!", "Comment SuccessFull", "success");
+	}
+	else
+	{
+		swal("Error occured","Sorry Try Again", "error");
+	}
 }
 function getImage(momentData){
 	var url ="canvas.php";
