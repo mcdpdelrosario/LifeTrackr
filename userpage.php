@@ -85,7 +85,7 @@
           <div class="modal-body">
             <h4 id="momentWords"></h4>
             <center>
-          <canvas id="myCanvas" width="400" height="200" style="border:1px solid #000000;">
+          <img id="imageData" src="x.png">
              </canvas> 
              </center>
           </div>
