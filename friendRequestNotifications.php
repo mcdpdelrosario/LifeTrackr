@@ -35,7 +35,7 @@
 
     <div class = "row">
 
-        <div class="col-lg-2 col-lg-offset-1"style="background-color:yellow;">
+        <div class="col-lg-2 col-lg-offset-1"style="background-color:yellow;"id="container1-notifications">
 
           <h3>Notifications</h3>
           <ul class="nav nav-pills nav-stacked">

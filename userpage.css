@@ -178,10 +178,19 @@ body{
 	color: white!important;
 }
 
-
-
-
 /*-----------------------------------NOTIFICATIONS--------------------*/
+
+/*profile-user*/
+
+#container1-profileuser{
+	background-color: #B0CDD9;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-width: 2px;
+	border-style: solid;
+	height:100px!important;
+	width:90%!important;
+}
 
 @media screen and (max-width: 350px)
 {
