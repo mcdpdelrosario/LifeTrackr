@@ -49,8 +49,20 @@
 
   <div class = "grid">
     <div class = "row">
-      <div class="col-lg-12 col-lg-offset-1 col-md-12 col-md-offset-1 col-sm-12 col-sm-offset-1 col-xs-12 col-xs-offset-1" id="container1-profileuser">
-        col me
+      <div class="col-lg-12 col-lg-offset-2 col-md-12 col-md-offset-1 col-sm-12 col-sm-offset-1 col-xs-12 col-xs-offset-1" id="container1-profileuser">
+          <div class="panel-body" id="container1-background">
+              <div id="left-panel">
+                    <div class="row">
+                          <div class="col-lg-7 col-md-7 col-sm-7 col-xs-4">
+                            <img id="profilepic-profile_user" src="#">
+                          </div>
+                          <!-- <div class="col-lg-5 col-md-7 col-sm-5 col-xs-6" id="profile_name">
+                            <a href="profile_user.php"><h4 id="myname"><?=$row['first_name']?> <?=$row['last_name']?> <br> </h4></a>
+                            <p id="username">@<?=$row['username']?></p>
+                           </div> -->
+                          </div> 
+                    </div>      
+                           
     </div>
 
   </div>   
