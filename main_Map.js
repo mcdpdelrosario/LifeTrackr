@@ -309,7 +309,7 @@ function modalClosedFunction(){
 }
 
 function likeFunction(){
-	likeAMoment({moment_id: clickedMoment, username: 21});
+	likeAMoment({moment_id: clickedMoment});
 }
 
 function enterComment(){
