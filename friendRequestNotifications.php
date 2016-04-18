@@ -41,7 +41,6 @@
           <ul class="nav nav-pills nav-stacked">
             <li><a href="Notifications.php">All <span class="glyphicon glyphicon-menu-right notiglyph"></span></a></li>
             <li><a href="activityNotifications.php">Activities <span class="glyphicon glyphicon-menu-right notiglyph"></span></a></li>
-            <li><a href="messagesNotifications.php">Messages <span class="glyphicon glyphicon-menu-right notiglyph"></span></a></li>
             <li class="active"><a href="friendRequestNotifications.php">Friend Requests <span class="glyphicon glyphicon-menu-right notiglyph"></span></a></li>
           </ul>
 
