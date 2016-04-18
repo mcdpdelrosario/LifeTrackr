@@ -246,6 +246,130 @@ body{
 	margin-top: 200px!important;
 	margin-left:20%!important;
 }
+
+/*profiler*/
+#container1-profiler{
+	width: 60%;
+	margin-top: 4%!important;
+	height: 50px!important;
+}
+
+#box1{
+  background-color: #273940;
+    color: white;
+    letter-spacing: 2px;
+    font-family: Montserrat, sans-serif;
+    word-spacing: 5px;
+}
+
+#box{
+
+  
+ background-color: #3E5560;
+  color: white;
+  margin-bottom: 0px;
+}
+
+/*for profile user*/
+#firstname-profiler p{
+	margin-left: -32%!important;
+	top: 5%!important;
+	position: absolute;
+	
+}
+
+#lastname-profiler p{
+	margin-left: -32%!important;
+	top:22%!important;
+	position: absolute;
+
+}
+
+
+#username-profiler p{
+	margin-left: -32%!important;
+	top:39%!important;
+	position: absolute;
+
+}
+
+#email-profiler p{
+	margin-left: -32%!important;
+	top:57%!important;
+	position: absolute;
+	
+
+}
+
+#password-profiler p{
+	margin-left: -32%!important;
+	top:73%!important;
+	position: absolute;
+	
+
+}
+
+
+/*profiler forms*/
+#firstname-profiler{
+	width: 50%!important;
+	margin-left: 80%!important;
+	margin-top:-5%!important;
+
+}
+
+#lastname-profiler{
+	width: 50%!important;
+	margin-left: 80%!important;
+
+}
+
+
+#username-profiler{
+		width: 50%!important;
+	margin-left: 80%!important;
+
+
+}
+
+
+
+#email-profiler{
+		width: 50%!important;
+	margin-left: 80%!important;
+
+
+}
+
+#password-profiler{
+		width: 50%!important;
+	margin-left: 80%!important;
+
+
+}
+
+#update-profiler{
+		width: 50%!important;
+	margin-left: 80%!important;
+}
+
+
+#update-profiler{
+	width: 30%!important;
+	margin-left: 90%!important;
+}
+
+#profile-pic-profiler{
+	
+	border:1px solid #021a40;
+	left: -7%!important;
+	position: absolute;
+	top: 10%!important;
+	width: 30%!important;
+}
+
+
+
 @media screen and (max-width: 400px)
 {
 	#pills1-containers{

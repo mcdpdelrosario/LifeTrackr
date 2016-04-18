@@ -79,7 +79,7 @@
                  <img id="profile-pic-profiler" src="img.jpg" class="img-circle">
               </div>
 
-              <button class="btn btn-default" type="submit" value="submit" id="upload-profiler">Upload</button>
+              <!-- <button class="btn btn-default" type="submit" value="submit" id="upload-profiler">Upload</button> -->
               
               <div class="form-group" id="firstname-profiler">
                <p>First Name</p><input type="text" class="form-control" id="fname_edit" name="fname_edit" value="<?=$_SESSION["fname"]?>">
@@ -89,7 +89,7 @@
                 <p>Last Name</p><input type="text" class="form-control" id="lname_edit" name="lname_edit" value="<?=$_SESSION["lname"]?>">
               </div>
               
-              <div class="form-group"id="username-profiler">
+                <div class="form-group"id="username-profiler">
                <p>Username</p> <input type="text" class="form-control" id="uname_edit" name="uname_edit" value="<?=$_SESSION["uname"]?>">
               </div>
               
