@@ -150,9 +150,12 @@ body{
 
 /*notifications*/
 #container1-notifications{
-	margin-top:10px!important;
+	margin-top:50px!important;
 }
 
+#container2-notifications{
+	margin-top:50px!important;
+}
 
 
 
@@ -223,7 +226,12 @@ body{
 #container4-moments{
 	margin-top:10%!important;
 }
-
+/*--------------------------------------------------MOMENTS----------------------------------------------------*/
+/*notifications*/
+#container1-notifications{
+	visibility: hidden!important;
+}
+/*--------------------------------------------------NOTIFS----------------------------------------------------
 }
 
 /*col-xs-12*/
@@ -283,9 +291,26 @@ body{
 #container3-moments{
 	visibility: hidden!important;
 }
+
+/*-------------------------------------------------------------MOMENTS*/
+
+/*NOTIFICATIONS*/
+#container1-notifications{
+	visibility: hidden!important;
 }
 
+/*NOTIFICATIONS------------------------------------------------------*/
+}
 
+@media screen and(max-width:800px)
+{
+	/*notifictions*/
+	#container1-notifications{
+	visibility: hidden!important;
+	/*-------------------------------------------*/
+}
+
+}
 
 
 @media screen and (min-width: 769px) and (max-width:900px)
