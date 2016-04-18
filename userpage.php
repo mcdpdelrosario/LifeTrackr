@@ -58,7 +58,7 @@
           </div>
           
           <div class="modal-footer">
-            <input id="Search" class="btn btn-default" type="file" value="browse" size="15">
+            <!-- <input id="Search" class="btn btn-default" type="file" value="browse" size="15"> -->
             <button id="ConfirmMoment" class="btn btn-default" type="submit" value="submit" onclick="confirmFunction()">Confirm</button>
             <button id="CancelMoment" type="button" class="btn btn-default" data-dismiss="modal" onclick="cancelFunction()">Cancel</button>
           </div>
@@ -84,19 +84,19 @@
           </div>
           <div class="modal-body">
             <h4 id="momentWords"></h4>
-            <center>
+         <!--    <center>
           <img id="imageData" src="x.png">
              </canvas> 
              </center>
-          </div>
+          --> </div>
           
           <div class="modal-footer">
             <div id="postButtons">
               <button id="momentLike" class="btn btn-default" type="submit" value="submit" onclick="likeFunction()">Like</button>
-              <button id="momentComment" type="button" class="btn btn-default" onclick="commentFunction()">Comment</button>
+              <!-- <button id="momentComment" type="button" class="btn btn-default" onclick="commentFunction()">Comment</button> -->
             </div>
             
-            <div id="commentArea"  style = "display: none;">
+            <!-- <div id="commentArea"  style = "display: none;">
               <div id="commentSection" class="panel panel-default">
                 <div class="panel-body">Panel Body</div>
               </div>
@@ -106,7 +106,7 @@
                 </div>
               </form>
               <button id="submitComment" type="button" class="btn btn-default" onclick="enterComment()">Submit</button>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
