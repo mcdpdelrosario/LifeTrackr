@@ -36,7 +36,7 @@
 
   <div class = "row">
 
-        <div class="col-lg-2 col-lg-offset-1"style="background-color:yellow;">
+        <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-offset-1 col-xs-2"style="background-color:yellow;">
 
           <h3>Notifications</h3>
           <ul class="nav nav-pills nav-stacked">
@@ -48,7 +48,7 @@
 
         </div>
 
-        <div class ="col-lg-offset-1 col-lg-5 " style="background-color:red;">
+        <div class ="col-lg-offset-1 col-lg-5 col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 col-xs-offset col-xs-5" style="background-color:red;" id="container1-notifications">
           <div class="panel panel-default">
           <?php
             if (mysqli_connect_errno()){

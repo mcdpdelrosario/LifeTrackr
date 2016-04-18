@@ -140,7 +140,30 @@ body{
 	margin-top:5%!important;
 }
 
+#pills-moments{
+	margin-left:5%!important;
+}
+
 /*--------------------------------MOMENTS------------------------------*/
+
+
+
+/*notifications*/
+#container1-notifications{
+	margin-top:10px!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------NOTIFICATIONS--------------------*/
 
 @media screen and (max-width:499px){
 
@@ -195,6 +218,10 @@ body{
 
 #container3-moments{
 	visibility: hidden!important;
+}
+
+#container4-moments{
+	margin-top:10%!important;
 }
 
 }
@@ -320,6 +347,11 @@ body{
 #postbutton-moments{
 	margin-left:200px!important;
 }
+
+#pills-moments{
+	margin-left:2%!important;
+}
+
 
 }
 
