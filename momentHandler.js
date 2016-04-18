@@ -67,10 +67,10 @@ function likeStatus(data,status){
 }
 
 function createComment(commentData){
-	var url = "createComment.php";
-	console.log(commentData);
+	//var url = "createComment.php";
+	//console.log(commentData);
 	//swal("Comment", "Moment id: "+commentData.moment_id+"\nComment: "+commentData.comment, "success");
-	queryServer(url,commentData,commentStatus);
+	//queryServer(url,commentData,commentStatus);
 }
 function commentStatus(data){
 	
