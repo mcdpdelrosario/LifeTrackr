@@ -134,23 +134,37 @@ session_start();
   <div class="col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-12" id="container3-moments">
        <ul class="nav nav-pills"id="pills-moments">
         <li class="pills-class-moments"data-toggle="modal" data-target="#friendsModal" id="friends-tab"><a href="#">Friends</a></li>
-        <li  class="pills-class-moments"><a href="#">Likes</a></li>
-        <li  class="pills-class-moments" data-toggle="modal" data-target="#messageModal"><a href="#">Messages</a></li>
+        <li  class="pills-class-moments" data-toggle="modal" data-target="#likesModal" id="likes-tab"><a href="#">Likes</a></li>
       </ul>
 
 </div>
 
-<div class="modal fade" id="messageModal" role="dialog">
+<div class="modal fade" id="likesModal" role="dialog">
     <div class="modal-dialog">
     
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
+          <h3 class="modal-title">Your likes</h3>
         </div>
         <div class="modal-body">
-          <p>Some text in the modal.</p>
+          <?php
+            $query="SELECT username, first_name, last_name, moment_id, m.user_id FROM likes AS l
+  INNER JOIN moments AS m
+  ON m.moments_id = l.moment_id
+    INNER JOIN userinfo AS ui
+    ON m.user_id = ui.user_id
+WHERE l.user_id = ".$_SESSION['userid']."";
+            $result = mysqli_query($con,$query);
+            while($row=mysqli_fetch_array($result)){
+              echo "You liked ";
+              ?>
+                <div class="panel-body">
+                  <a href="profile_user.php?user=<?=$row['user_id']?>"><?=$row['first_name']?> <?=$row['last_name']?>'s</a><p> </p><a href="showMoments.php?moment_id=<?=$row['moment_id']?>">post</a>
+                </div>
+              <?php
+            }
+          ?>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
