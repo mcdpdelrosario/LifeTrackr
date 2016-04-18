@@ -15,6 +15,7 @@
 	$pin_moment['username'] = array();
 	$pin_moment['img_user'] = array();
 	$pin_moment['img_moment'] = array();
+	$pin_moment['user_id'] = array();
 
 	$query = "SELECT m.user_id, m.moments_id, m.img_id, m.moments_message, m.longitude, m.latitude, m.time_stamp, username, first_name, last_name, ui.img_id AS user_img_id FROM moments AS m 
                                 INNER JOIN userinfo AS ui 
@@ -41,9 +42,9 @@
 		array_push($pin_moment['time_stamp'], $row['time_stamp']); 
 		array_push($pin_moment['first_name'], $row['first_name']); 
 		array_push($pin_moment['last_name'], $row['last_name']); 
-		array_push($pin_moment['username'], $row['username']); 
 		array_push($pin_moment['img_user'], $row['user_img_id']); 
 		array_push($pin_moment['img_moment'], $row['img_id']); 
+		array_push($pin_moment['user_id'], $row['user_id']); 
 	}
 
 	echo json_encode($pin_moment);
