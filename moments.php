@@ -144,7 +144,7 @@ session_start();
 <div class="row">
 
   <div class="col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-12" id="container3-moments">
-       <ul class="nav nav-pills">
+       <ul class="nav nav-pills"id="pills-moments">
         <li><a href="#">Friends</a></li>
         <li><a href="#">Likes</a></li>
         <li><a href="#">Messages</a></li>
