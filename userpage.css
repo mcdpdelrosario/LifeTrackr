@@ -402,7 +402,103 @@ body{
 	visibility: visible!important;
 	
 }
+
+
+#box1{
+	width:310px!important;
+	margin-left:-75px!important;
 }
+#box{
+	height: 300px!important;
+	width:310px!important;
+	margin-left:-75px!important;
+}
+#firstname-profiler p{
+	margin-left: -80%!important;
+	margin-top: -4%!important;
+}
+
+
+#lastname-profiler p{
+	margin-left: -80%!important;
+	margin-top: -2%!important;
+}
+
+
+#username-profiler p{
+	margin-left: -80%!important;
+	margin-top: 1%!important;
+}
+
+#email-profiler p{
+	margin-left: -80%!important;
+	margin-top: 3%!important;
+}
+
+#password-profiler p{
+	margin-left: -80%!important;
+	margin-top: 7%!important;
+}
+
+/*profiler forms*/
+
+
+
+#firstname-profiler{
+	width: 80%!important;
+	left: -10%!important;
+	margin-top: -10%!important;
+	
+
+}
+
+#lastname-profiler{
+	width: 80%!important;
+	left: -10%!important;
+	margin-top: -10%!important;}
+
+
+#username-profiler{
+	width: 80%!important;
+	left: -10%!important;
+	margin-top: -10%!important;
+}
+
+
+
+
+#email-profiler{
+	width: 80%!important;
+	left: -10%!important;
+	margin-top: -10%!important;
+
+}
+
+#password-profiler{
+	width: 80%!important;
+	left: -10%!important;
+	margin-top: -10%!important;;
+
+
+}
+
+#update-profiler{
+	width: 100%!important;
+	left: -100px!important;
+	margin-top: 5%!important;
+	position: absolute;
+}
+
+
+
+#profile-pic-profiler{
+	visibility: hidden!important;
+}
+
+}
+
+
+
 
 @media screen and (max-width:499px){
 
@@ -521,6 +617,93 @@ visibility: hidden!important;
 	width:70%!important;	
 	margin-left: 10%!important;
 }
+
+
+#box{
+	height: 300px!important;
+}
+#firstname-profiler p{
+	margin-left: -80%!important;
+	margin-top: -4%!important;
+}
+
+
+#lastname-profiler p{
+	margin-left: -80%!important;
+	margin-top: -2%!important;
+}
+
+
+#username-profiler p{
+	margin-left: -80%!important;
+	margin-top: 1%!important;
+}
+
+#email-profiler p{
+	margin-left: -80%!important;
+	margin-top: 3%!important;
+}
+
+#password-profiler p{
+	margin-left: -80%!important;
+	margin-top: 7%!important;
+}
+
+/*profiler forms*/
+
+
+
+#firstname-profiler{
+	width: 80%!important;
+	left: -10%!important;
+	margin-top: -10%!important;
+	
+
+}
+
+#lastname-profiler{
+	width: 80%!important;
+	left: -10%!important;
+	margin-top: -10%!important;}
+
+
+#username-profiler{
+	width: 80%!important;
+	left: -10%!important;
+	margin-top: -10%!important;
+}
+
+
+
+
+#email-profiler{
+	width: 80%!important;
+	left: -10%!important;
+	margin-top: -10%!important;
+
+}
+
+#password-profiler{
+	width: 80%!important;
+	left: -10%!important;
+	margin-top: -10%!important;;
+
+
+}
+
+#update-profiler{
+	width: 100%!important;
+	left: -100px!important;
+	margin-top: 5%!important;
+	position: absolute;
+}
+
+
+
+#profile-pic-profiler{
+	visibility: hidden!important;
+}
+
 }
 
 
@@ -623,6 +806,102 @@ visibility: hidden!important;
 	margin-left:12%!important;
 }
 
+#container1-profiler{
+	width: 100%;
+}
+
+#box{
+	height: 600px!important;
+}
+
+
+#firstname-profiler p{
+	margin-left: -60%!important;
+	
+}
+
+
+#lastname-profiler p{
+	margin-left: -60%!important;
+}
+
+
+#username-profiler p{
+	margin-left: -60%!important;
+}
+
+#email-profiler p{
+	margin-left: -60%!important;
+}
+
+#password-profiler p{
+	margin-left: -60%!important;
+}
+
+/*profiler forms*/
+
+
+
+#firstname-profiler{
+	width: 80%!important;
+	left: -20%!important;
+	margin-top: 35%!important;
+	position: absolute;
+	
+
+}
+
+#lastname-profiler{
+	width: 80%!important;
+	left: -20%!important;
+	margin-top: 50%!important;
+	position: absolute;
+}
+
+
+#username-profiler{
+	width: 80%!important;
+	left: -20%!important;
+	margin-top: 65%!important;
+	position: absolute;
+}
+
+
+
+
+#email-profiler{
+	width: 80%!important;
+	left: -20%!important;
+	margin-top: 80%!important;
+	position: absolute;
+	
+
+}
+
+#password-profiler{
+	width: 80%!important;
+	left: -20%!important;
+	margin-top: 95%!important;
+	position: absolute;
+
+
+}
+
+#update-profiler{
+	width: 30%!important;
+	left: -5%!important;
+	margin-top: 110%!important;
+	position: absolute;
+	
+}
+
+
+#profile-pic-profiler{
+	margin-left: 50%!important;
+	width:70%!important;
+}
+	
+
 }
 
 
@@ -658,6 +937,9 @@ visibility: hidden!important;
 	margin-top: -30%!important;
 }
 
+
+	
+
 }
 
 /*#profilepic-profile_user{
@@ -672,9 +954,6 @@ visibility: hidden!important;
 		margin-top: -30px!important;
 		margin-left: 10px!important;
 	}*/
-}
-
-}
 
 
 /*special media screens*/
@@ -704,6 +983,7 @@ visibility: hidden!important;
 	}
 */
 
+
 }
 
 @media screen and (min-width: 900px) and (max-width: 950px)
@@ -732,8 +1012,6 @@ visibility: hidden!important;
 }
 
 
-
-
 }
 
 
@@ -747,5 +1025,58 @@ visibility: hidden!important;
 {
 	margin-top:-4%!important;
 }
+
+}
+
+@media screen and (max-width: 1200px)
+{
+
+
+/*profiler forms*/
+#firstname-profiler{
+	margin-left: 90%!important;
+
+}
+
+#lastname-profiler{
+margin-left: 90%!important;
+
+}
+
+
+#username-profiler{
+margin-left: 90%!important;
+
+}
+
+
+
+#email-profiler{
+	margin-left: 90%!important;
+
+}
+
+#password-profiler{
+margin-left: 90%!important;
+
+}
+
+#update-profiler{
+	
+	margin-left: 100%!important;
+}
+
+
+
+
+#profile-pic-profiler{
+	
+	border:1px solid #021a40;
+	left: 10%!important;
+	position: absolute;
+	top: 10%!important;
+	width: 30%!important;
+}
+
 
 }

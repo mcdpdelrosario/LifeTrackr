@@ -140,7 +140,7 @@
      
 
                           <div id="cogbutton-profile_user">
-                                <a href="profiler.php"> <button type="button" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-cog" id="cogbutton"></span></button></a>
+                                <a href="profiler.php?userid=<?=$_SESSION['userid']?>"> <button type="button" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-cog" id="cogbutton"></span></button></a>
                           </div>
 
                            <div id="container3-prof">

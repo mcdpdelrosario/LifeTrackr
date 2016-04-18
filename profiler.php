@@ -62,7 +62,7 @@
 	   }
   ?>
 
-
+<div class="background-profiler">
   <section class="container" id="container1-profiler">
     <div class="panel-group" >
       <div class="panel panel-default">
@@ -133,6 +133,7 @@
       </div>          
     </div>
   </section> -->
+ </div> 
 
   <script src="js/jquery.js"></script>
   <!-- Bootstrap Core JavaScript -->
