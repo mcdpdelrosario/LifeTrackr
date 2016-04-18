@@ -59,7 +59,7 @@
         <div class="collapse navbar-collapse" id="mySettings">
            <ul class="nav navbar-nav">
             
-                 <li ><a href="activityNotifications.php"><span class="glyphicon glyphicon-user" ></span></a>
+                 <li ><a href="profile_user.php?user=<?=$_SESSION['userid']?>"><span class="glyphicon glyphicon-user" ></span></a>
             </li>
            </ul>
          </div> 
