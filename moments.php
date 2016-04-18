@@ -98,6 +98,13 @@ session_start();
 
 </div>
 
+<div class="row">
+
+  <div class="col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-12" id="container3-moments">
+  colme
+
+</div>
+
 
 </body>
 </html>
