@@ -50,7 +50,7 @@ session_start();
         <div class="col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-12" id="container1-moments">
           <div class="row">
                 <div class="col-lg-5 col-md-6 col-sm-6 col-xs-3">
-                       <img id="profilepic-moments" src="img.jpg">
+                       <img id="profilepic-moments" src="#">
                 </div>
                 
               
@@ -68,7 +68,7 @@ session_start();
        <div class="col-lg-offset-1 col-lg-7 col-md-offset-1 col-md-4 col-sm-offset-1 col-sm-4 col-xs-12" id="container2-moments"> 
         <div class="row">
           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-            <img id="profilepic1-moments" src="img.jpg">
+            <img id="profilepic1-moments" src="#">
           </div>
 
           <div class="col-lg-8 col-lg-offset-1 col-md-7 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-offset-1 col-xs-4" id="post-moments">
@@ -112,7 +112,7 @@ session_start();
                                 <hr>
                                   <p><?=$row['moments_message']?></p></div>
                             <div class="panel-footer">
-                              <p><a href="likeMoments.php?moment_id=<?=$row['moments_id']?>&moment_user_id=<?=$row['user_id']?>"><button class="btn btn-default">Like</button>  <button class="btn btn-default">Comment</button></p>
+                              <p><a href="likeMoments.php?moment_id=<?=$row['moments_id']?>&moment_user_id=<?=$row['user_id']?>"><button class="btn btn-default">Like</button></p>
 
                             </div>
                           </div>
