@@ -134,6 +134,7 @@ function showMarkers(map){
 function attachListener(marker, momentInfo) {
 
   marker.addListener('click', function() {
+  	getImage({moment: momentInfo.moment_id});
     document.getElementById("momentTitlePost").innerHTML=momentInfo.first_name+" "+momentInfo.last_name;
     document.getElementById("momentSubtitlePost").innerHTML=momentInfo.username;
     document.getElementById("momentWords").innerHTML=momentInfo.msg;
