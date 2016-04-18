@@ -39,7 +39,7 @@
 
 session_start();
  include "navbar.php";
-//   $con = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","bdd92f8752ef7e","fdb4d70b","lifetrackr");
+  $con = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","bdd92f8752ef7e","fdb4d70b","lifetrackr");
 
 // // Check connection
 // if (mysqli_connect_errno())
@@ -71,10 +71,10 @@ session_start();
               
 
                <div class "col-lg-offset-1 col-lg-6 col-md-offset-1 col-md -6 col-sm-offset-1 col-sm-offset-1" id="name-moments">
-<!-- 
+
                     <a href="#"><?=$_SESSION['firstname']?> <?=$_SESSION['lastname']?></a></br>
-                    <a href="#" id="username-moments"><?=$_SESSION['username']?></a>
- -->
+                    <a href="#" id="username-moments">@<?=$_SESSION['username']?></a>
+
                 </div>
 
           </div>      
@@ -94,7 +94,8 @@ session_start();
           </div>    
 
        </div>
-        <div id="container4-moments">
+
+       <div id ="container4-moments">
          <?php
           if (mysqli_connect_errno())
                     {
@@ -105,7 +106,7 @@ session_start();
                                     ON m.user_id = ui.user_id 
                                 INNER JOIN friends AS f  
                                     ON m.user_id = f.user_id_fr 
-                                WHERE f.user_id_user=".$_SESSION['myuser']." AND status =1 
+                                WHERE f.user_id_user=".$_SESSION['userid']." AND status =1 
                                 UNION ALL 
                                 SELECT m2.user_id, m2.moments_id, m2.img_id, moments_message, longitude, latitude, m2.time_stamp, username, first_name, last_name, ui2.img_id FROM moments AS m2 
                                 INNER JOIN userinfo AS ui2 
@@ -119,7 +120,7 @@ session_start();
                           <div class="panel panel-default">
                             <div class="panel-heading"><?=$row['first_name']?> <?=$row['last_name']?> @<?=$row['username']?></div>
                             <div class="panel-body">
-                              <img src='http://maps.googleapis.com/maps/api/staticmap?center=<?=$latlong?>&zoom=14&size=400x300&sensor=true&maptype=satellite'>
+                              <img src='http://maps.googleapis.com/maps/api/staticmap?center=<?=$latlong?>&zoom=18&size=400x300&sensor=true&maptype=satellite'>
                                 <hr>
                                   <p><?=$row['moments_message']?></p></div>
                             <div class="panel-footer">
@@ -133,8 +134,8 @@ session_start();
 
         ?>
 
-       </div>
-
+       
+   </div>       
 
   </div>
 
@@ -144,9 +145,9 @@ session_start();
 
   <div class="col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-12" id="container3-moments">
        <ul class="nav nav-pills">
-        <li><a href="#" id="friends-moments">Friends</a></li>
-        <li><a href="#" id="likes-moments">Likes</a></li>
-        <li><a href="#" id="messages-moments">Messages</a></li>
+        <li><a href="#">Friends</a></li>
+        <li><a href="#">Likes</a></li>
+        <li><a href="#">Messages</a></li>
       </ul>
 
 </div>
