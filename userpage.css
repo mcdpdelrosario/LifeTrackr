@@ -186,10 +186,19 @@ body{
 	background-color: #B0CDD9;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
-	border-width: 2px;
+	border-width: 0px 5px 5px 5px;
 	border-style: solid;
-	height:100px!important;
-	width:70%!important;
+	height:170px!important;
+	width: 64%!important;
+	margin-left:20%!important;
+}
+
+
+#profilepic-profile_user{
+	width: 150px!important;
+	height: 150px!important;
+	margin-top:-7px!important;
+	margin-left:5px!important;
 }
 
 @media screen and (max-width: 350px)
@@ -279,6 +288,11 @@ body{
 
 }
 
+#container1-profileuser{
+	width: 94%!important;
+	margin-left:15px!important;
+}
+
 }
 
 
@@ -352,6 +366,11 @@ body{
 #container2-notifications{
 	top:10%!important;
 	position: absolute;
+}
+
+#container1-profileuser{
+	width: 96%!important;
+	margin-left:15px!important;
 }
 }
 
