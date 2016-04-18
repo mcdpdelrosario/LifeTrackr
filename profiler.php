@@ -65,7 +65,7 @@
 <div class="background-profiler">
   <section class="container" id="container1-profiler">
     <div class="panel-group" >
-      <div class="panel panel-default">
+      <div class="panel panel-default"style="background-color: transparent">
         <form action="goprofiler.php" method="post">
           <div class="panel-heading plogh" id ="box1">
             <center><h4>General Account Settings</h4></center>

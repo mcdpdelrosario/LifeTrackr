@@ -403,7 +403,9 @@ body{
 	
 }
 
-
+.panel-default{
+	background-color: transparent!important;
+}
 #box1{
 	width:310px!important;
 	margin-left:-75px!important;
