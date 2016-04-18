@@ -62,23 +62,39 @@ session_start();
 
    <div class = "row">
 
-        <div class="col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-5 col-sm-offset-1 col-xs-5 col-xs-offset-1" id="container1-moments">
+        <div class="col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-12" id="container1-moments">
           <div class="row">
-                <div class="col-lg-5 col-md-6 col-sm-5 col-xs-6">
+                <div class="col-lg-5 col-md-6 col-sm-6 col-xs-3">
                        <img id="profilepic-moments" src="img.jpg">
                 </div>
+                
+              
 
-                <div class ="col-lg-offset-1 col-lg-6 col-md-offset-1 col-md-6 col-sm-offset-1 col-sm-6 col-xs-6" id="names-moments">
-                         <a href="#"><?=$_SESSION['fname']?> <?=$_SESSION['lname']?></a></br>
-                        <a href="#"><?=$_SESSION['uname']?></a>
+               <div class "col-lg-offset-1 col-lg-6 col-md-offset-1 col-md -6 col-sm-offset-1 col-sm-offset-1" id="name-moments">
+
+                    <a href="#"><?=$_SESSION['firstname']?> <?=$_SESSION['lastname']?></a></br>
+                    <a href="#"id="username-moments"><?=$_SESSION['username']?></a>
+
                 </div>
           </div>      
       </div>
 
-<!--        <div class ="col-lg-offset-1 col-lg-4 ">
-          <div class ="col">6column</div>
-      </div>
-  -->
+       <div class="col-lg-offset-1 col-lg-7 col-md-offset-1 col-md-4 col-sm-offset-1 col-sm-4 col-xs-12" id="container2-moments"> 
+        <div class="row">
+          <div class="col" id="colme">
+
+          colme
+
+          </div>
+
+
+
+        </div>  
+
+       </div>
+  </div>
+  
+
 
 </body>
 </html>
