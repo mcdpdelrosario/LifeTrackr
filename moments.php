@@ -94,6 +94,48 @@ session_start();
           </div>    
 
        </div>
+
+         <?php
+          if (mysqli_connect_errno())
+                    {
+                    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                    } else {
+                        $query_postmoment = "SELECT m.user_id, m.moments_id, m.img_id, m.moments_message, m.longitude, m.latitude, m.time_stamp, username, first_name, last_name, ui.img_id AS user_img_id FROM moments AS m 
+                                INNER JOIN userinfo AS ui 
+                                    ON m.user_id = ui.user_id 
+                                INNER JOIN friends AS f  
+                                    ON m.user_id = f.user_id_fr 
+                                WHERE f.user_id_user=".$_SESSION['myuser']." AND status =1 
+                                UNION ALL 
+                                SELECT m2.user_id, m2.moments_id, m2.img_id, moments_message, longitude, latitude, m2.time_stamp, username, first_name, last_name, ui2.img_id FROM moments AS m2 
+                                INNER JOIN userinfo AS ui2 
+                                    ON m2.user_id = ui2.user_id 
+                                    WHERE ui2.user_id=".$_SESSION['myuser']."
+                                ORDER BY time_stamp DESC";
+                        $result_postmoment = mysqli_query($con, $query_postmoment) or mysqli_error($con);
+                        while($row = mysqli_fetch_array($result_postmoment)){
+                            $latlong=$row['latitude'].','.$row['longitude'];
+                        ?>
+                          <div class="panel panel-default">
+                            <div class="panel-heading"><?=$row['first_name']?> <?=$row['last_name']?> @<?=$row['username']?></div>
+                            <div class="panel-body">
+                              <img src='http://maps.googleapis.com/maps/api/staticmap?center=<?=$latlong?>&zoom=14&size=400x300&sensor=true&maptype=satellite'>
+                                <hr>
+                                  <p><?=$row['moments_message']?></p></div>
+                            <div class="panel-footer">
+                              <button class="btn btn-default">Like</button>
+
+                            </div>
+                          </div>
+                        <?php
+                        }
+                    }
+
+        ?>
+
+       
+
+
   </div>
 
 </div>
