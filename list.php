@@ -11,3 +11,6 @@
   
 </li>	
 
+<li>
+  <a href="logout1.php" id="listdropdown-buts">Logout</a>
+</li>
