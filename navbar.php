@@ -59,12 +59,7 @@
         <div class="collapse navbar-collapse" id="mySettings">
            <ul class="nav navbar-nav">
             
-                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-vertical" ></span></a>
-                    <ul class="dropdown-menu" id="dropdown-settings">
-                      <?php
-                        include "list.php";
-                      ?>
-            </ul>
+                 <li ><a href="activityNotifications.php"><span class="glyphicon glyphicon-user" ></span></a>
             </li>
            </ul>
          </div> 
