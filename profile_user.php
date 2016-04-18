@@ -83,11 +83,11 @@
                               <?php
                             }else if(mysqli_num_rows($result)==0){
                               ?>
-                                <a href="addFriend.php?friend=<?=$userid?>"><button class="btn btn-default edit-profile" id="add-button" >Add Friend</button></a>
+                                <a href="addFriend.php?friend=<?=$userid?>"><button class="btn btn-default edit-profile" id="add-button" >Follow</button></a>
                               <?php
                             }else if(mysqli_num_rows($result)==1&&$row['status']==1){
                               ?>
-                                <a href="deleteFriend.php?friend=<?=$userid?>"><button class="btn btn-default edit-profile" id="delete-button">Friend</button></a>
+                                <a href="deleteFriend.php?friend=<?=$userid?>"><button class="btn btn-default edit-profile" id="delete-button">Following</button></a>
                                 <?php
                             }
                             
@@ -108,7 +108,7 @@
                       {
                       echo "Failed to connect to MySQL: " . mysqli_connect_error();
                       } else {
-                          $query = "select m.moments_id,ui.user_id, m.time_stamp, moments_message, longitude, latitude, first_name, last_name, username from userinfo as ui 
+                          $query = "select m.time_stamp, moments_message, longitude, latitude, first_name, last_name, username from userinfo as ui 
                             inner join moments as m 
                             on ui.user_id = m.user_id
                               where ui.user_id = ".$userid." ORDER BY time_stamp DESC";
@@ -122,8 +122,6 @@
                                     <hr>
                                     <p><?=$row['moments_message']?></p>
                                     <hr>
-                                     <p><a href="likeMoments.php?moment_id=<?=$row['moments_id']?>&moment_user_id=<?=$row['user_id']?>"><button class="btn btn-default">Like</button></p>
-
 
                         <?php
                           }
@@ -142,7 +140,7 @@
      
 
                           <div id="cogbutton-profile_user">
-                                <a href="profiler.php?userid=<?=$_SESSION['userid']?>"> <button type="button" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-cog" id="cogbutton"></span></button></a>
+                                <a href="profiler.php?userid=<?=$_SESSION['userid']?> "> <button type="button" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-cog" id="cogbutton"></span></button></a>
                           </div>
 
                            <div id="container3-prof">
