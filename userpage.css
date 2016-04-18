@@ -114,13 +114,11 @@ body{
 
 
 #container3-moments{
-	margin-top: 10px!important;
-	width: 50%!important;
-	height: 100px!important;
-	border-width: 4px 4px 4px 4px;	
+	margin-top: 1px!important;
+	height: 50px!important;
+    border-width: 4px 4px 4px 4px;	
     border-style: solid;	
     border-color: black!important;
-    border-radius: 10px!important;
 }
 
 #container4-moments{
@@ -187,6 +185,9 @@ body{
 	visibility: hidden!important;
 }
 
+#container3-moments{
+	visibility: hidden!important;
+}
 
 }
 
@@ -241,6 +242,10 @@ body{
 }
 
 #colme{
+	visibility: hidden!important;
+}
+
+#container3-moments{
 	visibility: hidden!important;
 }
 }
