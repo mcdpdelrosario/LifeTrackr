@@ -108,7 +108,7 @@ session_start();
                             <p></br> <?=$row['time_stamp']?></p>
                             </div>
                             <div class="panel-body">
-                              <img src='http://maps.googleapis.com/maps/api/staticmap?center=<?=$latlong?>&zoom=18&size=400x300&sensor=true&maptype=satellite'>
+                              <img id ="pic-profile_user" src='http://maps.googleapis.com/maps/api/staticmap?center=<?=$latlong?>&zoom=18&size=400x300&sensor=true&maptype=satellite'>
                                 <hr>
                                   <p><?=$row['moments_message']?></p></div>
                             <div class="panel-footer">
