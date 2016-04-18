@@ -1,0 +1,626 @@
+/*for notifications*/
+/*working until profile_user*/
+body{
+	/*overflow: hidden;*/
+	/*background-color: #f6fafc !important;*/
+	/*background-color: #DAF2FF!important;*/
+	background-color: #dfe3ee !important;
+	/*background-color: #33e4c;*/
+	background-size: 100% 100%;
+	/*height: 700px;*/
+	height: 100%;
+  	background-size: cover;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  overflow-y: auto!important;
+  overflow-x: hidden!important;
+  font-family: Montserrat, sans-serif!important;       
+}
+
+/*notifications code of dp*/
+.inner-content { display:none; }
+
+#load-more{
+  border-radius: 5em !important;
+  height: 100px;
+  width: 100px;
+  margin-left:45%;
+}
+
+
+/*userpage*/
+
+/*Rick Yes*/
+#map{
+  height: 100%;
+}
+
+#commitButton{
+	top: 55px;
+	right: 5px;
+	position: absolute;
+	background-color: lightblue;
+	color: black;
+}
+
+#findButton{
+	bottom: 5px;
+	left: 5px;
+	position: absolute;
+	background-color: orange;
+	color: black;
+}
+
+/*Rick No*/
+
+
+
+.col{
+	width:100%!important;
+	background-color: white!important;
+}
+
+/*moments*/
+
+
+#container1-moments{
+	background-color: #FFA758!important;
+	margin-top: 80px!important;
+	height: 200px!important;
+    border-width: 2px 2px 2px 2px;	
+    border-style: solid;	
+    border-color: #FFA758!important;
+}
+
+
+#profilepic-moments{
+	width: 120px!important;
+	height: 60%!important;
+	margin-left: 5%!important;
+	margin-top: 30%!important;
+}
+
+#name-moments{
+	color:white;
+	margin-top: 30%!important;
+	margin-left: 150px!important;
+
+}
+
+#colme{
+	background-color: black!important;
+}
+
+#container2-moments{
+	background-color: #FFFFFF!important;
+	margin-top: 80px!important;
+	width: 50%!important;
+	height: 100px!important;
+	border-width: 2px 2px 2px 2px;	
+    border-style: solid;	
+    border-color: white!important;
+    border-radius: 10px!important;
+}
+
+
+#profilepic1-moments{
+	width: 80px!important;
+	height: 85%!important;
+	margin-top:7px!important;
+	margin-left:5px!important;
+}
+
+
+#post-moments{
+	margin-top: 10px!important;
+	margin-left: 5px!important;
+}
+
+#input-moments{
+		height: 40px!important;
+		width: 120%!important;
+}
+
+#postbutton-moments{
+	margin-top:3px!important;
+	margin-left:106%!important;
+}
+
+
+#container3-moments{
+	background-color: #FFFFFF!important; 
+	margin-top: 10px!important;
+	width: 25%!important;
+	height: 50px!important;
+	border-width: 2px 2px 2px 2px;	
+    border-style: solid;	
+    border-color: white!important;
+    border-radius: 10px!important;
+    margin-top:1px!important;
+}
+
+
+#container4-moments{
+	margin-top:5%!important;
+}
+
+#pills-moments{
+	margin-left:5%!important;
+}
+
+ .pills-class-moments:hover > ul{
+	background-color: #FFA758!important;
+}
+
+/*--------------------------------MOMENTS------------------------------*/
+
+
+
+/*notifications*/
+#container1-notifications{
+	background-color: #FFA758!important;
+	border-width: 4px 1px 8px 1px;	
+    border-style: solid;
+     border-color: #FFA758!important;	
+	margin-top:50px!important;
+}
+
+#container1-notifications h3{
+	/*color: white;*/
+	text-align: center;
+	text-transform: uppercase;
+
+}
+
+
+#container2-notifications{
+	background-color: transparent!important;
+	margin-top:50px!important;
+}
+
+#pills-containers{
+	visibility: hidden!important;
+	height: 50px!important;
+	width:100%!important;
+}
+
+#pills1-containers{
+	margin-left:30%!important;
+	color: white!important;
+}
+
+/*-----------------------------------NOTIFICATIONS--------------------*/
+
+/*profile-user*/
+
+#container1-profileuser{
+	background-color: #B0CDD9;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-width: 0px 5px 5px 5px;
+	border-style: solid;
+	height:170px!important;
+	width: 64%!important;
+	margin-left:20%!important;
+	
+}
+
+
+#profilepic-profile_user{
+	width: 150px!important;
+	height: 150px!important;
+	margin-top:-7px!important;
+	margin-left:5px!important;
+}
+
+#names-profile_user{
+	margin-top: 60px!important;
+	left:-100px!important;
+}
+
+
+
+#profilebutton-profile_user{
+	margin-top: 100px!important;
+	left:70%!important;
+	position: absolute;
+	/*visibility: hidden!important;*/
+}
+
+
+#cogbutton-profile_user{
+	visibility: hidden!important;
+}
+
+#cogbutton{
+	border: none;
+	background-color: transparent!important;
+	font-size: 20px!important;
+}
+
+
+#container3-profileuser{
+	margin-top: 200px!important;
+	margin-left:20%!important;
+}
+@media screen and (max-width: 400px)
+{
+	#pills1-containers{
+		left:-5%!important;
+		position: absolute;
+	}
+
+
+	#myname{
+	font-size: 20px!important;
+	margin-left: 35%!important;
+	position: absolute;
+	}
+	#names-profile_user{
+		margin-top: 10%!important;
+		margin-left: -2px!important;
+	}
+
+	#username-profile_user{
+		margin-top: 50px!important;
+		position: absolute;
+		margin-left: 35%!important;
+	}
+	#profilebutton-profile_user{
+	visibility: visible!important;
+
+	}
+
+	#cogbutton-profile_user{
+	visibility: visible!important;
+	
+}
+}
+
+@media screen and (max-width:499px){
+
+#container1-moments{
+	height: 250px!important;
+	margin-top: 0px!important;
+}
+
+#username-moments
+{
+	margin-left:2%!important;
+}
+
+
+#profilepic-moments{
+	width: 150px!important;
+	height: 150px!important;
+	margin-left: 150%!important;
+}
+
+#name-moments{
+	margin-top: 180px!important;
+	margin-left: 33%!important;
+}
+
+#container2-moments{
+	width: 93%!important;
+	margin-top:2%!important;
+	margin-left:17px!important;
+}
+
+#profilepic1-moments{
+		visibility: hidden!important;
+	}
+
+#post-moments{
+	position: absolute;
+	margin-top:10px!important;
+	margin-left:15px!important;
+}
+
+#input-moments{
+	width: 330%!important;
+}
+#postbutton-moments{
+	margin-left:270%!important;
+}
+
+#colme{
+	visibility: hidden!important;
+}
+
+#container3-moments{
+	visibility: hidden!important;
+}
+
+#container4-moments{
+	margin-top:10%!important;
+}
+/*--------------------------------------------------MOMENTS----------------------------------------------------*/
+/*notifications*/
+#container1-notifications{
+	visibility: hidden!important;
+}
+
+#pills-containers{
+	visibility: visible!important;
+	background-color: black!important;
+}
+
+#container2-notifications{
+	top:10%!important;
+	position: absolute;
+}
+
+#pills1-containers{
+	margin-left:14%!important;
+
+}
+/*profileuser*/
+#container1-profileuser{
+	width: 93%!important;
+	margin-left:15px!important;
+}
+
+#profilepic-profile_user{
+	width: 120px!important;
+	height: 120px!important;
+	margin-top: 10px!important;
+}
+
+#names-profile_user{
+	margin-top:15%!important;
+	left:10%!important;
+}
+
+
+#profilebutton-profile_user{
+visibility: hidden!important;
+}
+
+#cogbutton-profile_user{
+	visibility: visible!important;
+	margin-top: -60px!important;
+	margin-left:80%!important;
+}
+
+
+
+#container3-profileuser{
+	margin-left: 5% !important;
+}
+
+#pic-profile_user
+{
+	width:70%!important;	
+	margin-left: 10%!important;
+}
+}
+
+
+/*col-xs-12*/
+@media screen and (min-width:498px) and (max-width:769px)
+{			
+
+#container1-moments{
+	height: 250px!important;
+	margin-top: 0px!important;
+}
+
+#profilepic-moments{
+	width: 150px!important;
+	height: 150px!important;
+	margin-left: 150%!important;
+}
+
+#name-moments{
+	margin-top: 200px!important;
+	margin-left: 35%!important;
+}
+
+#username-moments
+{
+	margin-left:2%!important;
+}
+#container2-moments{
+	width: 95%!important;
+	margin-top: 2%!important;
+	margin-left:17px!important;
+	height: 100px!important;
+}
+
+#profilepic1-moments{
+	width: 80px!important;
+
+}
+
+#post-moments{
+	
+	margin-top:10px!important;
+	margin-left:10px!important;
+}
+
+#input-moments{
+	width: 260%!important
+}
+
+#postbutton-moments{
+	margin-left:230%!important;
+}
+
+#colme{
+	visibility: hidden!important;
+}
+
+#container3-moments{
+	visibility: hidden!important;
+}
+
+#container1-notifications{
+	visibility: hidden!important;
+}
+
+#pills-containers{
+	visibility: visible!important;
+	background-color:black!important;
+}
+
+#container2-notifications{
+	top:10%!important;
+	position: absolute;
+}
+
+#container1-profileuser{
+	width: 96%!important;
+	margin-left:15px!important;
+}
+
+#names-profile_user{
+	left:4%!important;
+	margin-top: 5%!important;
+}
+
+#profilebutton-profile_user{
+visibility: hidden!important;
+}
+#cogbutton-profile_user{
+	visibility: visible!important;
+	margin-top: -100px!important;
+	margin-left: 70%!important;
+	border: none;
+	background-color: transparent!important;
+	color: transparent!important;
+}
+
+#container3-profileuser
+{
+	margin-left:12%!important;
+}
+
+}
+
+
+@media screen and (min-width: 769px) and (max-width:900px)
+{
+#container2-moments{
+	width: 40%!important;
+
+}
+
+#post-moments{
+	margin-left:50px!important;
+}
+
+#input-moments{
+		height: 40px!important;
+		width: 230%!important;
+}
+
+#postbutton-moments{
+	margin-left:150%!important;
+}
+
+
+#container3-profileuser{
+	margin-top:17%!important;
+	margin-left:10%!important;
+
+}
+
+#profilepic-profile_user{
+	visibility: visible!important;
+	margin-top: -30%!important;
+}
+
+}
+
+/*#profilepic-profile_user{
+				
+
+		margin-top: -70px!important;
+		
+	}
+
+		#profilebutton-profile_user
+	{
+		margin-top: -30px!important;
+		margin-left: 10px!important;
+	}*/
+}
+
+}
+
+
+/*special media screens*/
+@media screen and (min-width:900px) and (max-width:1000px)
+{
+	#input-moments{
+		width:350px!important;
+	}
+
+	#post-moments{
+		margin-left:10px!important;
+	}
+
+	#postbutton-moments{
+		margin-left: 290px!important;
+	}
+
+/*	#profilepic-profile_user{
+
+		margin-top:-70px!important;
+	}
+
+	#profilebutton-profile_user
+	{
+		margin-top: -30px!important;
+		margin-left: 10px!important;
+	}
+*/
+
+}
+
+@media screen and (min-width: 900px) and (max-width: 950px)
+{
+
+#container2-moments{
+	width: 40%!important;
+
+}
+
+#post-moments{
+	margin-left:30px!important;
+}
+
+#input-moments{
+		height: 40px!important;
+		width: 270%!important;
+}
+
+#postbutton-moments{
+	margin-left:200px!important;
+}
+
+#pills-moments{
+	margin-left:2%!important;
+}
+
+
+
+
+}
+
+
+@media screen and (max-width:1000px){
+	
+#profilepic-profile_user{
+	margin-top: -23%!important;
+}
+
+#profilebutton-profile_user
+{
+	margin-top:-4%!important;
+}
+
+}
