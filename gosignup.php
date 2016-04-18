@@ -22,7 +22,7 @@
 			$query = "INSERT INTO userinfo(username, first_name, last_name, password, email, time_stamp) VALUES ('".$uname_su."','".$fname_su."','".$lname_su."','".$pwd_su."','".$eadd_su."','".$createDate."')";
 			$result = mysqli_query($con, $query) or mysqli_error($con);
 
-			$query = "SELECT user_id FROM userinfo WHERE username = '".$logged_num."' && password = '".$signed_num."'";
+			$query = "SELECT user_id,first_name,last_name,username FROM userinfo WHERE username = '".$uname_su."' && password = '".$pwd_su."'";
 			$result = mysqli_query($con, $query) or mysqli_error($con);
 
 			if(!$result) 
@@ -31,12 +31,15 @@
 			} 
 			else 
 			{
-				$_SESSION["userid"] = $row['user_id'];
+				while($row=mysqli_fetch_array($result)){
+					$_SESSION["userid"] = $row['user_id'];
 			 		$_SESSION['firstname'] = $row['first_name'];
 			 		$_SESSION['lastname'] = $row['last_name'];
 			 		$_SESSION['username'] = $row['username'];
 			 		$_SESSION['imgid'] = $row['img_id'];
 				header('Location: userpage.php');
+				}
+				
 			}
 		}
 	}
