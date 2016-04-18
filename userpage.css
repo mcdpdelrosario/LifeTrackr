@@ -150,6 +150,10 @@ body{
 	margin-left:5%!important;
 }
 
+ .pills-class-moments:hover > ul{
+	background-color: blue!important;
+}
+
 /*--------------------------------MOMENTS------------------------------*/
 
 
@@ -163,16 +167,29 @@ body{
 	margin-top:50px!important;
 }
 
+#pills-containers{
+	visibility: hidden!important;
+	height: 50px!important;
+	width:100%!important;
+}
 
-
-
-
-
+#pills1-containers{
+	margin-left:30%!important;
+	color: white!important;
+}
 
 
 
 
 /*-----------------------------------NOTIFICATIONS--------------------*/
+
+@media screen and (max-width: 350px)
+{
+	#pills1-containers{
+		left:-5%!important;
+		position: absolute;
+	}
+}
 
 @media screen and (max-width:499px){
 
@@ -237,8 +254,24 @@ body{
 #container1-notifications{
 	visibility: hidden!important;
 }
-/*--------------------------------------------------NOTIFS----------------------------------------------------
+
+#pills-containers{
+	visibility: visible!important;
+	background-color: black!important;
 }
+
+#container2-notifications{
+	top:10%!important;
+	position: absolute;
+}
+
+#pills1-containers{
+	margin-left:14%!important;
+
+}
+
+}
+
 
 /*col-xs-12*/
 @media screen and (min-width:498px) and (max-width:769px)
@@ -298,24 +331,19 @@ body{
 	visibility: hidden!important;
 }
 
-/*-------------------------------------------------------------MOMENTS*/
-
-/*NOTIFICATIONS*/
 #container1-notifications{
 	visibility: hidden!important;
 }
 
-/*NOTIFICATIONS------------------------------------------------------*/
+#pills-containers{
+	visibility: visible!important;
+	background-color:black!important;
 }
 
-@media screen and(max-width:800px)
-{
-	/*notifictions*/
-	#container1-notifications{
-	visibility: hidden!important;
-	/*-------------------------------------------*/
+#container2-notifications{
+	top:10%!important;
+	position: absolute;
 }
-
 }
 
 
