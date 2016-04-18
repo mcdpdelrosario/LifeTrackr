@@ -96,7 +96,6 @@
                             
                             ?>
                           </div> 
-
                             <div class="col-lg-3 col-md-7 col-sm-5"id="editprofile-profileuser1">
                                 <a href="profiler.php"> <button type="button" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-cog" id="cogbutton"></span></button></a>
                           </div>
