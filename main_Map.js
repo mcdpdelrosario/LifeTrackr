@@ -25,7 +25,8 @@ function initialize() {
 		}
 	});
 	infoWindow = new google.maps.InfoWindow({map: null,
-	maxWidth: 200
+		content: "You are here",
+		maxWidth: 200
 	});
 	var philippines = { lat: 13, lng: 122 };
 
@@ -55,16 +56,18 @@ function initialize() {
 					lng: position.coords.longitude //from geolocation
 				},
 				map: map,
-				title:'Im kinda here I hope',
+				title:'You are here',
 				icon: {
 					path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
 			        strokeColor: "orange",
 			        scale: 6
 				}
 			});
+			infoWindow.open(map,userMarker);
 			userMarkerListener(userMarker);
 			map.setCenter(userMarker.position);
 			map.setZoom(zoomValue);
+
 		}, function() {
 			handleLocationError(true);
 		});
