@@ -1,3 +1,4 @@
+<!-- working -->
  <nav class="navbar navbar-default  navbar-fixed-top" id="navbarsettings">
 
     
@@ -35,9 +36,6 @@
                   <a href="notifications.php" id="signup-but"><span class="glyphicon glyphicon-bell"></span> Notifications</a>
                 </li>
                 
-                <li>
-                  <a href="notifications.php" id="signup-but"><span class="glyphicon glyphicon-film"></span>Notifications</a>
-                </li>
                 
                   
         </div>
