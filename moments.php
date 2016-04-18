@@ -71,29 +71,32 @@ session_start();
               
 
                <div class "col-lg-offset-1 col-lg-6 col-md-offset-1 col-md -6 col-sm-offset-1 col-sm-offset-1" id="name-moments">
-
+<!-- 
                     <a href="#"><?=$_SESSION['firstname']?> <?=$_SESSION['lastname']?></a></br>
-                    <a href="#"id="username-moments"><?=$_SESSION['username']?></a>
-
+                    <a href="#" id="username-moments"><?=$_SESSION['username']?></a>
+ -->
                 </div>
+
           </div>      
       </div>
 
        <div class="col-lg-offset-1 col-lg-7 col-md-offset-1 col-md-4 col-sm-offset-1 col-sm-4 col-xs-12" id="container2-moments"> 
         <div class="row">
-          <div class="col" id="colme">
-
-          colme
-
+          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <img id="profilepic1-moments" src="img.jpg">
           </div>
 
+          <div class="col-lg-8 col-lg-offset-1 col-md-7 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-offset-1 col-xs-4" id="post-moments">
 
+              <input type="text" class="form-control" placeholder=" Make now a moment." id="input-moments"  size="15"/>
 
-        </div>  
+              <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" id="postbutton-moments">Post</button>
+          </div>    
 
        </div>
   </div>
-  
+
+</div>
 
 
 </body>

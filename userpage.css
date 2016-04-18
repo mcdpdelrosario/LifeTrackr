@@ -88,6 +88,52 @@ body{
     border-radius: 10px!important;
 }
 
+
+#profilepic1-moments{
+	width: 80px!important;
+	height: 85%!important;
+	margin-top:7px!important;
+	margin-left:5px!important;
+}
+
+
+#post-moments{
+	margin-top: 10px!important;
+	margin-left: 5px!important;
+}
+
+#input-moments{
+		height: 40px!important;
+		width: 120%!important;
+}
+
+#postbutton-moments{
+	margin-top:3px!important;
+	margin-left:106%!important;
+}
+
+
+#container3-moments{
+	margin-top: 10px!important;
+	width: 50%!important;
+	height: 100px!important;
+	border-width: 4px 4px 4px 4px;	
+    border-style: solid;	
+    border-color: black!important;
+    border-radius: 10px!important;
+}
+
+#container4-moments{
+	margin-top: 10px!important;
+	width: 350px!important;
+	height: 100px!important;
+	border-width: 4px 4px 4px 4px;	
+    border-style: solid;	
+    border-color: black!important;
+    left:10px!important;
+}
+
+
 /*--------------------------------MOMENTS------------------------------*/
 
 @media screen and (max-width:499px){
@@ -119,9 +165,30 @@ body{
 	margin-top:2%!important;
 	margin-left:17px!important;
 }
+
+#profilepic1-moments{
+		visibility: hidden!important;
+	}
+
+#post-moments{
+	position: absolute;
+	margin-top:10px!important;
+	margin-left:15px!important;
+}
+
+#input-moments{
+	width: 330%!important;
+}
+#postbutton-moments{
+	margin-left:270%!important;
+}
+
+#colme{
+	visibility: hidden!important;
 }
 
 
+}
 
 /*col-xs-12*/
 @media screen and (min-width:498px) and (max-width:769px)
@@ -151,20 +218,95 @@ body{
 	width: 95%!important;
 	margin-top: 2%!important;
 	margin-left:17px!important;
+	height: 100px!important;
 }
 
+#profilepic1-moments{
+	width: 80px!important;
+
 }
+
+#post-moments{
+	
+	margin-top:10px!important;
+	margin-left:10px!important;
+}
+
+#input-moments{
+	width: 260%!important
+}
+
+#postbutton-moments{
+	margin-left:230%!important;
+}
+
+#colme{
+	visibility: hidden!important;
+}
+}
+
+
 
 
 @media screen and (min-width: 769px) and (max-width:900px)
 {
 #container2-moments{
 	width: 40%!important;
-}
+
 }
 
-@media screen and (min-width: 900px) and (max-width: 1200px)
+#post-moments{
+	margin-left:50px!important;
+}
+
+#input-moments{
+		height: 40px!important;
+		width: 230%!important;
+}
+
+#postbutton-moments{
+	margin-left:150%!important;
+}
+
+}
+
+
+/*special media screens*/
+@media screen and (min-width:900px) and (max-width:1000px)
 {
+	#input-moments{
+		width:350px!important;
+	}
+
+	#post-moments{
+		margin-left:10px!important;
+	}
+
+	#postbutton-moments{
+		margin-left: 290px!important;
+	}
+}
+
+@media screen and (min-width: 900px) and (max-width: 950px)
+{
+
+#container2-moments{
+	width: 40%!important;
+
+}
+
+#post-moments{
+	margin-left:30px!important;
+}
+
+#input-moments{
+		height: 40px!important;
+		width: 270%!important;
+}
+
+#postbutton-moments{
+	margin-left:200px!important;
+}
 
 }
 
