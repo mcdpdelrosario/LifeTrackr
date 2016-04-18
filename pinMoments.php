@@ -5,7 +5,7 @@
 
 	$pin_moment = array();
 	$pin_moment['moment_id'] = array();
-	$pin_moment['user_id'] = array();
+	$pin_moment['username'] = array();
 	$pin_moment['longitude'] = array();
 	$pin_moment['latitude'] = array();
 	$pin_moment['message'] = array();
@@ -34,7 +34,7 @@
 	while($row = mysqli_fetch_array($result))
 	{
 		array_push($pin_moment['moment_id'], $row['moments_id']);
-		array_push($pin_moment['user_id'], $row['user_id']);
+		array_push($pin_moment['username'], $row['username']);
 		array_push($pin_moment['message'], $row['moments_message']);
 		array_push($pin_moment['longitude'], $row['longitude']); 
 		array_push($pin_moment['latitude'], $row['latitude']); 
