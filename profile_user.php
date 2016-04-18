@@ -108,7 +108,7 @@
                       {
                       echo "Failed to connect to MySQL: " . mysqli_connect_error();
                       } else {
-                          $query = "select m.time_stamp, moments_message, longitude, latitude, first_name, last_name, username from userinfo as ui 
+                          $query = "select m.moments_id,ui.user_id, m.time_stamp, moments_message, longitude, latitude, first_name, last_name, username from userinfo as ui 
                             inner join moments as m 
                             on ui.user_id = m.user_id
                               where ui.user_id = ".$userid." ORDER BY time_stamp DESC";
@@ -122,6 +122,8 @@
                                     <hr>
                                     <p><?=$row['moments_message']?></p>
                                     <hr>
+                                     <p><a href="likeMoments.php?moment_id=<?=$row['moments_id']?>&moment_user_id=<?=$row['user_id']?>"><button class="btn btn-default">Like</button></p>
+
 
                         <?php
                           }

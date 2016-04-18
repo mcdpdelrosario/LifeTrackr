@@ -11,14 +11,3 @@
   
 </li>	
 
-<li>
-  <a href="#" id="listdropdown-buts">My Commits</a>
-</li>
-				
-<li>
-  <a href="#" id="listdropdown-buts">Settings</a>
-</li>
-
-<li>
-  <a href="#" id="listdropdown-buts">Logout</a>
-</li>
