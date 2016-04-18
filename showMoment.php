@@ -50,7 +50,8 @@ WHERE m.moments_id = ".$id."";
 	while($row=mysqli_fetch_array($result)){
 		$latlong=$row['latitude'] .",".$row['longitude'];
 		?>
-		<div class="panel panel-group">
+    <div class="col-lg-12 col-lg-offset-2 col-md-12 col-md-offset-2 col-sm-offser-2 co-sm-12 col-xs-12">
+		<div class="panel panel-group" id="container1-showmoments">
 			<div class="panel-heading">
 				<h3><?=$row['first_name']?> <?=$row['last_name']?> @<?=$row['username']?></br></h3>
 			</div>

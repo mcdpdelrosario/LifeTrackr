@@ -377,6 +377,13 @@ body{
 	width: 30%!important;
 }
 
+#container1-showmoments{
+	width: 60%;
+	height: 80%;
+	margin-top:2%!important;
+	margin-left: 1%!important; 
+}
+
 
 
 @media screen and (max-width: 400px)
@@ -504,13 +511,21 @@ body{
 	visibility: hidden!important;
 }
 
+
+
+
 }
 
 
 
 
 @media screen and (max-width:499px){
-
+#container1-showmoments{
+	width: 250px!important;
+	height:400px!important;
+	margin-left: -200px!important;
+	
+}
 #container1-moments{
 	height: 250px!important;
 	margin-top: 0px!important;
@@ -720,6 +735,19 @@ visibility: hidden!important;
 @media screen and (min-width:498px) and (max-width:769px)
 {			
 
+#container1-showmoments{
+	width: 100%;
+	height: 100%;
+	margin-top:2%!important;
+	margin-left: 5%!important; 
+}
+
+
+#pic-profile_user{
+	width:80%;
+}
+
+
 #container1-moments{
 	height: 250px!important;
 	margin-top: 0px!important;
@@ -911,6 +939,8 @@ visibility: hidden!important;
 }
 	
 
+
+
 }
 
 
@@ -947,7 +977,14 @@ visibility: hidden!important;
 }
 
 
-	
+	#container1-showmoments{
+	width: 80%;
+	height: 80%;
+	margin-top:2%!important;
+	margin-left: 1%!important; 
+}
+
+
 
 }
 
@@ -1034,6 +1071,14 @@ visibility: hidden!important;
 {
 	margin-top:-4%!important;
 }
+
+	#container1-showmoments{
+	width: 80%;
+	height: 100%;
+	margin-top:2%!important;
+	margin-left: 5%!important; 
+}
+
 
 }
 

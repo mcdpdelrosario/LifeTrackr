@@ -111,7 +111,7 @@
                                           <div class="panel-body">
                                           <a href="profile_user.php?user=<?=$row['user_id']?>"><?=$row['first_name']?> <?=$row['last_name']?></a>
                                           <?php
-                                            echo "added you.<br>";
+                                            echo " would like to follow you.<br>";
                                           ?>
                                             <a href="acceptFriend.php?friend=<?=$row['user_id']?>"><button class="btn btn-default">Accept</button></a>
                                           </div>
