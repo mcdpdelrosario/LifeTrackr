@@ -66,7 +66,7 @@ session_start();
       </div>
 
        <div class="col-lg-offset-1 col-lg-7 col-md-offset-1 col-md-4 col-sm-offset-1 col-sm-4 col-xs-12" id="container2-moments"> 
-        <div class="row">
+        <div class="row"id="hidethis">
           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
             <img id="profilepic1-moments" src="#">
           </div>
