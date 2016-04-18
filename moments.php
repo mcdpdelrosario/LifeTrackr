@@ -120,7 +120,7 @@ session_start();
                           <div class="panel panel-default">
                             <div class="panel-heading"><?=$row['first_name']?> <?=$row['last_name']?> @<?=$row['username']?></div>
                             <div class="panel-body">
-                              <img src='http://maps.googleapis.com/maps/api/staticmap?center=<?=$latlong?>&zoom=18&size=400x300&sensor=true&maptype=satellite'>
+                              <img id ="pic-profile_user" src='http://maps.googleapis.com/maps/api/staticmap?center=<?=$latlong?>&zoom=18&size=400x300&sensor=true&maptype=satellite'>
                                 <hr>
                                   <p><?=$row['moments_message']?></p></div>
                             <div class="panel-footer">

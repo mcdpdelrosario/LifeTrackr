@@ -176,7 +176,7 @@ body{
 
 
 #container2-notifications{
-	background-color: transparent;!important;
+	background-color: transparent!important;
 	margin-top:50px!important;
 }
 
@@ -204,6 +204,7 @@ body{
 	height:170px!important;
 	width: 64%!important;
 	margin-left:20%!important;
+	
 }
 
 
@@ -214,12 +215,68 @@ body{
 	margin-left:5px!important;
 }
 
-@media screen and (max-width: 350px)
+#names-profile_user{
+	margin-top: 60px!important;
+	left:-100px!important;
+}
+
+
+
+#profilebutton-profile_user{
+	margin-top: 100px!important;
+	left:70%!important;
+	position: absolute;
+	/*visibility: hidden!important;*/
+}
+
+
+#cogbutton-profile_user{
+	visibility: hidden!important;
+}
+
+#cogbutton{
+	border: none;
+	background-color: transparent!important;
+	font-size: 20px!important;
+}
+
+
+#container3-profileuser{
+	margin-top: 200px!important;
+	margin-left:20%!important;
+}
+@media screen and (max-width: 400px)
 {
 	#pills1-containers{
 		left:-5%!important;
 		position: absolute;
 	}
+
+
+	#myname{
+	font-size: 20px!important;
+	margin-left: 35%!important;
+	position: absolute;
+	}
+	#names-profile_user{
+		margin-top: 10%!important;
+		margin-left: -2px!important;
+	}
+
+	#username-profile_user{
+		margin-top: 50px!important;
+		position: absolute;
+		margin-left: 35%!important;
+	}
+	#profilebutton-profile_user{
+	visibility: visible!important;
+
+	}
+
+	#cogbutton-profile_user{
+	visibility: visible!important;
+	
+}
 }
 
 @media screen and (max-width:499px){
@@ -300,12 +357,45 @@ body{
 	margin-left:14%!important;
 
 }
-
+/*profileuser*/
 #container1-profileuser{
-	width: 94%!important;
+	width: 93%!important;
 	margin-left:15px!important;
 }
 
+#profilepic-profile_user{
+	width: 120px!important;
+	height: 120px!important;
+	margin-top: 10px!important;
+}
+
+#names-profile_user{
+	margin-top:15%!important;
+	left:10%!important;
+}
+
+
+#profilebutton-profile_user{
+visibility: hidden!important;
+}
+
+#cogbutton-profile_user{
+	visibility: visible!important;
+	margin-top: -60px!important;
+	margin-left:80%!important;
+}
+
+
+
+#container3-profileuser{
+	margin-left: 5% !important;
+}
+
+#pic-profile_user
+{
+	width:70%!important;	
+	margin-left: 10%!important;
+}
 }
 
 
@@ -385,6 +475,29 @@ body{
 	width: 96%!important;
 	margin-left:15px!important;
 }
+
+#names-profile_user{
+	left:4%!important;
+	margin-top: 5%!important;
+}
+
+#profilebutton-profile_user{
+visibility: hidden!important;
+}
+#cogbutton-profile_user{
+	visibility: visible!important;
+	margin-top: -100px!important;
+	margin-left: 70%!important;
+	border: none;
+	background-color: transparent!important;
+	color: transparent!important;
+}
+
+#container3-profileuser
+{
+	margin-left:12%!important;
+}
+
 }
 
 
@@ -408,6 +521,34 @@ body{
 	margin-left:150%!important;
 }
 
+
+#container3-profileuser{
+	margin-top:17%!important;
+	margin-left:10%!important;
+
+}
+
+#profilepic-profile_user{
+	visibility: visible!important;
+	margin-top: -30%!important;
+}
+
+}
+
+/*#profilepic-profile_user{
+				
+
+		margin-top: -70px!important;
+		
+	}
+
+		#profilebutton-profile_user
+	{
+		margin-top: -30px!important;
+		margin-left: 10px!important;
+	}*/
+}
+
 }
 
 
@@ -425,6 +566,19 @@ body{
 	#postbutton-moments{
 		margin-left: 290px!important;
 	}
+
+/*	#profilepic-profile_user{
+
+		margin-top:-70px!important;
+	}
+
+	#profilebutton-profile_user
+	{
+		margin-top: -30px!important;
+		margin-left: 10px!important;
+	}
+*/
+
 }
 
 @media screen and (min-width: 900px) and (max-width: 950px)
@@ -453,6 +607,20 @@ body{
 }
 
 
+
+
 }
 
 
+@media screen and (max-width:1000px){
+	
+#profilepic-profile_user{
+	margin-top: -23%!important;
+}
+
+#profilebutton-profile_user
+{
+	margin-top:-4%!important;
+}
+
+}
