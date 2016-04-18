@@ -9,28 +9,16 @@
   <script>
   $(function() {
     $( "#skills" ).autocomplete({
-      source: 'search.php'
+      source: 'search.php',
+      select: function( event, ui ) { 
+          var code = ui.item.id;
+          if(code != '') {
+            location.href = '/LifeTrackr/profile_user.php?user=' + code;
+            }
+      } 
     });
   });
   </script>
-
-<!--<script>
-$(function onclick(){
-    $( "#skills" ).autocomplete({
-      source: 'search1.php'
-});
-  });
-</script>-->
-
-<script>
-[$data].onkeyup = function(e){
-  e = e || event;
-  if (e.keyCode === 13 && !e.ctrlKey) {
-    // start your submit function
-  }
-  return true;
- }
-</script>
 
 </head>
 <body>
@@ -39,5 +27,6 @@ $(function onclick(){
   <label for="skills"></label>
   <input id="skills">
 </div>
+<button >
 </body>
 </html>
