@@ -47,7 +47,7 @@ $con = mysqli_connect("ap-cdbr-azure-southeast-b.cloudapp.net","bdd92f8752ef7e",
 
         </div>
 
-        <div class ="col-lg-offset-1 col-lg-5 " style="background-color:red;">
+        <div class ="col-lg-offset-1 col-lg-5 " style="background-color:red;"id="container2-notifications">
           <?php
             $query = "SELECT notification_type, link_id FROM notifications WHERE user_owner = ".$_SESSION['userid']." AND (notification_type=0 OR notification_type=2) ORDER BY time_stamp DESC";
             $result_notitype=mysqli_query($con, $query) or mysqli_error($con);
