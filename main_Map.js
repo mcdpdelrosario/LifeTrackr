@@ -89,6 +89,7 @@ function updateUserPosition(){
 				lat: position.coords.latitude, //from geolocation
 				lng: position.coords.longitude //from geolocation
 			});
+			document.cookie="user_latitude="+position.coords.latitude+"; user_longtitude="+position.coords.longitude;
 		}, function() {
 			handleLocationError(true);
 		});
@@ -324,25 +325,25 @@ function futureMode(){
 }
 
 function createMomentdash(){
+	var long = parseFloat(getCookie("user_longtitude"));
+	var lat = parseFloat(getCookie("user_latitude"));
 	var imagefp = null;
 	var comment = document.getElementById("input-moments").value;
 	sendMoments = {
-		moment_Lng: userMarker.position.lng(),
-		moment_Lat: userMarker.position.lat(),
+		moment_Lng: long,
+		moment_Lat: lat,
 		moment_Message: comment,
 		imagefp: imagefp
 	};
 	createMoment(sendMoments);
 }
-
-function createMomentDash(){
-	var imagefp = null;
-	var comment = document.getElementById("input-moments").value;
-	sendMoments = {
-		moment_Lng: userMarker.position.lng(),
-		moment_Lat: userMarker.position.lat(),
-		moment_Message: comment,
-		imagefp: imagefp
-	};
-	createMoment(sendMoments);
-}
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+    }
+    return "";
+} 

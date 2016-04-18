@@ -60,17 +60,18 @@ function likeStatus(data,status){
 }
 
 function createComment(commentData){
-	var url = ".php";
-	swal("Comment", "Moment id: "+commentData.moment_id+"\nComment: "+commentData.comment, "success");
-	//queryServer(url,momentData,likeStatus);
+	var url = "createComment.php";
+	//swal("Comment", "Moment id: "+commentData.moment_id+"\nComment: "+commentData.comment, "success");
+	queryServer(url,commentData,commentStatus);
 }
 function commentStatus(data,status){
-	if(status=="success")
-	{
-		swal("Well done!", "Comment SuccessFull", "success");
-	}
-	else
-	{
-		swal("Error occured", data +"\nStatus: " + status, "error");
-	}
+	alert(data);
+	// if(status=="success")
+	// {
+	// 	swal("Well done!", "Comment SuccessFull", "success");
+	// }
+	// else
+	// {
+	// 	swal("Error occured", data +"\nStatus: " + status, "error");
+	// }
 }
