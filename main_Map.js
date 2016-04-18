@@ -180,14 +180,14 @@ function sendUserCoordinates(){
 }
 function confirmFunction(){
 	var comments = document.getElementById("MomentsComment").value;
-	var imagefp = document.getElementById("Search").value;
+	//var imagefp = document.getElementById("Search").value;
 	var sendMoments;
 	if(futureFlag==0){
 		sendMoments = {
 			moment_Lng: temporaryMarker.position.lng(),
 			moment_Lat: temporaryMarker.position.lat(),
 			moment_Message: comments,
-			imagefp: imagefp
+			//imagefp: imagefp
 		};
 		fastMarker.setIcon({
 			path: google.maps.SymbolPath.BACKWARD_OPEN_ARROW,
@@ -199,7 +199,7 @@ function confirmFunction(){
 			moment_Lng: temporaryMarker.position.lng(),
 			moment_Lat: temporaryMarker.position.lat(),
 			moment_Message: comments,
-			imagefp: imagefp
+			//imagefp: imagefp
 		};
 		fastMarker.setIcon({
 			path: google.maps.SymbolPath.BACKWARD_OPEN_ARROW,
@@ -211,7 +211,7 @@ function confirmFunction(){
 	createMoment(sendMoments);
 	$("#momentModal").modal("hide");
 	document.getElementById("MomentsComment").value = "";
-	document.getElementById("Search").value = "";
+	//document.getElementById("Search").value = "";
 	
 }
 
@@ -219,7 +219,7 @@ function cancelFunction(){
 	hideTemporaryMarker();
 	$("#momentModal").modal("hide");
 	document.getElementById("MomentsComment").value = "";
-	document.getElementById("Search").value = "";
+	//document.getElementById("Search").value = "";
 }
 function createPointer(){
 	map.panTo(temporaryMarker.position);
@@ -300,12 +300,12 @@ function deg2rad(deg) {
 	return deg * (Math.PI/180)
 }
 function commentFunction(){
-	$("#commentArea").slideToggle("slow");
+	//$("#commentArea").slideToggle("slow");
 }
 function modalClosedFunction(){
-	$("#commentArea").slideUp("fast");
+	//$("#commentArea").slideUp("fast");
 	$("#momentPost").modal("hide");
-	document.getElementById("commentTextArea").value = "";
+	//document.getElementById("commentTextArea").value = "";
 }
 
 function likeFunction(){
@@ -315,9 +315,9 @@ function likeFunction(){
 
 function enterComment(){
 
-	var comment = document.getElementById("commentTextArea").value;
-	document.getElementById("commentTextArea").value = "";
-	createComment({moment_id: clickedMoment.moment_id, comment: comment});
+	// var comment = document.getElementById("commentTextArea").value;
+	// document.getElementById("commentTextArea").value = "";
+	// createComment({moment_id: clickedMoment.moment_id, comment: comment});
 }
 function futureMode(){
 	if(futureFlag == 0){
