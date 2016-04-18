@@ -31,7 +31,11 @@
 			} 
 			else 
 			{
-				$_SESSION["myuser"] = $row['user_id'];
+				$_SESSION["userid"] = $row['user_id'];
+			 		$_SESSION['firstname'] = $row['first_name'];
+			 		$_SESSION['lastname'] = $row['last_name'];
+			 		$_SESSION['username'] = $row['username'];
+			 		$_SESSION['imgid'] = $row['img_id'];
 				header('Location: userpage.php');
 			}
 		}
